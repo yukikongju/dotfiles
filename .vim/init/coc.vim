@@ -8,9 +8,10 @@
 		\ 'coc-prettier',
 		\ 'coc-pyright',
 		\ 'coc-python',
-		\ 'coc-todolist',
 		\ 'coc-vimlsp',
 		\ ]
+
+		" \ 'coc-todolist',
 
   nmap <silent> gd <Plug>(coc-definition)        " GoTo code navigation.
   nmap <silent> gy <Plug>(coc-type-definition)

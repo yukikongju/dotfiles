@@ -7,15 +7,17 @@
 
 " utils
   Plug 'scrooloose/nerdtree'
-  Plug 'neoclide/coc-snippets'
-  Plug 'vifm/vifm' " File mange with curses interface
-  Plug 'itchyny/calendar.vim' " calendar
-  " Plug 'tpope/vim-surround' " add tags, brackets, ... around selected lines
-  Plug 'junegunn/fzf' " command line fuzzy finder"
-  " Plug 'taglist.vim' " view variables, functions with :Tlist
   Plug 'mbbill/undotree' " view all undo history
+  Plug 'vifm/vifm' " File mange with curses interface
+  Plug 'tpope/vim-repeat' " can use . with other plugins
+  Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
+  " Plug 'tpope/vim-surround' " add tags, brackets, ... around selected lines
+  " Plug 'taglist.vim' " view variables, functions with :Tlist
   " Plug 'vim-scripts/taglist.vim'
   " Plug 'yegappan/taglist'
+
+" file finder
+  Plug 'junegunn/fzf' " command line fuzzy finder"
 
 " colorscheme & syntax highlight
   Plug 'altercation/vim-colors-solarized' " colorscheme for text
@@ -29,11 +31,10 @@
   " Plug 'ycm-core/YouCompleteMe' "you complete me autocomplete with linter
   " Plug 'davidhalter/jedi' " Python autocomplete
   " Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
-  Plug 'tpope/vim-repeat' " can use . with other plugins
-  Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
   Plug 'vim-scripts/c.vim' " c/c++ ide
 
 " snippets
+  Plug 'neoclide/coc-snippets'
   Plug 'honza/vim-snippets' " snippets for various languages
   " Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 
@@ -51,6 +52,7 @@
 
 " app
   Plug 'vimwiki/vimwiki' " create linked text files and auto number
+  Plug 'itchyny/calendar.vim' " calendar
   Plug 'lfos/calcurse' "Calendar scheduling app
   " Plug 'christoomey/vim-tmux-navigator'
   " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
