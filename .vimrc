@@ -7,15 +7,10 @@
 
 " utils
   Plug 'scrooloose/nerdtree'
-  Plug 'vimwiki/vimwiki' " create linked text files and auto number
-  Plug 'lfos/calcurse' "Calendar scheduling app
   Plug 'neoclide/coc-snippets'
-  Plug 'honza/vim-snippets' " snippets for various languages
-  " Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
   Plug 'vifm/vifm' " File mange with curses interface
-  " Plug 'christoomey/vim-tmux-navigator'
-  " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
   Plug 'itchyny/calendar.vim' " calendar
+  " Plug 'tpope/vim-surround' " add tags, brackets, ... around selected lines
   Plug 'junegunn/fzf' " command line fuzzy finder"
   " Plug 'taglist.vim' " view variables, functions with :Tlist
   Plug 'mbbill/undotree' " view all undo history
@@ -31,15 +26,16 @@
 
 " autocomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-  " Plug 'pappasam/coc-jedi' " Python autocomplete
-  " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
   " Plug 'ycm-core/YouCompleteMe' "you complete me autocomplete with linter
   " Plug 'davidhalter/jedi' " Python autocomplete
   " Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
-  " Plug 'tpope/vim-surround' " add tags, brackets, ... around selected lines
   Plug 'tpope/vim-repeat' " can use . with other plugins
   Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
   Plug 'vim-scripts/c.vim' " c/c++ ide
+
+" snippets
+  Plug 'honza/vim-snippets' " snippets for various languages
+  " Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 
 " debugger
   " Plug 'puremourning/vimspector' "Debugger
@@ -52,6 +48,12 @@
 
 " html
   Plug 'alvan/vim-closetag' " use > to create closing tag
+
+" app
+  Plug 'vimwiki/vimwiki' " create linked text files and auto number
+  Plug 'lfos/calcurse' "Calendar scheduling app
+  " Plug 'christoomey/vim-tmux-navigator'
+  " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
 
   call plug#end()
 
@@ -148,6 +150,7 @@
 " Choose Leader
   let mapleader=","
 
+  source ~/.vim/init/apps.vim
   source ~/.vim/init/coc.vim
   source ~/.vim/init/colors.vim
   source ~/.vim/init/functions.vim

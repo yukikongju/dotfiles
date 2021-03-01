@@ -3,6 +3,7 @@
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
 mkdir ~/.vim/init
+ln -s ~/.dotfiles/.vim/init/apps.vim ~/.vim/init/apps.vim
 ln -s ~/.dotfiles/.vim/init/colors.vim ~/.vim/init/colors.vim
 ln -s ~/.dotfiles/.vim/init/coc.vim ~/.vim/init/coc.vim
 ln -s ~/.dotfiles/.vim/init/functions.vim ~/.vim/init/functions.vim
