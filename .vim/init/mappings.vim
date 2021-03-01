@@ -41,6 +41,7 @@
   nnoremap <C-k> :m .-2<CR>==
 
 "  remapping replace
+  nnoremap <Leader>s :%s/\<<C-r><C-w>\>/  " global remap
   " nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>    " local replace
   " nnoremap gR gD:%s/<C-R>///gc<left><left><left>        " For global replace
 
