@@ -1,7 +1,11 @@
 #!/usr/bin/sh
 
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
+# get plugin manager (to test)
+curl -fLo ~/.dotfiles/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s ~/.dotfiles/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
 
+# generate symbolic links in $HOME directory
 mkdir ~/.vim/init
 ln -s ~/.dotfiles/.vim/init/apps.vim ~/.vim/init/apps.vim
 ln -s ~/.dotfiles/.vim/init/colors.vim ~/.vim/init/colors.vim
@@ -13,3 +17,4 @@ ln -s ~/.dotfiles/.vim/init/snippets.vim ~/.vim/init/snippets.vim
 ln -s ~/.dotfiles/.vim/init/tree.vim ~/.vim/init/tree.vim
 ln -s ~/.dotfiles/.vim/init/utils.vim ~/.vim/init/utils.vim
 ln -s ~/.dotfiles/.vim/init/vimspector.vim ~/.vim/init/vimspector.vim
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
