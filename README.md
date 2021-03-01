@@ -53,3 +53,4 @@ More help: https://github.com/pyinstaller/pyinstaller/issues/4996
 - [x] Dotfiles Management by Fireship: https://www.youtube.com/watch?v=r_MpUP6aKiQ&t=510s
 - [x] Splitting .vimrc file: https://vi.stackexchange.com/questions/5441/is-it-possible-and-useful-to-split-vimrc
 - [x] Enabling Symbolic Links in Git Bash: https://github.community/t/git-bash-symbolic-links-on-windows/522/11
+- [ ] dpecht's dotfiles examples: https://github.com/dspecht/dotfiles/blob/master/.vimr
