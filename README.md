@@ -38,7 +38,11 @@ second path
 
 #### Alternative: Initalizing all dotfiles from shell script
 
-[todo]
+In your ~/<User> directory, execute:
+
+```
+./<...>/.dotfiles/init_symbolic_links.sh
+```
 
 ## Ressources
 

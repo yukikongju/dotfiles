@@ -126,7 +126,7 @@
   set foldmethod=syntax
   set foldlevelstart=1
   set foldnestmax=2
-  let g:markdown_folding=11
+  " let g:markdown_folding=11
 
 " Buffers
   set hidden
