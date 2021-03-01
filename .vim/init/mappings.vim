@@ -32,6 +32,10 @@
 " remap for file indentation
   map <leader>r gg=G<CR>			" indent whole file with gg=G
 
+" remap apply macros
+  nnoremap Q @q
+  vnoremap Q :norm @q<cr>
+
 "  remapping replace
   " nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>    " local replace
   " nnoremap gR gD:%s/<C-R>///gc<left><left><left>        " For global replace
