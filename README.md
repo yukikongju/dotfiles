@@ -4,13 +4,16 @@ Keeping track of my Dotfiles by using symlink
 
 ## Table of Contents
 
-1. Generating Symbolic Links
+1. [Usage](#usage)
 2. [Troubleshooting](#troubleshooting)
 
-## Generating Symbolic Links
+## [Usage](#usage)
 
-We want to keep our .dotfiles in two places: one in this directory and one in
-our ~/<User> directory using a symbolic links for each of the dotfiles.
+#### Step 0: Clone this repository in your $HOME directory
+
+    ```
+    git clone https://github.com/yukikongju/dotfiles
+    ```
 
 #### Step 1: Enable Symbolic Links on Git Bash
 
@@ -26,18 +29,7 @@ export MSYS=winsymlinks:nativestrict
 
 For more information: https://github.community/t/git-bash-symbolic-links-on-windows/522/11
 
-#### Step 2: Create the symbolic links
-
-In your $HOME directory, execute:
-
-```
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-```
-
-This will create a new symbolic link by copying the file in the first path to the
-second path
-
-#### Alternative: Initalizing all dotfiles from shell script
+#### Step 2: Generate Symbolic Links from Directory
 
 In your $HOME directory, execute:
 
@@ -57,4 +49,5 @@ More help: https://github.com/pyinstaller/pyinstaller/issues/4996
 ## Ressources
 
 - [x] Dotfiles Management by Fireship: https://www.youtube.com/watch?v=r_MpUP6aKiQ&t=510s
-- [ ] Splitting .vimrc file: https://vi.stackexchange.com/questions/5441/is-it-possible-and-useful-to-split-vimrc
+- [x] Splitting .vimrc file: https://vi.stackexchange.com/questions/5441/is-it-possible-and-useful-to-split-vimrc
+- [x] Enabling Symbolic Links in Git Bash: https://github.community/t/git-bash-symbolic-links-on-windows/522/11
