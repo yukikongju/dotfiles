@@ -1,0 +1,17 @@
+" Colorscheme
+  syntax enable
+  set t_Co=256
+  set background=dark
+  colorscheme gruvbox
+
+" lightline Configs
+  let g:lightline = {
+		   \ 'colorscheme': 'gruvbox',
+		   \ 'active': {
+		   \   'left': [ [ 'mode', 'paste' ],
+		   \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
+		   \ },
+		   \ 'component': {
+		   \   'helloworld': ''
+		   \ },
+	       \ }
