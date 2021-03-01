@@ -7,13 +7,14 @@ Keeping track of my Dotfiles by using symlink
 1. [Usage](#usage)
 2. [Troubleshooting](#troubleshooting)
 
-## [Usage](#usage)
+## Usage
 
 #### Step 0: Clone this repository in your $HOME directory
 
-    ```
-    git clone https://github.com/yukikongju/dotfiles
-    ```
+```
+cd
+git clone https://github.com/yukikongju/dotfiles
+```
 
 #### Step 1: Enable Symbolic Links on Git Bash
 
@@ -21,6 +22,7 @@ For the symbolic links to work, you must enable symbolic links on your Git Bash.
 This step can be done two ways:
 
 Option 1: Reinstall Git Bash and allow Symbolic Links
+
 Option 2: Run Git Bash as admint and run the following command before executing sym link
 
 ```
