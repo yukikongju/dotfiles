@@ -17,8 +17,11 @@
   " Plug 'yegappan/taglist'
 
 " file finder
-  Plug 'junegunn/fzf' " command line fuzzy finder"
-  Plug 'nvim-telescope/telescope.nvim' " file finder
+  " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  " Plug 'junegunn/fzf.vim'
+  " Plug 'nvim-telescope/telescope.nvim' " file finder
+  " Plug 'nvim-lua/popup.nvim'
+  " Plug 'nvim-lua/plenary.nvim'
 
 " colorscheme & syntax highlight
   Plug 'altercation/vim-colors-solarized' " colorscheme for text
@@ -160,6 +163,7 @@
   source ~/.vim/init/git.vim
   source ~/.vim/init/mappings.vim
   source ~/.vim/init/snippets.vim
+  " source ~/.vim/init/telescope.vim
   source ~/.vim/init/tree.vim
   source ~/.vim/init/utils.vim
   source ~/.vim/init/vimspector.vim

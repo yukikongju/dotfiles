@@ -14,6 +14,7 @@ ln -s ~/.dotfiles/.vim/init/functions.vim ~/.vim/init/functions.vim
 ln -s ~/.dotfiles/.vim/init/git.vim ~/.vim/init/git.vim
 ln -s ~/.dotfiles/.vim/init/mappings.vim ~/.vim/init/mappings.vim
 ln -s ~/.dotfiles/.vim/init/snippets.vim ~/.vim/init/snippets.vim
+# ln -s ~/.dotfiles/.vim/init/telescope.vim ~/.vim/init/telescope.vim
 ln -s ~/.dotfiles/.vim/init/tree.vim ~/.vim/init/tree.vim
 ln -s ~/.dotfiles/.vim/init/utils.vim ~/.vim/init/utils.vim
 ln -s ~/.dotfiles/.vim/init/vimspector.vim ~/.vim/init/vimspector.vim
