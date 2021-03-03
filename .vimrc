@@ -17,8 +17,12 @@
   " Plug 'yegappan/taglist'
 
 " file finder
-  " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  " Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'airblade/vim-rooter' " fzf look at project directory
+  Plug 'jremmen/vim-ripgrep' " use Rg with fzf
+  " Plug 'ggreer/the_silver_searcher' " use ag with fzf
+  " Plug 'sharkdp/fd' " alternative to find
   " Plug 'nvim-telescope/telescope.nvim' " file finder
   " Plug 'nvim-lua/popup.nvim'
   " Plug 'nvim-lua/plenary.nvim'
@@ -159,6 +163,7 @@
   source ~/.vim/init/apps.vim
   source ~/.vim/init/coc.vim
   source ~/.vim/init/colors.vim
+  source ~/.vim/init/fzf.vim
   source ~/.vim/init/functions.vim
   source ~/.vim/init/git.vim
   source ~/.vim/init/mappings.vim
