@@ -1,6 +1,6 @@
 " nerdtree-git-plugin Configs
-  let g:NERDTreeShowIgnoredStatus = 1
-  let g:NERDTreeIndicatorMapCustom = {
+  let g:NERDTreeGitStatusShowIgnored = 1
+  let g:NERDTreeGitStatusIndicatorMapCustom = {
 	  \ "Modified"  : "✹",
 	  \ "Staged"    : "✚",
 	  \ "Untracked" : "✭",
