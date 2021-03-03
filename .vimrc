@@ -18,6 +18,7 @@
 
 " file finder
   Plug 'junegunn/fzf' " command line fuzzy finder"
+  Plug 'nvim-telescope/telescope.nvim' " file finder
 
 " colorscheme & syntax highlight
   Plug 'altercation/vim-colors-solarized' " colorscheme for text
@@ -39,7 +40,7 @@
   " Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 
 " debugger
-  " Plug 'puremourning/vimspector' "Debugger
+  Plug 'puremourning/vimspector' "Debugger
   " Plug 'szw/vim-maximizer' "another debugger
 
 " git
