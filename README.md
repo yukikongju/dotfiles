@@ -45,8 +45,11 @@ In your $HOME directory, execute:
 
 Option 1: We need to add the dll to the system path
 Option 2: Update all Bundles to see if patch has been pushed
+Option 3: using ``:let &pythonthreedll = 'C:/path/to/python36.dll'``
 
+E370: Could not load library python36.dll: https://github.com/vim/vim-win32-installer/issues/48
 More help: https://github.com/pyinstaller/pyinstaller/issues/4996
+
 
 ## Ressources
 

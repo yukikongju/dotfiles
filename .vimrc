@@ -17,8 +17,13 @@
   " Plug 'yegappan/taglist'
 
 " file finder
-  " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  " Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  " Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
+  " Plug 'jremmen/vim-ripgrep'
+  " Plug 'ggreer/the_silver_searcher'
+  " Plug 'universal-ctags/ctags'
+  " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
   " Plug 'nvim-telescope/telescope.nvim' " file finder
   " Plug 'nvim-lua/popup.nvim'
   " Plug 'nvim-lua/plenary.nvim'
@@ -156,9 +161,13 @@
 " Choose Leader
   let mapleader=","
 
+" solved python38.dll bug
+  let &pythonthreedll ="C:/Python39/python39.dll"
+
   source ~/.vim/init/apps.vim
   source ~/.vim/init/coc.vim
   source ~/.vim/init/colors.vim
+  source ~/.vim/init/fzf.vim
   source ~/.vim/init/functions.vim
   source ~/.vim/init/git.vim
   source ~/.vim/init/mappings.vim
@@ -167,4 +176,3 @@
   source ~/.vim/init/tree.vim
   source ~/.vim/init/utils.vim
   source ~/.vim/init/vimspector.vim
-
