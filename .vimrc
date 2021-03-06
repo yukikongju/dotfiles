@@ -11,6 +11,7 @@
   Plug 'vifm/vifm' " File mange with curses interface
   Plug 'tpope/vim-repeat' " can use . with other plugins
   Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
+  " Plug 'vim-syntastic/syntastic' "
   " Plug 'tpope/vim-surround' " add tags, brackets, ... around selected lines
   " Plug 'taglist.vim' " view variables, functions with :Tlist
   " Plug 'vim-scripts/taglist.vim'
