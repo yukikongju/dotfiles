@@ -38,8 +38,9 @@
 
 " autocomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-  " Plug 'ycm-core/YouCompleteMe' "you complete me autocomplete with linter
-  " Plug 'davidhalter/jedi' " Python autocomplete
+  " Plug 'artur-shaik/vim-javacomplete2' " java autocomplete
+  " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --tern-completer' }
+  Plug 'davidhalter/jedi' " Python autocomplete
   " Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
   Plug 'vim-scripts/c.vim' " c/c++ ide
 
@@ -47,10 +48,13 @@
   Plug 'neoclide/coc-snippets'
   Plug 'honza/vim-snippets' " snippets for various languages
   " Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'garbas/vim-snipmate'
 
 " debugger
   Plug 'puremourning/vimspector' "Debugger
-  " Plug 'szw/vim-maximizer' "another debugger
+  Plug 'szw/vim-maximizer' "compelement vimspector
 
 " git
   Plug 'tpope/vim-fugitive' "generate page to view commit message
@@ -159,11 +163,22 @@
   set background=dark
   colorscheme gruvbox
 
+" snippets
+  let g:snipMate = { 'snippet_version' : 1 }
+
 " Choose Leader
   let mapleader=","
 
+" setup for java autocomplete
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 " solved python38.dll bug
   let &pythonthreedll ="C:/Python39/python39.dll"
+  let g:pymode_python = 'python3'
+
+" if has('python3')
+"   python3 import sys
+" endif
 
 " make python pretty
   let python_highlight_all = 1
