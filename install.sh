@@ -10,6 +10,7 @@ mkdir -p ~/.vim/init
 ln -s ~/.dotfiles/.vim/init/apps.vim ~/.vim/init/apps.vim
 ln -s ~/.dotfiles/.vim/init/colors.vim ~/.vim/init/colors.vim
 ln -s ~/.dotfiles/.vim/init/coc.vim ~/.vim/init/coc.vim
+ln -s ~/.dotfiles/.vim/init/fzf.vim ~/.vim/init/fzf.vim
 ln -s ~/.dotfiles/.vim/init/functions.vim ~/.vim/init/functions.vim
 ln -s ~/.dotfiles/.vim/init/git.vim ~/.vim/init/git.vim
 ln -s ~/.dotfiles/.vim/init/mappings.vim ~/.vim/init/mappings.vim
