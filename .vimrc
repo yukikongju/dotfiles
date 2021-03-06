@@ -18,8 +18,9 @@
   " Plug 'yegappan/taglist'
 
 " file finder
+  " Plug 'kien/ctrlp.vim' " fuzzy finder
   " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  " Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
   " Plug 'jremmen/vim-ripgrep'
   " Plug 'ggreer/the_silver_searcher'
   " Plug 'universal-ctags/ctags'
@@ -38,9 +39,11 @@
 
 " autocomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
+  Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
   " Plug 'artur-shaik/vim-javacomplete2' " java autocomplete
   " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --tern-completer' }
-  Plug 'davidhalter/jedi' " Python autocomplete
+  " Plug 'davidhalter/jedi' " Python autocomplete
+  " Plug 'davidhalter/jedi-vim' " Python autocomplete
   " Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
   Plug 'vim-scripts/c.vim' " c/c++ ide
 
@@ -182,6 +185,10 @@
 
 " make python pretty
   let python_highlight_all = 1
+
+  " ctrlp
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
 
   source ~/.vim/init/apps.vim
   source ~/.vim/init/coc.vim
