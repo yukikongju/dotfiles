@@ -17,13 +17,13 @@
   " Plug 'yegappan/taglist'
 
 " file finder
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   " Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
   " Plug 'jremmen/vim-ripgrep'
   " Plug 'ggreer/the_silver_searcher'
   " Plug 'universal-ctags/ctags'
   " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
+  " Plug 'junegunn/fzf.vim'
   " Plug 'nvim-telescope/telescope.nvim' " file finder
   " Plug 'nvim-lua/popup.nvim'
   " Plug 'nvim-lua/plenary.nvim'
@@ -163,6 +163,9 @@
 
 " solved python38.dll bug
   let &pythonthreedll ="C:/Python39/python39.dll"
+
+" make python pretty
+  let python_highlight_all = 1
 
   source ~/.vim/init/apps.vim
   source ~/.vim/init/coc.vim

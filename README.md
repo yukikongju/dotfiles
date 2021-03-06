@@ -50,6 +50,23 @@ Option 3: using ``:let &pythonthreedll = 'C:/path/to/python36.dll'``
 E370: Could not load library python36.dll: https://github.com/vim/vim-win32-installer/issues/48
 More help: https://github.com/pyinstaller/pyinstaller/issues/4996
 
+#### Plugin Unavailable because Vim requires Python 3.6
+
+We have a problem because vim insn't installed with python. We can verify this
+with ``:version`` and see that python has a ``-python`` before it.
+
+The solution is to reinstall vim with python.
+
+```
+brew remove vim
+brew cleanup
+brew install vim --with-python
+```
+
+More information: https://stackoverflow.com/questions/65413685/youcompleteme-unavailable-requires-vim-compiled-with-python-3-6-0-support
+Update: https://superuser.com/questions/1115159/how-do-i-install-vim-on-osx-with-python-3-support
+
+Enabling +python feature in vim: https://vi.stackexchange.com/questions/11526/how-to-enable-python-feature-in-vim
 
 ## Ressources
 
