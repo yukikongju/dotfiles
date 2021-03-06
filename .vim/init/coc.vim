@@ -1,3 +1,6 @@
+" activate :CocList extensions
+" let g:coc_config_home = '$HOME/.vim/coc'
+
 " coc.nvim Configs
   let g:coc_disable_startup_warning = 1
   let g:coc_global_extensions = [
@@ -12,6 +15,7 @@
 		\ ]
 
 		" \ 'coc-todolist',
+		" \ 'coc-definition',
 
   nmap <silent> gd <Plug>(coc-definition)        " GoTo code navigation.
   nmap <silent> gy <Plug>(coc-type-definition)
