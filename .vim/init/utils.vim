@@ -6,7 +6,7 @@
   let g:NERDToggleCheckAllLines = 1
 
 " vim-rainbow Configs
-  " let g:rainbow_active = 1
+  let g:rainbow_active = 1
 
 " vim-closetag Configs
   let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
