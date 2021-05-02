@@ -74,3 +74,4 @@ Enabling +python feature in vim: https://vi.stackexchange.com/questions/11526/ho
 - [x] Splitting .vimrc file: https://vi.stackexchange.com/questions/5441/is-it-possible-and-useful-to-split-vimrc
 - [x] Enabling Symbolic Links in Git Bash: https://github.community/t/git-bash-symbolic-links-on-windows/522/11
 - [ ] dpecht's dotfiles examples: https://github.com/dspecht/dotfiles/blob/master/.vimr
+- [ ] Installing zsh: https://dev.to/zinox9/installing-zsh-on-windows-37em

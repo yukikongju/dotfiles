@@ -24,7 +24,7 @@
   " Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
   " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   " Plug 'sharkdp/bat' " a cat clone with syntax highlighting and git integration
-  " Plug 'airblade/vim-rooter' " fzf look at project directory
+  Plug 'airblade/vim-rooter' " fzf look at project directory
   " Plug 'jremmen/vim-ripgrep' " use Rg with fzf
   " Plug 'ggreer/the_silver_searcher' " use ag with fzf
   " Plug 'sharkdp/fd' " alternative to find
@@ -34,6 +34,7 @@
 
 " colorscheme & syntax highlight
   " Plug 'altercation/vim-colors-solarized' " colorscheme for text
+  " Plug 'powerline/fonts'
   Plug 'itchyny/lightline.vim' " colorscheme for vim modes
   Plug 'scrooloose/nerdcommenter' " Change indentation behavior
   Plug 'morhetz/gruvbox' " grubbox color scheme
@@ -48,6 +49,7 @@
   " Plug 'davidhalter/jedi-vim' " Python autocomplete
   " Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
   Plug 'vim-scripts/c.vim' " c/c++ ide
+  Plug 'lervag/vimtex'
 
 " snippets
   " Plug 'neoclide/coc-snippets'
@@ -191,6 +193,19 @@
   " ctrlp
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP'
+"
+" mappings for replacement
+
+" For local replace
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+
+" For global replace
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
+" latex compile shortcut
+" nnoremap <leader>ll :!latexmk -pdf %
+nnoremap <leader>ll :!pdflatex %
+nnoremap <leader>la :!explorer %<.pdf
 
   source ~/.vim/init/apps.vim
   source ~/.vim/init/coc.vim
