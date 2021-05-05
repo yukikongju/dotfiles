@@ -5,6 +5,8 @@
 #     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # ln -s ~/.dotfiles/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
 
+# remove old links
+
 # generate symbolic links in $HOME directory
 mkdir -p ~/.vim/init
 ln -s ~/dotfiles/.vim/init/apps.vim ~/.vim/init/apps.vim

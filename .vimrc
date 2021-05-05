@@ -12,10 +12,6 @@ Plug 'mbbill/undotree' " view all undo history
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 " Plug 'vim-syntastic/syntastic' "
-" Plug 'tpope/vim-surround' " add tags, brackets, ... around selected lines
-" Plug 'taglist.vim' " view variables, functions with :Tlist
-" Plug 'vim-scripts/taglist.vim'
-" Plug 'yegappan/taglist'
 
 " file finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -23,7 +19,6 @@ Plug 'junegunn/fzf.vim'
 " Plug 'kien/ctrlp.vim' " fuzzy finder
 " Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'sharkdp/bat' " a cat clone with syntax highlighting and git integration
 Plug 'airblade/vim-rooter' " fzf look at project directory
 " Plug 'jremmen/vim-ripgrep' " use Rg with fzf
 " Plug 'ggreer/the_silver_searcher' " use ag with fzf
@@ -32,9 +27,7 @@ Plug 'airblade/vim-rooter' " fzf look at project directory
 " Plug 'nvim-lua/popup.nvim'
 " Plug 'nvim-lua/plenary.nvim'
 
-" colorscheme & syntax highlight
-" Plug 'altercation/vim-colors-solarized' " colorscheme for text
-" Plug 'powerline/fonts'
+" colorscheme' & syntax highlight
 Plug 'itchyny/lightline.vim' " colorscheme for vim modes
 Plug 'scrooloose/nerdcommenter' " Change indentation behavior
 Plug 'morhetz/gruvbox' " grubbox color scheme
@@ -53,8 +46,8 @@ Plug 'lervag/vimtex'
 
 " snippets
 " Plug 'neoclide/coc-snippets'
-" Plug 'honza/vim-snippets' " snippets for various languages
-" Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
+Plug 'honza/vim-snippets' " snippets for various languages
+Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
@@ -65,8 +58,6 @@ Plug 'szw/vim-maximizer' "compelement vimspector
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
-" Plug 'airblade/vim-gitgutter' " view which line have changed
-" Plug 'Xuyuanp/nerdtree-git-plugin' " view which files have been modified on tree
 
 " html
 " Plug 'alvan/vim-closetag' " use > to create closing tag
@@ -190,10 +181,6 @@ let g:pymode_python = 'python3'
 " make python pretty
 let python_highlight_all = 1
 
-" ctrlp
-" let g:ctrlp_map = '<c-p>'
-" let g:ctrlp_cmd = 'CtrlP'
-"
 " mappings for replacement
 
 " For local replace
@@ -204,7 +191,12 @@ let python_highlight_all = 1
 
 " latex compile shortcut into current directory
 nnoremap <leader>ll :!pdflatex %; mv %:t:r.* %:p:h;
-nnoremap <leader>la :!cd %:h; explorer %:h.pdf
+nnoremap <leader>la :!cd %:h; explorer %:t:r.pdf
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim
