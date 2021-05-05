@@ -41,6 +41,9 @@ In your $HOME directory, execute:
 
 ## Troubleshooting
 
+Making Git use Vim as editor:
+`` git config --global core.editor "vim"``
+
 #### Python dll missing
 
 Option 1: We need to add the dll to the system path
