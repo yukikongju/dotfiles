@@ -40,8 +40,8 @@
   nnoremap <C-j> :m .+1<CR>==
   nnoremap <C-k> :m .-2<CR>==
 
-"  remapping replace
-  nnoremap <Leader>s :%s/\<<C-r><C-w>\>/  " global remap
+"  global remap
+  nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
   " nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>    " local replace
   " nnoremap gR gD:%s/<C-R>///gc<left><left><left>        " For global replace
 

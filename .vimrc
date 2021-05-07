@@ -8,35 +8,24 @@ call plug#begin('~/.vim/plugged')
 " utils
 Plug 'scrooloose/nerdtree'
 Plug 'mbbill/undotree' " view all undo history
-" Plug 'vifm/vifm' " File mange with curses interface
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
-" Plug 'vim-syntastic/syntastic' "
+" Plug 'voldikss/vim-floaterm' " popup terminal for vim
 
 " file finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'kien/ctrlp.vim' " fuzzy finder
-" Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'airblade/vim-rooter' " fzf look at project directory
-" Plug 'jremmen/vim-ripgrep' " use Rg with fzf
-" Plug 'ggreer/the_silver_searcher' " use ag with fzf
-" Plug 'sharkdp/fd' " alternative to find
-" Plug 'nvim-telescope/telescope.nvim' " file finder
-" Plug 'nvim-lua/popup.nvim'
-" Plug 'nvim-lua/plenary.nvim'
 
 " colorscheme' & syntax highlight
 Plug 'itchyny/lightline.vim' " colorscheme for vim modes
 Plug 'scrooloose/nerdcommenter' " Change indentation behavior
-Plug 'morhetz/gruvbox' " grubbox color scheme
+Plug 'morhetz/gruvbox' " gruvbox color scheme
 Plug 'ap/vim-css-color' " Highlight colors in css files
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
-" Plug 'artur-shaik/vim-javacomplete2' " java autocomplete
 " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --tern-completer' }
 " Plug 'davidhalter/jedi' " Python autocomplete
 " Plug 'davidhalter/jedi-vim' " Python autocomplete
@@ -48,9 +37,10 @@ Plug 'lervag/vimtex'
 " Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
+" Plug 'gillescastel/latex-snippets'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+" Plug 'garbas/vim-snipmate'
 
 " debugger
 Plug 'puremourning/vimspector' "Debugger
@@ -58,9 +48,6 @@ Plug 'szw/vim-maximizer' "compelement vimspector
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
-
-" html
-" Plug 'alvan/vim-closetag' " use > to create closing tag
 
 " app
 Plug 'vimwiki/vimwiki' " create linked text files and auto number
@@ -153,7 +140,7 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
-nnoremap <esc><esc> :noh<CR>
+nnoremap <esc> :noh<return><esc>
 
 " Colorscheme
 syntax enable
@@ -161,42 +148,22 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 
-" snippets
-let g:snipMate = { 'snippet_version' : 1 }
 
 " Choose Leader
 let mapleader=","
-
-" setup for java autocomplete
-" autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " solved python38.dll bug
 let &pythonthreedll ="C:/Python39/python39.dll"
 let g:pymode_python = 'python3'
 
-" if has('python3')
-"   python3 import sys
-" endif
-
 " make python pretty
 let python_highlight_all = 1
 
-" mappings for replacement
-
-" For local replace
-" nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
-
-" For global replace
-" nnoremap gR gD:%s/<C-R>///gc<left><left><left>
-
-" latex compile shortcut into current directory
+" latex compile shortcut into current directory on Windows
 nnoremap <leader>ll :!pdflatex %; mv %:t:r.* %:p:h;
 nnoremap <leader>la :!cd %:h; explorer %:t:r.pdf
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" latex compile shortcut into current directory on Linux
 
 source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim
@@ -205,8 +172,8 @@ source ~/.vim/init/fzf.vim
 source ~/.vim/init/functions.vim
 source ~/.vim/init/git.vim
 source ~/.vim/init/mappings.vim
-" source ~/.vim/init/snippets.vim
+source ~/.vim/init/snippets.vim
 " source ~/.vim/init/telescope.vim
 source ~/.vim/init/tree.vim
 source ~/.vim/init/utils.vim
-" source ~/.vim/init/vimspector.vim
+source ~/.vim/init/vimspector.vim
