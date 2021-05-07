@@ -8,13 +8,13 @@
 		\ 'coc-cmake',
 		\ 'coc-java',
 		\ 'coc-jedi',
-		\ 'coc-prettier',
-		\ 'coc-pyright',
 		\ 'coc-python',
 		\ 'coc-vimlsp',
 		\ ]
 
 		" \ 'coc-todolist',
+		" \ 'coc-pyright',
+		" \ 'coc-prettier',
 		" \ 'coc-definition',
 
   nmap <silent> gd <Plug>(coc-definition)        " GoTo code navigation.

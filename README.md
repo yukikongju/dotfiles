@@ -4,77 +4,37 @@ Keeping track of my Dotfiles by using symlink
 
 ## Table of Contents
 
-1. [Usage](#usage)
-2. [Troubleshooting](#troubleshooting)
+1. [Requirements](#requirements)
+2. [Setting Up dotfiles](#setup)
+3. [What does .vimrc do](#what)
+4. [Troubleshooting](#troubleshooting)
 
-## Usage
+## Requirements
 
-#### Step 0: Clone this repository in your $HOME directory
+- [ ] Enable Symbolic Links on Git Bash: ``export MSYS=winsymlinks:nativestrict``
 
-```
-cd
-git clone https://github.com/yukikongju/dotfiles
-```
+- [ ] Download nodejs for coc.nvim: `` sudo apt-get install nodejs``
 
-#### Step 1: Enable Symbolic Links on Git Bash
+- [ ] Make vim a core editor: `` git config --global core.editor "vim"``
 
-For the symbolic links to work, you must enable symbolic links on your Git Bash.
-This step can be done two ways:
+## Setting Up Dotfiles
 
-Option 1: Reinstall Git Bash and allow Symbolic Links
+`` ./install.sh ``
 
-Option 2: Run Git Bash as admint and run the following command before executing sym link
+## What does .vimrc do
 
-```
-export MSYS=winsymlinks:nativestrict
-```
+- [x] Git Integration
+- [x] Autocomplete with coc.nvim
+- [ ] Snippets with ultisnip
+- [ ] Fuzzy file finder with fzf
+- [ ] Refractor
+- [ ] Latex Compiler
+- [ ] Debugger with vimspector
 
-For more information: https://github.community/t/git-bash-symbolic-links-on-windows/522/11
-
-#### Step 2: Generate Symbolic Links from Directory
-
-In your $HOME directory, execute:
-
-```
-./<...>/.dotfiles/init_symbolic_links.sh
-```
-
-## Troubleshooting
-
-Making Git use Vim as editor:
-`` git config --global core.editor "vim"``
-
-#### Python dll missing
-
-Option 1: We need to add the dll to the system path
-Option 2: Update all Bundles to see if patch has been pushed
-Option 3: using ``:let &pythonthreedll = 'C:/path/to/python36.dll'``
-
-E370: Could not load library python36.dll: https://github.com/vim/vim-win32-installer/issues/48
-More help: https://github.com/pyinstaller/pyinstaller/issues/4996
-
-#### Plugin Unavailable because Vim requires Python 3.6
-
-We have a problem because vim insn't installed with python. We can verify this
-with ``:version`` and see that python has a ``-python`` before it.
-
-The solution is to reinstall vim with python.
-
-```
-brew remove vim
-brew cleanup
-brew install vim --with-python
-```
-
-More information: https://stackoverflow.com/questions/65413685/youcompleteme-unavailable-requires-vim-compiled-with-python-3-6-0-support
-Update: https://superuser.com/questions/1115159/how-do-i-install-vim-on-osx-with-python-3-support
-
-Enabling +python feature in vim: https://vi.stackexchange.com/questions/11526/how-to-enable-python-feature-in-vim
 
 ## Ressources
 
 - [x] Dotfiles Management by Fireship: https://www.youtube.com/watch?v=r_MpUP6aKiQ&t=510s
 - [x] Splitting .vimrc file: https://vi.stackexchange.com/questions/5441/is-it-possible-and-useful-to-split-vimrc
 - [x] Enabling Symbolic Links in Git Bash: https://github.community/t/git-bash-symbolic-links-on-windows/522/11
-- [ ] dpecht's dotfiles examples: https://github.com/dspecht/dotfiles/blob/master/.vimr
 - [ ] Installing zsh: https://dev.to/zinox9/installing-zsh-on-windows-37em

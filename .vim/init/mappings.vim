@@ -45,6 +45,3 @@
   " nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>    " local replace
   " nnoremap gR gD:%s/<C-R>///gc<left><left><left>        " For global replace
 
-" Abbreviations for JAVA
-  " abbr psvm public static void main(String[] args){<CR>}<esc>O
-
