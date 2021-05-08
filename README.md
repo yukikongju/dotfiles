@@ -8,18 +8,26 @@ Keeping track of my Dotfiles by using symlink
 2. [Setting Up dotfiles](#setup)
 3. [What does .vimrc do](#what)
 4. [Troubleshooting](#troubleshooting)
+5. [Ressources](#ressorces)
 
 ## Requirements
 
-- [ ] Download Plugin manager from junegunn/vim-plug: `` curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+- [x] Download Plugin manager from junegunn/vim-plug: `` curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ``
-- [ ] Enable Symbolic Links on Git Bash: ``export MSYS=winsymlinks:nativestrict``
+- [x] Enable Symbolic Links on Git Bash: ``export MSYS=winsymlinks:nativestrict``
 
-- [ ] Download nodejs for coc.nvim: `` sudo apt-get install nodejs``
+- [x] Download nodejs for coc.nvim: `` sudo apt-get install nodejs``
 
-- [ ] Make vim a core editor: `` git config --global core.editor "vim"``
+- [x] Make vim a core editor: `` git config --global core.editor "vim"``
+- [x] Download pdflatex to compile latex files: `` sudo apt-get pdflatex``
 
 ## Setting Up Dotfiles
+
+#### Step 1: Download requirements
+
+`` ./requirements.sh``
+
+#### Step 2: Generate Symbolic Links
 
 `` ./install.sh ``
 
@@ -31,8 +39,9 @@ Keeping track of my Dotfiles by using symlink
 - [x] Snippets with ultisnips
 - [x] Mappings Refractor
 - [x] Windows Splitting with Tmux
-- [x] Latex Compiler with <leader>ll
+- [x] Latex Compiler with ``<leader>ll``
 - [ ] PDF file opener
+- [ ] Navigating through errors using quickfix
 - [ ] Macros Integration
 - [ ] Debugger with vimspector
 

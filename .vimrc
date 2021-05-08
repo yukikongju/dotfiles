@@ -31,7 +31,6 @@ Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
 " Plug 'davidhalter/jedi-vim' " Python autocomplete
 " Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
 Plug 'vim-scripts/c.vim' " c/c++ ide
-" Plug 'lervag/vimtex'
 
 " snippets
 " Plug 'neoclide/coc-snippets'
@@ -42,8 +41,12 @@ Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 " Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
 
+" latex compiler
+" Plug 'lervag/vimtex'
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
+
 " debugger
-" Plug 'puremourning/vimspector' "Debugger
+Plug 'puremourning/vimspector' "Debugger
 " Plug 'szw/vim-maximizer' "compelement vimspector
 
 " git
@@ -53,7 +56,7 @@ Plug 'tpope/vim-fugitive' "generate page to view commit message
 Plug 'vimwiki/vimwiki' " create linked text files and auto number
 " Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
-" Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
 
 call plug#end()
@@ -167,13 +170,19 @@ nnoremap <leader>ll :!pdflatex %; mv %:t:r.* %:p:h;
 nnoremap <leader>la :!cd %:h; explorer %:t:r.pdf
 
 " latex compile shortcut into current directory on Linux
+" nnoremap <leader>ll :!latexmk -pdf -pvc % ; mv %:t:r.* %:p:h;
+" nnoremap <leader>ll :!latexmk -pdf % ; mv %:t:r.* %:p:h;
+
+" test to view latex file
+let g:livepreview_previewer = 'pdflatex'
+let g:livepreview_engine = 'evince' . ' [options]'
 
 source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim
 source ~/.vim/init/colors.vim
 source ~/.vim/init/fzf.vim
 source ~/.vim/init/functions.vim
-" source ~/.vim/init/git.vim
+source ~/.vim/init/git.vim
 source ~/.vim/init/mappings.vim
 source ~/.vim/init/snippets.vim
 " source ~/.vim/init/telescope.vim

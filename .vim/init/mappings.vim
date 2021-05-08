@@ -40,6 +40,10 @@
   nnoremap J :m .+1<CR>gv=gv
   nnoremap K :m .-2<CR>gv=gv
 
+" quickfix remaps to find errors
+  " map <C-j> :cn<CR>
+  " map <C-k> :cp<CR>
+
 "  remap under cursor
   nnoremap <Leader>a :%s/\<<C-r><C-w>\>/
   " nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>    " local replace
