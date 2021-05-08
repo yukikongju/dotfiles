@@ -31,20 +31,20 @@ Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
 " Plug 'davidhalter/jedi-vim' " Python autocomplete
 " Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
 Plug 'vim-scripts/c.vim' " c/c++ ide
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 " snippets
 " Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 " Plug 'gillescastel/latex-snippets'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
+" Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
 
 " debugger
-Plug 'puremourning/vimspector' "Debugger
-Plug 'szw/vim-maximizer' "compelement vimspector
+" Plug 'puremourning/vimspector' "Debugger
+" Plug 'szw/vim-maximizer' "compelement vimspector
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
@@ -148,16 +148,19 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 
-
 " Choose Leader
 let mapleader=","
 
+" Workaround to fix weird utf-8 ubiquitous char that makes vim enter in
+" replace mode
+set t_u7=
+
 " solved python38.dll bug
-let &pythonthreedll ="C:/Python39/python39.dll"
-let g:pymode_python = 'python3'
+" let &pythonthreedll ="C:/Python39/python39.dll"
+" let g:pymode_python = 'python3'
 
 " make python pretty
-let python_highlight_all = 1
+" let python_highlight_all = 1
 
 " latex compile shortcut into current directory on Windows
 nnoremap <leader>ll :!pdflatex %; mv %:t:r.* %:p:h;
@@ -170,7 +173,7 @@ source ~/.vim/init/coc.vim
 source ~/.vim/init/colors.vim
 source ~/.vim/init/fzf.vim
 source ~/.vim/init/functions.vim
-source ~/.vim/init/git.vim
+" source ~/.vim/init/git.vim
 source ~/.vim/init/mappings.vim
 source ~/.vim/init/snippets.vim
 " source ~/.vim/init/telescope.vim

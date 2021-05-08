@@ -4,7 +4,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "
 " snippets
-let g:snipMate = { 'snippet_version' : 1 }
+" let g:snipMate = { 'snippet_version' : 1 }
 
 " let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 " let g:UltiSnipsUsePythonVersion = 3
