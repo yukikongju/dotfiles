@@ -28,10 +28,10 @@
   nnoremap <silent> K :call <SID>show_documentation()<CR>  " Use K to show documentation in preview window.
 
   " use <tab> for trigger completion and navigate to the next complete item
-  " function! s:check_back_space() abort
-	" let col = col('.') - 1
-	" return !col || getline('.')[col - 1]  =~ '\s'
-  " endfunction
+  function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction
 
   " inoremap <silent><expr> <Tab>
   "     \ pumvisible() ? "\<C-n>" :

@@ -30,11 +30,11 @@ Keeping track of my Dotfiles by using symlink
 - [x] Fuzzy file finder with fzf
 - [x] Snippets with ultisnips
 - [x] Mappings Refractor
+- [x] Windows Splitting with Tmux
+- [x] Latex Compiler with <leader>ll
+- [ ] PDF file opener
 - [ ] Macros Integration
-- [ ] Windows Splitting with Tmux
-- [ ] Latex Compiler
 - [ ] Debugger with vimspector
-
 
 ## Ressources
 

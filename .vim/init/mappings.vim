@@ -7,15 +7,15 @@
   nnoremap E $
 
 " Remap Save Session
-  nnoremap <leader>s :mksession<CR>			" we can save session with mks!
+  nnoremap <leader>s :mksession!<CR>			" we can save session with mks!
 
 " remap change windows split quickly
   nmap <leader>h :wincmd h<CR>
   nmap <leader>j :wincmd j<CR>
   nmap <leader>k :wincmd k<CR>
   nmap <leader>l :wincmd l<CR>
-  nnoremap <silent> <leader>+ :vertical resize +5<CR>
-  nnoremap <silent> <leader>- :vertical resize +5<CR>
+  nnoremap <Leader>+ :vertical resize +5<CR>
+  nnoremap <Leader>- :vertical resize +5<CR>
 
 " remap tabs change
   nmap gt :tabnext<CR>
@@ -37,11 +37,11 @@
   vnoremap Q :norm @q<cr>
 
 " mapping to move lines
-  nnoremap <C-j> :m .+1<CR>==
-  nnoremap <C-k> :m .-2<CR>==
+  nnoremap J :m .+1<CR>gv=gv
+  nnoremap K :m .-2<CR>gv=gv
 
-"  global remap
-  nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+"  remap under cursor
+  nnoremap <Leader>a :%s/\<<C-r><C-w>\>/
   " nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>    " local replace
   " nnoremap gR gD:%s/<C-R>///gc<left><left><left>        " For global replace
 
