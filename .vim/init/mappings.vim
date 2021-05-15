@@ -27,6 +27,14 @@
   nnoremap <leader>rv :source $MYVIMRC<cr>       " reload vimrv
   nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/ " open .vim files dir
 
+" latex compile shortcut into current directory on Windows
+  nnoremap <leader>ll :!pdflatex %; mv %:t:r.* %:p:h;
+  nnoremap <leader>la :!cd %:h; explorer %:t:r.pdf
+
+" Add all latex and pdf files inside repository
+  nnoremap <leader>lc :!git add */*.pdf */*.tex;
+" Autocommit latex and pdf files inside repository
+
 " Keybinding for date
   map <F2> :r! date +"\%A \%d \%B \%Y" <CR>
 
@@ -47,6 +55,8 @@
 
 "  remap under cursor
   nnoremap <Leader>a :%s/\<<C-r><C-w>\>/
-  " nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>    " local replace
-  " nnoremap gR gD:%s/<C-R>///gc<left><left><left>        " For global replace
+  " local replace
+  nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+  " Global replace
+  nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
