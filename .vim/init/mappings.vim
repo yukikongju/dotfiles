@@ -3,8 +3,10 @@
   nnoremap k gk
 
 " Remap jump to beginning/end of line
-  nnoremap B ^
-  nnoremap E $
+  map B ^
+  map E $
+  " nnoremap B ^
+  " nnoremap E $
 
 " Remap Save Session
   nnoremap <leader>s :mksession!<CR>			" we can save session with mks!
@@ -53,10 +55,7 @@
   " map <C-j> :cn<CR>
   " map <C-k> :cp<CR>
 
-"  remap under cursor
+"  remap under cursor, global replace
   nnoremap <Leader>a :%s/\<<C-r><C-w>\>/
-  " local replace
-  nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
-  " Global replace
-  nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+  nnoremap gR gD:%s/<C-R>///gc<left><left><left><C-R>
 
