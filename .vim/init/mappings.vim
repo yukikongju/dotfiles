@@ -25,6 +25,7 @@
 " edit and reload vimrc shortcut
   nnoremap <leader>ev :tabnew $MYVIMRC<cr>       " edit vimrc
   nnoremap <leader>rv :source $MYVIMRC<cr>       " reload vimrv
+  nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/ " open .vim files dir
 
 " Keybinding for date
   map <F2> :r! date +"\%A \%d \%B \%Y" <CR>
