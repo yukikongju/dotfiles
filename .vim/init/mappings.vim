@@ -5,11 +5,9 @@
 " Remap jump to beginning/end of line
   map B ^
   map E $
-  " nnoremap B ^
-  " nnoremap E $
 
 " Remap Save Session
-  nnoremap <leader>s :mksession!<CR>			" we can save session with mks!
+  nnoremap <leader>s :mksession!<CR>	" we can save session with mks!
 
 " remap change windows split quickly
   nmap <leader>h :wincmd h<CR>
@@ -22,7 +20,7 @@
 " remap tabs change
   nmap gt :tabnext<CR>
   nmap gT :tabprevious<CR>
-  nmap <leader>nt :tabe<CR>				" create new tab
+  nmap <leader>nt :tabe<CR>
 
 " edit and reload vimrc shortcut
   nnoremap <leader>ev :tabnew $MYVIMRC<cr>       " edit vimrc
@@ -41,7 +39,7 @@
   map <F2> :r! date +"\%A \%d \%B \%Y" <CR>
 
 " remap for file indentation
-  map <leader>r gg=G<CR>			" indent whole file with gg=G
+  map <leader>r gg=G<CR>
 
 " remap apply macros
   nnoremap Q @q
@@ -55,7 +53,18 @@
   " map <C-j> :cn<CR>
   " map <C-k> :cp<CR>
 
-"  remap under cursor, global replace
+" Workaround to fix letters insertion after using escape keys by remaping
+" escape + arrow to its respective motion
+  nnoremap <silent> <ESC>OA <UP>
+  nnoremap <silent> <ESC>OB <DOWN>
+  nnoremap <silent> <ESC>OC <RIGHT>
+  nnoremap <silent> <ESC>OD <LEFT>
+  inoremap <silent> <ESC>OA <UP>
+  inoremap <silent> <ESC>OB <DOWN>
+  inoremap <silent> <ESC>OC <RIGHT>
+  inoremap <silent> <ESC>OD <LEFT>
+
+" replace under cursor, global replace
   nnoremap <Leader>a :%s/\<<C-r><C-w>\>/
   nnoremap gR gD:%s/<C-R>///gc<left><left><left><C-R>
 
