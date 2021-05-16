@@ -7,7 +7,8 @@ call plug#begin('~/.vim/plugged')
 
 " utils
 Plug 'scrooloose/nerdtree'
-Plug 'mbbill/undotree' " view all undo history
+Plug 'szw/vim-maximizer' " Fix vim windows
+" Plug 'mbbill/undotree' " view all undo history
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
@@ -25,7 +26,7 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
+" Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
 " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --tern-completer' }
 " Plug 'davidhalter/jedi' " Python autocomplete
 " Plug 'davidhalter/jedi-vim' " Python autocomplete
@@ -36,7 +37,7 @@ Plug 'vim-scripts/c.vim' " c/c++ ide
 " Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
-" Plug 'gillescastel/latex-snippets'
+Plug 'gillescastel/latex-snippets'
 " Plug 'MarcWeber/vim-addon-mw-utils'
 " Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
@@ -56,7 +57,7 @@ Plug 'tpope/vim-fugitive' "generate page to view commit message
 Plug 'vimwiki/vimwiki' " create linked text files and auto number
 " Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
 
 call plug#end()
@@ -164,14 +165,6 @@ set t_u7=
 
 " make python pretty
 " let python_highlight_all = 1
-
-" latex compile shortcut into current directory on Windows
-nnoremap <leader>ll :!pdflatex %; mv %:t:r.* %:p:h;
-nnoremap <leader>la :!cd %:h; explorer %:t:r.pdf
-
-" latex compile shortcut into current directory on Linux
-" nnoremap <leader>ll :!latexmk -pdf -pvc % ; mv %:t:r.* %:p:h;
-" nnoremap <leader>ll :!latexmk -pdf % ; mv %:t:r.* %:p:h;
 
 " test to view latex file
 let g:livepreview_previewer = 'pdflatex'
