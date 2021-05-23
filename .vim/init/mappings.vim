@@ -25,7 +25,7 @@
 " edit and reload vimrc shortcut
   nnoremap <leader>ev :tabnew $MYVIMRC<cr>       " edit vimrc
   nnoremap <leader>rv :source $MYVIMRC<cr>       " reload vimrv
-  nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/ " open .vim files dir
+  nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/<cr> " open .vim files dir
 
 " latex compile shortcut into current directory on Windows
   nnoremap <leader>ll :!pdflatex %; mv %:t:r.* %:p:h;
@@ -36,10 +36,19 @@
 " Autocommit latex and pdf files inside repository
 
 " Keybinding for date
-  map <F2> :r! date +"\%A \%d \%B \%Y" <CR>
+  map <leader>d :r! date "+\%A \%d \%B \%Y" <CR>
+  map <leader>t :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
+
 
 " remap for file indentation
   map <leader>r gg=G<CR>
+
+" replace under cursor, global replace
+  nnoremap <Leader>a :%s/\<<C-r><C-w>\>/
+  nnoremap gR gD:%s/<C-R>///gc<left><left><left><C-R>
+
+" Search exact word
+
 
 " remap apply macros
   nnoremap Q @q
@@ -53,6 +62,9 @@
   " map <C-j> :cn<CR>
   " map <C-k> :cp<CR>
 
+" Execute python script from vim
+" noremap <leader>p :!clear; python3 %<CR>
+
 " Workaround to fix letters insertion after using escape keys by remaping
 " escape + arrow to its respective motion
   nnoremap <silent> <ESC>OA <UP>
@@ -64,7 +76,4 @@
   inoremap <silent> <ESC>OC <RIGHT>
   inoremap <silent> <ESC>OD <LEFT>
 
-" replace under cursor, global replace
-  nnoremap <Leader>a :%s/\<<C-r><C-w>\>/
-  nnoremap gR gD:%s/<C-R>///gc<left><left><left><C-R>
 

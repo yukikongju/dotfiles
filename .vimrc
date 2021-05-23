@@ -8,9 +8,14 @@ call plug#begin('~/.vim/plugged')
 " utils
 Plug 'scrooloose/nerdtree'
 Plug 'szw/vim-maximizer' " Fix vim windows
-" Plug 'mbbill/undotree' " view all undo history
+Plug 'mbbill/undotree' " view all undo history
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
+Plug 'tpope/vim-speeddating' "date shortcut"
+" Plug 'AntinoyDigirolamo/todo/todotxt-machine' "todo"
+Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
+" Plug 'aziz/PlainTasks' " todo list
+
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
 
 " file finder
@@ -28,13 +33,10 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 " Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
 " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --tern-completer' }
-" Plug 'davidhalter/jedi' " Python autocomplete
-" Plug 'davidhalter/jedi-vim' " Python autocomplete
-" Plug 'mattn/emmet-vim' " autocomplete for HTML, CSS, JS
 Plug 'vim-scripts/c.vim' " c/c++ ide
 
 " snippets
-" Plug 'neoclide/coc-snippets'
+Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 Plug 'gillescastel/latex-snippets'
@@ -127,7 +129,7 @@ set encoding=utf-8
 
 " Folding
 set foldmethod=syntax
-set foldlevelstart=1
+set foldlevelstart=2
 set foldnestmax=2
 " let g:markdown_folding=11
 

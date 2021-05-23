@@ -31,8 +31,12 @@ Keeping track of my Dotfiles by using symlink
 
 `` ./install.sh ``
 
+#### Step 3: Install Plugin
+`` :PlugInstall ``
+
 ## What does .vimrc do
 
+Pluggins:
 - [x] Git Integration
 - [x] Autocomplete with coc.nvim
 - [x] Fuzzy file finder with fzf
@@ -40,10 +44,15 @@ Keeping track of my Dotfiles by using symlink
 - [x] Mappings Refractor
 - [x] Windows Splitting with Tmux
 - [x] Latex Compiler with ``<leader>ll``
-- [ ] PDF file opener
-- [ ] Navigating through errors using quickfix
-- [ ] Macros Integration
+- [ ] PDF file viewer
 - [ ] Debugger with vimspector
+
+Native:
+- [ ] Navigating through errors using quickfix with ``:cn, :cp``
+- [X] Using Buffers and Registers to yank previous entries with
+      ``"<letter>yy`` and ``"<letter>p``
+- [X] Using Ticks to save local file position with ``'<letter>`` and ``m<letter>``
+- [X] Macros Integration with ``q<letter>`` and ``@<letter>``
 
 ## Ressources
 
@@ -52,3 +61,5 @@ Keeping track of my Dotfiles by using symlink
 - [x] Enabling Symbolic Links in Git Bash: https://github.community/t/git-bash-symbolic-links-on-windows/522/11
 - [ ] Installing zsh: https://dev.to/zinox9/installing-zsh-on-windows-37em
 - [ ] Download Unofficial Vim 8.2: https://itsfoss.com/vim-8-release-install/
+- [ ] Setting up Jupyter Notebook with Python on Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-set-up-jupyter-notebook-with-python-3-on-ubuntu-18-04
+

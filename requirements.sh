@@ -17,9 +17,8 @@ sudo apt install pdflatex
 sudo apt-get install python3-pip
 sudo apt-get install python3-venv
 
-
 # Download jedi for python autocomplete
-# pip3 install jedi-language-server
+pip3 install jedi-language-server
 # pip install -U pylint --user
 
 # Make vim main editor
