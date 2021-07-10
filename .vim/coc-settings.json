@@ -7,6 +7,8 @@
     "suggest.enablePreview": true,
     "suggest.removeDuplicateItems": true,
 
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+
     "codeLens.enable": true,
 
     "diagnostic.warningSign": "!",
@@ -14,7 +16,7 @@
 
     "coc.preferences.jumpCommand": "drop",
     "coc.preferences.rootPatterns": [".git", ".vscode"],
-    "coc.preferences.formatOnSaveFiletypes": ["python", "javascript", "javascriptreact", "typescriptreact", "css"],
+    "coc.preferences.formatOnSaveFiletypes": ["python", "javascript", "javascriptreact", "typescriptreact", "css", "tex"],
 
     "jedi.executable.command": "jedi-language-server",
     "jedi.enable": true,
@@ -29,8 +31,7 @@
 
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.jediEnabled": true
+    "python.jediEnabled": false
 
 }
-
 

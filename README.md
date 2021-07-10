@@ -51,7 +51,7 @@ Native:
 - [ ] Navigating through errors using quickfix with ``:cn, :cp``
 - [X] Using Buffers and Registers to yank previous entries with
       ``"<letter>yy`` and ``"<letter>p``
-- [X] Using Ticks to save local file position with ``'<letter>`` and ``m<letter>``
+- [X] Using Ticks to save local file position with `` '<letter>`` and ``m<letter>``
 - [X] Macros Integration with ``q<letter>`` and ``@<letter>``
 
 ## Ressources

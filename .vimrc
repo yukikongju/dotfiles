@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
-filetype plugin on
+" filetype plugin on
+filetype plugin indent on
 
 " Pluggins
 call plug#begin('~/.vim/plugged')
@@ -97,7 +98,7 @@ set shiftwidth=4
 " set softtabstop=4
 set smarttab
 set smartindent
-" set autoindent
+set autoindent " remove??
 set noshiftround
 
 " Swapfiles
