@@ -21,6 +21,13 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 unlink $HOME/.vim/coc-settings.json
 ln -s ~/dotfiles/.vim/coc-settings.json ~/.vim/coc-settings.json
 
+# generate symbolic link for .bashrc file
+unlink $HOME/.bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+
+# generate symbolic link for .bash_aliases file
+
+
 # generate symlinks for snippets
 # mkdir -p ~/.vim/snippets
 # for f in $(ls ~/dotfiles/.vim/snippets); do

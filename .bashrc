@@ -48,3 +48,44 @@ wht='\[\033[01;37m\]'   # White
 clr='\[\033[00m\]'      # Reset
 
 ########################## CUSTOMIZATION ##########################
+
+# Display the current Git branch in the Bash prompt.
+
+function git_branch() {
+    if [ -d .git  ] ; then
+	printf "%s" "($(git branch 2> /dev/null | awk '/\*/{print $2}'))";
+    fi
+}
+
+# Set the prompt.
+function bash_prompt(){
+    PS1='${debian_chroot:+($debian_chroot)}'${red}'$(git_branch)'${blu}' \W'${grn}' \$ '${clr}
+}
+
+bash_prompt
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+########################### FUNCTIONS ############################
+
+# initialize new git project: git_init project_name
+
+function git_init() {
+    if [ -z "$1"  ]; then
+	printf "%s\n" "Please provide a directory name.";
+    else
+	mkdir "$1";
+	builtin cd "$1";
+	pwd;
+	git init;
+	touch readme.md .gitignore LICENSE;
+	echo "# $(basename $PWD)" >> readme.md
+    fi
+}
