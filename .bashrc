@@ -52,18 +52,14 @@ clr='\[\033[00m\]'      # Reset
 # Display the current Git branch in the Bash prompt.
 
 function git_branch() {
-    if [ -d .git  ] ; then
-	printf "%s" "($(git branch 2> /dev/null | awk '/\*/{print $2}'))";
-    fi
-}
-
-function parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 # Set the prompt.
 function bash_prompt(){
-      PS1='${debian_chroot:+($debian_chroot)} '${blu}'\w '${pur}'$(parse_git_branch)'${grn}' \$ '${clr}
+    # PS1='${debian_chroot:+($debian_chroot)} '${blu}'\w '${red}'$(git_branch)'${grn}' \$ '${clr}
+    PS1=''${grn}'$(whoami) '${wht}'in ${debian_chroot:+($debian_chroot)}'${blu}'\w '${red}'$(git_branch)'${grn}'\$ '${clr}
+    # PS1='${debian_chroot:+($debian_chroot)} '${cyn}'\w '${pur}'$(git_branch)'${grn}' \$ '${clr}
 }
 
 bash_prompt
@@ -76,6 +72,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 
 ########################### FUNCTIONS ############################
 
