@@ -77,6 +77,11 @@ fi
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# add fzf autocomplete for terminal
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# export FZF_DEFAULT_OPS="--extended"
+# export FZF_DEFAULT_COMMAND="fd --type f"
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 ########################### FUNCTIONS ############################
 
@@ -94,3 +99,4 @@ function git_init() {
 	echo "# $(basename $PWD)" >> readme.md
     fi
 }
+

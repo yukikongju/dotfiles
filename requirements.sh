@@ -13,7 +13,7 @@ sudo apt install pdflatex
 # Download mupdf to open pdf file
 # sudo apt install mupdf
 
-# Download pip for python
+# Download pip and virtual environment for python
 sudo apt-get install python3-pip
 sudo apt-get install python3-venv
 
@@ -23,5 +23,15 @@ pip3 install jedi-language-server
 
 # Make vim main editor
 # git config --global core.editor "vim"
+
+# install fzf for terminal
+# ctrl+r: terminal command history
+# ctrl+t: file finder
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install # say yes to all
+source ~/.bashrc
+source ~/.zshrc
+sudo apt install fdclone
+
 
 
