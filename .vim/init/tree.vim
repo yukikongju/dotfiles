@@ -4,7 +4,7 @@ nnoremap <leader>u :UndotreeShow<CR>
 " NERDTree Configs
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window left.
 " autocmd StdinReadPre * let s:std_in=1

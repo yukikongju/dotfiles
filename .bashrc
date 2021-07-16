@@ -57,9 +57,13 @@ function git_branch() {
     fi
 }
 
+function parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 # Set the prompt.
 function bash_prompt(){
-    PS1='${debian_chroot:+($debian_chroot)}'${red}'$(git_branch)'${blu}' \W'${grn}' \$ '${clr}
+      PS1='${debian_chroot:+($debian_chroot)} '${blu}'\w '${pur}'$(parse_git_branch)'${grn}' \$ '${clr}
 }
 
 bash_prompt
