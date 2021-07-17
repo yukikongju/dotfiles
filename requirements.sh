@@ -21,6 +21,9 @@ sudo apt-get install python3-venv
 pip3 install jedi-language-server
 # pip install -U pylint --user
 
+# download other packages
+sudo apt install rename # rename package
+
 # Make vim main editor
 # git config --global core.editor "vim"
 

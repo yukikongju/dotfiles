@@ -95,7 +95,7 @@ function git_init() {
 	builtin cd "$1";
 	pwd;
 	git init;
-	touch README.md .gitignore LICENSE;
+	touch README.md .gitignore LICENSE requirements.txt;
 	echo "# $(basename $PWD) " >> README.md
 	echo "" >> README.md
 
@@ -111,7 +111,15 @@ function git_init() {
 
 	# create sections
 	echo "" >> README.md
-	echo "## [Requirements](#requirements)" >> README.md
+	echo -e "## [Requirements](#requirements)\n" >> README.md
+	echo -e "#### Step 1: Create virtual environment with venv (suggested)\n" >> README.md
+	venv_name=$(echo "$(basename $PWD)-venv" | awk '{print tolower($0)}')
+	echo -e "\`\` python3 -m venv $venv_name \`\`\n" >> README.md
+	echo -e "\`\` source "${venv_name}"/bin/activate \`\`\n" >> README.md
+	echo -e "#### Step 2: Install Requirements\n" >> README.md
+	echo -e "\`\` pip install -r requirements.txt \`\` \n" >> README.md
+
+	echo "" >> README.md
 	echo "## [Features](#features)" >> README.md
 	echo "## [How it Works](#how-it-works)" >> README.md
 	echo "## [Usage](#usage)" >> README.md
