@@ -79,7 +79,7 @@ fi
 
 # add fzf autocomplete for terminal
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# export FZF_DEFAULT_OPS="--extended"
+export FZF_DEFAULT_OPS="--extended"
 # export FZF_DEFAULT_COMMAND="fd --type f"
 # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
@@ -95,8 +95,31 @@ function git_init() {
 	builtin cd "$1";
 	pwd;
 	git init;
-	touch readme.md .gitignore LICENSE;
-	echo "# $(basename $PWD)" >> readme.md
+	touch README.md .gitignore LICENSE;
+	echo "# $(basename $PWD) " >> README.md
+	echo "" >> README.md
+
+	# create table of contents in README.md
+	echo "## Table of Contents" >> README.md
+	echo "" >> README.md
+	echo "- [Requirements](#requirements)" >> README.md
+	echo "- [Features](#features)" >> README.md
+	echo "- [How it Works](#how-it-works)" >> README.md
+	echo "- [Usage](#usage)" >> README.md
+	echo "- [Classes](#classes)" >> README.md
+	echo "- [Ressources](#ressources)" >> README.md
+
+	# create sections
+	echo "" >> README.md
+	echo "## [Requirements](#requirements)" >> README.md
+	echo "## [Features](#features)" >> README.md
+	echo "## [How it Works](#how-it-works)" >> README.md
+	echo "## [Usage](#usage)" >> README.md
+	echo "## [Classes](#classes)" >> README.md
+	echo "## [Ressources](#ressources)" >> README.md
+
+	# open README.md after creating project
+	vi README.md
     fi
 }
 
