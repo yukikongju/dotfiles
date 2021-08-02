@@ -40,6 +40,7 @@ Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
+" Plug 'ervandew/supertab' "use tab for all completion
 Plug 'gillescastel/latex-snippets'
 " Plug 'MarcWeber/vim-addon-mw-utils'
 " Plug 'tomtom/tlib_vim'
@@ -147,7 +148,6 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
-nnoremap <esc> :noh<return><esc>
 
 " Colorscheme
 syntax enable

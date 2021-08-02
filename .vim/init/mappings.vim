@@ -1,13 +1,21 @@
 " Remap vertical move
   nnoremap j gj
   nnoremap k gk
+  " inoremap <C-j> gj
+  " inoremap <C-k> gk
 
 " Remap jump to beginning/end of line
-  map B ^
-  map E $
+  nnoremap B ^
+  nnoremap E $
+  nnoremap Y y$
+
+" Keeping everything centered
+  nnoremap n nzzzv
+  nnoremap N Nzzzv
+  nnoremap J mzJ`z
 
 " Remap Save Session
-  nnoremap <leader>s :mksession!<CR>	" we can save session with mks!
+  nnoremap <leader>s :mksession!<CR>
 
 " remap change windows split quickly
   nmap <leader>h :wincmd h<CR>
@@ -33,12 +41,12 @@
 
 " Add all latex and pdf files inside repository
   nnoremap <leader>lc :!git add */*.pdf */*.tex;
+
 " Autocommit latex and pdf files inside repository
 
 " Keybinding for date
   map <leader>d :r! date "+\%A \%d \%B \%Y" <CR>
   map <leader>t :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
-
 
 " remap for file indentation
   map <leader>r gg=G<CR>
@@ -49,14 +57,24 @@
 
 " Search exact word
 
+" Clear highlight after search
+  nnoremap <esc><esc> :noh<return>
 
 " remap apply macros
   nnoremap Q @q
   vnoremap Q :norm @q<cr>
 
 " mapping to move lines
-  nnoremap J :m .+1<CR>gv=gv
-  nnoremap K :m .-2<CR>gv=gv
+  vnoremap J :m '>+1<CR>gv=gv
+  vnoremap K :m '<-2<CR>gv=gv
+  nnoremap <C-j> :m .+1<CR>==
+  nnoremap <C-k> :m .-2<CR>==
+
+" adding/removing blank line above/below
+  nnoremap <F2> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+  nnoremap <F3> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+  nnoremap <F4> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+  nnoremap <F5> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " quickfix remaps to find errors
   " map <C-j> :cn<CR>
