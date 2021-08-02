@@ -81,7 +81,7 @@
   " map <C-k> :cp<CR>
 
 " Execute python script from vim
-" noremap <leader>p :!clear; python3 %<CR>
+ noremap <F7> <ESC>:w<CR>:silent execute "!python %"<CR><CR>
 
 " Workaround to fix letters insertion after using escape keys by remaping
 " escape + arrow to its respective motion
