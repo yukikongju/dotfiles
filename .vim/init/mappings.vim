@@ -45,8 +45,8 @@
 " Autocommit latex and pdf files inside repository
 
 " Keybinding for date
-  map <leader>d :r! date "+\%A \%d \%B \%Y" <CR>
-  map <leader>t :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
+  map <F1> :r! date "+\%A \%d \%B \%Y" <CR>
+  map <F2> :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
 
 " remap for file indentation
   map <leader>r gg=G<CR>
@@ -71,10 +71,10 @@
   nnoremap <C-k> :m .-2<CR>==
 
 " adding/removing blank line above/below
-  nnoremap <F2> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-  nnoremap <F3> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-  nnoremap <F4> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-  nnoremap <F5> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+  nnoremap <F3> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+  nnoremap <F4> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+  nnoremap <F5> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+  nnoremap <F6> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " quickfix remaps to find errors
   " map <C-j> :cn<CR>
