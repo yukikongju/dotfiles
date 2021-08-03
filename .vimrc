@@ -8,8 +8,8 @@ call plug#begin('~/.vim/plugged')
 
 " utils
 Plug 'scrooloose/nerdtree'
-Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'mbbill/undotree' " view all undo history
+Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'tpope/vim-speeddating' "date shortcut"
@@ -33,7 +33,6 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 " Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
-" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'vim-scripts/c.vim' " c/c++ ide
 
 " snippets
@@ -52,7 +51,6 @@ Plug 'gillescastel/latex-snippets'
 
 " debugger
 Plug 'puremourning/vimspector' "Debugger
-" Plug 'szw/vim-maximizer' "compelement vimspector
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
@@ -70,16 +68,18 @@ call plug#end()
 syntax on
 
 " Autocompletion
-" set complete+=kspell
 set completeopt=menuone,longest
 set shortmess+=c
 set updatetime=300					" Faster Completion
 
-" Spelling
-" set spell
+" Enable dictionary autocompletion in Markdown files and Git Commit Messages
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType gitcommit setlocal complete+=kspell
 " set spelllang=eng
 
-" Mouse
+" Activate Mouse Action
 " set mouse=a
 
 " Cursor

@@ -153,7 +153,7 @@ function generate_vimspector_python_json() {
     printf '\t\t\t"type":"python",\n' >> .vimspector.json
     printf '\t\t\t"protocol": "auto",\n' >> .vimspector.json
     printf '\t\t\t"stopOnEntry": true,\n' >> .vimspector.json
-    printf '\t\t\t"justMyCode": false,\n' >> .vimspector.json
+    printf '\t\t\t"justMyCode": true,\n' >> .vimspector.json
     printf '\t\t\t"cwd":"${workspaceRoot}",\n' >> .vimspector.json
     printf '\t\t\t"program": "${file}",\n' >> .vimspector.json
     printf '\t\t\t"debugOptions":[],\n' >> .vimspector.json

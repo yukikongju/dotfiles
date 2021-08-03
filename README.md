@@ -36,7 +36,7 @@ Keeping track of my Dotfiles by using symlink
 
 ## What does .vimrc do
 
-Pluggins:
+Plugins:
 - [X]  Git Integration
 - [X] Autocomplete with coc.nvim
 - [X] Fuzzy file finder with fzf
@@ -54,6 +54,7 @@ Native:
 - [X] Using Ticks to save local file position with `` '<letter>`` and ``m<letter>``
 - [X] Macros Integration with ``q<letter>`` and ``@<letter>``
 - [X] Execute python script inside vim with ``<F7>``
+- [X] Spelling Checker for Markdown files with errors fix suggestions with ``z=`` in normal mode
 
 ## Ressources
 
