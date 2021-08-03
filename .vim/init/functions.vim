@@ -5,11 +5,19 @@ fun! TrimWhiteSpace()
     call winrestview(l:save)
 endfun
 
-augroup THE_PRIMAGEN
+augroup TrailSpace
     autocmd!
     autocmd BufWritePre * :call TrimWhiteSpace()
 augroup END
 
+" Formating file on save
+" autocmd bufwritepost *.js silent !standard --fix %
+" au BufWrite * silent! :Autoformat
+
+augroup RemoveEmptyLinesButOne
+    autocmd FileType java,javascript,c
+		\ autocmd! RemoveEmptyLinesButOne BufWritePost <buffer> silent! :g/^\_$\n\_^$/d
+augroup END
 
 " allows cursor change in tmux mode (untested)
 " if exists('$TMUX')

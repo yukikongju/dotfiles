@@ -30,10 +30,10 @@ nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 
 " adding/removing blank line above/below
-nnoremap <F3> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <F4> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <F5> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-nnoremap <F6> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+" nnoremap <F3> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+" nnoremap <F4> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+" nnoremap <F5> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+" nnoremap <F6> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " remap change windows split quickly (<c-w>hjkl)
 nnoremap <Leader>+ :vertical resize +5<CR>

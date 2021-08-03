@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 #######################################################################
-#                            Installations                            #
+#                  Programs/Languages Installations                   #
 #######################################################################
 
 # Download Plugin Manager
@@ -10,7 +10,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent
 # Install Python
 sudo apt-get install python3-pip
 sudo apt-get install python3-venv # create python-venv
-pip3 install jedi-language-server # python autocomplete
 
 # Install Java
 sudo apt install default-jre
@@ -30,6 +29,21 @@ sudo apt install pdflatex
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install # say yes to all
 
+#######################################################################
+#                       Packages Installations                        #
+#######################################################################
+
+# Change npm permissions
+ mkdir ~/.npm-global
+ npm config set prefix '~/.npm-global'
+ export PATH=~/.npm-global/bin:$PATH
+ source ~/.profile
+
+# Install JS Packages
+npm install -g standard # js style formatting
+
+# Install Python Packages
+pip3 install jedi-language-server # python autocomplete
 
 #######################################################################
 #                       Generate Symbolic Links                       #

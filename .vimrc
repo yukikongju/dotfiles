@@ -1,6 +1,5 @@
 set nocompatible
 filetype off
-" filetype plugin on
 filetype plugin indent on
 
 " Pluggins
@@ -13,9 +12,8 @@ Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'tpope/vim-speeddating' "date shortcut"
-" Plug 'AntinoyDigirolamo/todo/todotxt-machine' "todo"
 Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
-" Plug 'aziz/PlainTasks' " todo list
+Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
 
@@ -32,15 +30,19 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-" Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
 Plug 'vim-scripts/c.vim' " c/c++ ide
+Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
+" Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
+
+" autoformat
+Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
 
 " snippets
 Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
-" Plug 'ervandew/supertab' "use tab for all completion
 Plug 'gillescastel/latex-snippets'
+" Plug 'ervandew/supertab' "use tab for all completion
 " Plug 'MarcWeber/vim-addon-mw-utils'
 " Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
@@ -59,7 +61,6 @@ Plug 'tpope/vim-fugitive' "generate page to view commit message
 Plug 'vimwiki/vimwiki' " create linked text files and auto number
 " Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
-" Plug 'christoomey/vim-tmux-navigator'
 " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
 
 call plug#end()
@@ -71,6 +72,7 @@ syntax on
 set completeopt=menuone,longest
 set shortmess+=c
 set updatetime=300					" Faster Completion
+" set omnifunc=syntaxcomplete#Complete
 
 " Enable dictionary autocompletion in Markdown files and Git Commit Messages
 autocmd FileType markdown setlocal spell
@@ -87,7 +89,6 @@ set scrolloff=8
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 set visualbell
-set noerrorbells
 set cursorline " Highlight line under cursor
 let &t_SI = "\<esc>[5 q" " I beam cursor for insert mode
 let &t_EI = "\<esc>[2 q" " block cursor for normal mode
@@ -161,7 +162,8 @@ colorscheme gruvbox
 " Choose Leader
 let mapleader=","
 
-" Workaround to fix weird utf-8 ubiquitous char that makes vim enter in
+
+" Work around to fix weird utf-8 ubiquitous char that makes vim enter in
 " replace mode
 set t_u7=
 

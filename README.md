@@ -37,24 +37,27 @@ Keeping track of my Dotfiles by using symlink
 ## What does .vimrc do
 
 Plugins:
-- [X]  Git Integration
+- [X] Git Integration
+- [X] File System Explorer with NERDTree and ``<leader>t`` and ``<leader>f``
 - [X] Autocomplete with coc.nvim
-- [X] Fuzzy file finder with fzf
-- [X] Snippets with ultisnips
+- [X] Fuzzy file finder with fzf ``<c-f>``
+- [ ] Snippets with ultisnips
 - [X] Mappings Refractor
 - [X] Windows Splitting with Tmux
 - [X] Latex Compiler with ``<leader>ll``
 - [ ] PDF file viewer
-- [ ] Debugger with vimspector
+- [X] Debugger with vimspector and ``<leader>dd``
 
 Native:
 - [X] Navigating through errors using quickfix with ``:cn, :cp``
+- [X] Global and local rename with ``<leader>a``
 - [X] Using Buffers and Registers to yank previous entries with
       ``"<letter>yy`` and ``"<letter>p``
 - [X] Using Ticks to save local file position with `` '<letter>`` and ``m<letter>``
 - [X] Macros Integration with ``q<letter>`` and ``@<letter>``
 - [X] Execute python script inside vim with ``<F7>``
 - [X] Spelling Checker for Markdown files with errors fix suggestions with ``z=`` in normal mode
+- [X] Open ``.vimrc`` file anywhere with ``<leader>ev``
 
 ## Ressources
 
