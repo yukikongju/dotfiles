@@ -112,24 +112,34 @@ function git_init() {
 
 # TO FIX: indentation doesn't work
 # VIMSPECTOR_CONTENT=$(cat <<-END
-    # {
-        # "configurations": {
-            # "run Python":{
-                # "adapter" : "debugpy",
-                # "configuration" :{
-                # "request": "launch",
-                # "type":"python",
-                # "protocol": "auto",
-                # "stopOnEntry": true,
-                # "cwd":"~$(pwd)",
-                # "program": "*.py",
-                # "debugOptions":[]
+# {
+    # "configurations": {
+	# "run Python":{
+	    # "adapter" : "debugpy",
+	    # "configuration" :{
+		# "request": "launch",
+		# "type":"python",
+		# "protocol": "auto",
+		# "stopOnEntry": false,
+		# "justMyCode": false,
+		# "cwd":"${workspaceRoot}",
+		# "program": "${file}",
+		# "debugOptions":[],
+		# "args":[ "*${CommandLineArgs}" ]
+	    # },
+	    # "breakpoints": {
+		# "exception": {
+		    # "caught": "N",
+		    # "uncaught": "Y"
 		# }
 	    # }
 	# }
     # }
+# }
 # END
 # )
+
+
 
 function generate_vimspector_python_json() {
     touch .vimspector.json
@@ -143,10 +153,20 @@ function generate_vimspector_python_json() {
     printf '\t\t\t"type":"python",\n' >> .vimspector.json
     printf '\t\t\t"protocol": "auto",\n' >> .vimspector.json
     printf '\t\t\t"stopOnEntry": true,\n' >> .vimspector.json
-    printf '\t\t\t"cwd":"~/%s",\n' $dir >> .vimspector.json
-    printf '\t\t\t"program": "main.py",\n' >> .vimspector.json
-    printf '\t\t\t"debugOptions":[]\n' >> .vimspector.json
+    printf '\t\t\t"justMyCode": false,\n' >> .vimspector.json
+    printf '\t\t\t"cwd":"${workspaceRoot}",\n' >> .vimspector.json
+    printf '\t\t\t"program": "${file}",\n' >> .vimspector.json
+    printf '\t\t\t"debugOptions":[],\n' >> .vimspector.json
+    printf '\t\t\t"args":[ "*${CommandLineArgs}" ]\n' >> .vimspector.json
+    printf '\t\t\t},\n' >> .vimspector.json
+
+    printf '\t\t\t"breakpoints" :{\n' >> .vimspector.json
+    printf '\t\t\t\t"exception" :{\n' >> .vimspector.json
+    printf '\t\t\t\t"caught" : "N",\n' >> .vimspector.json
+    printf '\t\t\t\t"uncaught" : "Y"\n' >> .vimspector.json
+    printf '\t\t\t\t}\n' >> .vimspector.json
     printf '\t\t\t}\n' >> .vimspector.json
+
     printf '\t\t}\n' >> .vimspector.json
     printf '\t}\n' >> .vimspector.json
     printf '}\n' >> .vimspector.json

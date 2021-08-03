@@ -53,6 +53,7 @@ Native:
       ``"<letter>yy`` and ``"<letter>p``
 - [X] Using Ticks to save local file position with `` '<letter>`` and ``m<letter>``
 - [X] Macros Integration with ``q<letter>`` and ``@<letter>``
+- [X] Execute python script inside vim with ``<F7>``
 
 ## Ressources
 
