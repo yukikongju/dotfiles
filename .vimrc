@@ -87,6 +87,8 @@ set scrolloff=8
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 set visualbell
+set noerrorbells
+set cursorline " Highlight line under cursor
 let &t_SI = "\<esc>[5 q" " I beam cursor for insert mode
 let &t_EI = "\<esc>[2 q" " block cursor for normal mode
 let &t_SR = "\<esc>[3 q" " underline cursor for replace mode
@@ -94,18 +96,19 @@ let &t_SR = "\<esc>[3 q" " underline cursor for replace mode
 " Indentation and tabulation
 set wrap
 set formatoptions=tcqrn1
-" set tabstop=4
 set shiftwidth=4
-" set softtabstop=4
 set smarttab
 set smartindent
-set autoindent " remove??
+set autoindent
 set noshiftround
+" set tabstop=4
+" set softtabstop=4 " number of spaces in tab
 
 " Swapfiles
 set nobackup
 set nowritebackup
 set noswapfile
+set autowrite " save automatically before :next and :make
 
 " File Stats
 set ruler
@@ -122,6 +125,7 @@ set wildmenu
 set nostartofline
 set signcolumn=yes
 set colorcolumn=80
+set title " Set Windows's title
 
 " Rendering
 set ttyfast
@@ -131,9 +135,8 @@ set encoding=utf-8
 
 " Folding
 set foldmethod=syntax
-set foldlevelstart=2
+set foldlevelstart=5 " open all fold nested below n level deep
 set foldnestmax=2
-" let g:markdown_folding=11
 
 " Buffers
 set hidden

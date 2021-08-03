@@ -1,11 +1,41 @@
 #!/usr/bin/sh
 
-# get plugin manager (to test)
-# curl -fLo ~/.dotfiles/.vim/autoload/plug.vim --create-dirs \
-#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# ln -s ~/.dotfiles/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
+#######################################################################
+#                            Installations                            #
+#######################################################################
 
-# generate symbolic links in $HOME directory
+# Download Plugin Manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install Python
+sudo apt-get install python3-pip
+sudo apt-get install python3-venv # create python-venv
+pip3 install jedi-language-server # python autocomplete
+
+# Install Java
+sudo apt install default-jre
+sudo apt install default-jdk # install javac compiler
+
+# Install JavaScript
+sudo apt-get install nodejs
+sudo apt-get install npm # js package manager
+
+# Install Latex Compiler
+sudo apt install pdflatex
+
+# Install File Manager
+# sudo apt install fdclone
+
+# install fzf for terminal
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install # say yes to all
+
+
+#######################################################################
+#                       Generate Symbolic Links                       #
+#######################################################################
+
+# generate sym links for .vim/init
 mkdir -p ~/.vim/init
 for f in $(ls ~/dotfiles/.vim/init); do
     unlink $HOME/.vim/init/$f
@@ -15,6 +45,7 @@ done
 
 # generate symbolic link for .vimrc
 unlink $HOME/.vimrc
+# rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 # generate symbolic link for coc-settings.json
@@ -36,4 +67,17 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc
     # ln -s ~/dotfiles/.vim/snippets/$f ~/.vim/snippets/$f
 # done
 
+#######################################################################
+#                            Miscellaneous                            #
+#######################################################################
 
+# Installing Vim Pluggins
+printf "\n\n Installing Vim Pluggins...\n"
+# vim -E +PlugInstall +qall || true
+
+# Make vim main editor
+git config --global core.editor "vim"
+
+# reload all rc files
+source ~/.bashrc
+source ~/.zshrc
