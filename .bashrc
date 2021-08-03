@@ -95,39 +95,94 @@ function git_init() {
 	builtin cd "$1";
 	pwd;
 	git init;
-	touch README.md .gitignore LICENSE requirements.txt;
-	echo "# $(basename $PWD) " >> README.md
-	echo "" >> README.md
+	touch .gitignore LICENSE requirements.txt;
 
-	# create table of contents in README.md
-	echo "## Table of Contents" >> README.md
-	echo "" >> README.md
-	echo "- [Requirements](#requirements)" >> README.md
-	echo "- [Features](#features)" >> README.md
-	echo "- [How it Works](#how-it-works)" >> README.md
-	echo "- [Usage](#usage)" >> README.md
-	echo "- [Classes](#classes)" >> README.md
-	echo "- [Ressources](#ressources)" >> README.md
+	# generate README.md
+	generate_readme
 
-	# create sections
-	echo "" >> README.md
-	echo -e "## [Requirements](#requirements)\n" >> README.md
-	echo -e "#### Step 1: Create virtual environment with venv (suggested)\n" >> README.md
-	venv_name=$(echo "$(basename $PWD)-venv" | awk '{print tolower($0)}')
-	echo -e "\`\` python3 -m venv $venv_name \`\`\n" >> README.md
-	echo -e "\`\` source "${venv_name}"/bin/activate \`\`\n" >> README.md
-	echo -e "#### Step 2: Install Requirements\n" >> README.md
-	echo -e "\`\` pip install -r requirements.txt \`\` \n" >> README.md
+	# generate LICENCE
 
-	echo "" >> README.md
-	echo "## [Features](#features)" >> README.md
-	echo "## [How it Works](#how-it-works)" >> README.md
-	echo "## [Usage](#usage)" >> README.md
-	echo "## [Classes](#classes)" >> README.md
-	echo "## [Ressources](#ressources)" >> README.md
+	# generate .vimspector.json file for debugger
+	generate_vimspector_python_json
 
 	# open README.md after creating project
 	vi README.md
     fi
+}
+
+# TO FIX: indentation doesn't work
+# VIMSPECTOR_CONTENT=$(cat <<-END
+    # {
+        # "configurations": {
+            # "run Python":{
+                # "adapter" : "debugpy",
+                # "configuration" :{
+                # "request": "launch",
+                # "type":"python",
+                # "protocol": "auto",
+                # "stopOnEntry": true,
+                # "cwd":"~$(pwd)",
+                # "program": "*.py",
+                # "debugOptions":[]
+		# }
+	    # }
+	# }
+    # }
+# END
+# )
+
+function generate_vimspector_python_json() {
+    touch .vimspector.json
+    dir=$(basename $PWD)
+    printf '{\n' >> .vimspector.json
+    printf '\t"configurations": {\n' >> .vimspector.json
+    printf '\t\t"run Python":{\n' >> .vimspector.json
+    printf '\t\t\t"adapter" : "debugpy",\n' >> .vimspector.json
+    printf '\t\t\t"configuration" :{\n' >> .vimspector.json
+    printf '\t\t\t"request": "launch",\n' >> .vimspector.json
+    printf '\t\t\t"type":"python",\n' >> .vimspector.json
+    printf '\t\t\t"protocol": "auto",\n' >> .vimspector.json
+    printf '\t\t\t"stopOnEntry": true,\n' >> .vimspector.json
+    printf '\t\t\t"cwd":"~/%s",\n' $dir >> .vimspector.json
+    printf '\t\t\t"program": "main.py",\n' >> .vimspector.json
+    printf '\t\t\t"debugOptions":[]\n' >> .vimspector.json
+    printf '\t\t\t}\n' >> .vimspector.json
+    printf '\t\t}\n' >> .vimspector.json
+    printf '\t}\n' >> .vimspector.json
+    printf '}\n' >> .vimspector.json
+}
+
+
+function generate_readme() {
+    touch README.md
+    echo "# $(basename $PWD) " >> README.md
+    echo "" >> README.md
+
+    # create table of contents in README.md
+    echo "## Table of Contents" >> README.md
+    echo "" >> README.md
+    echo "- [Requirements](#requirements)" >> README.md
+    echo "- [Features](#features)" >> README.md
+    echo "- [How it Works](#how-it-works)" >> README.md
+    echo "- [Usage](#usage)" >> README.md
+    echo "- [Classes](#classes)" >> README.md
+    echo "- [Ressources](#ressources)" >> README.md
+
+    # create sections
+    echo "" >> README.md
+    echo -e "## [Requirements](#requirements)\n" >> README.md
+    echo -e "#### Step 1: Create virtual environment with venv (suggested)\n" >> README.md
+    venv_name=$(echo "$(basename $PWD)-venv" | awk '{print tolower($0)}')
+    echo -e "\`\` python3 -m venv $venv_name \`\`\n" >> README.md
+    echo -e "\`\` source "${venv_name}"/bin/activate \`\`\n" >> README.md
+    echo -e "#### Step 2: Install Requirements\n" >> README.md
+    echo -e "\`\` pip install --upgrade -r requirements.txt \`\` \n" >> README.md
+
+    echo "" >> README.md
+    echo "## [Features](#features)" >> README.md
+    echo "## [How it Works](#how-it-works)" >> README.md
+    echo "## [Usage](#usage)" >> README.md
+    echo "## [Classes](#classes)" >> README.md
+    echo "## [Ressources](#ressources)" >> README.md
 }
 
