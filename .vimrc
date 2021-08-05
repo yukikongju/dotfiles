@@ -13,7 +13,9 @@ Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'tpope/vim-speeddating' "date shortcut"
 Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
-Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
+Plug 'liuchengxu/vim-which-key' " show all key bindings
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!']  }
+" Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
 
@@ -71,7 +73,8 @@ syntax on
 " Autocompletion
 set completeopt=menuone,longest
 set shortmess+=c
-set updatetime=300					" Faster Completion
+set updatetime=300
+set timeoutlen=500
 " set omnifunc=syntaxcomplete#Complete
 
 " Enable dictionary autocompletion in Markdown files and Git Commit Messages
@@ -95,7 +98,7 @@ let &t_EI = "\<esc>[2 q" " block cursor for normal mode
 let &t_SR = "\<esc>[3 q" " underline cursor for replace mode
 
 " Indentation and tabulation
-set wrap
+" set wrap
 set formatoptions=tcqrn1
 set shiftwidth=4
 set smarttab
@@ -126,7 +129,7 @@ set wildmenu
 set nostartofline
 set signcolumn=yes
 set colorcolumn=80
-set title " Set Windows's title
+set title
 
 " Rendering
 set ttyfast
@@ -167,16 +170,10 @@ let mapleader=","
 " replace mode
 set t_u7=
 
-" solved python38.dll bug
-" let &pythonthreedll ="C:/Python39/python39.dll"
-" let g:pymode_python = 'python3'
-
-" make python pretty
-" let python_highlight_all = 1
-
 " test to view latex file
 let g:livepreview_previewer = 'pdflatex'
 let g:livepreview_engine = 'evince' . ' [options]'
+
 
 source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim
@@ -186,7 +183,8 @@ source ~/.vim/init/functions.vim
 source ~/.vim/init/git.vim
 source ~/.vim/init/mappings.vim
 source ~/.vim/init/snippets.vim
-" source ~/.vim/init/telescope.vim
+" source ~/.vim/init/tmux.vim
 source ~/.vim/init/tree.vim
 source ~/.vim/init/utils.vim
 source ~/.vim/init/vimspector.vim
+source ~/.vim/init/which-key.vim
