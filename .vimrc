@@ -11,9 +11,11 @@ Plug 'mbbill/undotree' " view all undo history
 Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
-Plug 'tpope/vim-speeddating' "date shortcut"
-Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
+" Plug 'tpope/vim-speeddating' "date shortcut"
+" Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
 Plug 'liuchengxu/vim-which-key' " show all key bindings
+Plug 'dkarter/bullets.vim'
+" Plug 'jkramer/vim-checkbox' " check box easily
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
@@ -36,6 +38,7 @@ Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
 
 " autoformat
 Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
+Plug 'prettier/vim-prettier'
 
 " snippets
 Plug 'neoclide/coc-snippets'
@@ -58,7 +61,7 @@ Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive' "generate page to view commit message
 
 " app
-Plug 'vimwiki/vimwiki' " create linked text files and auto number
+" Plug 'vimwiki/vimwiki' " create linked text files and auto number
 " Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
 " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
@@ -170,6 +173,7 @@ set t_u7=
 " test to view latex file
 let g:livepreview_previewer = 'pdflatex'
 let g:livepreview_engine = 'evince' . ' [options]'
+
 
 source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim

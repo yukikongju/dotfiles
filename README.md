@@ -8,7 +8,7 @@ Keeping track of my Dotfiles by using symlink
 2. [Setting Up dotfiles](#setup)
 3. [What does .vimrc do](#what)
 4. [Troubleshooting](#troubleshooting)
-5. [Ressources](#ressorces)
+5. [Ressources](#ressources)
 
 ## Requirements
 
@@ -42,13 +42,14 @@ Plugins:
 - [X] Autocomplete with coc.nvim
 - [X] Fuzzy file finder with fzf ``<c-f>``
 - [ ] Snippets with ultisnips
-- [X] Mappings Refractor
-- [X] Windows Splitting with Tmux
+- [X] Windows Splitting with tmux
 - [X] Latex Compiler with ``<leader>ll``
 - [ ] PDF file viewer
 - [X] Debugger with vimspector and ``<leader>dd``
+- [X] Check and Uncheck checkboxes with bullets.vim ``<leader>x``
 
 Native:
+- [X] Mappings Refractor
 - [X] Navigating through errors using quickfix with ``:cn, :cp``
 - [X] Global and local rename with ``<leader>a``
 - [X] Using Buffers and Registers to yank previous entries with
