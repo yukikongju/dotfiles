@@ -14,7 +14,6 @@ Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'tpope/vim-speeddating' "date shortcut"
 Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
 Plug 'liuchengxu/vim-which-key' " show all key bindings
-" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!']  }
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
@@ -34,7 +33,6 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
-" Plug 'pappasam/jedi-language-server' " (has to be install via pip?)
 
 " autoformat
 Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
@@ -54,7 +52,7 @@ Plug 'gillescastel/latex-snippets'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
 
 " debugger
-Plug 'puremourning/vimspector' "Debugger
+Plug 'puremourning/vimspector'
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
@@ -165,7 +163,6 @@ colorscheme gruvbox
 " Choose Leader
 let mapleader=","
 
-
 " Work around to fix weird utf-8 ubiquitous char that makes vim enter in
 " replace mode
 set t_u7=
@@ -173,7 +170,6 @@ set t_u7=
 " test to view latex file
 let g:livepreview_previewer = 'pdflatex'
 let g:livepreview_engine = 'evince' . ' [options]'
-
 
 source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim

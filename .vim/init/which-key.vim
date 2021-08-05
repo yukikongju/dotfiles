@@ -11,17 +11,37 @@ let g:which_key_map =  {}
 " " Create menus based on existing mappings
 " " =======================================================
 
-nnoremap <silent> <leader>ev :tabe $MYVIMRC<CR>
-nnoremap <silent> <leader>rv :source $MYVIMRC<CR>
-"let g:which_key_map.e.v = 'open-vimrc'
+" Keybindings for vim files
+nnoremap <silent> <leader>ve :tabnew $MYVIMRC<cr>
+nnoremap <leader>vr :source $MYVIMRC<cr>
+nnoremap <silent> <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
+let g:which_key_map.v ={
+	    \'name':'+vim',
+	    \'e':'edit-vim',
+	    \'r':'reload-vim',
+	    \'f':'open-vim-subdirectory'
+	    \}
 
+" Keybindings to open quickfix and location
 nnoremap <silent> <leader>oq  :copen<CR>
 nnoremap <silent> <leader>ol  :lopen<CR>
 let g:which_key_map.o = {
-      \ 'name' : '+open',
-      \ 'q' : 'open-quickfix'    ,
-      \ 'l' : 'open-locationlist',
-      \}
+	    \ 'name' : '+open',
+	    \ 'q' : 'open-quickfix'    ,
+	    \ 'l' : 'open-locationlist',
+	    \}
+
+" Keybindings for latex (Fix: behavior)
+nnoremap <leader>lg :!pdflatex %; mv %:t:r.* %:p:h;
+nnoremap <leader>lo :!cd %:h; explorer %:t:r.pdf
+nnoremap <leader>la :!git add */*.pdf */*.tex;
+let g:which_key_map.l ={
+	    \'name':'+latex',
+	    \'g': 'generate-pdf',
+	    \'o':'open-pdf',
+	    \'a':'git-add-pdf-latex',
+	    \}
+
 
 " =======================================================
 " " Create menus not based on existing mappings:
@@ -51,14 +71,14 @@ let g:which_key_map['w'] = {
 
 " Keybindings for buffer
 let g:which_key_map.b = {
-          \ 'name' : '+buffer' ,
-      \ '1' : ['b1'        , 'buffer 1']        ,
-      \ '2' : ['b2'        , 'buffer 2']        ,
-      \ 'd' : ['bd'        , 'delete-buffer']   ,
-      \ 'f' : ['bfirst'    , 'first-buffer']    ,
-      \ 'h' : ['Startify'  , 'home-buffer']     ,
-      \ 'l' : ['blast'     , 'last-buffer']     ,
-      \ 'n' : ['bnext'     , 'next-buffer']     ,
-      \ 'p' : ['bprevious' , 'previous-buffer'] ,
-      \ '?' : ['Buffers'   , 'fzf-buffer']      ,
-      \}
+	    \ 'name' : '+buffer' ,
+	    \ '1' : ['b1'        , 'buffer 1']        ,
+	    \ '2' : ['b2'        , 'buffer 2']        ,
+	    \ 'd' : ['bd'        , 'delete-buffer']   ,
+	    \ 'f' : ['bfirst'    , 'first-buffer']    ,
+	    \ 'h' : ['Startify'  , 'home-buffer']     ,
+	    \ 'l' : ['blast'     , 'last-buffer']     ,
+	    \ 'n' : ['bnext'     , 'next-buffer']     ,
+	    \ 'p' : ['bprevious' , 'previous-buffer'] ,
+	    \ '?' : ['Buffers'   , 'fzf-buffer']      ,
+	    \}
