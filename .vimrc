@@ -12,11 +12,11 @@ Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'liuchengxu/vim-which-key' " show all key bindings
-Plug 'dkarter/bullets.vim'
+Plug 'dkarter/bullets.vim' " check box easily
+Plug 'mhinz/vim-startify' " fancy start screen and session manager
 " Plug 'francoiscabrol/ranger.vim'
 " Plug 'tpope/vim-speeddating' "date shortcut"
 " Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
-" Plug 'jkramer/vim-checkbox' " check box easily
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
@@ -36,6 +36,8 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
+" Plug 'pangloss/vim-javascript'
+" Plug 'dense-analysis/ale'
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
 
@@ -97,15 +99,15 @@ autocmd FileType gitcommit setlocal complete+=kspell
 autocmd FileType tex setlocal complete+=kspell
 
 " Activate Mouse Action
-set mouse=a
+" set mouse=a
 
 " Cursor
 set scrolloff=8
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 set visualbell
-set noerrorbells
-set t_vb=
+" set noerrorbells
+" set t_vb=
 
 " Change Cursor Style based on mode
 set cursorline " Highlight line under cursor
@@ -189,7 +191,14 @@ set t_u7=
 let g:livepreview_previewer = 'pdflatex'
 let g:livepreview_engine = 'evince' . ' [options]'
 
+" Configs ale
+" let b:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
+" let g:ale_completion_autoimport = 1
+" let g:ale_completion_enabled = 1
+" let g:ale_fix_on_sabe = 1
 
+
+" Vim Configs
 source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim
 source ~/.vim/init/colors.vim
@@ -198,6 +207,7 @@ source ~/.vim/init/functions.vim
 source ~/.vim/init/git.vim
 source ~/.vim/init/mappings.vim
 source ~/.vim/init/snippets.vim
+source ~/.vim/init/startify.vim
 " source ~/.vim/init/tmux.vim
 source ~/.vim/init/tree.vim
 source ~/.vim/init/utils.vim

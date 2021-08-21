@@ -14,6 +14,7 @@ let g:coc_global_extensions = [
 	    \ 'coc-cmake',
 	    \ 'coc-java',
 	    \ 'coc-jedi',
+	    \ 'coc-tsserver',
 	    \ 'coc-vimlsp',
 	    \ ]
 
@@ -23,7 +24,6 @@ let g:coc_global_extensions = [
 " \ 'coc-python',
 " \ 'coc-pyright',
 " \ 'coc-todolist',
-" \ 'coc-tsserver',
 " \ 'coc-json',
 " \ 'coc-snippets',
 
@@ -47,6 +47,11 @@ nmap <leader>rn <Plug>(coc-rename)
 " xmap <leader>f  <Plug>(coc-format-selected)
 " nmap <leader>f  <Plug>(coc-format-selected)
 
+" Quick Fix
+nmap <silent> ga <Plug>(coc-codeaction)
+nmap <silent> gl <Plug>(coc-codelens-action)
+
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -63,6 +68,13 @@ let g:coc_snippet_prev = '<S-TAB>'
 "             \ pumvisible() ? "\<C-n>" :
 "             \ <SID>check_back_space() ? "\<TAB>" :
 "             \ coc#rpc#request('doKeymap', 'snippets-expand')
+
+
+" inoremap <silent><expr> <TAB>
+	    " \ pumvisible() ? "\<C-n>" :
+	    " \ <SID>check_back_space() ? "\<TAB>" :
+	    " \ coc#refresh()
+
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
