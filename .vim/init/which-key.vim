@@ -33,13 +33,15 @@ let g:which_key_map.o = {
 
 " Keybindings for latex (Fix: behavior)
 nnoremap <leader>lg :!pdflatex %; mv %:t:r.* %:p:h;
+nnoremap <leader>lc :!pdflatex %
 nnoremap <leader>lo :!cd %:h; explorer %:t:r.pdf
 nnoremap <leader>la :!git add */*.pdf */*.tex;
 let g:which_key_map.l ={
 	    \'name':'+latex',
-	    \'g': 'generate-pdf',
-	    \'o':'open-pdf',
-	    \'a':'git-add-pdf-latex',
+	    \'a': 'git-add-pdf-latex',
+	    \'c': 'generate-pdf-current-file',
+	    \'g': 'generate-pdf-lecture-notes',
+	    \'o': 'open-pdf',
 	    \}
 
 

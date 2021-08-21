@@ -24,10 +24,16 @@ nmap <leader>p "0p
 nmap <leader>P "0P
 
 " mapping to move lines
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+vnoremap <silent> J :m '>+1<CR>gv=gv
+vnoremap <silent> K :m '<-2<CR>gv=gv
 nnoremap <silent> <C-j> :m .+1<CR>==
 nnoremap <silent> <C-k> :m .-2<CR>==
+" make alt work: the terminal map alt to escape key by default
+" execute "set <M-j>=\ej"
+" execute "set <M-k>=\ek"
+" nnoremap <silent> <M-j> :m .+1<CR>==
+" nnoremap <silent> <M-k> :m .-2<CR>==
+
 
 " adding/removing blank line above/below
 " nnoremap <F3> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
@@ -38,8 +44,8 @@ nnoremap <silent> <C-k> :m .-2<CR>==
 " remap tabs change
 nmap gt :tabnext<CR>
 nmap gT :tabprevious<CR>
-nmap <silent> <leader>nt :tabe<CR>
 
+nmap <silent> <leader>nt :tabe<CR>
 " Quick fix Remaps
 " nnoremap <leader>qe :cw<CR> "open quickfix window if there are errors (error)
 " nnoremap <leader>qj :cn<CR> " go to next error in the window

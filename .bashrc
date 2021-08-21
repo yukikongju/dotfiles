@@ -1,4 +1,4 @@
-export PATH="$PATH:/c/Python38"
+# export PATH="$PATH:/c/Python38"
 
 
 ####################### ALIASES ###################################
@@ -58,7 +58,8 @@ function git_branch() {
 # Set the prompt.
 function bash_prompt(){
     # PS1='${debian_chroot:+($debian_chroot)} '${blu}'\w '${red}'$(git_branch)'${grn}' \$ '${clr}
-    PS1=''${grn}'$(whoami) '${wht}'in ${debian_chroot:+($debian_chroot)}'${blu}'\w '${red}'$(git_branch)'${grn}'\$ '${clr}
+    PS1=''${grn}'$(whoami) '${red}'→ ${debian_chroot:+($debian_chroot)}'${blu}'\w '${red}'$(git_branch)'${grn}'\$ '${clr}
+    # PS1=''${pur}'[ '${grn}'$(whoami) '${pur}'] '${red}'→ ${debian_chroot:+($debian_chroot)}'${blu}'\w '${red}'$(git_branch)' '${wht}'
     # PS1='${debian_chroot:+($debian_chroot)} '${cyn}'\w '${pur}'$(git_branch)'${grn}' \$ '${clr}
 }
 
@@ -85,6 +86,14 @@ export FZF_DEFAULT_OPS="--extended"
 
 ########################### FUNCTIONS ############################
 
+# Upgrade ubuntu packages
+function update_packages(){
+    sudo apt update
+    apt list --upgradable
+    sudo apt upgrade
+    sudo apt update && sudo apt upgrade -y
+}
+
 # initialize new git project: git_init project_name
 
 function git_init() {
@@ -101,6 +110,8 @@ function git_init() {
 	generate_readme
 
 	# generate LICENCE
+
+	# create venv
 
 	# generate .vimspector.json file for debugger
 	generate_vimspector_python_json

@@ -11,10 +11,11 @@ Plug 'mbbill/undotree' " view all undo history
 Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
-" Plug 'tpope/vim-speeddating' "date shortcut"
-" Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
 Plug 'liuchengxu/vim-which-key' " show all key bindings
 Plug 'dkarter/bullets.vim'
+" Plug 'francoiscabrol/ranger.vim'
+" Plug 'tpope/vim-speeddating' "date shortcut"
+" Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
 " Plug 'jkramer/vim-checkbox' " check box easily
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
@@ -35,10 +36,13 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+
 
 " autoformat
 Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
-Plug 'prettier/vim-prettier'
+" Plug 'prettier/vim-prettier'
 
 " snippets
 Plug 'neoclide/coc-snippets'
@@ -81,9 +85,12 @@ set timeoutlen=500
 " Enable dictionary autocompletion in Markdown files and Git Commit Messages
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
+" autocmd FileType tex setlocal spell
 autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType gitcommit setlocal complete+=kspell
+" autocmd FileType tex setlocal complete+=kspell
 " set spelllang=eng
+" set spelllang=fra
 
 " Activate Mouse Action
 " set mouse=a

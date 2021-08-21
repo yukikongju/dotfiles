@@ -71,6 +71,10 @@ unlink $HOME/.bashrc
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 
 # generate symbolic link for .bash_aliases file
+# generate symbolic link for .tmux.conf
+unlink $HOME/.tmux.conf
+rm $HOME/.tmux.conf
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 
 # generate symlinks for snippets
