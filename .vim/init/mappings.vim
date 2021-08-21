@@ -14,16 +14,19 @@ nnoremap Y y$
 " Keeping everything centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" Remove/Add Space under cursor
 nnoremap J mzJ`z
+nnoremap K m`o<Esc>``
 
 " Remap Save Session
-nnoremap <leader>s :mksession!<CR>
+" nnoremap <leader>s :mksession!<CR>
 
 " Paste last thing yanked, not deleted
 nmap <leader>p "0p
 nmap <leader>P "0P
 
-" mapping to move lines
+" Move lines
 vnoremap <silent> J :m '>+1<CR>gv=gv
 vnoremap <silent> K :m '<-2<CR>gv=gv
 nnoremap <silent> <C-j> :m .+1<CR>==
@@ -34,18 +37,11 @@ nnoremap <silent> <C-k> :m .-2<CR>==
 " nnoremap <silent> <M-j> :m .+1<CR>==
 " nnoremap <silent> <M-k> :m .-2<CR>==
 
-
-" adding/removing blank line above/below
-" nnoremap <F3> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-" nnoremap <F4> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-" nnoremap <F5> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-" nnoremap <F6> :set paste<CR>m`O<Esc>``:set nopaste<CR>
-
 " remap tabs change
 nmap gt :tabnext<CR>
 nmap gT :tabprevious<CR>
-
 nmap <silent> <leader>nt :tabe<CR>
+
 " Quick fix Remaps
 " nnoremap <leader>qe :cw<CR> "open quickfix window if there are errors (error)
 " nnoremap <leader>qj :cn<CR> " go to next error in the window
@@ -54,8 +50,10 @@ nmap <silent> <leader>nt :tabe<CR>
 " cursor, so undefine the mapping there.
 " autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
-" Formatting
-map <leader>r gg=G<CR>
+" Formatting and stay on the same line
+nmap <silent> <leader>i gg=G``zz<CR>
+
+" Formatting on save
 
 " write only if something is changed
 " noremap <leader>w :up<cr>
@@ -75,9 +73,9 @@ vnoremap Q :norm @q<cr>
 map <F1> :r! date "+\%A \%d \%B \%Y" <CR>
 map <F2> :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
 
-" replace under cursor, global replace
-nnoremap <leader>a :%s/\<<C-r><C-w>\>/
-nnoremap gR gD:%s/<C-R>///gc<left><left><left><C-R>
+" Global/Local Replace
+nnoremap <leader>ra :%s/\<<C-r><C-w>\>/
+nnoremap <leader>rc gD:%s/<C-R>///gc<left><left><left><C-R>
 
 " Search exact word
 

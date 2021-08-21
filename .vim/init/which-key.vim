@@ -47,6 +47,15 @@ let g:which_key_map.l ={
 
 " \'c': 'generate-pdf-from-current-file',
 
+" Keybindings for SpellCheck/autocorrect
+nnoremap <leader>ao :setlocal spell!<CR>
+nnoremap <leader>at :call ToggleSpellLang()<CR>
+let g:which_key_map.a = {
+	    \ 'name': '+autocorrect',
+	    \ 'o': 'autocorrect-on-off',
+	    \ 't' : 'toggle-lang',
+	    \}
+
 " =======================================================
 " " Create menus not based on existing mappings:
 " " =======================================================
@@ -72,6 +81,7 @@ let g:which_key_map['w'] = {
 	    \ 'v' : ['<C-W>v'     , 'split-window-below']    ,
 	    \ '?' : ['Windows'    , 'fzf-window']            ,
 	    \}
+
 
 " Keybindings for buffer
 let g:which_key_map.b = {

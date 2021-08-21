@@ -41,7 +41,7 @@ Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
 
 
 " autoformat
-Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
+" Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
 " Plug 'prettier/vim-prettier'
 
 " snippets
@@ -77,29 +77,37 @@ syntax on
 
 " Autocompletion
 set completeopt=menuone,longest
+set complete-=t " disable searching tags
 set shortmess+=c
 set updatetime=300
 set timeoutlen=500
+set spelllang=en_ca
+" set spelllang=fr
+set spellsuggest=fast,20 " don't show too much suggestion
 " set omnifunc=syntaxcomplete#Complete
+
+
 
 " Enable dictionary autocompletion in Markdown files and Git Commit Messages
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
-" autocmd FileType tex setlocal spell
+autocmd FileType tex setlocal spell
 autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType gitcommit setlocal complete+=kspell
-" autocmd FileType tex setlocal complete+=kspell
-" set spelllang=eng
-" set spelllang=fra
+autocmd FileType tex setlocal complete+=kspell
 
 " Activate Mouse Action
-" set mouse=a
+set mouse=a
 
 " Cursor
 set scrolloff=8
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 set visualbell
+set noerrorbells
+set t_vb=
+
+" Change Cursor Style based on mode
 set cursorline " Highlight line under cursor
 let &t_SI = "\<esc>[5 q" " I beam cursor for insert mode
 let &t_EI = "\<esc>[2 q" " block cursor for normal mode
