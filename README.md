@@ -41,12 +41,13 @@ Plugins:
 - [X] File System Explorer with NERDTree and ``<leader>t`` and ``<leader>f``
 - [X] Autocomplete with coc.nvim
 - [X] Fuzzy file finder with fzf ``<c-f>``
-- [ ] Snippets with ultisnips
+- [X] Snippets with ultisnips
 - [X] Windows Splitting with tmux
 - [X] Latex Compiler with ``<leader>ll``
 - [ ] PDF file viewer
 - [X] Debugger with vimspector and ``<leader>dd``
 - [X] Check and Uncheck checkboxes with bullets.vim ``<leader>x``
+- [X] Jump to file reference with startify ``gf``
 
 Native:
 - [X] Mappings Refractor
@@ -69,4 +70,5 @@ Native:
 - [Download Unofficial Vim 8.2](https://itsfoss.com/vim-8-release-install/)
 - [Setting up Jupyter Notebook with Python on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-set-up-jupyter-notebook-with-python-3-on-ubuntu-18-04)
 - [Modern Coder's install fzf on terminal](https://www.youtube.com/watch?v=1a5NiMhqAR0)
+- [vim-galore](https://github.com/mhinz/vim-galore)
 
