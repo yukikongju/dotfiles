@@ -8,8 +8,8 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 let g:which_key_map =  {}
 
 " =======================================================
-" " Create menus based on existing mappings
-" " =======================================================
+" Create menus based on existing mappings
+" =======================================================
 
 " Keybindings for vim files
 nnoremap <silent> <leader>ve :tabnew $MYVIMRC<cr>
@@ -33,17 +33,19 @@ let g:which_key_map.o = {
 
 " Keybindings for latex (Fix: behavior)
 nnoremap <leader>lg :!pdflatex %; mv %:t:r.* %:p:h;
-nnoremap <leader>lc :!pdflatex %
+nnoremap <leader>lr :!pdflatex %
+" nnoremap <leader>lc :!cd %:p:h; pdflatex %
 nnoremap <leader>lo :!cd %:h; explorer %:t:r.pdf
 nnoremap <leader>la :!git add */*.pdf */*.tex;
 let g:which_key_map.l ={
 	    \'name':'+latex',
 	    \'a': 'git-add-pdf-latex',
-	    \'c': 'generate-pdf-current-file',
 	    \'g': 'generate-pdf-lecture-notes',
-	    \'o': 'open-pdf',
+	    \'r': 'generate-pdf-from-root',
+	    \'o': 'open-pdf-windows',
 	    \}
 
+" \'c': 'generate-pdf-from-current-file',
 
 " =======================================================
 " " Create menus not based on existing mappings:

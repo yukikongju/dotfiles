@@ -1,0 +1,157 @@
+#######################################################################
+#                         Document Templates                          #
+#######################################################################
+
+# snippet template-article
+# endsnippet
+
+snippet template-book
+\documentclass[a4paper,oneside]{book}
+
+% ----------------------------- Packages --------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{etoc}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% -------------------- Removing Chapter Number --------------------------
+
+\titleformat{\chapter}[display]
+{\Huge\bfseries}
+{}
+{0pt}
+{}
+\titlespacing*{\chapter}{0pt}{-40pt}{20pt}
+
+\title{${1:title}}
+\author{${2:author}}
+
+\begin{document}
+
+% --------------------------------- Header -------------------------------
+
+\maketitle
+\tableofcontents
+\clearpage
+
+% --------------------------------- Body ---------------------------------
+
+${0:${VISUAL}}
+
+\end{document}
+endsnippet
+
+snippet template-maths-notes
+\documentclass[]{article}
+
+% ----------------------------- Packages --------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{parskip}
+\usepackage{titletoc}
+
+\title{Notes de Cours - ${1:title}}
+\author{${2:author}}
+
+\begin{document}
+
+% --------------------------------- Header -------------------------------
+
+\maketitle
+\tableofcontents
+
+% Page Break after each section
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+
+% Defining new containers
+\newtheorem{axiom}{Axiome}
+\newtheorem{corollary}{Corollaire}[subsection]
+\newtheorem{definition}{Définition}[subsection]
+\newtheorem*{intuition}{Intuition}
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem*{problem}{Problème}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{property}{Propriété}[subsection]
+\newtheorem*{remark}{Remarque}
+\newtheorem{theorem}{Théorème}[subsection]
+
+% --------------------------------- Body ---------------------------------
+
+\section*{Introduction}
+
+${0:${VISUAL}}
+
+\end{document}
+
+endsnippet
+
+# snippet template-cheatsheet
+# endsnippet
+
+# snippet template-powerpoint
+# endsnippet
+
+#######################################################################
+#                            Maths Section                            #
+#######################################################################
+
+snippet axiom
+\begin{axiom}[${1:axiom}]
+    ${0:${VISUAL}}
+\end{axiom}
+endsnippet
+
+snippet cor
+\begin{corollary}[${1:corollary}]
+    ${0:${VISUAL}}
+\end{corollary}
+endsnippet
+
+snippet def
+\begin{definition}[${1:definition}]
+    ${0:${VISUAL}}
+\end{definition}
+endsnippet
+
+snippet lem
+\begin{lemma}[${1:lemma}]
+    ${0:${VISUAL}}
+\end{lemma}
+endsnippet
+
+snippet prob
+\begin{problem}[${1:problem}]
+    ${0:${VISUAL}}
+\end{problem}
+endsnippet
+
+snippet prop
+\begin{proposition}[${1:proposition}]
+    ${0:${VISUAL}}
+\end{proposition}
+endsnippet
+
+snippet rem
+\begin{remark}[${1:remark}]
+    ${0:${VISUAL}}
+\end{remark}
+endsnippet
+
+snippet thm
+\begin{theorem}[${1:theorem}]
+    ${0:${VISUAL}}
+\end{theorem}
+endsnippet
+
+#######################################################################
+#                            Maths Symbols 			      #
+#######################################################################
+
