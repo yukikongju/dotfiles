@@ -1,9 +1,10 @@
 # export PATH="$PATH:/c/Python38"
 
+#######################################################################
+#                               ALIASES                               #
+#######################################################################
 
-####################### ALIASES ###################################
-
-alias py="winpty python.exe"
+# alias py="winpty python.exe"
 
 # git aliases
 alias gs='git status'
@@ -28,14 +29,20 @@ alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
 
-############## Bash History Parameters ######################
+#######################################################################
+#                            BASH HISTORY                             #
+#######################################################################
+
 
 HISTTIMEFORMAT="%F %T "
 HISTCONTROL=ignoredups
 HISTSIZE=2000
 HISTFILESIZE=2000
 
-################## BASH COLORS ##################################
+#######################################################################
+#                             BASH COLORS                             #
+#######################################################################
+
 
 blk='\[\033[01;30m\]'   # Black
 red='\[\033[01;31m\]'   # Red
@@ -47,7 +54,10 @@ cyn='\[\033[01;36m\]'   # Cyan
 wht='\[\033[01;37m\]'   # White
 clr='\[\033[00m\]'      # Reset
 
-########################## CUSTOMIZATION ##########################
+#######################################################################
+#                        PROMPT CUSTOMIZATIONS                        #
+#######################################################################
+
 
 # Display the current Git branch in the Bash prompt.
 
@@ -59,6 +69,7 @@ function git_branch() {
 function bash_prompt(){
     # PS1='${debian_chroot:+($debian_chroot)} '${blu}'\w '${red}'$(git_branch)'${grn}' \$ '${clr}
     PS1=''${grn}'$(whoami) '${red}'→ ${debian_chroot:+($debian_chroot)}'${blu}'\w '${red}'$(git_branch)'${grn}'\$ '${clr}
+    # PS1=''${pur}'[ '${grn}'$(whoami) '${pur}'] '${red}'→ ${debian_chroot:+($debian_chroot)}'${blu}'\w '${red}'$(git_branch)' '${wht}
     # PS1=''${pur}'[ '${grn}'$(whoami) '${pur}'] '${red}'→ ${debian_chroot:+($debian_chroot)}'${blu}'\w '${red}'$(git_branch)' '${wht}'
     # PS1='${debian_chroot:+($debian_chroot)} '${cyn}'\w '${pur}'$(git_branch)'${grn}' \$ '${clr}
 }
@@ -84,7 +95,10 @@ export FZF_DEFAULT_OPS="--extended"
 # export FZF_DEFAULT_COMMAND="fd --type f"
 # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-########################### FUNCTIONS ############################
+#######################################################################
+#                              FUNCTIONS                              #
+#######################################################################
+
 
 # Upgrade ubuntu packages
 function update_packages(){
@@ -92,6 +106,18 @@ function update_packages(){
     apt list --upgradable
     sudo apt upgrade
     sudo apt update && sudo apt upgrade -y
+}
+
+# Add read, write execute to files and directories (TOFIX)
+function change_mod_recurse() {
+    # Files: +rw
+    find * -type f -print | xargs chmod +wr
+    # find * ! -type f -readable -prune -o -print | xargs chmod 644
+
+    # Directories: +xwr
+    find * -type d -print | xargs chmod +xwr
+    # find * -type d ! -readable -prune -o -print | xargs chmod 755
+
 }
 
 # initialize new git project: git_init project_name
@@ -184,6 +210,7 @@ function generate_vimspector_python_json() {
 }
 
 
+
 function generate_readme() {
     touch README.md
     echo "# $(basename $PWD) " >> README.md
@@ -216,4 +243,5 @@ function generate_readme() {
     echo "## [Classes](#classes)" >> README.md
     echo "## [Ressources](#ressources)" >> README.md
 }
+
 

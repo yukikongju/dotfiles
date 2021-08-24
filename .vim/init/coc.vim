@@ -38,7 +38,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -54,27 +53,23 @@ nmap <silent> gl <Plug>(coc-codelens-action)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+" inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " coc-snippets
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 
 
 " COC FUNCTIONS
 
-" trigger <TAB> for completion ?
-" inoremap <silent><expr> <TAB>
-"             \ pumvisible() ? "\<C-n>" :
-"             \ <SID>check_back_space() ? "\<TAB>" :
-"             \ coc#rpc#request('doKeymap', 'snippets-expand')
-
-
-" inoremap <silent><expr> <TAB>
-	    " \ pumvisible() ? "\<C-n>" :
-	    " \ <SID>check_back_space() ? "\<TAB>" :
-	    " \ coc#refresh()
-
+" Use tab for trigger completion with characters ahead and navigate
+inoremap <silent><expr> <TAB>
+	    \ pumvisible() ? "\<C-n>" :
+	    \ <SID>check_back_space() ? "\<TAB>" :
+	    \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -87,6 +82,14 @@ if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()
 else
     inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position
+if exists('*complete_info')
+    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
 " show documentation

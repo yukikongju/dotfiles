@@ -27,6 +27,13 @@ let g:UltiSnipsSnippetsDir="$HOME/.vim/UltiSnips"
 " Use <leader>x for convert visual selected code to snippet
 " xmap <leader>x  <Plug>(coc-convert-snippet)
 
+" Use tex.snippets for .tex and .plaintex files
+" autocmd BuffEnter,BufNew *.plaintex setf plaintex.tex
+
+
+
+
+
 " VSCode like tab completion
 inoremap <silent><expr> <TAB>
 	    \ pumvisible() ? coc#_select_confirm() :

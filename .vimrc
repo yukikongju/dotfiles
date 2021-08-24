@@ -14,6 +14,8 @@ Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'liuchengxu/vim-which-key' " show all key bindings
 Plug 'dkarter/bullets.vim' " check box easily
 Plug 'mhinz/vim-startify' " fancy start screen and session manager
+" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger
+" Plug 'ranger/ranger'
 " Plug 'francoiscabrol/ranger.vim'
 " Plug 'tpope/vim-speeddating' "date shortcut"
 " Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
@@ -31,6 +33,13 @@ Plug 'itchyny/lightline.vim' " colorscheme for vim modes
 Plug 'scrooloose/nerdcommenter' " Change indentation behavior
 Plug 'morhetz/gruvbox' " gruvbox color scheme
 Plug 'ap/vim-css-color' " Highlight colors in css files
+" Plug 'ryanoasis/nerd-fonts' " Install Nerd Font
+" Plug 'ryanoasis/vim-devicons' " Use icons from ryanoasis/nerd-fonts
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'edkolev/promptline.vim'
+
+
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
@@ -78,14 +87,15 @@ call plug#end()
 syntax on
 
 " Autocompletion
-set completeopt=menuone,longest
-set complete-=t " disable searching tags
+set completeopt=longest,menuone
+" set complete-=t " disable searching tags
+" set complete-=i " disable import
 set shortmess+=c
 set updatetime=300
 set timeoutlen=500
-set spelllang=en_ca
+" set spelllang=en_ca
 " set spelllang=fr
-set spellsuggest=fast,20 " don't show too much suggestion
+" set spellsuggest=fast,20 " don't show too much suggestion
 " set omnifunc=syntaxcomplete#Complete
 
 
@@ -124,7 +134,7 @@ set smartindent
 set autoindent
 set noshiftround
 " set tabstop=4
-" set softtabstop=4 " number of spaces in tab
+set softtabstop=4 " number of spaces in tab
 
 " Swapfiles
 set nobackup
@@ -153,12 +163,17 @@ set title
 set ttyfast
 
 " Encoding
-set encoding=utf-8
+set encoding=UTF-8
 
 " Folding
 set foldmethod=syntax
+set foldcolumn=1
 set foldlevelstart=5 " open all fold nested below n level deep
 set foldnestmax=2
+
+" Enable fold for js
+autocmd FileType javascript setlocal foldmethod=syntax
+let javaScript_fold=1
 
 " Buffers
 set hidden
@@ -180,6 +195,7 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 
+
 " Choose Leader
 let mapleader=","
 
@@ -196,6 +212,14 @@ let g:livepreview_engine = 'evince' . ' [options]'
 " let g:ale_completion_autoimport = 1
 " let g:ale_completion_enabled = 1
 " let g:ale_fix_on_sabe = 1
+
+" airline Configs
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_theme='gruvbox'
 
 
 " Vim Configs
