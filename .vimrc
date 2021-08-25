@@ -6,27 +6,32 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 " utils
-Plug 'scrooloose/nerdtree'
-Plug 'mbbill/undotree' " view all undo history
 Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
-Plug 'liuchengxu/vim-which-key' " show all key bindings
 Plug 'dkarter/bullets.vim' " check box easily
-Plug 'mhinz/vim-startify' " fancy start screen and session manager
-" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger
-" Plug 'ranger/ranger'
-" Plug 'francoiscabrol/ranger.vim'
-" Plug 'tpope/vim-speeddating' "date shortcut"
-" Plug 'dhruvasagar/vim-dotoo' " todo scheduler (new)
+" Plug 'voldikss/vim-floaterm' " popup terminal for vim
+
+" tmux
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
-" Plug 'voldikss/vim-floaterm' " popup terminal for vim
+" Sidebar
+Plug 'scrooloose/nerdtree'
+Plug 'mbbill/undotree' " view all undo history
+Plug 'liuchengxu/vim-which-key' " show all key bindings
+
+" ctags
+Plug 'preservim/tagbar' " show functions and import from ctags on tagbar
+Plug 'universal-ctags/ctags' " ctags implementation
 
 " file finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter' " fzf look at project directory
+Plug 'mhinz/vim-startify' " fancy start screen and session manager
+" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger
+" Plug 'ranger/ranger'
+" Plug 'francoiscabrol/ranger.vim'
 
 " colorscheme' & syntax highlight
 Plug 'itchyny/lightline.vim' " colorscheme for vim modes
@@ -39,17 +44,13 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'edkolev/promptline.vim'
 
-
-
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
-" Plug 'pangloss/vim-javascript'
 " Plug 'dense-analysis/ale'
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
-
 
 " autoformat
 " Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
@@ -60,10 +61,6 @@ Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 Plug 'gillescastel/latex-snippets'
-" Plug 'ervandew/supertab' "use tab for all completion
-" Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'tomtom/tlib_vim'
-" Plug 'garbas/vim-snipmate'
 
 " latex compiler
 " Plug 'lervag/vimtex'

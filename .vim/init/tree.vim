@@ -13,9 +13,8 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" nnoremap <leader>t :NERDTreeToggle<CR>
-" nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <leader>t :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+" nnoremap <leader>m :NERDTreeToggle<CR>
 
 " let NERDTreeQuitOnOpen = 1
 " let NERDTreeMinimalUI = 1
@@ -26,3 +25,10 @@ nnoremap <leader>t :NERDTreeFind<CR>
 "  UndoTree Configs  "
 """"""""""""""""""""""
 nnoremap <leader>u :UndotreeShow<CR>
+let g:undotree_WindowLayout=2
+
+""""""""""""""""""""""
+"  TagBar Configs  "
+""""""""""""""""""""""
+nnoremap <leader>t :Tagbar<CR>
+let g:tagbar_autoclose=1

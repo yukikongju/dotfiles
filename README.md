@@ -61,6 +61,8 @@ Native:
 - [X] Execute python script inside vim with ``<F7>``
 - [X] Spelling Checker for Markdown files with errors fix suggestions with ``z=`` in normal mode
 - [X] Open ``.vimrc`` file anywhere with ``<leader>ev``
+- [X] Go to top, mid, bottom file with ``zt``, ``zz`` and ``zb``
+- [X] Increment and decrement next number with ``<c-a>`` and ``<c-x>``
 
 ## Ressources
 
