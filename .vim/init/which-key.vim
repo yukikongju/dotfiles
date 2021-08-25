@@ -138,3 +138,11 @@ let g:which_key_map.b = {
 	    \ 'p' : ['bprevious' , 'previous-buffer'] ,
 	    \ '?' : ['Buffers'   , 'fzf-buffer']      ,
 	    \}
+
+" Keybindings for gitgutter hunks
+" let g:which_key_map.h = {
+"             \'name':'+hunk',
+"             \'p': ['<Plug>(GitGutterPreviewHunk)' , 'preview-hunk'],
+"             \'s': ['<Plug>(GitGutterStageHunk)' , 'stage-hunk'],
+"             \'u': ['<Plug>(GitGutterUndoHunk)' , 'undo-hunk'],
+"             \}

@@ -13,7 +13,7 @@ Plug 'dkarter/bullets.vim' " check box easily
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
 
 " tmux
-" Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
+Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
 " Sidebar
 Plug 'scrooloose/nerdtree'
@@ -71,6 +71,9 @@ Plug 'puremourning/vimspector'
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
+Plug 'airblade/vim-gitgutter' " Show diff
+" Plug 'lewis6991/gitsigns.nvim' " Alternative to vim-gutter
+" Plug 'nvim-lua/plenary.nvim'
 
 " app
 " Plug 'vimwiki/vimwiki' " create linked text files and auto number
@@ -95,15 +98,9 @@ set timeoutlen=500
 " set spellsuggest=fast,20 " don't show too much suggestion
 " set omnifunc=syntaxcomplete#Complete
 
-
-
 " Enable dictionary autocompletion in Markdown files and Git Commit Messages
-autocmd FileType markdown setlocal spell
-autocmd FileType gitcommit setlocal spell
-autocmd FileType tex setlocal spell
-autocmd FileType markdown setlocal complete+=kspell
-autocmd FileType gitcommit setlocal complete+=kspell
-autocmd FileType tex setlocal complete+=kspell
+autocmd FileType markdown,gitcommit,tex, setlocal spell
+autocmd FileType markdown,gitcommit,tex setlocal complete+=kspell
 
 " Activate Mouse Action
 " set mouse=a
@@ -169,7 +166,7 @@ set foldlevelstart=5 " open all fold nested below n level deep
 set foldnestmax=2
 
 " Enable fold for js
-autocmd FileType javascript setlocal foldmethod=syntax
+autocmd FileType javascript,java setlocal foldmethod=syntax
 let javaScript_fold=1
 
 " Buffers
@@ -211,12 +208,12 @@ let g:livepreview_engine = 'evince' . ' [options]'
 " let g:ale_fix_on_sabe = 1
 
 " airline Configs
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#left_sep = ' '
 " let g:airline#extensions#tabline#left_alt_sep = '|'
 " let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_theme='gruvbox'
+" let g:airline_theme='gruvbox'
 
 
 " Vim Configs
@@ -229,7 +226,7 @@ source ~/.vim/init/git.vim
 source ~/.vim/init/mappings.vim
 source ~/.vim/init/snippets.vim
 source ~/.vim/init/startify.vim
-" source ~/.vim/init/tmux.vim
+source ~/.vim/init/tmux.vim
 source ~/.vim/init/tree.vim
 source ~/.vim/init/utils.vim
 source ~/.vim/init/vimspector.vim
