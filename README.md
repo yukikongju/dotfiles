@@ -42,12 +42,12 @@ Plugins:
 - [X] Autocomplete with coc.nvim
 - [X] Fuzzy file finder with fzf ``<c-f>``
 - [X] Snippets with ultisnips
-- [X] Windows Splitting with tmux
 - [X] Latex Compiler with ``<leader>ll``
 - [X] Debugger with vimspector and ``<leader>dd``
 - [X] Check and Uncheck checkboxes with bullets.vim ``<leader>x``
 - [X] Jump to file reference with startify ``gf``
 - [X] Jump to functions definition and reference with coc.nvim ``gd`` and ``gr``
+- [X] Personnal Notes to HTML with vimwiki using ``<leader>wa``
 - [ ] PDF file viewer
 
 Native:
@@ -64,6 +64,28 @@ Native:
 - [X] Go to top, mid, bottom file with ``zt``, ``zz`` and ``zb``
 - [X] Increment and decrement next number with ``<c-a>`` and ``<c-x>``
 
+## Tmux Keybindings
+
+- Current key binding: ``<c-b>``
+
+#### Session and Window Preview
+
+- Session and Window Preview: ``<c-b>w``
+
+#### Windows
+
+- Create Window: ``<c-b>c``
+- Close currente Window: ``<c-b>&`` or ``<c-d>``
+- Move to previous and next window: ``<c-b>p`` and ``<c-b>n``
+
+#### Panes
+
+- Split pane horizontally and vertically: ``<c-b>%`` and ``<c-b>"``
+- Move pane: ``<c-b>{}``
+- Switch to pane: ``<c-b><arrow-key>`` or ``<c-b>o``
+- Convert pane to window: ``<c-b>!``
+- Resize Panes: ``<c-b><c- 'arrow-key'>``
+
 ## Ressources
 
 - [Dotfiles Management by Fireship](https://www.youtube.com/watch?v=r_MpUP6aKiQ&t=510s)
@@ -75,4 +97,5 @@ Native:
 - [Modern Coder's install fzf on terminal](https://www.youtube.com/watch?v=1a5NiMhqAR0)
 - [vim-galore](https://github.com/mhinz/vim-galore)
 - [Install Jupyter notebook](https://speedysense.com/install-jupyter-notebook-on-ubuntu-20-04/)
+- [Tmux CheatSheet](https://tmuxcheatsheet.com/)
 

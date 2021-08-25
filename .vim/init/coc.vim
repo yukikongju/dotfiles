@@ -14,6 +14,7 @@ let g:coc_global_extensions = [
 	    \ 'coc-cmake',
 	    \ 'coc-java',
 	    \ 'coc-jedi',
+	    \'coc-markmap',
 	    \ 'coc-tsserver',
 	    \ 'coc-vimlsp',
 	    \ ]

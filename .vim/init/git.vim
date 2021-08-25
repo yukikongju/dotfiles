@@ -27,3 +27,18 @@ let g:NERDTreeGitStatusShowIgnored = 1
 " nmap ghu <Plug>(GitGutterUndoHunk)
 " nmap ghp <Plug>(GitGutterPreviewHunk)
 
+" Customize symbols
+" let g:gitgutter_sign_added = 'xx'
+" let g:gitgutter_sign_modified = 'yy'
+" let g:gitgutter_sign_removed = 'zz'
+" let g:gitgutter_sign_removed_first_line = '^^'
+" let g:gitgutter_sign_removed_above_and_below = '{'
+" let g:gitgutter_sign_modified_removed = 'ww'
+"
+" Check Hunk summary on GitStatus
+function! GitStatus()
+    let [a,m,r] = GitGutterGetHunkSummary()
+    return printf('+%d ~%d -%d', a, m, r)
+endfunction
+set statusline+=%{GitStatus()}
+

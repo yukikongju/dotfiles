@@ -4,6 +4,11 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir="$HOME/.vim/UltiSnips"
 
+" tab completion
+let g:ultisnipsexpandtrigger = "<tab>"
+let g:ultisnipsjumpforwardtrigger = "<c-n>"
+let g:ultisnipsjumpbackwardtrigger = "<c-p>"
+
 " Use <C-l> for trigger snippet expand.
 " imap <C-l> <Plug>(coc-snippets-expand)
 

@@ -72,11 +72,11 @@ Plug 'puremourning/vimspector'
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
 Plug 'airblade/vim-gitgutter' " Show diff
-" Plug 'lewis6991/gitsigns.nvim' " Alternative to vim-gutter
-" Plug 'nvim-lua/plenary.nvim'
+
+" vimwiki
+Plug 'vimwiki/vimwiki' " create linked text files
 
 " app
-" Plug 'vimwiki/vimwiki' " create linked text files and auto number
 " Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
 " Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
@@ -217,7 +217,6 @@ let g:livepreview_engine = 'evince' . ' [options]'
 
 
 " Vim Configs
-source ~/.vim/init/apps.vim
 source ~/.vim/init/coc.vim
 source ~/.vim/init/colors.vim
 source ~/.vim/init/fzf.vim
@@ -230,4 +229,5 @@ source ~/.vim/init/tmux.vim
 source ~/.vim/init/tree.vim
 source ~/.vim/init/utils.vim
 source ~/.vim/init/vimspector.vim
+source ~/.vim/init/vimwiki.vim
 source ~/.vim/init/which-key.vim

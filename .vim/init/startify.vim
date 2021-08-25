@@ -1,3 +1,5 @@
+" From https://www.chrisatmachine.com/Neovim/11-startify/
+
 " Custom header [ Text to ASCII Art Generator (TAAG) ]
 let g:startify_custom_header = [
     \ ' 	     _    ___              _____ __             __  _ ____       ',
@@ -20,6 +22,7 @@ let g:startify_lists = [
 let g:startify_bookmarks = [
 	    \ { 'b': '~/.bashrc'  },
 	    \ { 'v': '~/.vimrc'  },
+	    \ { 't': '~/.tmux.conf'  },
 	    \]
 
 " Startify Configs

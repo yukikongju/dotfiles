@@ -37,6 +37,13 @@ function install_fzf {
     sudo apt-get install ctags
 }
 
+function install_tmux {
+    sudo apt-get install tmux
+}
+
+function install_vimwiki {
+    pip install vimwiki-markdown
+}
 # function install_font {
 #     sudo apt-get install fonts-powerline
 #     fc-cahce -vf
@@ -73,7 +80,8 @@ function install_python_packages{
 function generate_vim_sym_links {
     # generate sym links for vim configs in .vim/init
     mkdir -p ~/.vim/init
-    for f in $(ls ~/dotfiles/.vim/init); do
+    for f in $
+	(ls ~/dotfiles/.vim/init); do
 	unlink $HOME/.vim/init/$f
 	rm -rf $HOME/.vim/init/$f
 	ln -s ~/dotfiles/.vim/init/$f ~/.vim/init/$f
