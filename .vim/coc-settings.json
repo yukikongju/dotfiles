@@ -1,37 +1,67 @@
 {
-    "suggest.minTriggerInputLength": 2,
-    "suggest.snippetIndicator": "►",
-    "suggest.maxCompleteItemCount": 8,
-    "suggest.labelMaxLength": 40,
-    "suggest.noselect": false,
-    "suggest.enablePreview": true,
-    "suggest.removeDuplicateItems": true,
-
-    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-
-    "codeLens.enable": true,
-
-    "diagnostic.warningSign": "!",
-    "diagnostic.checkCurrentLine": false,
-
-    "coc.preferences.jumpCommand": "drop",
-    "coc.preferences.rootPatterns": [".git", ".vscode"],
-    "coc.preferences.formatOnSaveFiletypes": ["python", "javascript", "javascriptreact", "typescriptreact", "css", "tex"],
-
-    "jedi.executable.command": "jedi-language-server",
-    "jedi.enable": true,
-    "jedi.markupKindPreferred": "plaintext",
-    "jedi.trace.server": "messages",
-    "jedi.jediSettings.autoImportModules": [],
-    "jedi.executable.args": [],
-    "jedi.completion.disableSnippets": false,
-    "jedi.diagnostics.enable": true,
-    "jedi.diagnostics.didChange": true,
-    "jedi.diagnostics.didSave": true,
-
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.jediEnabled": false
-
+	"suggest.minTriggerInputLength": 2,
+	"suggest.snippetIndicator": "►",
+	"suggest.maxCompleteItemCount": 10,
+	"suggest.labelMaxLength": 40,
+	"suggest.noselect": false,
+	"suggest.enablePreview": true,
+	"suggest.removeDuplicateItems": true,
+	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
+	"diagnostic.warningSign": "!",
+	"diagnostic.checkCurrentLine": false,
+	"coc.preferences.jumpCommand": "drop",
+	"coc.preferences.rootPatterns": [
+		".git",
+		".vscode"
+	],
+	// codelens
+	"codeLens.enable": true,
+	"javascript.referencesCodeLens.enable": true,
+	"java.completion.enabled": true,
+	// autoformat
+	"coc.preferences.formatOnSaveFiletypes": [
+		"css",
+		"java",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"html",
+		"markdown",
+		"python",
+		"tex",
+		"typescriptreact",
+		"vim"
+	],
+	// Python Configs
+	"jedi.executable.command": "jedi-language-server",
+	"jedi.enable": true,
+	"jedi.markupKindPreferred": "plaintext",
+	"jedi.trace.server": "messages",
+	"jedi.jediSettings.autoImportModules": [],
+	"jedi.executable.args": [],
+	"jedi.completion.disableSnippets": false,
+	"python.formatting.provider": "autopep8",
+	"jedi.diagnostics.enable": true,
+	"jedi.diagnostics.didChange": true,
+	"jedi.diagnostics.didSave": true,
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	"python.jediEnabled": false,
+	"python.pythonPath": "python",
+	// Java Configs
+	"java.referencesCodeLens.enabled": true,
+	"java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok/lombok.jar",
+	// Javascript Configs
+	"tsserver.enable": true,
+	"tsserver.enableJavascript": true,
+	// Markdown Configs
+	"[markdown]": {
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": true,
+			"strings": true
+		},
+		"editor.acceptSuggestionOnEnter": "on",
+		"editor.tabCompletion": "onlySnippets"
+	}
 }
-
