@@ -29,9 +29,18 @@ function install_latex {
 }
 
 function install_fzf {
+    # installing fzf
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install # say yes to all
+
+    # installing ctags
+    sudo apt-get install ctags
 }
+
+# function install_font {
+#     sudo apt-get install fonts-powerline
+#     fc-cahce -vf
+# }
 
 
 #######################################################################
@@ -54,6 +63,7 @@ function install_python_packages{
     pip install pep8 # code formatting
     # pandas, html5lib, numpy, requests, BeautifulSoup4
 }
+
 
 
 #######################################################################

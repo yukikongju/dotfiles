@@ -56,12 +56,54 @@ let g:which_key_map.a = {
 	    \ 't' : 'toggle-lang',
 	    \}
 
+" Keybindings for fzf
+nnoremap <silent> <leader>fb :Buffers<CR>
+nnoremap <silent> <leader>f/ :BLines<CR>
+nnoremap <silent> <leader>f' :Marks<CR>
+nnoremap <silent> <leader>ff :History<CR>
+nnoremap <silent> <leader>fg :Commits<CR>
+nnoremap <silent> <leader>fc: :History:<CR>
+nnoremap <silent> <leader>ft :Tags<CR>
+nnoremap <silent> <Leader>fs :Snippets<CR>
+nnoremap <silent> <Leader>fm :Maps<CR>
+" nnoremap <silent> <Leader>fa :Ag<CR>
+" nnoremap <silent> <Leader>fr :Rg<CR>
+" nnoremap <silent> <leader>fs: :History/<CR> " search history
+" nnoremap <silent> <leader>H :Helptags<CR>
+
+let g:which_key_map.f = {
+	    \'name': '+fzf',
+	    \'b': 'buffers',
+	    \'c': 'command-history',
+	    \'f': 'files-history',
+	    \'g': 'git-commit',
+	    \'m': 'maps',
+	    \'t': 'tags',
+	    \'s': 'snippets',
+	    \'/': 'blines',
+	    \}
+
+" TODO: Add marks to mappings
+" \' ' : 'marks',
+
+
+" Keybindings for global/local Replace
+nnoremap <leader>ra :%s/\<<C-r><C-w>\>/
+nnoremap <leader>rc gD:%s/<C-R>///gc<left><left><left><C-R>
+let g:which_key_map.r ={
+	    \'name': 'replace',
+	    \'a': 'replace-all',
+	    \'c': 'replace-confirm',
+	    \}
+
+" TODO: Keybindings for vimspector
+
 " =======================================================
 " " Create menus not based on existing mappings:
 " " =======================================================
 
 " Keybindings for windows
-let g:which_key_map['w'] = {
+let g:which_key_map.w = {
 	    \ 'name' : '+windows' ,
 	    \ 'w' : ['<C-W>w'     , 'other-window']          ,
 	    \ 'd' : ['<C-W>c'     , 'delete-window']         ,

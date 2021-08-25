@@ -73,9 +73,6 @@ vnoremap Q :norm @q<cr>
 map <F1> :r! date "+\%A \%d \%B \%Y" <CR>
 map <F2> :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
 
-" Global/Local Replace
-nnoremap <leader>ra :%s/\<<C-r><C-w>\>/
-nnoremap <leader>rc gD:%s/<C-R>///gc<left><left><left><C-R>
 
 " Search exact word
 

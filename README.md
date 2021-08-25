@@ -44,10 +44,11 @@ Plugins:
 - [X] Snippets with ultisnips
 - [X] Windows Splitting with tmux
 - [X] Latex Compiler with ``<leader>ll``
-- [ ] PDF file viewer
 - [X] Debugger with vimspector and ``<leader>dd``
 - [X] Check and Uncheck checkboxes with bullets.vim ``<leader>x``
 - [X] Jump to file reference with startify ``gf``
+- [X] Jump to functions definition and reference with coc.nvim ``gd`` and ``gr``
+- [ ] PDF file viewer
 
 Native:
 - [X] Mappings Refractor
@@ -71,4 +72,5 @@ Native:
 - [Setting up Jupyter Notebook with Python on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-set-up-jupyter-notebook-with-python-3-on-ubuntu-18-04)
 - [Modern Coder's install fzf on terminal](https://www.youtube.com/watch?v=1a5NiMhqAR0)
 - [vim-galore](https://github.com/mhinz/vim-galore)
+- [Install Jupyter notebook](https://speedysense.com/install-jupyter-notebook-on-ubuntu-20-04/)
 

@@ -2,12 +2,7 @@
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" let g:UltiSnipsSnippetDirectories=['~/UltiSnips']
-" let g:UltiSnipsSnippetDir=["$HOME/dotfiles/.vim/UltiSnips"]
 let g:UltiSnipsSnippetsDir="$HOME/.vim/UltiSnips"
-" let g:UltiSnipsSnippetDirectories=["$HOME/dotfiles/.vim/UltiSnips"]
-" let g:UltiSnipsSnippetsDir="$HOME/UltiSnips"
-" let g:UltiSnipsSnippetDirectories=["$HOME/.vim/UltiSnips"]
 
 " Use <C-l> for trigger snippet expand.
 " imap <C-l> <Plug>(coc-snippets-expand)
@@ -29,10 +24,6 @@ let g:UltiSnipsSnippetsDir="$HOME/.vim/UltiSnips"
 
 " Use tex.snippets for .tex and .plaintex files
 " autocmd BuffEnter,BufNew *.plaintex setf plaintex.tex
-
-
-
-
 
 " VSCode like tab completion
 inoremap <silent><expr> <TAB>
