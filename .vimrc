@@ -13,7 +13,10 @@ Plug 'dkarter/bullets.vim' " check box easily
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
 
 " tmux
-Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
+" Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
+
+" treesitter
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Sidebar
 Plug 'scrooloose/nerdtree'
@@ -53,6 +56,9 @@ Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
 " Plug 'mattn/vim-lsp-settings'
 
 " autoformat
+Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switch bc no <S-tab> behavior)
+" Plug 'godlygeek/tabular' " Allows vim-markdown to work
+" Plug 'plasticboy/vim-markdown' " markdown formatting
 " Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
 " Plug 'prettier/vim-prettier'
 
@@ -75,11 +81,14 @@ Plug 'airblade/vim-gitgutter' " Show diff
 
 " vimwiki
 Plug 'vimwiki/vimwiki' " create linked text files
+" Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
+" Plug 'tools-life/taskwiki'
+" Plug 'GothenburgBitFactory/taskwarrior' " task management
 
 " app
 " Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
-" Plug 'blindFS/vim-taskwarrior' " taskwarrior task manager
+" Plug 'blindFS/vim-taskwarrior' " interface for taskwarrior task manager
 
 call plug#end()
 
@@ -215,6 +224,11 @@ let g:livepreview_engine = 'evince' . ' [options]'
 " let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " let g:airline_theme='gruvbox'
 
+" Fix JSON indentation
+" augroup Indentation
+" autocmd!
+" autocmd FileType javascript set shiftwidth=2
+" augroup END
 
 " Vim Configs
 source ~/.vim/init/coc.vim

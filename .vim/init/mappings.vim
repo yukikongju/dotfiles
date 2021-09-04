@@ -53,6 +53,9 @@ nmap <silent> <leader>nt :tabe<CR>
 " Formatting and stay on the same line
 nmap <silent> <leader>i gg=G``zz<CR>
 
+" local formatting
+" nmap <silent> <leader>i =i{<CR>
+
 " Formatting on save
 
 " write only if something is changed
@@ -72,7 +75,7 @@ vnoremap Q :norm @q<cr>
 " Keybinding for date
 map <F1> :r! date "+\%A \%d \%B \%Y" <CR>
 map <F2> :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
-
+nnoremap <leader>now :r!date<CR>
 
 " Search exact word
 
@@ -90,5 +93,4 @@ inoremap <silent> <ESC>OA <UP>
 inoremap <silent> <ESC>OB <DOWN>
 inoremap <silent> <ESC>OC <RIGHT>
 inoremap <silent> <ESC>OD <LEFT>
-
 
