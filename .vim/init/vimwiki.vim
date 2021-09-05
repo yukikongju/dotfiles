@@ -22,6 +22,7 @@ let g:vimwiki_list = [
 	    \ 'path_html': '~/VimWikiNotes/Logs/site_html/',
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
+	    \ 'auto_diary-index': 1,
 	    \},
 	    \{
 	    \ 'path': '~/VimWikiNotes/Rant/',
@@ -31,6 +32,7 @@ let g:vimwiki_list = [
 	    \ 'path_html': '~/VimWikiNotes/Rant/site_html/',
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
+	    \ 'auto_generate_tags': 1,
 	    \},
 	    \{
 	    \ 'path': '~/VimWikiNotes/FlashCards/',
@@ -51,8 +53,10 @@ let g:vimwiki_list = [
 	    \ 'template_ext': '.tpl',
 	    \}
 	    \]
+
 " Automatically export vimwiki to html
 " \ 'auto_export':1,
+" 'auto_tags':1
 
 " Mapping to generate html for all vimwiki files
 nnoremap <leader>wa :VimwikiAll2HTML<CR>
@@ -66,6 +70,15 @@ nnoremap <leader>wa :VimwikiAll2HTML<CR>
 
 " use <tab> to jump to next sections and snippets in insert mode
 let g:vimwiki_table_mappings = 0
+
+"""""""""""""""""""""""""
+"  Vimwik HTML Configs  "
+"""""""""""""""""""""""""
+
+" New lines in list item are converted in <br> in html file
+let g:vimwiki_list_ignore_newline = 0
+let g:vimwiki_text_ignore_newline = 0
+" let g:vimwiki_html_header_numbering = 0
 
 """"""""""""""""""""""""""
 "  vim.calendar Configs  "

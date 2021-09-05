@@ -16,4 +16,4 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 # Symbolic link for coc-settings
 unlink $HOME/.vim/coc-settings.json
 rm -rf $HOME/.vim/coc-settings.json
-ln -s ~/dotfiles/coc-settings.json ~/.vim/coc-settings.json
+ln -s ~/dotfiles/.vim/coc-settings.json ~/.vim/coc-settings.json

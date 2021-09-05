@@ -49,7 +49,7 @@ Plugins:
 - [X] Check and Uncheck checkboxes with bullets.vim ``<leader>x``
 - [X] Jump to file reference with startify ``gf``
 - [X] Jump to functions definition and reference with coc.nvim ``gd`` and ``gr``
-- [X] Personnal Notes to HTML with vimwiki using ``<leader>wa``, `` <leader>ws ``, `` <leader>w<leader>w``, `` <leader>w<leader>i``
+- [X] Personnal Notes to HTML with vimwiki using ``<leader>wa``, `` <leader>ws ``, `` <leader>w<leader>w``, `` <leader>w<leader>i``, ``<leader>ws``, `` <leader>wt``
 - [X] Search through code in buffer with Ack using ``<leader>sa``
 - [ ] Ag, Rg, LustyBuffer
 - [ ] PDF file viewer
