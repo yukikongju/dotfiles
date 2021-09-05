@@ -37,11 +37,24 @@ function install_fzf {
     sudo apt-get install ctags
 }
 
+function install_ack { # code searcher
+    # install grep, ack, silversearcher
+    sudo apt-get install ack-grep ripgrep silversearcher-ag
+
+    # install vim+ruby
+    sudo apt-get install vim-nox vim-rails
+}
+
 function install_tmux {
     sudo apt-get install tmux
 }
 
+function install_taskwarrior {
+    sudo apt install taskwarrior
+}
+
 function install_vimwiki {
+    # generate HTML files
     pip install vimwiki-markdown
 }
 # function install_font {

@@ -11,24 +11,41 @@ let g:which_key_map =  {}
 " Create menus based on existing mappings
 " =======================================================
 
-" Keybindings for vim files
-nnoremap <silent> <leader>ve :tabnew $MYVIMRC<cr>
-nnoremap <leader>vr :source $MYVIMRC<cr>
-nnoremap <silent> <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
-let g:which_key_map.v ={
-	    \'name':'+vim',
-	    \'e':'edit-vim',
-	    \'r':'reload-vim',
-	    \'f':'open-vim-subdirectory'
+" Keybindings for SpellCheck/autocorrect
+nnoremap <leader>ao :setlocal spell!<CR>
+nnoremap <leader>at :call ToggleSpellLang()<CR>
+let g:which_key_map.a = {
+	    \ 'name': '+autocorrect',
+	    \ 'o': 'autocorrect-on-off',
+	    \ 't' : 'toggle-lang',
 	    \}
 
-" Keybindings to open quickfix and location
-nnoremap <silent> <leader>oq  :copen<CR>
-nnoremap <silent> <leader>ol  :lopen<CR>
-let g:which_key_map.o = {
-	    \ 'name' : '+open',
-	    \ 'q' : 'open-quickfix'    ,
-	    \ 'l' : 'open-locationlist',
+" Keybindings for fzf
+nnoremap <silent> <leader>fb :Buffers<CR>
+nnoremap <silent> <leader>f/ :BLines<CR>
+nnoremap <silent> <leader>f' :Marks<CR>
+nnoremap <silent> <leader>ff :History<CR>
+nnoremap <silent> <leader>fg :Commits<CR>
+nnoremap <silent> <leader>ft :Tags<CR>
+nnoremap <silent> <Leader>fs :Snippets<CR>
+nnoremap <silent> <Leader>fm :Maps<CR>
+nnoremap <silent> <Leader>fa :Ag<CR> " the silver searcher
+nnoremap <silent> <Leader>fr :Rg<CR> " grep inside files opened in bufer
+nnoremap <silent> <leader>fc :History:<CR>
+" nnoremap <silent> <leader>fs: :History/<CR> " search history
+" nnoremap <silent> <leader>H :Helptags<CR>
+
+let g:which_key_map.f = {
+	    \'name': '+fzf',
+	    \'b': 'buffers',
+	    \'c': 'command-history',
+	    \'f': 'files-history',
+	    \'g': 'git-commit',
+	    \'m': 'maps',
+	    \'r': 'ripgrep',
+	    \'s': 'snippets',
+	    \'t': 'tags',
+	    \'/': 'blines',
 	    \}
 
 " Keybindings for latex (Fix: behavior)
@@ -47,45 +64,14 @@ let g:which_key_map.l ={
 
 " \'c': 'generate-pdf-from-current-file',
 
-" Keybindings for SpellCheck/autocorrect
-nnoremap <leader>ao :setlocal spell!<CR>
-nnoremap <leader>at :call ToggleSpellLang()<CR>
-let g:which_key_map.a = {
-	    \ 'name': '+autocorrect',
-	    \ 'o': 'autocorrect-on-off',
-	    \ 't' : 'toggle-lang',
+" Keybindings to open quickfix and location
+nnoremap <silent> <leader>oq  :copen<CR>
+nnoremap <silent> <leader>ol  :lopen<CR>
+let g:which_key_map.o = {
+	    \ 'name' : '+open',
+	    \ 'q' : 'open-quickfix'    ,
+	    \ 'l' : 'open-locationlist',
 	    \}
-
-" Keybindings for fzf
-nnoremap <silent> <leader>fb :Buffers<CR>
-nnoremap <silent> <leader>f/ :BLines<CR>
-nnoremap <silent> <leader>f' :Marks<CR>
-nnoremap <silent> <leader>ff :History<CR>
-nnoremap <silent> <leader>fg :Commits<CR>
-nnoremap <silent> <leader>fc: :History:<CR>
-nnoremap <silent> <leader>ft :Tags<CR>
-nnoremap <silent> <Leader>fs :Snippets<CR>
-nnoremap <silent> <Leader>fm :Maps<CR>
-" nnoremap <silent> <Leader>fa :Ag<CR>
-" nnoremap <silent> <Leader>fr :Rg<CR>
-" nnoremap <silent> <leader>fs: :History/<CR> " search history
-" nnoremap <silent> <leader>H :Helptags<CR>
-
-let g:which_key_map.f = {
-	    \'name': '+fzf',
-	    \'b': 'buffers',
-	    \'c': 'command-history',
-	    \'f': 'files-history',
-	    \'g': 'git-commit',
-	    \'m': 'maps',
-	    \'t': 'tags',
-	    \'s': 'snippets',
-	    \'/': 'blines',
-	    \}
-
-" TODO: Add marks to mappings
-" \' ' : 'marks',
-
 
 " Keybindings for global/local Replace
 nnoremap <leader>ra :%s/\<<C-r><C-w>\>/
@@ -94,6 +80,17 @@ let g:which_key_map.r ={
 	    \'name': 'replace',
 	    \'a': 'replace-all',
 	    \'c': 'replace-confirm',
+	    \}
+
+" Keybindings for vim files
+nnoremap <silent> <leader>ve :tabnew $MYVIMRC<cr>
+nnoremap <leader>vr :source $MYVIMRC<cr>
+nnoremap <silent> <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
+let g:which_key_map.v ={
+	    \'name':'+vim',
+	    \'e':'edit-vim',
+	    \'r':'reload-vim',
+	    \'f':'open-vim-subdirectory'
 	    \}
 
 " TODO: Keybindings for vimspector

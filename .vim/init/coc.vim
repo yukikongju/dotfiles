@@ -12,11 +12,14 @@ let g:coc_disable_startup_warning = 1
 let g:coc_global_extensions = [
 	    \ 'coc-clangd',
 	    \ 'coc-cmake',
+	    \ 'coc-elixir',
 	    \ 'coc-java',
 	    \ 'coc-jedi',
-	    \'coc-markmap',
+	    \ 'coc-markmap',
+	    \ 'coc-snippets',
 	    \ 'coc-tsserver',
 	    \ 'coc-vimlsp',
+	    \ 'coc-vimtex',
 	    \ ]
 
 " \ 'coc-definition',
@@ -26,7 +29,6 @@ let g:coc_global_extensions = [
 " \ 'coc-pyright',
 " \ 'coc-todolist',
 " \ 'coc-json',
-" \ 'coc-snippets',
 
 " COC MAPPINGS
 

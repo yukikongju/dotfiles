@@ -19,8 +19,8 @@ augroup RemoveEmptyLinesButOne
 		\ autocmd! RemoveEmptyLinesButOne BufWritePost <buffer> silent! :g/^\_$\n\_^$/d
 augroup END
 
+" toggle between en and fr
 function! ToggleSpellLang()
-    " toggle between en and fr
     if &spelllang =~# 'en'
 	:set spelllang=fr
     else
@@ -28,13 +28,12 @@ function! ToggleSpellLang()
     endif
 endfunction
 
-
-    " allows cursor change in tmux mode (untested)
+" allows cursor change in tmux mode (untested)
 " if exists('$TMUX')
-    " let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    " let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+" let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+" let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 " else
-    " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " endif
 

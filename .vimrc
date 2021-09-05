@@ -32,9 +32,17 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter' " fzf look at project directory
 Plug 'mhinz/vim-startify' " fancy start screen and session manager
+" Plug 'vifm/vifm'
+" Plug 'vifm/vifm.vim' " Launch vifm from vim
 " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger
 " Plug 'ranger/ranger'
 " Plug 'francoiscabrol/ranger.vim'
+
+" Code Finder
+Plug 'mileszs/ack.vim' " use :Ack in vim -> :Ack "<pattern>" "<file>"
+Plug 'rking/ag.vim'	" use :Ag in vim
+" Plug 'sjbach/lusty' " Buffer-grep: find code in opened buffer (missing
+" functionalities)
 
 " colorscheme' & syntax highlight
 Plug 'itchyny/lightline.vim' " colorscheme for vim modes
@@ -102,8 +110,6 @@ set completeopt=longest,menuone
 set shortmess+=c
 set updatetime=300
 set timeoutlen=500
-" set spelllang=en_ca
-" set spelllang=fr
 " set spellsuggest=fast,20 " don't show too much suggestion
 " set omnifunc=syntaxcomplete#Complete
 
@@ -231,6 +237,7 @@ let g:livepreview_engine = 'evince' . ' [options]'
 " augroup END
 
 " Vim Configs
+source ~/.vim/init/ack.vim
 source ~/.vim/init/coc.vim
 source ~/.vim/init/colors.vim
 source ~/.vim/init/fzf.vim
