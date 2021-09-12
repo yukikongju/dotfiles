@@ -8,7 +8,7 @@ endfun
 augroup TrailSpace
     autocmd!
     " autocmd BufWritePre * :call TrimWhiteSpace()
-    autocmd BufWritePre python,java,javascript,latex :call TrimWhiteSpace()
+    autocmd BufWritePre python,java,javascript,latex,vim :call TrimWhiteSpace()
 augroup END
 
 " Formating file on save

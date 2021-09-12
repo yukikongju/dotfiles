@@ -20,6 +20,24 @@ let g:which_key_map.a = {
 	    \ 't' : 'toggle-lang',
 	    \}
 
+nmap <leader>hd <Plug>(GitGutterPreviewHunk)
+nmap <leader>hf <Plug>(GitGutterFold)
+nmap <leader>hn <Plug>(GitGutterNextHunk)
+nmap <leader>hp <Plug>(GitGutterPrevHunk)
+
+" Keybindings for gitgutter hunks
+let g:which_key_map.h = {
+	    \'name':'+hunk',
+	    \'d': 'hunks-difference',
+	    \'f': 'fold-hunks',
+	    \'n': 'next-hunk',
+	    \'p': 'previous-hunk',
+	    \}
+
+"     \'p': ['<Plug>(GitGutterPreviewHunk)' , 'preview-hunk'],
+"     \'s': ['<Plug>(GitGutterStageHunk)' , 'stage-hunk'],
+"     \'u': ['<Plug>(GitGutterUndoHunk)' , 'undo-hunk'],
+
 " Keybindings for fzf
 nnoremap <silent> <leader>fb :Buffers<CR>
 nnoremap <silent> <leader>f/ :BLines<CR>
@@ -34,6 +52,9 @@ nnoremap <silent> <Leader>fr :Rg<CR> " grep inside files opened in bufer
 nnoremap <silent> <leader>fc :History:<CR>
 " nnoremap <silent> <leader>fs: :History/<CR> " search history
 " nnoremap <silent> <leader>H :Helptags<CR>
+
+
+
 
 let g:which_key_map.f = {
 	    \'name': '+fzf',
@@ -136,10 +157,3 @@ let g:which_key_map.b = {
 	    \ '?' : ['Buffers'   , 'fzf-buffer']      ,
 	    \}
 
-" Keybindings for gitgutter hunks
-" let g:which_key_map.h = {
-"             \'name':'+hunk',
-"             \'p': ['<Plug>(GitGutterPreviewHunk)' , 'preview-hunk'],
-"             \'s': ['<Plug>(GitGutterStageHunk)' , 'stage-hunk'],
-"             \'u': ['<Plug>(GitGutterUndoHunk)' , 'undo-hunk'],
-"             \}

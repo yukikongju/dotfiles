@@ -29,5 +29,12 @@ function AckSearch(string) abort
 	let &shellpipe = saved_shellpipe
     endtry
 endfunction
-
 nnoremap <leader>sa :call AckSearch("")<left><left>
+" nnoremap <leader>sa :tabe; AckSearch("")<left><left> (doesnt work)
+
+" Open Ack in new tab
+" nnoremap <leader>st :tabe<CR>:Ack ""<left>
+nnoremap <leader>st :tabe<CR>:call AckSearch("")<left><left>
+
+" Open Ack with word under cursor in new tab
+" nnoremap <leader>sT :tabe<CR>:Ack <C-r><C-w><CR>

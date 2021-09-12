@@ -21,7 +21,12 @@ let g:NERDTreeGitStatusShowIgnored = 1
 "  GitGutter Configs  "
 """""""""""""""""""""""
 
-" let g:gitgutter_map_keys = 0
+" Disable key mapping
+let g:gitgutter_map_keys = 0
+
+" Jump between hunks
+" nmap ]h <Plug>(GitGutterNextHunk)
+" nmap [h <Plug>(GitGutterPrevHunk)
 
 " nmap ghs <Plug>(GitGutterStageHunk)
 " nmap ghu <Plug>(GitGutterUndoHunk)
@@ -34,7 +39,7 @@ let g:NERDTreeGitStatusShowIgnored = 1
 " let g:gitgutter_sign_removed_first_line = '^^'
 " let g:gitgutter_sign_removed_above_and_below = '{'
 " let g:gitgutter_sign_modified_removed = 'ww'
-"
+
 " Check Hunk summary on GitStatus
 function! GitStatus()
     let [a,m,r] = GitGutterGetHunkSummary()

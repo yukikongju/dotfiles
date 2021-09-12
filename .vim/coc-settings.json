@@ -1,4 +1,11 @@
 {
+	"pairs.enableCharacters": [
+		"(",
+		"{",
+		"[",
+		"'",
+		"`"
+	],
 	"suggest.minTriggerInputLength": 2,
 	"suggest.snippetIndicator": "►",
 	"suggest.maxCompleteItemCount": 10,

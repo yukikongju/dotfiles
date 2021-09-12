@@ -64,12 +64,19 @@ nnoremap <leader>wa :VimwikiAll2HTML<CR>
 " Set Title as File Name
 " au BufNewFile *.md :r!echo %:t:r;
 
+" use <tab> to jump to next sections and snippets in insert mode
+let g:vimwiki_table_mappings = 0
+
+""""""""""""
+"  Macros  "
+""""""""""""
+
 " Macro to create new vimwiki + title with @t
 " let @q = 'BwYv$<Enter>PBx='
 " let @q = 'BwYv$'
 
-" use <tab> to jump to next sections and snippets in insert mode
-let g:vimwiki_table_mappings = 0
+" Macro to add 3 trailing space to indent markdown files
+" let @i = '$a   \<Esc>'   
 
 """""""""""""""""""""""""
 "  Vimwik HTML Configs  "
