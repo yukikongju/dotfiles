@@ -44,15 +44,18 @@ Plugins:
 - [X] Autocomplete with coc.nvim
 - [X] Fuzzy file finder with fzf ``<c-f>``
 - [X] Snippets with ultisnips
-- [X] Latex Compiler with ``<leader>ll``
+- [X] Latex Compiler with vimtex using ``<leader>lc``
 - [X] Debugger with vimspector and ``<leader>dd``
 - [X] Check and Uncheck checkboxes with bullets.vim ``<leader>x``
 - [X] Jump to file reference with startify ``gf``
 - [X] Jump to functions definition and reference with coc.nvim ``gd`` and ``gr``
 - [X] Personnal Notes to HTML with vimwiki using ``<leader>wa``, `` <leader>ws ``, `` <leader>w<leader>w``, `` <leader>w<leader>i``, ``<leader>ws``, `` <leader>wt``
 - [X] Search through code in buffer with Ack using ``<leader>sa``
+- [X] PDF file viewer with evince (zathura is another option)
+- [X] Converting markdown file to pdf with pandoc using ``pandoc file.md -o file.pdf``
 - [ ] Ag, Rg, LustyBuffer
-- [ ] PDF file viewer
+- [ ] Window Manager with dwm or i3
+- [ ] Preview Picture and Videos with ranger
 
 Native:
 - [X] Mappings Refractor
@@ -103,4 +106,5 @@ Native:
 - [Install Jupyter notebook](https://speedysense.com/install-jupyter-notebook-on-ubuntu-20-04/)
 - [Tmux CheatSheet](https://tmuxcheatsheet.com/)
 - [Vimwiki CheatSheet](http://thedarnedestthing.com/vimwiki%20cheatsheet)
+- [Evince Shortcuts](htps://defkey.com/evince-shortcuts)
 

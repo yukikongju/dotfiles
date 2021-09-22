@@ -11,6 +11,7 @@
 function install_python {
     sudo apt-get install python3-pip
     sudo apt-get install python3-venv # create python-venv
+    sudo apt-get install jedi-language-server
 }
 
 function install_java {
@@ -26,6 +27,7 @@ function install_js {
 function install_latex {
     sudo apt install pdflatex
     sudo apt install evince
+    sudo apt install zathura
 }
 
 function install_fzf {
@@ -35,6 +37,10 @@ function install_fzf {
 
     # installing ctags
     sudo apt-get install ctags
+}
+
+function install_window_manager {
+    sudo apt install i3-wm
 }
 
 function install_ack { # code searcher
@@ -57,6 +63,19 @@ function install_vimwiki {
     # generate HTML files
     pip install vimwiki-markdown
 }
+
+function install_ranger {
+    sudo apt install ranger-fm
+    # add dependecies to preview pictures on ranger
+    sudo apt install libjpeg8-dev zlib1g-dev python-dev python3-dev libxtst-dev
+}
+
+function install_devicons {
+    # Install icons and put it in .local/share/fonts
+    # IN terminal, set custom font as downloaded font
+    # See: Ubuntu terminal preferences
+}
+
 # function install_font {
 #     sudo apt-get install fonts-powerline
 #     fc-cahce -vf

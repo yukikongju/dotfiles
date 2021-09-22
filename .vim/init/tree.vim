@@ -32,3 +32,28 @@ let g:undotree_WindowLayout=2
 """"""""""""""""""""""
 nnoremap <leader>t :Tagbar<CR>
 let g:tagbar_autoclose=1
+
+""""""""""""""""""""""""""""""""""""
+"  Vim-Nerdtree-Syntax-Highlights  "
+""""""""""""""""""""""""""""""""""""
+
+" Disable unmatched folder and file icons having the same color as their
+" labels
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+
+" Disable Highlights
+let g:NERDTreeDisableFileExtensionHighlight = 1
+let g:NERDTreeDisableExactMatchHighlight = 1
+let g:NERDTreeDisablePatternMatchHighlight = 1
+
+" Highlights full name
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+
+" Highlight folders using exact match
+let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+

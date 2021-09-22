@@ -53,9 +53,6 @@ nnoremap <silent> <leader>fc :History:<CR>
 " nnoremap <silent> <leader>fs: :History/<CR> " search history
 " nnoremap <silent> <leader>H :Helptags<CR>
 
-
-
-
 let g:which_key_map.f = {
 	    \'name': '+fzf',
 	    \'b': 'buffers',
@@ -70,17 +67,24 @@ let g:which_key_map.f = {
 	    \}
 
 " Keybindings for latex (Fix: behavior)
+nnoremap <leader>la :!git add */*.pdf */*.tex;
 nnoremap <leader>lg :!pdflatex %; mv %:t:r.* %:p:h;
 nnoremap <leader>lr :!pdflatex %
-" nnoremap <leader>lc :!cd %:p:h; pdflatex %
+nnoremap <leader>lc :VimtexCompile
 nnoremap <leader>lo :!cd %:h; explorer %:t:r.pdf
-nnoremap <leader>la :!git add */*.pdf */*.tex;
+nnoremap <leader>lp :! pandoc % -o %<.pdf; 
+nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf; 
+" https://piware.de/2014/07/vim-config-for-markdownlatex-pandoc-editing/
+" todo: save file and open
 let g:which_key_map.l ={
 	    \'name':'+latex',
 	    \'a': 'git-add-pdf-latex',
+	    \'b': 'pandoc-beamer',
+	    \'c': 'compile-latex-with-evince',
 	    \'g': 'generate-pdf-lecture-notes',
-	    \'r': 'generate-pdf-from-root',
 	    \'o': 'open-pdf-windows',
+	    \'p': 'convert-md-to-pdf-with-pandoc',
+	    \'r': 'generate-pdf-from-root',
 	    \}
 
 " \'c': 'generate-pdf-from-current-file',

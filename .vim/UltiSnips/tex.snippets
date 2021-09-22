@@ -178,6 +178,115 @@ endsnippet
 # snippet template-powerpoint
 # endsnippet
 
+snippet template-problem-set "Template Problem Set" b
+\documentclass[12pt,a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% packages %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{tabulary}
+
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{placeins}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{psfrag}
+
+\usepackage{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%% students data %%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\student}{\textbf{Emulie Chhor}}
+\newcommand{\course}{\textbf{IFT 1575}}
+\newcommand{\assignment}{\textbf{1}}
+
+%%%%%%%%%%%%%%%%%%% using theorem style %%%%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exa}[thm]{Example}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{quest}{Question}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum}%% a garbage package you don't need except to create examples.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\lhead{Azamuke Denish}
+\rhead{ \thepage}
+%\cfoot{\textbf{AIMS Rwanda Academic Year 2020 - 2021}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%%%%%%%%%%%%%%  Shortcut for usual set of numbers  %%%%%%%%%%%
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Formatting %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% reset equation count after section and subsection
+
+\usepackage{chngcntr}
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\thispagestyle{empty}
+\begin{center}
+	% \includegraphics[scale = 0.6]{DIRO_LOGO.jpg}
+	\vspace{0.5cm}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%% assignment information %%%%%%%%%%%%%%%%
+
+\noindent
+\rule{17cm}{0.2cm}\\[0.3cm]
+Nom: \student \hfill Devoir \assignment\\[0.1cm]
+Cours: \course \hfill Date: \today\\
+\rule{17cm}{0.05cm}
+% \vspace{1.0cm}
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Body %%%%%%%%%%%%%%%%%%%%
+
+\section*{Problème 1}
+
+\subsection*{Solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bibilography
+
+\newpage
+\begin{thebibliography}{99}
+	\bibitem{am} Bitter, R., Mohiuddin, T., \& Nawrocki, M. (2017). LabVIEW: {\em Advanced programming techniques.\em} CRC press.
+\end{thebibliography}
+\end{document}
+
+endsnippet
+
+
+
+
+
 #######################################################################
 #                         Sections Templates                          #
 #######################################################################

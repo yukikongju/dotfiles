@@ -50,7 +50,9 @@ Plug 'scrooloose/nerdcommenter' " Change indentation behavior
 Plug 'morhetz/gruvbox' " gruvbox color scheme
 Plug 'ap/vim-css-color' " Highlight colors in css files
 " Plug 'ryanoasis/nerd-fonts' " Install Nerd Font
-" Plug 'ryanoasis/vim-devicons' " Use icons from ryanoasis/nerd-fonts
+Plug 'ryanoasis/vim-devicons' " Use icons from ryanoasis/nerd-fonts
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'edkolev/promptline.vim'
@@ -65,7 +67,7 @@ Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
 
 " autoformat
 Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switch bc no <S-tab> behavior)
-" Plug 'godlygeek/tabular' " Allows vim-markdown to work
+" Plug 'godlygeek/tabulark " Allows vim-markdown to work
 " Plug 'plasticboy/vim-markdown' " markdown formatting
 " Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
 " Plug 'prettier/vim-prettier'
@@ -77,8 +79,12 @@ Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
 Plug 'gillescastel/latex-snippets'
 
 " latex compiler
-" Plug 'lervag/vimtex'
-" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
+Plug 'lervag/vimtex'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
+
+" pandoc compiler
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " debugger
 Plug 'puremourning/vimspector'
@@ -182,6 +188,8 @@ set foldnestmax=2
 
 " Enable fold for js
 autocmd FileType javascript,java setlocal foldmethod=syntax
+" autocmd FileType markdown setlocal foldmethod=indent
+autocmd FileType markdown setlocal foldmethod=expr
 let javaScript_fold=1
 
 " Buffers
@@ -212,9 +220,24 @@ let mapleader=","
 " replace mode
 set t_u7=
 
-" test to view latex file
-let g:livepreview_previewer = 'pdflatex'
-let g:livepreview_engine = 'evince' . ' [options]'
+" Configs for vim-latex-live-preview
+let g:livepreview_previewer = 'evince'
+let g:livepreview_engine = 'pdflatex' . ' [options]'
+" let g:livepreview_use_biber = 1
+
+" Allow fold inside Markdown (vim-markdown)
+let g:markdown_folding = 1
+" let g:vimiwiki_global_ext = 0
+" let g:vimwiki_folding = 'custom'
+
+ " let g:tex_flavor='latex'
+" let g:vimtex_view_method='zathura'
+" let g:vimtex_quickfix_mode=0
+" set conceallevel=1
+" let g:tex_conceal='abdmg'
+" let g:vimtex_compiler_latexmk=1
+
+" open latex on side screen
 
 " Configs ale
 " let b:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
@@ -236,10 +259,14 @@ let g:livepreview_engine = 'evince' . ' [options]'
 " autocmd FileType javascript set shiftwidth=2
 " augroup END
 
+" Configs for pandoc
+ " let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
+ " let g:pandoc#filetypes#pandoc_markdown = 0
+
 " Vim Configs
 source ~/.vim/init/ack.vim
-source ~/.vim/init/coc.vim
 source ~/.vim/init/colors.vim
+source ~/.vim/init/coc.vim
 source ~/.vim/init/fzf.vim
 source ~/.vim/init/functions.vim
 source ~/.vim/init/git.vim
