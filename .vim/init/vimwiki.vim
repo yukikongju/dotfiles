@@ -43,6 +43,33 @@ let g:vimwiki_list = [
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \},
+	    \{
+	    \ 'path': '~/VimWikiNotes/Writting/',
+	    \ 'name':'Writting Prompts',
+	    \ 'syntax': 'markdown',
+	    \ 'ext': '.md',
+	    \ 'path_html': '~/VimWikiNotes/Writting/site_html/',
+	    \ 'custom_wiki2html': 'vimwiki_markdown',
+	    \ 'template_ext': '.tpl',
+	    \},
+	    \{
+	    \ 'path': '~/VimWikiNotes/Blog/',
+	    \ 'name':'Blog',
+	    \ 'syntax': 'markdown',
+	    \ 'ext': '.md',
+	    \ 'path_html': '~/VimWikiNotes/Blog/site_html/',
+	    \ 'custom_wiki2html': 'vimwiki_markdown',
+	    \ 'template_ext': '.tpl',
+	    \},
+	    \{
+	    \ 'path': '~/Documents/Learning-Logs/Winter2021',
+	    \ 'name':'Learning Logs',
+	    \ 'syntax': 'markdown',
+	    \ 'ext': '.md',
+	    \ 'path_html': '~/Documents/Learning-Logs/Winter2021/site_html',
+	    \ 'custom_wiki2html': 'vimwiki_markdown',
+	    \ 'template_ext': '.tpl',
+	    \},
 	    \]
 
 " Automatically export vimwiki to html

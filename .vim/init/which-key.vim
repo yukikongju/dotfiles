@@ -11,9 +11,10 @@ let g:which_key_map =  {}
 " Create menus based on existing mappings
 " =======================================================
 
-" Keybindings for SpellCheck/autocorrect
+" Keybindings for SpellCheck/autocorrect/wordcount
 nnoremap <leader>ao :setlocal spell!<CR>
 nnoremap <leader>at :call ToggleSpellLang()<CR>
+
 let g:which_key_map.a = {
 	    \ 'name': '+autocorrect',
 	    \ 'o': 'autocorrect-on-off',
@@ -47,8 +48,8 @@ nnoremap <silent> <leader>fg :Commits<CR>
 nnoremap <silent> <leader>ft :Tags<CR>
 nnoremap <silent> <Leader>fs :Snippets<CR>
 nnoremap <silent> <Leader>fm :Maps<CR>
-nnoremap <silent> <Leader>fa :Ag<CR> " the silver searcher
-nnoremap <silent> <Leader>fr :Rg<CR> " grep inside files opened in bufer
+nnoremap <silent> <Leader>fa :Ag<CR> 
+nnoremap <silent> <Leader>fr :Rg<CR>
 nnoremap <silent> <leader>fc :History:<CR>
 " nnoremap <silent> <leader>fs: :History/<CR> " search history
 " nnoremap <silent> <leader>H :Helptags<CR>
@@ -71,9 +72,15 @@ nnoremap <leader>la :!git add */*.pdf */*.tex;
 nnoremap <leader>lg :!pdflatex %; mv %:t:r.* %:p:h;
 nnoremap <leader>lr :!pdflatex %
 nnoremap <leader>lc :VimtexCompile
-nnoremap <leader>lo :!cd %:h; explorer %:t:r.pdf
+nnoremap <leader>lo :!zathura %<.pdf;
+" nnoremap <leader>lo :!cd %:h; explorer %:t:r.pdf
 nnoremap <leader>lp :! pandoc % -o %<.pdf; 
-nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf; 
+" nnoremap <leader>lt :! pandoc % -o %<.pdf --table-of-contents --number-sections -V documentclass=report -V geometry:margin=1in;
+" nnoremap <leader>lt :! pandoc % -o %<.pdf --toc --number-sections -V documentclass=report;
+nnoremap <leader>lt :! pandoc % -o %<.pdf --toc
+" nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf; 
+nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf --toc --listings --number-section -auto_identifiers; 
+nnoremap <leader>lx :! xelatex %;
 " https://piware.de/2014/07/vim-config-for-markdownlatex-pandoc-editing/
 " todo: save file and open
 let g:which_key_map.l ={
@@ -82,10 +89,20 @@ let g:which_key_map.l ={
 	    \'b': 'pandoc-beamer',
 	    \'c': 'compile-latex-with-evince',
 	    \'g': 'generate-pdf-lecture-notes',
-	    \'o': 'open-pdf-windows',
+	    \'o': 'open-pdf-zathura',
 	    \'p': 'convert-md-to-pdf-with-pandoc',
+	    \'t': 'pandoc-with-table-of-contents',
 	    \'r': 'generate-pdf-from-root',
+	    \'x': 'xelatex-compiling',
 	    \}
+
+nnoremap <leader>ep :!python3 %;
+
+let g:which_key_map.e = {
+	    \'name': '+execute',
+	    \'p': 'execute-python3', 
+	    \}
+
 
 " \'c': 'generate-pdf-from-current-file',
 

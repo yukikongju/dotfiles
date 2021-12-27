@@ -8,8 +8,10 @@ call plug#begin('~/.vim/plugged')
 " utils
 Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
+Plug 'tpope/vim-eunuch' " use UNIX shell command in vim
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'dkarter/bullets.vim' " check box easily
+Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :Markdown
 " Plug 'voldikss/vim-floaterm' " popup terminal for vim
 
 " tmux
@@ -83,8 +85,8 @@ Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
 
 " pandoc compiler
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " debugger
 Plug 'puremourning/vimspector'
@@ -95,12 +97,14 @@ Plug 'airblade/vim-gitgutter' " Show diff
 
 " vimwiki
 Plug 'vimwiki/vimwiki' " create linked text files
+" Plug 'esensar/vimwiki-reviews-lua' " reviews vimwiki by week, month, year
+" Plug 'nvim-lua/plenary.nvim'
 " Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
 " Plug 'tools-life/taskwiki'
 " Plug 'GothenburgBitFactory/taskwarrior' " task management
 
 " app
-" Plug 'itchyny/calendar.vim' " calendar
+Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
 " Plug 'blindFS/vim-taskwarrior' " interface for taskwarrior task manager
 
@@ -181,15 +185,15 @@ set ttyfast
 set encoding=UTF-8
 
 " Folding
-set foldmethod=syntax
+" set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=5 " open all fold nested below n level deep
 set foldnestmax=2
 
 " Enable fold for js
 autocmd FileType javascript,java setlocal foldmethod=syntax
-" autocmd FileType markdown setlocal foldmethod=indent
-autocmd FileType markdown setlocal foldmethod=expr
+autocmd FileType python setlocal foldmethod=indent
+" autocmd FileType markdown setlocal foldmethod=expr
 let javaScript_fold=1
 
 " Buffers
@@ -212,6 +216,8 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 
+" copy to clipboard
+set clipboard=unnamed
 
 " Choose Leader
 let mapleader=","
@@ -222,8 +228,13 @@ set t_u7=
 
 " Configs for vim-latex-live-preview
 let g:livepreview_previewer = 'evince'
+" let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'pdflatex' . ' [options]'
 " let g:livepreview_use_biber = 1
+
+" automatically change the current directory
+autocmd BufEnter * silent! lcd %:p:h
+" set autochdir
 
 " Allow fold inside Markdown (vim-markdown)
 let g:markdown_folding = 1
@@ -262,6 +273,10 @@ let g:markdown_folding = 1
 " Configs for pandoc
  " let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
  " let g:pandoc#filetypes#pandoc_markdown = 0
+
+" calendar.vim
+" let g:calendar_google_calendar = 1
+" let g:calendar_google_task = 1
 
 " Vim Configs
 source ~/.vim/init/ack.vim

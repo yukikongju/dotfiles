@@ -28,6 +28,7 @@ function install_latex {
     sudo apt install pdflatex
     sudo apt install evince
     sudo apt install zathura
+    sudo apt-get install texlive-latex-recommended
 }
 
 function install_fzf {
@@ -80,6 +81,10 @@ function install_devicons {
 #     sudo apt-get install fonts-powerline
 #     fc-cahce -vf
 # }
+
+function install_apps {
+    sudo snap install youtube-music-desktop-app
+}
 
 
 #######################################################################

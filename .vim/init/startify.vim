@@ -23,10 +23,17 @@ let g:startify_bookmarks = [
 	    \ { 'b': '~/.bashrc'  },
 	    \ { 'v': '~/.vimrc'  },
 	    \ { 't': '~/.tmux.conf'  },
-	    \ { 'w': '~/VimWikiNotes/Courses/UdeM.md' },
-	    \ { 'd': '~/VimWikiNotes/Logs/index.md' },
-	    \ { 'r': '~/VimWikiNotes/Rant/index.md' },
+	    \ { 'n': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/Bac-Maths-Info/Session3/Notes-Session3'  },
+	    \ { 'c': '~/Documents/badminton-playbook/pratiques/Carabins2021-2022/Carabins2021-2022.md'  },
+	    \ { 'd': '~/Documents/badminton-playbook/pratiques/voletdev2021-2022/'  },
+	    \ { 'l': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/Lecture-Notes/'  },
+	    \ { 'm': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/Miscellaneous/'  },
+	    \ { 'g': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/Bac-Maths-Info/Curriculums/'  },
 	    \]
+
+" \ { 'w': '~/VimWikiNotes/Courses/UdeM.md' },
+" \ { 'd': '~/VimWikiNotes/Logs/index.md' },
+" \ { 'r': '~/VimWikiNotes/Rant/index.md' },
 
 " Startify Configs
 let g:startify_session_dir = '~/.config/nvim/session'
