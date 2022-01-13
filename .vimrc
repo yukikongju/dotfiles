@@ -11,8 +11,8 @@ Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'tpope/vim-eunuch' " use UNIX shell command in vim
 Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'dkarter/bullets.vim' " check box easily
-Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :Markdown
-" Plug 'voldikss/vim-floaterm' " popup terminal for vim
+Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
+Plug 'voldikss/vim-floaterm' " popup terminal for vim with :terminal and :FloatermToggle
 
 " tmux
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
@@ -55,14 +55,22 @@ Plug 'ap/vim-css-color' " Highlight colors in css files
 Plug 'ryanoasis/vim-devicons' " Use icons from ryanoasis/nerd-fonts
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Plug 'edkolev/promptline.vim'
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
+" Plug 'neoclide/coc-tabnine'
+
+
+" Plug 'jalvesaq/Nvim-R' " autocomplete for Rlang : https://www.freecodecamp.org/news/turning-vim-into-an-r-ide-cd9602e8c217/
+" Plug 'ncm2/ncm2'
+" Plug 'roxma/nvim-yarp'
+" Plug 'gaalcaras/ncm-R'
+
 " Plug 'dense-analysis/ale'
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
@@ -89,7 +97,7 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
 " Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " debugger
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
@@ -97,6 +105,8 @@ Plug 'airblade/vim-gitgutter' " Show diff
 
 " vimwiki
 Plug 'vimwiki/vimwiki' " create linked text files
+Plug 'jceb/vim-orgmode' " task management with .org file 
+" Plug 'xolox/vim-notes' " Note Taking in Vim using :Note
 " Plug 'esensar/vimwiki-reviews-lua' " reviews vimwiki by week, month, year
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
@@ -216,8 +226,9 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 
-" copy to clipboard
-set clipboard=unnamed
+" copy to clipboard in linux
+set clipboard=unnamedplus
+" set clipboard=unnamed " for windows
 
 " Choose Leader
 let mapleader=","
@@ -257,11 +268,11 @@ let g:markdown_folding = 1
 " let g:ale_fix_on_sabe = 1
 
 " airline Configs
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#left_sep = ' '
-" let g:airline#extensions#tabline#left_alt_sep = '|'
-" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " let g:airline_theme='gruvbox'
 
 " Fix JSON indentation
@@ -277,6 +288,11 @@ let g:markdown_folding = 1
 " calendar.vim
 " let g:calendar_google_calendar = 1
 " let g:calendar_google_task = 1
+
+" Vim Rooter Configs
+
+" Deactivate Vim Rooter echoing ( only echoes for Vimwiki)
+let g:rooter_silent_chdir = 1
 
 " Vim Configs
 source ~/.vim/init/ack.vim

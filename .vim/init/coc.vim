@@ -22,6 +22,7 @@ let g:coc_global_extensions = [
 	    \ 'coc-vimtex',
 	    \ ]
 
+" \ 'coc-r-lsp',
 " \ 'coc-definition',
 " \ 'coc-eslint',
 " \ 'coc-prettier',

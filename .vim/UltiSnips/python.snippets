@@ -1,3 +1,29 @@
 snippet usr
 #!/usr/bin/env/python
 endsnippet
+
+######################
+#  File and Directories  #
+######################
+
+snippet writef "write in file" b
+with open('${1:filename.csv}', '${2:w}') as ${3:f}:
+    f.write(${4:})
+endsnippet
+
+snippet readf "read file" b
+with open('${1:filename.csv}', '${2:r}') as ${3:f}:
+    ${4: x} = f.read()
+endsnippet
+
+snippet makedirs "create directory if doesn't exist" b
+os.makedirs(${1:Path/to/dir}, exist_ok=True)
+endsnippet
+
+snippet globext "Find Files in directory with extension" b
+${1:files} = []
+for file in glob.glob(f'${2:*.txt}'):
+    ${1:}.append(file)
+endsnippet
+
+

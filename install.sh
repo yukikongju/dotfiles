@@ -26,9 +26,31 @@ function install_js {
 
 function install_latex {
     sudo apt install pdflatex
+    npm install wallpaper
     sudo apt install evince
     sudo apt install zathura
     sudo apt-get install texlive-latex-recommended
+}
+
+function swap_caps_escape {
+    # https://askubuntu.com/questions/363346/how-to-permanently-switch-caps-lock-and-esc
+    setxkbmap -option caps:swapescape
+}
+
+
+function install_calibre {
+    sudo apt install calibre
+}
+
+function install_onenote {
+    sudo snap install onenote-desktop
+}
+
+function install_microsoft_office {
+    # https://gist.github.com/raelgc/4ccc023830bfd12c0227
+    # https://www.youtube.com/watch?v=vTakHpggAMs
+    sudo apt install wine
+    sudo apt install winetricks
 }
 
 function install_fzf {
@@ -69,6 +91,15 @@ function install_ranger {
     sudo apt install ranger-fm
     # add dependecies to preview pictures on ranger
     sudo apt install libjpeg8-dev zlib1g-dev python-dev python3-dev libxtst-dev
+}
+
+function install_r {
+    # https://www.youtube.com/watch?v=iN0UZ43G6GE
+    # https://cloud.r-project.org/bin/linux/ubuntu/
+    sudo apt-get install r-base-core
+    sudo apt-get install r-base
+    sudo apt-get install gdebi-core wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2021.09.1-372-amd64.deb
+    sudo gdebi rstudio-server-2021.09.1-372-amd64.deb
 }
 
 function install_devicons {

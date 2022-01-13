@@ -251,6 +251,7 @@ numbersections: true
 colorlinks: true
 link-color: blue
 geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
+toc-depth: 4
 ---
 
 \newpage{}
@@ -263,6 +264,26 @@ snippet template-beamer "Template Beamer" b
 
 endsnippet
 
+
+# https://github.com/aaronwolen/pandoc-letter
+snippet template-letter "Template for Motivation Letter" b
+---
+author: ${1:Émulie Chhor}
+template: template-letter.tex
+subject: 
+opening: Chers recruteurs, 
+closing: Cordialement,
+date: "${2:ddate}"
+address: Montréal, Québec
+colorlinks: true
+link-color: blue
+geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
+---
+endsnippet
+
+
+
+
 #######################################################################
 #                           Latex Shortcuts                           #
 #######################################################################
@@ -271,4 +292,20 @@ snippet col "\textcolor{}{}" b
 \textcolor{${1:red}}{${2:}}
 endsnippet
 
+snippet lu "Last Update" b
+Last Updated: ${1:ddate}
+endsnippet
+
+# PROBLEM - makes vim freeze
+# snippet py "python code" b
+# ```python
+# ${1:}
+# ```
+# endsnippet
+
+snippet scode "source code" b
+```${1:python}
+${2:}
+```
+endsnippet
 

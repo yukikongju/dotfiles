@@ -93,7 +93,18 @@ Native:
 - Convert pane to window: ``<c-b>!``
 - Resize Panes: ``<c-b><c- 'arrow-key'>``
 
+## One Drive Integration
+
+- [X] Install InSync
+- [X] Install One Note 
+- [ ] Use Immersive Reader by Converting PDF file to .docx file
+
+[White screen in One Note](https://github.com/anujdatar/onenote-desktop/issues/25)
+
+
 ## Ressources
+
+- [How to Open a PDF in Word and use Immersive Reader](https://www.youtube.com/watch?v=dCAPOExjfb8)
 
 - [Dotfiles Management by Fireship](https://www.youtube.com/watch?v=r_MpUP6aKiQ&t=510s)
 - [Splitting .vimrc file](https://vi.stackexchange.com/questions/5441/is-it-possible-and-useful-to-split-vimrc)
