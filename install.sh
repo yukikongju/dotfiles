@@ -33,6 +33,7 @@ function install_latex {
 }
 
 function swap_caps_escape {
+    # for windows: https://github.com/susam/uncap
     # https://askubuntu.com/questions/363346/how-to-permanently-switch-caps-lock-and-esc
     setxkbmap -option caps:swapescape
 }
