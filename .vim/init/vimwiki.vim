@@ -3,7 +3,7 @@
 """""""""""""""""""""
 let g:vimwiki_folding='expr' "list, '', expr, syntax,
 
-" Subfolders: Courses, Logs, Rant, FlashCards, ActiveRecall, Prog
+" Subfolders: Courses, Logs, Rant, Todos, FlashCards, ActiveRecall, Prog
 let g:vimwiki_list = [
 	    \{
 	    \ 'path': '~/VimWikiNotes/Courses/',
@@ -35,23 +35,14 @@ let g:vimwiki_list = [
 	    \ 'auto_generate_tags': 1,
 	    \},
 	    \{
-	    \ 'path': '~/VimWikiNotes/FlashCards/',
-	    \ 'name':'Flash Cards',
+	    \ 'path': '~/VimWikiNotes/Todos/',
+	    \ 'name':'Todos',
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
-	    \ 'path_html': '~/VimWikiNotes/FlashCards/site_html/',
+	    \ 'path_html': '~/VimWikiNotes/Todos/site_html/',
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \},
-	    \{
-	    \ 'path': '~/VimWikiNotes/ActiveRecall/',
-	    \ 'name':'Active Recall',
-	    \ 'syntax': 'markdown',
-	    \ 'ext': '.md',
-	    \ 'path_html': '~/VimWikiNotes/ActiveRecall/site_html/',
-	    \ 'custom_wiki2html': 'vimwiki_markdown',
-	    \ 'template_ext': '.tpl',
-	    \}
 	    \]
 
 " Automatically export vimwiki to html
