@@ -25,6 +25,11 @@
 	"codeLens.enable": true,
 	"javascript.referencesCodeLens.enable": true,
 	"java.completion.enabled": true,
+	"coc.preferences.colorSupport": { 
+	  "type": "boolean", 
+	  "description": "Enable color highlight if language server support it.", 
+	  "default": true 
+	}, 
 	// autoformat
 	"coc.preferences.formatOnSaveFiletypes": [
 		"css",

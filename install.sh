@@ -24,6 +24,16 @@ function install_js {
     sudo apt-get install npm # js package manager
 }
 
+function install_jekyll {
+    sudo apt-get install ruby-full build-essential zlib1g-dev
+    sudo gem install jekyll bundler
+    sudo gem install jekyll jekyll-feed jekyll-gist jekyll-paginate jekyll-sass-converter jekyll-coffeescript
+    gem install minima jekyll-feed
+    sudo apt install ruby-bundler
+    sudo bundle install
+
+}
+
 function install_latex {
     sudo apt install pdflatex
     npm install wallpaper
@@ -37,6 +47,16 @@ function swap_caps_escape {
     setxkbmap -option caps:swapescape
 }
 
+function install_CTfs {
+    sudo apt install nmap
+    sudo apt install gobuster
+    sudo apt install smbclient
+}
+
+
+function install_sql {
+    sudo apt install mysql*
+}
 
 function install_calibre {
     sudo apt install calibre

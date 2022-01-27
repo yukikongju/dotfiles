@@ -63,6 +63,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 " Plug 'neoclide/coc-tabnine'
 
 
@@ -97,7 +98,7 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
 " Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " debugger
-" Plug 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
@@ -310,3 +311,7 @@ source ~/.vim/init/utils.vim
 source ~/.vim/init/vimspector.vim
 source ~/.vim/init/vimwiki.vim
 source ~/.vim/init/which-key.vim
+
+" run .profile
+" source ~/.profile
+

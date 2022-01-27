@@ -101,11 +101,13 @@ let g:which_key_map.l ={
 
 nnoremap <leader>ep :!python3 %;
 nnoremap <leader>er :!Rscript %;
+nnoremap <leader>ej :!jekyll s;
 
 let g:which_key_map.e = {
 	    \'name': '+execute',
 	    \'p': 'execute-python3', 
 	    \'r': 'execute-rscript', 
+	    \'j': 'serve-jekyll', 
 	    \}
 
 

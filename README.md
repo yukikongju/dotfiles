@@ -56,6 +56,7 @@ Plugins:
 - [ ] Ag, Rg, LustyBuffer
 - [ ] Window Manager with dwm or i3
 - [ ] Preview Picture and Videos with ranger
+- [X] swap CAPS with esc: ```setxkbmap -option caps:swapescape```
 
 Native:
 - [X] Mappings Refractor
