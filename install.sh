@@ -19,6 +19,16 @@ function install_java {
     sudo apt install default-jdk # install javac compiler
 }
 
+function install_r {
+    sudo apt-get install libcurl4-openssl-dev libcairo2-dev libudunits2-dev
+    sudo apt-get install pkg-config
+    sudo apt install libssl-dev
+    sudo apt-get install font-manager
+    sudo apt-get install font-manager
+    sudo apt-get install libgdal-dev
+    sudo apt install ffmpeg
+}
+
 function install_js {
     sudo apt-get install nodejs
     sudo apt-get install npm # js package manager
@@ -33,6 +43,13 @@ function install_jekyll {
     sudo bundle install
 
 }
+
+function install_flameshot {
+    # install screenshot : https://askubuntu.com/questions/1036473/how-to-change-screenshot-application-to-flameshot-on-ubuntu-18-04
+    sudo apt install flameshot
+}
+
+
 
 function install_latex {
     sudo apt install pdflatex
