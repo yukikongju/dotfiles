@@ -61,11 +61,17 @@ Plug 'vim-airline/vim-airline-themes'
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-Plug 'vim-scripts/c.vim' " c/c++ ide
+" Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 " Plug 'neoclide/coc-tabnine'
 
+" autocomplete for react development
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 
 " Plug 'jalvesaq/Nvim-R' " autocomplete for Rlang : https://www.freecodecamp.org/news/turning-vim-into-an-r-ide-cd9602e8c217/
 " Plug 'ncm2/ncm2'

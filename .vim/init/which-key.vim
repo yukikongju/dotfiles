@@ -81,7 +81,10 @@ nnoremap <leader>ll :! pandoc --template=template-letter.tex % -o %<.pdf;
 " nnoremap <leader>lt :! pandoc % -o %<.pdf --table-of-contents --number-sections -V documentclass=report -V geometry:margin=1in;
 " nnoremap <leader>lt :! pandoc % -o %<.pdf --toc --number-sections -V documentclass=report;
 nnoremap <leader>lt :! pandoc % -o %<.pdf --toc
-nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf --toc --listings --number-section -auto_identifiers; 
+nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf --toc --listings --number-section; 
+" nnoremap <leader>ln :! pandoc % -o %<.pdf --from markdown --template template-beamer.tex --listings --number-sections --pdf-engine=xelatex;
+" nnoremap <leader>ln :! pandoc % -o %<.pdf --template=my-template.tex --pdf-engine=xelatex
+nnoremap <leader>ln :! pandoc  --template=my-template.tex --pdf-engine=xelatex % -o %<.pdf
 nnoremap <leader>lx :! xelatex %;
 " https://piware.de/2014/07/vim-config-for-markdownlatex-pandoc-editing/
 " todo: save file and open
@@ -97,6 +100,7 @@ let g:which_key_map.l ={
 	    \'t': 'pandoc-with-table-of-contents',
 	    \'r': 'generate-pdf-from-root',
 	    \'x': 'xelatex-compiling',
+	    \'n': 'beamer-nord-theme',
 	    \}
 
 nnoremap <leader>ep :!python3 %;

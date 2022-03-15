@@ -17,7 +17,7 @@ with open('${1:filename.csv}', '${2:r}') as ${3:f}:
 endsnippet
 
 snippet makedirs "create directory if doesn't exist" b
-os.makedirs(${1:Path/to/dir}, exist_ok=True)
+os.makedirs(f'${1:Path/to/dir}', exist_ok=True)
 endsnippet
 
 snippet globext "Find Files in directory with extension" b

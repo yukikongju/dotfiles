@@ -41,9 +41,13 @@
 		"markdown",
 		"python",
 		"tex",
+		"typescript",
 		"typescriptreact",
 		"vim"
 	],
+	// React Config
+	"tsserver.formarOnType": true, 
+	"coc.preferences.formarOnType": true,
 	// Python Configs
 	"jedi.executable.command": "jedi-language-server",
 	"jedi.enable": true,
@@ -75,5 +79,6 @@
 		},
 		"editor.acceptSuggestionOnEnter": "on",
 		"editor.tabCompletion": "onlySnippets"
-	}
+  },
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }

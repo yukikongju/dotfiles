@@ -454,6 +454,115 @@ snippet template-beamer "Template Beamer" b
 endsnippet
 
 
+snippet template-homework2 "Template Homework 2" b
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fphw Assignment
+% LaTeX Template
+% Version 1.0 (27/04/2019)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Class by Felipe Portales-Oliva (f.portales.oliva@gmail.com) with template 
+% content and modifications by Vel (vel@LaTeXTemplates.com)
+%
+% Template (this file) License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	12pt, % Default font size, values between 10pt-12pt are allowed
+	%letterpaper, % Uncomment for US letter paper size
+	%spanish, % Uncomment for Spanish
+]{fphw}
+
+
+
+% Template-specific packages
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+% \usepackage{listings} % Required for insertion of code
+\usepackage{minted}
+
+% \usepackage{enumerate} % To modify the enumerate environment
+\usepackage{enumitem}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{systeme}
+\usepackage{longtable}
+\usepackage{xfrac}
+\usepackage{extarrows}
+
+% https://tex.stackexchange.com/questions/173729/comma-in-math-mode
+\mathchardef\period=\mathcode`.
+\DeclareMathSymbol{.}{\mathord}{letters}{"3B}
+\DeclareMathOperator{\pgcd}{pgcd}
+
+% Essayer de faire fonctionner les headers
+\usepackage[dvipsnames]{xcolor}
+
+\include{headers}
+
+\allowdisplaybreaks
+
+\newcommand{\ket}{\rangle}
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{${1:}} % Assignment title
+
+\author{${2:}} % Student name
+
+\date{${3:}} % Due date
+
+\institute{Université de Montréal \\ Département d'informatique et de recherche opérationnelle} % Institute or school name
+
+\class{${4:}} % Course or class name
+
+\professor{${5:}} % Professor or teacher in charge of the assignment
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the assignment title, created automatically using the information in the custom commands above
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT CONTENT
+%----------------------------------------------------------------------------------------
+
+\section*{Problème 1}
+
+%------------------------------------------------
+
+\subsection*{Réponse}
+    
+    
+
+\end{document}
+
+endsnippet
+
+
+
+
 
 #######################################################################
 #                         Sections Templates                          #
