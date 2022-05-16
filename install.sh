@@ -71,6 +71,11 @@ function install_CTfs {
     sudo apt install smbclient
 }
 
+function install_matrix {
+    # matrix background
+    sudo apt install cmatrix
+}
+
 
 function install_sql {
     sudo apt install mysql*

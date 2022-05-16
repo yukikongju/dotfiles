@@ -34,6 +34,14 @@ Keeping track of my Dotfiles by using symlink
 #### Step 3: Install Plugin inside .vimrc file
 `` :PlugInstall ``
 
+
+## What does the setup do?
+
+- [X] Matrix Style background: ``cmatrix``
+- [ ] Task Automation with autosys: autorep, .jil, sentevent
+- [ ] Windows Configuration with Tmux
+
+
 ## What does .vimrc do
 
 Plugins:
@@ -85,6 +93,7 @@ Native:
 - Create Window: ``<c-b>c``
 - Close currente Window: ``<c-b>&`` or ``<c-d>``
 - Move to previous and next window: ``<c-b>p`` and ``<c-b>n``
+- Full Screen: `F11`
 
 #### Panes
 
@@ -102,6 +111,7 @@ Native:
 
 [White screen in One Note](https://github.com/anujdatar/onenote-desktop/issues/25)
 
+## Installing Autosys for task scheduling automation
 
 ## Ressources
 
