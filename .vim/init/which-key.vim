@@ -21,23 +21,16 @@ let g:which_key_map.a = {
 	    \ 't' : 'toggle-lang',
 	    \}
 
-nmap <leader>hd <Plug>(GitGutterPreviewHunk)
-nmap <leader>hf <Plug>(GitGutterFold)
-nmap <leader>hn <Plug>(GitGutterNextHunk)
-nmap <leader>hp <Plug>(GitGutterPrevHunk)
+nnoremap <leader>ep :!python3 %;
+nnoremap <leader>er :!Rscript %;
+nnoremap <leader>ej :!jekyll s;
 
-" Keybindings for gitgutter hunks
-let g:which_key_map.h = {
-	    \'name':'+hunk',
-	    \'d': 'hunks-difference',
-	    \'f': 'fold-hunks',
-	    \'n': 'next-hunk',
-	    \'p': 'previous-hunk',
+let g:which_key_map.e = {
+	    \'name': '+execute',
+	    \'p': 'execute-python3', 
+	    \'r': 'execute-rscript', 
+	    \'j': 'serve-jekyll', 
 	    \}
-
-"     \'p': ['<Plug>(GitGutterPreviewHunk)' , 'preview-hunk'],
-"     \'s': ['<Plug>(GitGutterStageHunk)' , 'stage-hunk'],
-"     \'u': ['<Plug>(GitGutterUndoHunk)' , 'undo-hunk'],
 
 " Keybindings for fzf
 nnoremap <silent> <leader>fb :Buffers<CR>
@@ -68,6 +61,26 @@ let g:which_key_map.f = {
 	    \'t': 'tags',
 	    \'/': 'blines',
 	    \}
+
+nmap <leader>hd <Plug>(GitGutterPreviewHunk)
+nmap <leader>hf <Plug>(GitGutterFold)
+nmap <leader>hn <Plug>(GitGutterNextHunk)
+nmap <leader>hp <Plug>(GitGutterPrevHunk)
+
+" Keybindings for gitgutter hunks
+let g:which_key_map.h = {
+	    \'name':'+hunk',
+	    \'d': 'hunks-difference',
+	    \'f': 'fold-hunks',
+	    \'n': 'next-hunk',
+	    \'p': 'previous-hunk',
+	    \}
+
+"     \'p': ['<Plug>(GitGutterPreviewHunk)' , 'preview-hunk'],
+"     \'s': ['<Plug>(GitGutterStageHunk)' , 'stage-hunk'],
+"     \'u': ['<Plug>(GitGutterUndoHunk)' , 'undo-hunk'],
+
+
 
 " Keybindings for latex (Fix: behavior)
 nnoremap <leader>la :!git add */*.pdf */*.tex;
@@ -103,37 +116,46 @@ let g:which_key_map.l ={
 	    \'n': 'beamer-nord-theme',
 	    \}
 
-nnoremap <leader>ep :!python3 %;
-nnoremap <leader>er :!Rscript %;
-nnoremap <leader>ej :!jekyll s;
-
-let g:which_key_map.e = {
-	    \'name': '+execute',
-	    \'p': 'execute-python3', 
-	    \'r': 'execute-rscript', 
-	    \'j': 'serve-jekyll', 
-	    \}
 
 
 " \'c': 'generate-pdf-from-current-file',
 
 " Keybindings to open quickfix and location
-nnoremap <silent> <leader>oq  :copen<CR>
-nnoremap <silent> <leader>ol  :lopen<CR>
+nnoremap <silent> <leader>ob :!btm --color gruvbox<CR>
+nnoremap <silent> <leader>om :!cmatrix<CR>
+nnoremap <silent> <leader>or :!ranger<CR>
 let g:which_key_map.o = {
-	    \ 'name' : '+open',
-	    \ 'q' : 'open-quickfix'    ,
-	    \ 'l' : 'open-locationlist',
+	    \ 'name' : '+open-app',
+	    \ 'b' : 'open-bottom-cpu',
+	    \ 'm' : 'open-cmatrix',
+	    \ 'r' : 'open-ranger',
 	    \}
 
 " Keybindings for global/local Replace
 nnoremap <leader>ra :%s/\<<C-r><C-w>\>/
 nnoremap <leader>rc gD:%s/<C-R>///gc<left><left><left><C-R>
 let g:which_key_map.r ={
-	    \'name': 'replace',
-	    \'a': 'replace-all',
-	    \'c': 'replace-confirm',
+	    \'name': '+replace',
+	    \'a': 'replace-all-under-cursor',
+	    \'c': 'replace-confirm-all-under-cursor',
 	    \}
+
+" nnoremap <leader>sa :call AckSearch("")<left><left>
+nnoremap <leader>sa :Ag <SPACE>
+nnoremap <leader>sj :Ack <SPACE>
+nnoremap <leader>su :Ack! "\b<cword>\b" <CR>	
+nnoremap <silent> <leader>sq  :copen<CR>
+nnoremap <silent> <leader>sl  :lopen<CR>
+let g:which_key_map.s ={
+	    \ 'name': '+search',
+	    \ 'a': 'search-word',
+	    \ 'j': 'search-word-and-jump',
+	    \ 'l' : 'locationlist',
+	    \ 'q' : 'quickfix'    ,
+	    \ 't' : 'tagbar'    ,
+	    \ 'u' : 'search-under-cursor-and-jump'    ,
+	    \}
+
 
 " Keybindings for vim files
 nnoremap <silent> <leader>ve :tabnew $MYVIMRC<cr>

@@ -129,4 +129,5 @@ Native:
 - [Tmux CheatSheet](https://tmuxcheatsheet.com/)
 - [Vimwiki CheatSheet](http://thedarnedestthing.com/vimwiki%20cheatsheet)
 - [Evince Shortcuts](htps://defkey.com/evince-shortcuts)
+- [Vim after 15 years - Ian Langworth](https://statico.github.io/vim3.html)
 

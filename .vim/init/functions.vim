@@ -29,7 +29,9 @@ function! ToggleSpellLang()
     endif
 endfunction
 
-" word count
+" TODO: word count
+
+
 
 
 " allows cursor change in tmux mode (untested)

@@ -49,6 +49,11 @@ function install_flameshot {
     sudo apt install flameshot
 }
 
+function install_bottom {
+    # cpu app usage: https://www.linode.com/docs/guides/installing-and-using-bottom-on-linux/
+    curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.3/bottom_0.6.3_amd64.deb
+    sudo dpkg -i bottom_0.6.3_amd64.deb
+}
 
 
 function install_latex {
