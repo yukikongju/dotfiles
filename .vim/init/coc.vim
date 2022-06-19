@@ -20,8 +20,10 @@ let g:coc_global_extensions = [
 	    \ 'coc-tsserver',
 	    \ 'coc-vimlsp',
 	    \ 'coc-vimtex',
+	    \ 'coc-rls',
 	    \ ]
 
+" \ 'coc-rust-analyzer',
 " \ 'coc-r-lsp',
 " \ 'coc-definition',
 " \ 'coc-eslint',

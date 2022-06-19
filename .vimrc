@@ -13,6 +13,11 @@ Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'dkarter/bullets.vim' " check box easily
 Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
 Plug 'voldikss/vim-floaterm' " popup terminal for vim with :terminal and :FloatermToggle
+Plug 'terryma/vim-expand-region' " Press + to expand the visual selection and _ to shrink it.
+" Plug 'tpope/vim-rsi' " Prevent key override
+" Plug 'tpope/vim-sleuth' " automatically adjsut shiftwidth and expandtab
+
+
 
 " tmux
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
@@ -65,6 +70,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 " Plug 'neoclide/coc-tabnine'
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'simrat39/rust-tools.nvim'
 
 " autocomplete for react development
 Plug 'pangloss/vim-javascript'
@@ -72,6 +81,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
+" Plug 'tpope/vim-endwise' " adding 'end' and various keywords automaticalle
+
 
 " Plug 'jalvesaq/Nvim-R' " autocomplete for Rlang : https://www.freecodecamp.org/news/turning-vim-into-an-r-ide-cd9602e8c217/
 " Plug 'ncm2/ncm2'
@@ -105,6 +116,8 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
 
 " debugger
 Plug 'puremourning/vimspector'
+" Plugin 'skalnik/vim-vroom' " Ruby test
+
 
 " git
 Plug 'tpope/vim-fugitive' "generate page to view commit message
@@ -128,7 +141,8 @@ Plug 'itchyny/calendar.vim' " calendar
 call plug#end()
 
 " Syntax
-syntax on
+" syntax on
+syntax enable
 
 " Autocompletion
 set completeopt=longest,menuone

@@ -8,7 +8,28 @@
     # curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # }
 
-function install_python {
+function install_rust { # cargo
+    # https://rust-lang.github.io/rustup/installation/index.html
+    sudo apt install rustc
+    sudo snap install rustup --classic
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+    rustup toolchain link system /usr
+    rustup toolchain install nightly
+    rustup component add rustfmt --toolchain nightly
+    # rustup default nightly
+
+    # install librairies
+    cargo install xbuild
+    cargo install cargo-sysroot
+
+    # install rust autocomplete: https://www.youtube.com/watch?v=LfJZboTeDt0&t=71s
+    # https://github.com/neoclide/coc-rls
+    rustup component add rls rust-analysis rust-src
+}
+
+
+function install_python { # pip
     sudo apt-get install python3-pip
     sudo apt-get install python3-venv # create python-venv
     sudo apt-get install jedi-language-server
@@ -48,6 +69,12 @@ function install_flameshot {
     # install screenshot : https://askubuntu.com/questions/1036473/how-to-change-screenshot-application-to-flameshot-on-ubuntu-18-04
     sudo apt install flameshot
 }
+
+function install_htb {
+    sudo apt install openvpn
+    sudo apt install golang-go
+}
+
 
 function install_bottom {
     # cpu app usage: https://www.linode.com/docs/guides/installing-and-using-bottom-on-linux/
@@ -101,6 +128,12 @@ function install_microsoft_office {
     sudo apt install winetricks
 }
 
+function install_tree {
+    # install tree . to view tree-like directory view
+    sudo apt install tree
+    sudo apt install locate # locate file: locate xxcd
+}
+
 function install_fzf {
     # installing fzf
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -111,6 +144,7 @@ function install_fzf {
 }
 
 function install_window_manager {
+    sudo apt install i3
     sudo apt install i3-wm
 }
 

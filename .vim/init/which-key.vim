@@ -22,14 +22,22 @@ let g:which_key_map.a = {
 	    \}
 
 nnoremap <leader>ep :!python3 %;
-nnoremap <leader>er :!Rscript %;
+nnoremap <leader>es :!Rscript %;
 nnoremap <leader>ej :!jekyll s;
+nnoremap <leader>er :!cargo build;
+nnoremap <leader>eb :!cargo run;
+" nnoremap <leader>eb :!./%:t:r;
+" nnoremap <leader>er :!rustc %:p; 
+" nnoremap <leader>eb :!./%:r;
+" nnoremap <leader>er :!rustc %:p:t; 
 
 let g:which_key_map.e = {
 	    \'name': '+execute',
-	    \'p': 'execute-python3', 
-	    \'r': 'execute-rscript', 
+	    \'b': 'execute-rust-binary-file', 
 	    \'j': 'serve-jekyll', 
+	    \'p': 'execute-python3', 
+	    \'s': 'execute-rscript', 
+	    \'r': 'compile-rust', 
 	    \}
 
 " Keybindings for fzf

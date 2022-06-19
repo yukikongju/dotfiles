@@ -24,8 +24,7 @@
 	// codelens
 	"codeLens.enable": true,
 	"javascript.referencesCodeLens.enable": true,
-	"java.completion.enabled": true,
-	"coc.preferences.colorSupport": { 
+	"java.completion.enabled": true, "coc.preferences.colorSupport": { 
 	  "type": "boolean", 
 	  "description": "Enable color highlight if language server support it.", 
 	  "default": true 
@@ -43,7 +42,8 @@
 		"tex",
 		"typescript",
 		"typescriptreact",
-		"vim"
+		"vim", 
+		"rust"
 	],
 	// React Config
 	"tsserver.formarOnType": true, 
@@ -79,6 +79,13 @@
 		},
 		"editor.acceptSuggestionOnEnter": "on",
 		"editor.tabCompletion": "onlySnippets"
-  },
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
+	},
+	// Rust Configs
+	"rust-analyzer.diagnostics.enable": true,
+	"rust-analyzer.inlayHints.chainingHints": true,
+	"rust-analyzer.inlayHints.typeHints": true,
+	"rust-analyzer.inlayHints.parameterHints": true,
+	"rust-analyzer.serverPath": "/home/yukikongju/.cargo/bin/rust-analyzer",
+	"rust-analyzer.trace.extension": true,
+	"rust-client.enable": true
 }
