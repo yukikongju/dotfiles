@@ -79,6 +79,9 @@ nnoremap <leader>now :r!date<CR>
 
 " Search exact word
 
+" Map ESC to jj
+" imap jj <Esc>
+
 
 " Execute python script from vim
 noremap <F7> <ESC>:w<CR>:silent execute "!python %"<CR><CR>

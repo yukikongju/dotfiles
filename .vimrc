@@ -14,6 +14,7 @@ Plug 'dkarter/bullets.vim' " check box easily
 Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
 Plug 'voldikss/vim-floaterm' " popup terminal for vim with :terminal and :FloatermToggle
 Plug 'terryma/vim-expand-region' " Press + to expand the visual selection and _ to shrink it.
+Plug 'junegunn/vim-peekaboo' " see the contents of registers with `'` and `@`
 " Plug 'tpope/vim-rsi' " Prevent key override
 " Plug 'tpope/vim-sleuth' " automatically adjsut shiftwidth and expandtab
 
@@ -46,7 +47,7 @@ Plug 'mhinz/vim-startify' " fancy start screen and session manager
 " Plug 'francoiscabrol/ranger.vim'
 
 " Code Finder
-Plug 'mileszs/ack.vim' " use :Ack in vim -> :Ack "<pattern>" "<file>"
+Plug 'mileszs/ack.vim' " use :Ack in vim -> :Ack <pattern> <file>
 Plug 'rking/ag.vim'	" use :Ag in vim
 " Plug 'sjbach/lusty' " Buffer-grep: find code in opened buffer (missing
 " functionalities)

@@ -26,6 +26,14 @@ let g:bullets_enabled_file_types = [
 	    \ 'gitcommit',
 	    \]
 
+" Configs for vim-expand-region
+" vmap v <Plug>(expand_region_expand)
+" vmap <C-v> <Plug>(expand_region_shrink)
+
+" Configs for vim-peekaboo
+let g:peekaboo_window = 'vertical botright 50new'
+
+
 " T-mux
 " let g:tmux_navigator_no_mappings = 1
 " nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>

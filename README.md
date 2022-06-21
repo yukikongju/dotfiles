@@ -64,7 +64,7 @@ Plugins:
 - [ ] Ag, Rg, LustyBuffer
 - [ ] Window Manager with dwm or i3
 - [ ] Preview Picture and Videos with ranger
-- [X] swap CAPS with esc: ```setxkbmap -option caps:swapescape```
+- [X] swap CAPS with esc: ```crontab -e; @reboot setxkbmap -option caps:swapescape```
 
 Native:
 - [X] Mappings Refractor
@@ -112,6 +112,10 @@ Native:
 [White screen in One Note](https://github.com/anujdatar/onenote-desktop/issues/25)
 
 ## Installing Autosys for task scheduling automation
+
+
+
+
 
 ## Ressources
 

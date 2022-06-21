@@ -41,37 +41,42 @@ let g:which_key_map.e = {
 	    \}
 
 " Keybindings for fzf
+nnoremap <silent> <Leader>fa :Ag<CR> 
 nnoremap <silent> <leader>fb :Buffers<CR>
-nnoremap <silent> <leader>f/ :BLines<CR>
+nnoremap <silent> <leader>fc :History:<CR>
+" nnoremap <silent> <leader>f/ :BLines<CR>
 nnoremap <silent> <leader>f' :Marks<CR>
 nnoremap <silent> <leader>ff :History<CR>
-nnoremap <silent> <leader>fg :Commits<CR>
-nnoremap <silent> <leader>ft :Tags<CR>
-nnoremap <silent> <Leader>fs :Snippets<CR>
-nnoremap <silent> <Leader>fm :Maps<CR>
 nnoremap <silent> <leader>fe :!nautilus .<CR>
-nnoremap <silent> <Leader>fa :Ag<CR> 
+nnoremap <silent> <leader>fg :Commits<CR>
+nnoremap <silent> <leader>fh :Helptags<CR>
+nnoremap <silent> <Leader>fm :Maps<CR>
 nnoremap <silent> <Leader>fr :Rg<CR>
-nnoremap <silent> <leader>fc :History:<CR>
-" nnoremap <silent> <leader>fs: :History/<CR> " search history
-" nnoremap <silent> <leader>H :Helptags<CR>
+nnoremap <silent> <Leader>fs :Snippets<CR>
+nnoremap <silent> <leader>ft :Tags<CR>
+" nnoremap <silent> <leader>fy :registers<CR>
+nnoremap <silent> <leader>f/ :History/<CR> 
 
 let g:which_key_map.f = {
 	    \'name': '+fzf',
+	    \'a': 'Ag',
 	    \'b': 'buffers',
 	    \'c': 'command-history',
 	    \'f': 'files-history',
 	    \'g': 'git-commit',
+	    \'h': 'helptags',
 	    \'m': 'maps',
 	    \'e': 'file-explorer',
 	    \'r': 'ripgrep',
-	    \'s': 'snippets',
+	    \'s': 'file-snippets',
 	    \'t': 'tags',
-	    \'/': 'blines',
+	    \'/': 'search-history',
 	    \}
 
-nmap <leader>hd <Plug>(GitGutterPreviewHunk)
-nmap <leader>hf <Plug>(GitGutterFold)
+" \'y': 'yank-history',
+
+" nmap <leader>hd <Plug>(GitGutterPreviewHunk)
+" nmap <leader>hf <Plug>(GitGutterFold)
 nmap <leader>hn <Plug>(GitGutterNextHunk)
 nmap <leader>hp <Plug>(GitGutterPrevHunk)
 
@@ -152,11 +157,14 @@ let g:which_key_map.r ={
 nnoremap <leader>sa :Ag <SPACE>
 nnoremap <leader>sj :Ack <SPACE>
 nnoremap <leader>su :Ack! "\b<cword>\b" <CR>	
+nnoremap <leader>sd :Gvdiffsplit<CR>
+
 nnoremap <silent> <leader>sq  :copen<CR>
 nnoremap <silent> <leader>sl  :lopen<CR>
 let g:which_key_map.s ={
 	    \ 'name': '+search',
 	    \ 'a': 'search-word',
+	    \ 'd': 'search-file-difference',
 	    \ 'j': 'search-word-and-jump',
 	    \ 'l' : 'locationlist',
 	    \ 'q' : 'quickfix'    ,

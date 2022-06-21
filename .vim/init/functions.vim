@@ -33,6 +33,15 @@ endfunction
 
 
 
+" text search
+" vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
+"     \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
+" omap s :normal vs<CR>
+
+" TODO: Compare two files
+" diff -u -w cargo/src/bin/cargo/commands/build.rs cargo/src/bin/cargo/commands/rustc.rs
+
+
 
 " allows cursor change in tmux mode (untested)
 " if exists('$TMUX')

@@ -11,7 +11,7 @@ let g:NERDTreeGitStatusShowIgnored = 1
 "         \ "Deleted"   : "✖",
 "         \ "Dirty"     : "✗",
 "         \ "Clean"     : "✔︎",
-"         \ 'Ignored'   : '☒',
+          \ 'Ignored'   : '☒',
 "         \ "Unknown"   : "?"
 "         \ }
 "
@@ -25,8 +25,8 @@ let g:NERDTreeGitStatusShowIgnored = 1
 let g:gitgutter_map_keys = 0
 
 " Jump between hunks
-" nmap ]h <Plug>(GitGutterNextHunk)
-" nmap [h <Plug>(GitGutterPrevHunk)
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 
 " nmap ghs <Plug>(GitGutterStageHunk)
 " nmap ghu <Plug>(GitGutterUndoHunk)

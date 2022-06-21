@@ -87,5 +87,6 @@
 	"rust-analyzer.inlayHints.parameterHints": true,
 	"rust-analyzer.serverPath": "/home/yukikongju/.cargo/bin/rust-analyzer",
 	"rust-analyzer.trace.extension": true,
-	"rust-client.enable": true
+	"rust-client.enable": true,
+	"rust-client.disableRustup":true
 }
