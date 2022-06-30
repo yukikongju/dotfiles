@@ -8,6 +8,20 @@
     # curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # }
 
+function install_pandoc {
+    # https://github.com/alexeygumirov/pandoc-beamer-how-to
+    sudo apt update
+    sudo apt install pandoc
+    sudo apt install imagemagick
+    sudo apt install texlive-latex-recommended
+    sudo apt install texlive-fonts-recommended
+    sudo apt install texlive-latex-extra
+    sudo apt install texlive-fonts-extra
+    sudo apt install texlive-xetex
+}
+
+
+
 function install_rust { # cargo
     # https://rust-lang.github.io/rustup/installation/index.html
     sudo apt install rustc
@@ -28,6 +42,13 @@ function install_rust { # cargo
     rustup component add rls rust-analysis rust-src
 }
 
+function install_browser {
+    sudo apt install lynx
+}
+
+function install_sound {
+    sudo apth install libasound2-dev
+}
 
 function install_python { # pip
     sudo apt-get install python3-pip

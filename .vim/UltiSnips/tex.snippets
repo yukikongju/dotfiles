@@ -2,11 +2,11 @@
 #                         Document Templates                          #
 #######################################################################
 
-# snippet template-article
-# endsnippet
-
 snippet template-book
 \documentclass[a4paper,oneside]{book}
+
+% part, chapter, section, subsection
+
 
 % ----------------------------- Packages --------------------------------
 
@@ -28,6 +28,7 @@ snippet template-book
 
 \title{${1:title}}
 \author{${2:author}}
+% \date{}
 
 \begin{document}
 
@@ -35,11 +36,15 @@ snippet template-book
 
 \maketitle
 \tableofcontents
+\listoffigures
+\listoftables
 \clearpage
 
 % --------------------------------- Body ---------------------------------
 
 ${0:${VISUAL}}
+
+\appendix
 
 \end{document}
 endsnippet
@@ -76,7 +81,7 @@ snippet template-maths-notes
 \newtheorem{corollary}{Corollaire}[subsection]
 \newtheorem{definition}{Définition}[subsection]
 \newtheorem*{intuition}{Intuition}
-\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{lemma}{Lemme}
 \newtheorem*{problem}{Problème}
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{property}{Propriété}[subsection]
@@ -119,11 +124,11 @@ snippet template-homework "Template for Homework"
 \pagestyle{fancy}
 
 \newenvironment{problem}[2][Problem]
-{  \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+{  \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\\\}
 {  \end{mdframed} }
 
 \newenvironment{solution}
-{\textbf{Solution} \\ }
+{\textbf{Solution} \\\\ }
 {}
 
 \renewcommand{\qed}{\quad\qedsymbol}
@@ -179,7 +184,7 @@ endsnippet
 # endsnippet
 
 snippet template-problem-set "Template Problem Set" b
-\documentclass[12pt,a4paper]{article}
+\documentclass[14pt,a4paper]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% packages %%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}
@@ -259,13 +264,12 @@ snippet template-problem-set "Template Problem Set" b
 
 %%%%%%%%%%%%%%%%%%%%% assignment information %%%%%%%%%%%%%%%%
 
-\noindent
-\rule{17cm}{0.2cm}\\[0.3cm]
-Nom: \student \hfill Devoir \assignment\\[0.1cm]
-Cours: \course \hfill Date: \today\\
+\noindent\\\\
+\rule{17cm}{0.05cm}\\\\
+Nom: \student \hfill Devoir \assignment\\\\
+Cours: \course \hfill Date: \today\\\\
 \rule{17cm}{0.05cm}
-% \vspace{1.0cm}
-\vspace{0.5cm}
+\vspace{1.5cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Body %%%%%%%%%%%%%%%%%%%%
 
@@ -356,17 +360,17 @@ snippet template-beamer "Template Beamer" b
 \begin{frame}{Defined Colors}{This is a subtitle}
   \begin{description}[Snow Storm]
   \item[Polar Night]
-    \textcolor{NordDarkBlack}{NordDarkBlack} \quad \textcolor{NordBlack}{NordBlack}\\
+    \textcolor{NordDarkBlack}{NordDarkBlack} \quad \textcolor{NordBlack}{NordBlack}\\\\
     \textcolor{NordMediumBlack}{NordMediumBlack} \quad \textcolor{NordBrightBlack}{NordBrightBlack}
   \item[Snow Storm]
-    \textcolor{NordWhite}{NordWhite} \quad \textcolor{NordBrighterWhite}{NordBrightestWhite}\\
+    \textcolor{NordWhite}{NordWhite} \quad \textcolor{NordBrighterWhite}{NordBrightestWhite}\\\\
     \textcolor{NordBrightestWhite}{NordBrightestWhite}
   \item[Forest]
-    \textcolor{NordCyan}{NordCyan} \quad \textcolor{NordBrightCyan}{NordBrightCyan}\\
+    \textcolor{NordCyan}{NordCyan} \quad \textcolor{NordBrightCyan}{NordBrightCyan}\\\\
     \textcolor{NordBlue}{NordBlue} \quad \textcolor{NordBrightBlue}{NordBrightBlue}
   \item[Aurora]
-    \textcolor{NordRed}{NordRed} \quad \textcolor{NordOrange}{NordOrange} \\
-    \textcolor{NordYellow}{NordYellow} \quad \textcolor{NordGreen}{NordGreen} \\
+    \textcolor{NordRed}{NordRed} \quad \textcolor{NordOrange}{NordOrange} \\\\
+    \textcolor{NordYellow}{NordYellow} \quad \textcolor{NordGreen}{NordGreen} \\\\
     \textcolor{NordMagenta}{NordMagenta}
   \end{description}
 \end{frame}
@@ -375,7 +379,7 @@ snippet template-beamer "Template Beamer" b
 
 \begin{frame}[fragile]{Recommended Free Fonts}
   \begin{description}[Selected Fonts]
-  \item[Selected Fonts] recommended for this theme\\
+  \item[Selected Fonts] recommended for this theme\\\\
     \begin{lstlisting}[basicstyle = \ttfamily\small]
 \setmainfont{Yanone Kaffeesatz}
 \setsansfont{Andika New Basic}
@@ -532,7 +536,7 @@ snippet template-homework2 "Template Homework 2" b
 
 \date{${3:}} % Due date
 
-\institute{Université de Montréal \\ Département d'informatique et de recherche opérationnelle} % Institute or school name
+\institute{Université de Montréal \\\\ Département d'informatique et de recherche opérationnelle} % Institute or school name
 
 \class{${4:}} % Course or class name
 
@@ -559,6 +563,109 @@ snippet template-homework2 "Template Homework 2" b
 \end{document}
 
 endsnippet
+
+snippet template-bookest "Template for bookest" b
+\documentclass[oneside, 11pt]{bookest}
+
+\title{${1:Title}}
+\author{${2:Emulie Chhor}}
+\date{${3:\today}}
+
+\begin{document}
+
+% \maketitle
+\tableofcontents
+\listoftables
+\listoffigures
+
+
+% \part{fdasf}
+% \chapter{test}
+% \section{fdios}
+
+\appendix
+
+
+\end{document}
+endsnippet
+
+
+
+
+snippet template-article "Scientific Article" b
+\documentclass[letterpaper, 12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES
+
+% \usepackage{graphics.graphicx}
+\usepackage{multicol}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage[title]{appendix}
+\usepackage{wasysym}
+\usepackage{url}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{capt-of}
+\usepackage{gensymb}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{varioref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+% \usepackage[
+% backend=biber,
+% style=ieee,
+% citestyle=numeric
+% ]{biblatex}
+
+\setlength{\parskip}{1em} % add space between paragraph
+\setlength{\parindent}{0em} % remove indentation
+\captionsetup[table]{labelfont=bf}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HEADER
+
+\begin{document}
+\begin{center}
+    \huge{${1:Title}} \\\\ [10pt]
+    \large{by ${2:Emulie Chhor}}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABSTRACT
+
+
+\rule{\textwidth}{0.5pt}
+\begin{abstract}
+    ${4:}
+\end{abstract}
+\rule{\textwidth}{0.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABLE OF CONTENTS
+
+% add table of contents
+% \newpage
+% \tableofcontents
+% \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BODY
+
+
+\section{${3:Introduction}}%
+\label{sec:${3:Introduction}}
+
+
+\end{document}
+endsnippet
+
 
 
 

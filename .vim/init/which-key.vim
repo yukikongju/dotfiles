@@ -26,6 +26,7 @@ nnoremap <leader>es :!Rscript %;
 nnoremap <leader>ej :!jekyll s;
 nnoremap <leader>er :!cargo build;
 nnoremap <leader>eb :!cargo run;
+nnoremap <leader>eh :!firefox %;
 " nnoremap <leader>eb :!./%:t:r;
 " nnoremap <leader>er :!rustc %:p; 
 " nnoremap <leader>eb :!./%:r;
@@ -35,6 +36,7 @@ let g:which_key_map.e = {
 	    \'name': '+execute',
 	    \'b': 'execute-rust-binary-file', 
 	    \'j': 'serve-jekyll', 
+	    \'h': 'open-html', 
 	    \'p': 'execute-python3', 
 	    \'s': 'execute-rscript', 
 	    \'r': 'compile-rust', 
