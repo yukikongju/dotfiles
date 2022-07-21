@@ -615,6 +615,7 @@ snippet template-article "Scientific Article" b
 \usepackage{varioref}
 \usepackage{hyperref}
 \usepackage{cleveref}
+\usepackage{apacite}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -661,6 +662,12 @@ snippet template-article "Scientific Article" b
 
 \section{${3:Introduction}}%
 \label{sec:${3:Introduction}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY
+
+\bibliographystyle{apacite}
+\bibliography{References} % include references.bib and \cite{}
 
 
 \end{document}

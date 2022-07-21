@@ -31,6 +31,11 @@ vnoremap <silent> J :m '>+1<CR>gv=gv
 vnoremap <silent> K :m '<-2<CR>gv=gv
 nnoremap <silent> <C-j> :m .+1<CR>==
 nnoremap <silent> <C-k> :m .-2<CR>==
+
+" remap escape keys to kj in insert mode (makes vim slow?)
+" nnoremap kj <esc>
+" inoremap kj <esc>
+
 " make alt work: the terminal map alt to escape key by default
 " execute "set <M-j>=\ej"
 " execute "set <M-k>=\ek"
@@ -80,7 +85,7 @@ nnoremap <leader>now :r!date<CR>
 " Search exact word
 
 " Map ESC to jj
-" imap jj <Esc>
+" nnoremap jj <Esc>
 
 
 " Execute python script from vim
@@ -88,12 +93,11 @@ noremap <F7> <ESC>:w<CR>:silent execute "!python %"<CR><CR>
 
 " Workaround to fix letters insertion after using escape keys by remaping
 " escape + arrow to its respective motion
-nnoremap <silent> <ESC>OA <UP>
-nnoremap <silent> <ESC>OB <DOWN>
-nnoremap <silent> <ESC>OC <RIGHT>
-nnoremap <silent> <ESC>OD <LEFT>
-inoremap <silent> <ESC>OA <UP>
-inoremap <silent> <ESC>OB <DOWN>
-inoremap <silent> <ESC>OC <RIGHT>
-inoremap <silent> <ESC>OD <LEFT>
-
+" nnoremap <silent> <ESC>OA <UP>
+" nnoremap <silent> <ESC>OB <DOWN>
+" nnoremap <silent> <ESC>OC <RIGHT>
+" nnoremap <silent> <ESC>OD <LEFT>
+" inoremap <silent> <ESC>OA <UP>
+" inoremap <silent> <ESC>OB <DOWN>
+" inoremap <silent> <ESC>OC <RIGHT>
+" inoremap <silent> <ESC>OD <LEFT>

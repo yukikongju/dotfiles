@@ -20,6 +20,9 @@ function install_pandoc {
     sudo apt install texlive-xetex
 }
 
+function install_db {
+    sudo apt install sqlite3
+}
 
 
 function install_rust { # cargo
