@@ -20,8 +20,23 @@ function install_pandoc {
     sudo apt install texlive-xetex
 }
 
+function install_docker {
+    sudo apt-get install docker.io
+    sudo systemctl enable docker
+}
+
+function install_conda {
+    # https://varhowto.com/install-miniconda-ubuntu-20-04/
+    # after conda has been installed
+    conda install cudotoolkit
+}
+
 function install_db {
     sudo apt install sqlite3
+}
+
+function install_vimium {
+    # https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/
 }
 
 

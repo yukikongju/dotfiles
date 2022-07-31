@@ -13,8 +13,8 @@ Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'dkarter/bullets.vim' " check box easily
 Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
 Plug 'voldikss/vim-floaterm' " popup terminal for vim with :terminal and :FloatermToggle
-Plug 'terryma/vim-expand-region' " Press + to expand the visual selection and _ to shrink it.
-Plug 'junegunn/vim-peekaboo' " see the contents of registers with `'` and `@`
+" Plug 'terryma/vim-expand-region' " Press + to expand the visual selection and _ to shrink it.
+" Plug 'junegunn/vim-peekaboo' " see the contents of registers with `'` and `@`
 " Plug 'tpope/vim-rsi' " Prevent key override
 " Plug 'tpope/vim-sleuth' " automatically adjsut shiftwidth and expandtab
 

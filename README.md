@@ -61,7 +61,7 @@ Plugins:
 - [X] Search through code in buffer with Ack using ``<leader>sa``
 - [X] PDF file viewer with evince (zathura is another option)
 - [X] Converting markdown file to pdf with pandoc using ``pandoc file.md -o file.pdf``
-- [ ] Ag, Rg, LustyBuffer
+- [X] Ag, Rg, LustyBuffer
 - [ ] Window Manager with dwm or i3
 - [ ] Preview Picture and Videos with ranger
 - [X] swap CAPS with esc: ```crontab -e; @reboot setxkbmap -option caps:swapescape```
