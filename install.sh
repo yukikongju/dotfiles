@@ -35,6 +35,10 @@ function install_db {
     sudo apt install sqlite3
 }
 
+function install_linux_system_tools {
+    sudo apt install net-tools
+}
+
 function install_vimium {
     # https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/
 }

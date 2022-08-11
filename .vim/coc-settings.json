@@ -88,5 +88,6 @@
 	"rust-analyzer.serverPath": "/home/yukikongju/.cargo/bin/rust-analyzer",
 	"rust-analyzer.trace.extension": true,
 	"rust-client.enable": true,
-	"rust-client.disableRustup":true
+  "rust-client.disableRustup": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
 }

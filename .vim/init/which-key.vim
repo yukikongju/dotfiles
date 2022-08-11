@@ -21,12 +21,20 @@ let g:which_key_map.a = {
 	    \ 't' : 'toggle-lang',
 	    \}
 
+
+" Keybindings for rustlings book
+nnoremap <leader>bh :!rustlings hint next;
+nnoremap <leader>bw :!rustlings watch;
+
+
+nnoremap <leader>ec :!gcc %;
+nnoremap <leader>ej :!jekyll s;
 nnoremap <leader>ep :!python3 %;
 nnoremap <leader>es :!Rscript %;
-nnoremap <leader>ej :!jekyll s;
 nnoremap <leader>er :!cargo build;
 nnoremap <leader>eb :!cargo run;
 nnoremap <leader>eh :!firefox %;
+
 " nnoremap <leader>eb :!./%:t:r;
 " nnoremap <leader>er :!rustc %:p; 
 " nnoremap <leader>eb :!./%:r;
@@ -35,6 +43,7 @@ nnoremap <leader>eh :!firefox %;
 let g:which_key_map.e = {
 	    \'name': '+execute',
 	    \'b': 'execute-rust-binary-file', 
+	    \'c': 'compile-c-lang', 
 	    \'j': 'serve-jekyll', 
 	    \'h': 'open-html', 
 	    \'p': 'execute-python3', 
