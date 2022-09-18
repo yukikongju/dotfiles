@@ -8,6 +8,27 @@
     # curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # }
 
+function install_sioyek {
+    # https://flatpak.org/setup/Ubuntu
+    # https://flathub.org/apps/details/com.github.ahrm.sioyek
+    sudo apt install flatpak
+    sudo apt install gnome-software-plugin-flatpak
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak install flathub com.github.ahrm.sioyek
+    # flatpak run com.github.ahrm.sioyek
+}
+
+function install_qt {
+    # https://stackoverflow.com/questions/48147356/install-qt-on-ubuntu
+    sudo apt-get install build-essential
+    sudo apt-get install qtcreator
+    sudo apt-get install qt5-default
+    sudo apt-get install qt5-doc
+    sudo apt-get install qt5-doc-html qtbase5-doc-html
+    sudo apt-get install qtbase5-examples
+}
+
+
 function install_pandoc {
     # https://github.com/alexeygumirov/pandoc-beamer-how-to
     sudo apt update

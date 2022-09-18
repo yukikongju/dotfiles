@@ -65,6 +65,7 @@ Plugins:
 - [ ] Window Manager with dwm or i3
 - [ ] Preview Picture and Videos with ranger
 - [X] swap CAPS with esc: ```crontab -e; @reboot setxkbmap -option caps:swapescape```
+- [X] Using `sioyek` to view PDF smartly
 
 Native:
 - [X] Mappings Refractor
