@@ -113,16 +113,18 @@ nnoremap <leader>lr :!pdflatex %
 nnoremap <leader>lc :VimtexCompile
 nnoremap <leader>lo :!zathura %<.pdf;
 nnoremap <leader>lp :! pandoc % -o %<.pdf; 
-" nnoremap <leader>ll :! pandoc --template=template-letter.md % -o %<.pdf; 
 nnoremap <leader>ll :! pandoc --template=template-letter.tex % -o %<.pdf; 
-" nnoremap <leader>lt :! pandoc % -o %<.pdf --table-of-contents --number-sections -V documentclass=report -V geometry:margin=1in;
-" nnoremap <leader>lt :! pandoc % -o %<.pdf --toc --number-sections -V documentclass=report;
 nnoremap <leader>lt :! pandoc % -o %<.pdf --toc
 nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf --toc --listings --number-section; 
-" nnoremap <leader>ln :! pandoc % -o %<.pdf --from markdown --template template-beamer.tex --listings --number-sections --pdf-engine=xelatex;
-" nnoremap <leader>ln :! pandoc % -o %<.pdf --template=my-template.tex --pdf-engine=xelatex
-nnoremap <leader>ln :! pandoc  --template=my-template.tex --pdf-engine=xelatex % -o %<.pdf
+nnoremap <leader>lm :! pandoc -t beamer % -o %<.pdf --slide-level=2 -V theme:metropolis ;
+nnoremap <leader>ln :! pandoc -t beamer % -o %<.pdf --slide-level=2 -V theme:Montpellier -V colortheme:rose -V fonttheme:professionalfonts;
 nnoremap <leader>lx :! xelatex %;
+
+" nnoremap <leader>lt :! pandoc % -o %<.pdf --table-of-contents --number-sections -V documentclass=report -V geometry:margin=1in;
+" nnoremap <leader>ln :! pandoc  --template=my-template.tex --pdf-engine=xelatex % -o %<.pdf
+" nnoremap <leader>lt :! pandoc % -o %<.pdf --toc --number-sections -V documentclass=report;
+
+
 " https://piware.de/2014/07/vim-config-for-markdownlatex-pandoc-editing/
 " todo: save file and open
 let g:which_key_map.l ={
@@ -137,6 +139,7 @@ let g:which_key_map.l ={
 	    \'t': 'pandoc-with-table-of-contents',
 	    \'r': 'generate-pdf-from-root',
 	    \'x': 'xelatex-compiling',
+	    \'m': 'beamer-metropolis-theme',
 	    \'n': 'beamer-nord-theme',
 	    \}
 
@@ -158,6 +161,9 @@ let g:which_key_map.o = {
 " Keybindings for global/local Replace
 nnoremap <leader>ra :%s/\<<C-r><C-w>\>/
 nnoremap <leader>rc gD:%s/<C-R>///gc<left><left><left><C-R>
+
+" Keybings to reverse lines
+" nnoremap <leader>rr :g/^/m 0 5 (startline, endline)
 let g:which_key_map.r ={
 	    \'name': '+replace',
 	    \'a': 'replace-all-under-cursor',

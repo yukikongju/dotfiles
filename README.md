@@ -65,7 +65,7 @@ Plugins:
 - [ ] Window Manager with dwm or i3
 - [ ] Preview Picture and Videos with ranger
 - [X] swap CAPS with esc: ```crontab -e; @reboot setxkbmap -option caps:swapescape```
-- [X] Using `sioyek` to view PDF smartly
+- [X] Using `sioyek` to view PDF smartly: `flatpak run com.github.ahrm.sioyek`
 
 Native:
 - [X] Mappings Refractor
@@ -79,7 +79,9 @@ Native:
 - [X] Spelling Checker for Markdown files with errors fix suggestions with ``z=`` in normal mode
 - [X] Open ``.vimrc`` file anywhere with ``<leader>ev``
 - [X] Go to top, mid, bottom file with ``zt``, ``zz`` and ``zb``
+- [X] Move screen whilst keeping the cursor at the same spot with `<ctrl-e>` and `<ctrl-y>`
 - [X] Increment and decrement next number with ``<c-a>`` and ``<c-x>``
+- [X] Using [folds](https://bitcrowd.dev/folding-sections-of-markdown-in-vim)
 
 ## Tmux Keybindings
 
@@ -135,4 +137,17 @@ Native:
 - [Vimwiki CheatSheet](http://thedarnedestthing.com/vimwiki%20cheatsheet)
 - [Evince Shortcuts](htps://defkey.com/evince-shortcuts)
 - [Vim after 15 years - Ian Langworth](https://statico.github.io/vim3.html)
+
+**Pandoc**
+
+- [beamertheme gallery](https://deic.uab.cat/~iblanes/beamer_gallery/index.html)
+- [ultimate-beamer-theme-list](https://github.com/martinbjeldbak/ultimate-beamer-theme-list)
+- [bulding prettry slides using markdown and pandoc - Andrea Valenza](https://avalz.it/blog/notes/build-pretty-slides/)
+- [pandoc beamer how to ](https://github.com/alexeygumirov/pandoc-beamer-how-to)
+
+
+- [metropolis theme](https://github.com/matze/mtheme)
+- [beamerthemenord](https://github.com/junwei-wang/beamerthemeNord)
+- [bracken theme](https://www.overleaf.com/latex/templates/beamer-template-by-cameron-bracken/gmgmqwprthxb)
+- [montpellier rose professionalfonts theme](https://deic.uab.cat/~iblanes/beamer_gallery/individual/Montpellier-rose-professionalfonts.html)
 
