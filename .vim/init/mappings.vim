@@ -82,7 +82,8 @@ map <F1> :r! date "+\%A \%d \%B \%Y" <CR>
 map <F2> :r! date "+\%A \%d \%B \%Y" -d "+1 day" <CR>
 nnoremap <leader>now :r!date<CR>
 
-" Search exact word
+" Search exact word undercursor (use * or #)
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " Map ESC to jj
 " nnoremap jj <Esc>

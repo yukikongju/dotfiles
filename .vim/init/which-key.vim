@@ -113,7 +113,9 @@ nnoremap <leader>lr :!pdflatex %
 nnoremap <leader>lc :VimtexCompile
 nnoremap <leader>lo :!zathura %<.pdf;
 nnoremap <leader>lp :! pandoc % -o %<.pdf; 
-nnoremap <leader>ll :! pandoc --template=template-letter.tex % -o %<.pdf; 
+nnoremap <leader>ll :! pandoc % -o %<.pdf --template='%:p:h/template-letter.tex'; 
+" nnoremap <leader>ll :! pandoc % -o %<.pdf --template='template-letter.tex'; 
+" nnoremap <leader>ll :! pandoc % -o %<.pdf --template='letter.tex'; 
 nnoremap <leader>lt :! pandoc % -o %<.pdf --toc
 nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf --toc --listings --number-section; 
 nnoremap <leader>lm :! pandoc -t beamer % -o %<.pdf --slide-level=2 -V theme:metropolis ;
@@ -134,17 +136,16 @@ let g:which_key_map.l ={
 	    \'c': 'compile-latex-with-evince',
 	    \'g': 'generate-pdf-lecture-notes',
 	    \'o': 'open-pdf-zathura',
-	    \'l': 'template-letter',
+	    \'l': 'pandoc-letter',
 	    \'p': 'convert-md-to-pdf-with-pandoc',
 	    \'t': 'pandoc-with-table-of-contents',
 	    \'r': 'generate-pdf-from-root',
 	    \'x': 'xelatex-compiling',
 	    \'m': 'beamer-metropolis-theme',
-	    \'n': 'beamer-nord-theme',
+	    \'n': 'beamer-montpellier-theme',
 	    \}
 
-
-
+" \'n': 'beamer-nord-theme',
 " \'c': 'generate-pdf-from-current-file',
 
 " Keybindings to open quickfix and location
