@@ -21,6 +21,14 @@ Keeping track of my Dotfiles by using symlink
 - [X] Make vim a core editor: `` git config --global core.editor "vim"``
 - [X] Download pdflatex to compile latex files: `` sudo apt-get pdflatex``
 
+
+## ToDos
+
+- [ ] use `beamerthemeNord` as pandoc template
+- [ ] configure i3 window manager
+- [ ] Add `mathjax` and `latex` in vimwiki (see [this](https://www.rosipov.com/blog/custom-templates-in-vimwiki/))
+
+
 ## Setting Up Dotfiles
 
 #### Step 1: Download requirements
@@ -117,8 +125,18 @@ Native:
 ## Installing Autosys for task scheduling automation
 
 
+## How to add LatexMathML inside vimwiki
 
+After seeing [this](https://www.rosipov.com/blog/custom-templates-in-vimwiki/) and 
+[this](https://www.maths.nottingham.ac.uk/plp/pmadw/lm.html), 
 
+to add latex inside vimwiki, add js script inside `.vim/plugged/vimwiki/autoload/vimwiki/default.tpl`
+
+```
+  <script type="text/javascript"
+  src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
+  </script>
+```
 
 ## Ressources
 

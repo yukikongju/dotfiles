@@ -19,7 +19,6 @@ Plug 'voldikss/vim-floaterm' " popup terminal for vim with :terminal and :Floate
 " Plug 'tpope/vim-sleuth' " automatically adjsut shiftwidth and expandtab
 
 
-
 " tmux
 " Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
@@ -40,9 +39,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter' " fzf look at project directory
 Plug 'mhinz/vim-startify' " fancy start screen and session manager
-" Plug 'vifm/vifm'
 " Plug 'vifm/vifm.vim' " Launch vifm from vim
 " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger
+" Plug 'vifm/vifm'
 " Plug 'ranger/ranger'
 " Plug 'francoiscabrol/ranger.vim'
 
@@ -69,10 +68,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 " Plug 'vim-scripts/c.vim' " c/c++ ide
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
-" Plug 'neoclide/coc-tabnine'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+" Plug 'neoclide/coc-tabnine'
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'simrat39/rust-tools.nvim'
 
@@ -82,10 +80,12 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
-" Plug 'tpope/vim-endwise' " adding 'end' and various keywords automaticalle
+Plug 'neovimhaskell/haskell-vim'
+" adding 'end' and various keywords automaticalle
+" Plug 'tpope/vim-endwise' 
 
-
-" Plug 'jalvesaq/Nvim-R' " autocomplete for Rlang : https://www.freecodecamp.org/news/turning-vim-into-an-r-ide-cd9602e8c217/
+" autocomplete for Rlang : https://www.freecodecamp.org/news/turning-vim-into-an-r-ide-cd9602e8c217/
+" Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 " Plug 'ncm2/ncm2'
 " Plug 'roxma/nvim-yarp'
 " Plug 'gaalcaras/ncm-R'
@@ -117,7 +117,6 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
 
 " debugger
 Plug 'puremourning/vimspector'
-" Plugin 'skalnik/vim-vroom' " Ruby test
 
 
 " git
@@ -129,10 +128,9 @@ Plug 'vimwiki/vimwiki' " create linked text files
 Plug 'jceb/vim-orgmode' " task management with .org file 
 " Plug 'xolox/vim-notes' " Note Taking in Vim using :Note
 " Plug 'esensar/vimwiki-reviews-lua' " reviews vimwiki by week, month, year
-" Plug 'nvim-lua/plenary.nvim'
 " Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
-" Plug 'tools-life/taskwiki'
 " Plug 'GothenburgBitFactory/taskwarrior' " task management
+" Plug 'tools-life/taskwiki'
 
 " app
 Plug 'itchyny/calendar.vim' " calendar
