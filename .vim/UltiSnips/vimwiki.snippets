@@ -258,6 +258,29 @@ toc-depth: 4
 
 endsnippet
 
+
+# https://cran.r-project.org/web/packages/linl/readme/README.html
+snippet pandoc-letter "Pandoc Letter"
+---
+template: template-letter.tex
+subject: 
+opening: Chers recruteurs, 
+closing: Cordialement,
+date: "Jan 25, 2022"
+address: Montréal, Québec
+colorlinks: true
+link-color: blue
+geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
+signature: signature2.pdf
+signature-before: -8ex
+signature-scale: 0.2
+signature-width: 35mm
+
+output: linl::linl
+---
+endsnippet
+
+
 # https://osl.ugr.es/CTAN/macros/latex/contrib/beamer-contrib/themes/beamerthemenord/
 snippet template-beamer "Template Beamer" b
 
@@ -296,8 +319,14 @@ Goal:
 
 endsnippet
 
+snippet hid "hidden details for Q&A" b 
+<details style="background-color: ${3:orange}">
+<summary> ${1:question} </summary>
 
-
+${2: answer}
+</details>
+endsnippet
+    
 #######################################################################
 #                           Latex Shortcuts                           #
 #######################################################################
