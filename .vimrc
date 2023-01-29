@@ -70,6 +70,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+" Plug 'hrsh7th/nvim-cmp'
 " Plug 'neoclide/coc-tabnine'
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'simrat39/rust-tools.nvim'
@@ -105,11 +106,13 @@ Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switc
 Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
+" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'gillescastel/latex-snippets'
 
 " latex compiler
 Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
+" Plug 'vim-latex/vim-latex'
 
 " pandoc compiler
 " Plug 'vim-pandoc/vim-pandoc'
@@ -126,9 +129,9 @@ Plug 'airblade/vim-gitgutter' " Show diff
 " vimwiki
 Plug 'vimwiki/vimwiki' " create linked text files
 Plug 'jceb/vim-orgmode' " task management with .org file 
+Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
 " Plug 'xolox/vim-notes' " Note Taking in Vim using :Note
 " Plug 'esensar/vimwiki-reviews-lua' " reviews vimwiki by week, month, year
-" Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
 " Plug 'GothenburgBitFactory/taskwarrior' " task management
 " Plug 'tools-life/taskwiki'
 

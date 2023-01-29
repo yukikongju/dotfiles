@@ -31,8 +31,10 @@ let g:vimwiki_list = [
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
 	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Courses/site_html/',
-	    \ 'custom_wiki2html': 'vimwiki_markdown',
+	    \ 'template_path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/templates/',
+	    \ 'template_default': 'default',
 	    \ 'template_ext': '.tpl',
+	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \},
 	    \{
 	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Logs/',
@@ -74,18 +76,32 @@ let g:vimwiki_list = [
 	    \},
 	    \]
 
+" Allow latex in vimwiki
+" let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md', 'dvipng': 'dvipng'}]
+" let g:vimwiki_latex_dvipng = 'dvipng'
+" let g:vimwiki_latex_engine = 'vimtex'
+
 " Automatically export vimwiki to html
 " \ 'auto_export':1,
 " 'auto_tags':1
 
 " Mapping to generate html for all vimwiki files
 nnoremap <leader>wa :VimwikiAll2HTML<CR>
+" nnoremap <leader>wt :VimwikiTOC<CR>
 
 " Set Title as File Name
 " au BufNewFile *.md :r!echo %:t:r;
 
 " use <tab> to jump to next sections and snippets in insert mode
 let g:vimwiki_table_mappings = 0
+" let g:vimwiki_table_mappins = 0
+
+" remapping follow links
+
+" to add to template to render math formulas
+" <script type="text/javascript" src="<mathjax_folder>/es5/tex-chtml.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 
 """"""""""""
 "  Macros  "

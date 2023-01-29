@@ -132,6 +132,8 @@ After seeing [this](https://www.rosipov.com/blog/custom-templates-in-vimwiki/) a
 
 to add latex inside vimwiki, add js script inside `.vim/plugged/vimwiki/autoload/vimwiki/default.tpl`
 
+For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
+
 ```
   <script type="text/javascript"
   src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
