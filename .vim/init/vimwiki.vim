@@ -93,8 +93,37 @@ nnoremap <leader>wa :VimwikiAll2HTML<CR>
 " au BufNewFile *.md :r!echo %:t:r;
 
 " use <tab> to jump to next sections and snippets in insert mode
-let g:vimwiki_table_mappings = 0
 " let g:vimwiki_table_mappins = 0
+" Thanks to anton-fomin!: https://github.com/vimwiki/vimwiki/issues/1093
+let g:vimwiki_key_mappings = {
+            \ 'all_maps': 1,
+            \ 'global': 1,
+            \ 'headers': 1,
+            \ 'text_objs': 1,
+            \ 'table_format': 1,
+            \ 'table_mappings': 0,
+            \ 'lists': 1,
+            \ 'links': 1,
+            \ 'html': 1,
+            \ 'mouse': 1,
+            \ }
+augroup VimwikiRemaps
+    autocmd!
+    " unmap tab in insert mode
+    autocmd Filetype vimwiki silent! iunmap <buffer> <Tab>
+    " remap table tab mappings to M-n M-p
+    autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-n> vimwiki#tbl#kbd_tab()
+    autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-p> vimwiki#tbl#kbd_shift_tab()
+    " on enter if completion is open, complete first element otherwise use
+    " default vimwiki mapping
+    autocmd Filetype vimwiki inoremap <silent><expr><buffer> <cr> pumvisible() ? coc#_select_confirm()
+augroup end
+
+" autocmd FileType markdown,rmarkdown,vimwiki " activates only on markdown, rmarkdown, and vimiwki filetypes
+"       \ inoremap <CR> <ESC>:VimwikiReturn 3 5<CR>| " enables insert mode vimwiki return mapping
+"       \ autocmd CompleteChanged * silent! iunmap <CR>| " disables insert mode mapping on complete changed
+"       \ autocmd CompleteDone * inoremap <CR> <ESC>:VimwikiReturn 3 5<CR> " re-enables the insert mode mapping
+
 
 " remapping follow links
 
