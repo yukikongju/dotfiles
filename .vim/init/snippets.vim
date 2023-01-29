@@ -21,6 +21,12 @@ let g:ultisnipsexpandtrigger = "<tab>"
 let g:ultisnipsjumpforwardtrigger = "<c-n>"
 let g:ultisnipsjumpbackwardtrigger = "<c-p>"
 
+
+
+" snippets
+" let g:snipMate = { 'snippet_version' : 1 }
+
+" let g:UltiSnipsUsePythonVersion = 3
 " Use <C-l> for trigger snippet expand.
 " imap <C-l> <Plug>(coc-snippets-expand)
 
@@ -42,21 +48,3 @@ let g:ultisnipsjumpbackwardtrigger = "<c-p>"
 " Use tex.snippets for .tex and .plaintex files
 " autocmd BuffEnter,BufNew *.plaintex setf plaintex.tex
 
-" VSCode like tab completion
-inoremap <silent><expr> <TAB>
-	    \ pumvisible() ? coc#_select_confirm() :
-	    \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-	    \ <SID>check_back_space() ? "\<TAB>" :
-	    \ coc#refresh()
-
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-let g:coc_snippet_next = '<tab>'
-
-" snippets
-" let g:snipMate = { 'snippet_version' : 1 }
-
-" let g:UltiSnipsUsePythonVersion = 3

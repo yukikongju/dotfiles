@@ -70,7 +70,8 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " COC FUNCTIONS
 
-" Use tab for trigger completion with characters ahead and navigate
+" Use tab for trigger completion with characters ahead and navigate: (python
+" function autocomplete)
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -82,15 +83,28 @@ inoremap <silent><expr> <Tab>
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice
-" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" VSCode like tab completion: using tab to trigger snippet
+inoremap <silent><expr> <TAB>
+	    \ pumvisible() ? coc#_select_confirm() :
+	    \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+	    \ <SID>CheckBackspace() ? "\<TAB>" :
+	    \ coc#refresh()
+
+
+let g:coc_snippet_next = '<tab>'
+
 
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 " Use <c-space> to trigger completion.
@@ -102,11 +116,11 @@ endfunction
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position
-" if exists('*complete_info')
-"     inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-" else
-"     inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" endif
+if exists('*complete_info')
+    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 " show documentation
 function! s:show_documentation()
