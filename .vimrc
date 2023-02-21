@@ -6,17 +6,18 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 " utils
-Plug 'szw/vim-maximizer' " Fix vim windows
 Plug 'tpope/vim-repeat' " can use . with other plugins
 Plug 'tpope/vim-eunuch' " use UNIX shell command in vim
-Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
 Plug 'dkarter/bullets.vim' " check box easily
 Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
 Plug 'voldikss/vim-floaterm' " popup terminal for vim with :terminal and :FloatermToggle
+" Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
+" Plug 'szw/vim-maximizer' " Fix vim windows
+" Plug 'wincent/command-t' " file buffers
 " Plug 'terryma/vim-expand-region' " Press + to expand the visual selection and _ to shrink it.
 " Plug 'junegunn/vim-peekaboo' " see the contents of registers with `'` and `@`
 " Plug 'tpope/vim-rsi' " Prevent key override
-" Plug 'tpope/vim-sleuth' " automatically adjsut shiftwidth and expandtab
+" Plug 'tpope/vim-sleuth' " automatically adjust shiftwidth and expandtab
 
 
 " tmux
@@ -32,7 +33,7 @@ Plug 'liuchengxu/vim-which-key' " show all key bindings
 
 " ctags
 Plug 'preservim/tagbar' " show functions and import from ctags on tagbar
-Plug 'universal-ctags/ctags' " ctags implementation
+" Plug 'universal-ctags/ctags' " ctags implementation
 
 " file finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -56,9 +57,7 @@ Plug 'itchyny/lightline.vim' " colorscheme for vim modes
 Plug 'scrooloose/nerdcommenter' " Change indentation behavior
 Plug 'morhetz/gruvbox' " gruvbox color scheme
 Plug 'ap/vim-css-color' " Highlight colors in css files
-" Plug 'ryanoasis/nerd-fonts' " Install Nerd Font
 Plug 'ryanoasis/vim-devicons' " Use icons from ryanoasis/nerd-fonts
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -67,33 +66,25 @@ Plug 'vim-airline/vim-airline-themes'
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 " Plug 'vim-scripts/c.vim' " c/c++ ide
-Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-" Plug 'hrsh7th/nvim-cmp'
+" Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
+" Plug 'rust-lang/rust.vim'
+" Plug 'racer-rust/vim-racer'
+" Plug 'fatih/vim-go'
 " Plug 'neoclide/coc-tabnine'
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'simrat39/rust-tools.nvim'
 
 " autocomplete for react development
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
-Plug 'neovimhaskell/haskell-vim'
-" adding 'end' and various keywords automaticalle
+" Plug 'pangloss/vim-javascript'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'jparise/vim-graphql'
+" Plug 'neovimhaskell/haskell-vim'
 " Plug 'tpope/vim-endwise' 
-
-" autocomplete for Rlang : https://www.freecodecamp.org/news/turning-vim-into-an-r-ide-cd9602e8c217/
-" Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
-" Plug 'ncm2/ncm2'
-" Plug 'roxma/nvim-yarp'
-" Plug 'gaalcaras/ncm-R'
 
 " Plug 'dense-analysis/ale'
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
+" Plug 'neovim/nvim-lspconfig'
 
 " autoformat
 Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switch bc no <S-tab> behavior)
@@ -106,12 +97,11 @@ Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switc
 Plug 'neoclide/coc-snippets'
 Plug 'honza/vim-snippets' " snippets for various languages
 Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
-" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'gillescastel/latex-snippets'
+" Plug 'gillescastel/latex-snippets'
 
 " latex compiler
-Plug 'lervag/vimtex'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
+" Plug 'lervag/vimtex'
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
 " Plug 'vim-latex/vim-latex'
 
 " pandoc compiler
@@ -128,7 +118,7 @@ Plug 'airblade/vim-gitgutter' " Show diff
 
 " vimwiki
 Plug 'vimwiki/vimwiki' " create linked text files
-Plug 'jceb/vim-orgmode' " task management with .org file 
+" Plug 'jceb/vim-orgmode' " task management with .org file 
 Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
 " Plug 'xolox/vim-notes' " Note Taking in Vim using :Note
 " Plug 'esensar/vimwiki-reviews-lua' " reviews vimwiki by week, month, year
@@ -136,7 +126,7 @@ Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
 " Plug 'tools-life/taskwiki'
 
 " app
-Plug 'itchyny/calendar.vim' " calendar
+" Plug 'itchyny/calendar.vim' " calendar
 " Plug 'lfos/calcurse' "Calendar scheduling app
 " Plug 'blindFS/vim-taskwarrior' " interface for taskwarrior task manager
 
@@ -226,8 +216,8 @@ set foldnestmax=2
 " Enable fold for js
 autocmd FileType javascript,java setlocal foldmethod=syntax
 autocmd FileType python setlocal foldmethod=indent
-" autocmd FileType markdown setlocal foldmethod=expr
 let javaScript_fold=1
+" autocmd FileType markdown setlocal foldmethod=expr
 
 " Buffers
 set hidden
@@ -262,8 +252,8 @@ set t_u7=
 
 " Configs for vim-latex-live-preview
 let g:livepreview_previewer = 'evince'
-" let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'pdflatex' . ' [options]'
+" let g:livepreview_previewer = 'zathura'
 " let g:livepreview_use_biber = 1
 
 " automatically change the current directory
@@ -272,23 +262,9 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " Allow fold inside Markdown (vim-markdown)
 let g:markdown_folding = 1
-" let g:vimiwiki_global_ext = 0
-" let g:vimwiki_folding = 'custom'
 
- " let g:tex_flavor='latex'
-" let g:vimtex_view_method='zathura'
-" let g:vimtex_quickfix_mode=0
-" set conceallevel=1
-" let g:tex_conceal='abdmg'
-" let g:vimtex_compiler_latexmk=1
 
 " open latex on side screen
-
-" Configs ale
-" let b:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
-" let g:ale_completion_autoimport = 1
-" let g:ale_completion_enabled = 1
-" let g:ale_fix_on_sabe = 1
 
 " airline Configs
 let g:airline_powerline_fonts = 1
@@ -308,11 +284,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
  " let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
  " let g:pandoc#filetypes#pandoc_markdown = 0
 
-" calendar.vim
-" let g:calendar_google_calendar = 1
-" let g:calendar_google_task = 1
-
-" Vim Rooter Configs
 
 " Deactivate Vim Rooter echoing ( only echoes for Vimwiki)
 let g:rooter_silent_chdir = 1

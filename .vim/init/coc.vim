@@ -12,18 +12,18 @@ let g:coc_disable_startup_warning = 1
 let g:coc_global_extensions = [
 	    \ 'coc-clangd',
 	    \ 'coc-cmake',
-	    \ 'coc-elixir',
-	    \ 'coc-java',
 	    \ 'coc-jedi',
-	    \ 'coc-markmap',
-	    \ 'coc-snippets',
-	    \ 'coc-tsserver',
-	    \ 'coc-vimlsp',
-	    \ 'coc-vimtex',
-	    \ 'coc-rls',
 	    \ ]
 
+" \ 'coc-markmap',
+" \ 'coc-elixir',
+" \ 'coc-snippets',
+" \ 'coc-tsserver',
+" \ 'coc-vimtex',
+" \ 'coc-rls',
 " \ 'coc-rust-analyzer',
+" \ 'coc-java',
+" \ 'coc-vimlsp',
 " \ 'coc-r-lsp',
 " \ 'coc-definition',
 " \ 'coc-eslint',
@@ -76,11 +76,12 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 " no select by `"suggest.noselect": true` in your configuration file
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" Don't put that!!!
+" inoremap <silent><expr> <Tab>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ CheckBackspace() ? "\<Tab>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 
 " VSCode like tab completion: using tab to trigger snippet
@@ -100,6 +101,8 @@ function! CheckBackspace() abort
 endfunction
 
 
+" inoremap <silent><expr> <c-space> coc#refresh()
+
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
@@ -116,11 +119,11 @@ endfunction
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position
-if exists('*complete_info')
-    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+" if exists('*complete_info')
+"     inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" else
+"     inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" endif
 
 " show documentation
 function! s:show_documentation()
