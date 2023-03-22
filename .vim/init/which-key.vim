@@ -30,10 +30,14 @@ nnoremap <leader>bw :!rustlings watch;
 nnoremap <leader>ec :!gcc %;
 nnoremap <leader>ej :!jekyll s;
 nnoremap <leader>ep :!python3 %;
+nnoremap <leader>en :!python %;
 nnoremap <leader>es :!Rscript %;
 nnoremap <leader>er :!cargo build;
 nnoremap <leader>eb :!cargo run;
 nnoremap <leader>eh :!firefox %;
+nnoremap <leader>el :!python3 % < inputs.txt;
+nnoremap <leader>et :!./compilegcc 
+
 
 " nnoremap <leader>eb :!./%:t:r;
 " nnoremap <leader>er :!rustc %:p; 

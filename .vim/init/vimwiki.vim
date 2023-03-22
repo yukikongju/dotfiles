@@ -66,6 +66,15 @@ let g:vimwiki_list = [
 	    \ 'template_ext': '.tpl',
 	    \},
 	    \{
+	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/ChatGPT/',
+	    \ 'name':'ChatGPT',
+	    \ 'syntax': 'markdown',
+	    \ 'ext': '.md',
+	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/ChatGPT/site_html/',
+	    \ 'custom_wiki2html': 'vimwiki_markdown',
+	    \ 'template_ext': '.tpl',
+	    \},
+	    \{
 	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Blog/',
 	    \ 'name':'Blog',
 	    \ 'syntax': 'markdown',

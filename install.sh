@@ -8,6 +8,20 @@
     # curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # }
 
+function install_weylus { 
+    # https://ubunlog.com/en/weylus-convierte-telefono-tableta-en-pantalla-tactil-para-escritorio/
+    # https://xournalpp.github.io/installation/linux/
+}
+
+function install_zsh{
+    # https://dev.to/yogeshdev/make-your-unix-terminal-beautiful-productive-c1d
+    sudo apt install zsh
+
+    # managing zsh configuration
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+}
+
+
 function install_sioyek {
     # https://flatpak.org/setup/Ubuntu
     # https://flathub.org/apps/details/com.github.ahrm.sioyek
@@ -16,7 +30,25 @@ function install_sioyek {
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install flathub com.github.ahrm.sioyek
     # flatpak run com.github.ahrm.sioyek
+
+    # echo "alias sioyek='flatpak run com.github.ahrm.sioyek'" > ~/.bashrc
 }
+
+function install_gobuster {
+    # https://www.cyberithub.com/how-to-install-gobuster-on-ubuntu-20-04-lts/
+    # https://hackertarget.com/gobuster-tutorial/
+    go install github.com/OJ/gobuster/v3@latest
+    export PATH=$PATH:~/go/bin
+}
+
+function install_hashcat {
+    apt-get install ocl-icd-libopencl1 opencl-headers clinfo
+}
+
+function install_haskell {
+    sudo apt-get install haskell-stack threadscope
+}
+
 
 function install_qt {
     # https://stackoverflow.com/questions/48147356/install-qt-on-ubuntu
@@ -148,11 +180,12 @@ function install_bottom {
 
 
 function install_latex {
+    # https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux
     sudo apt install pdflatex
     npm install wallpaper
     sudo apt install evince
     sudo apt install zathura
-    sudo apt-get install texlive-latex-recommended
+    sudo apt-get install texlive-latex-recommended texlive texlive-base texlive-full
 }
 
 function swap_caps_escape {
@@ -163,7 +196,7 @@ function swap_caps_escape {
 
 function install_CTfs {
     sudo apt install nmap
-    sudo apt install gobuster
+    # sudo apt install gobuster
     sudo apt install smbclient
 }
 
@@ -231,6 +264,7 @@ function install_taskwarrior {
 function install_vimwiki {
     # generate HTML files
     pip install vimwiki-markdown
+    sudo apt install dvipng
 }
 
 function install_ranger {
@@ -246,6 +280,10 @@ function install_r {
     sudo apt-get install r-base
     sudo apt-get install gdebi-core wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2021.09.1-372-amd64.deb
     sudo gdebi rstudio-server-2021.09.1-372-amd64.deb
+
+    # download devtools
+    sudo apt-get -y install libcurl4-openssl-dev
+    sudo apt-get install libcurl4-openssl-dev libssl-dev
 }
 
 function install_devicons {
