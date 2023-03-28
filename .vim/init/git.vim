@@ -20,9 +20,18 @@ let g:NERDTreeGitStatusShowIgnored = 1
 """""""""""""""""""""""
 "  GitGutter Configs  "
 """""""""""""""""""""""
+" stage hunk: <leader>hs ; undo stage: <leader>hu; preview hunk: <leader>hp
+
+highlight GitGutterAdd guifg=#008200 ctermfg=Green
+highlight GitGutterChange guifg=#bbd100 ctermfg=Yellow
+highlight GitGutterDelete guifg=#ff9999 ctermfg=Red
 
 " Disable key mapping
 let g:gitgutter_map_keys = 0
+let g:gitgutter_enabled = 1
+
+" Keep vim snappy
+let g:gitgutter_max_signs = 500 
 
 " Jump between hunks
 nmap ]h <Plug>(GitGutterNextHunk)
@@ -30,7 +39,7 @@ nmap [h <Plug>(GitGutterPrevHunk)
 
 nmap ghs <Plug>(GitGutterStageHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
-" nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
 
 " Customize symbols
 " let g:gitgutter_sign_added = 'xx'

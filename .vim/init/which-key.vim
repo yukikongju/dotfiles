@@ -89,6 +89,16 @@ let g:which_key_map.f = {
 	    \'/': 'search-history',
 	    \}
 
+
+" GitGutter Keybindings
+let g:which_key_map.h = {
+	    \'name': '+gitgutter', 
+	    \'p': 'preview-hunk', 
+	    \'s': 'stage-hunk', 
+	    \'u': 'undo-stage', 
+	    \}
+
+
 " Keybindings for latex (Fix: behavior)
 nnoremap <leader>la :!git add */*.pdf */*.tex;
 nnoremap <leader>lc :VimtexCompile
