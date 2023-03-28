@@ -28,6 +28,7 @@ nnoremap <leader>bw :!rustlings watch;
 
 
 nnoremap <leader>ec :!gcc %;
+nnoremap <leader>ek :!g++ -O % -o %:h;
 nnoremap <leader>ej :!jekyll s;
 nnoremap <leader>ep :!python3 %;
 nnoremap <leader>en :!python %;
@@ -59,8 +60,6 @@ let g:which_key_map.e = {
 nnoremap <silent> <Leader>fa :Ag<CR> 
 nnoremap <silent> <leader>fb :Buffers<CR>
 nnoremap <silent> <leader>fc :History:<CR>
-" nnoremap <silent> <leader>f/ :BLines<CR>
-nnoremap <silent> <leader>f' :Marks<CR>
 nnoremap <silent> <leader>ff :History<CR>
 nnoremap <silent> <leader>fe :!nautilus .<CR>
 nnoremap <silent> <leader>fg :Commits<CR>
@@ -70,7 +69,9 @@ nnoremap <silent> <Leader>fr :Rg<CR>
 nnoremap <silent> <Leader>fs :Snippets<CR>
 nnoremap <silent> <leader>ft :Tags<CR>
 " nnoremap <silent> <leader>fy :registers<CR>
+" nnoremap <silent> <leader>f/ :BLines<CR>
 nnoremap <silent> <leader>f/ :History/<CR> 
+nnoremap <silent> <leader>f' :Marks<CR>
 
 let g:which_key_map.f = {
 	    \'name': '+fzf',
@@ -112,16 +113,16 @@ let g:which_key_map.h = {
 
 " Keybindings for latex (Fix: behavior)
 nnoremap <leader>la :!git add */*.pdf */*.tex;
-nnoremap <leader>lg :!pdflatex %; mv %:t:r.* %:p:h;
-nnoremap <leader>lr :!pdflatex %
 nnoremap <leader>lc :VimtexCompile
+nnoremap <leader>lg :!pdflatex %; mv %:t:r.* %:p:h;
+nnoremap <leader>ll :! pandoc % -o %<.pdf --template='%:p:h/template-letter.tex'; 
 nnoremap <leader>lo :!zathura %<.pdf;
 nnoremap <leader>lp :! pandoc % -o %<.pdf; 
-nnoremap <leader>ll :! pandoc % -o %<.pdf --template='%:p:h/template-letter.tex'; 
+nnoremap <leader>lr :!pdflatex %
 " nnoremap <leader>ll :! pandoc % -o %<.pdf --template='template-letter.tex'; 
 " nnoremap <leader>ll :! pandoc % -o %<.pdf --template='letter.tex'; 
-nnoremap <leader>lt :! pandoc % -o %<.pdf --toc
 nnoremap <leader>lb :! pandoc -t beamer % -o %<.pdf --toc --listings --number-section; 
+nnoremap <leader>lt :! pandoc % -o %<.pdf --toc
 nnoremap <leader>lm :! pandoc -t beamer % -o %<.pdf --slide-level=2 -V theme:metropolis ;
 nnoremap <leader>ln :! pandoc -t beamer % -o %<.pdf --slide-level=2 -V theme:Montpellier -V colortheme:rose -V fonttheme:professionalfonts;
 nnoremap <leader>lx :! xelatex %;
@@ -188,22 +189,27 @@ let g:which_key_map.s ={
 	    \ 'a': 'search-word',
 	    \ 'd': 'search-file-difference',
 	    \ 'j': 'search-word-and-jump',
-	    \ 'l' : 'locationlist',
-	    \ 'q' : 'quickfix'    ,
-	    \ 't' : 'tagbar'    ,
-	    \ 'u' : 'search-under-cursor-and-jump'    ,
+	    \ 'l': 'locationlist',
+	    \ 'q': 'quickfix'    ,
+	    \ 't': 'tagbar'    ,
+	    \ 'u': 'search-under-cursor-and-jump'    ,
 	    \}
 
 
 " Keybindings for vim files
-nnoremap <silent> <leader>ve :tabnew $MYVIMRC<cr>
+nnoremap <leader>ve :tabnew $MYVIMRC<cr>
+nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
 nnoremap <leader>vr :source $MYVIMRC<cr>
-nnoremap <silent> <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
+nnoremap <leader>vs :vsplit<cr>
+nnoremap <leader>vt :tabe<cr>
+
 let g:which_key_map.v ={
 	    \'name':'+vim',
-	    \'e':'edit-vim',
-	    \'r':'reload-vim',
-	    \'f':'open-vim-subdirectory'
+	    \'e': 'edit-vim',
+	    \'r': 'reload-vim',
+	    \'f': 'open-vim-files',
+	    \'s': 'open-vsplit',
+	    \'t': 'open-newtab'
 	    \}
 
 " TODO: Keybindings for vimspector

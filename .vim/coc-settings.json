@@ -15,21 +15,16 @@
 	"suggest.removeDuplicateItems": true,
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"diagnostic.warningSign": "!",
-	"diagnostic.checkCurrentLine": false,
+	"diagnostic.checkCurrentLine": true,
 	"coc.preferences.jumpCommand": "drop",
-	"coc.preferences.rootPatterns": [
-		".git",
-		".vscode"
-	],
-	// codelens
-	"codeLens.enable": true,
-	"javascript.referencesCodeLens.enable": true,
-	"java.completion.enabled": true, "coc.preferences.colorSupport": { 
-	  "type": "boolean", 
-	  "description": "Enable color highlight if language server support it.", 
-	  "default": true 
-	}, 
-	// autoformat
+	"coc.preferences.snippetSupport": true,
+	"coc.preferences.colorSupport": true,
+        "coc.preferences.fold.enable": false,
+	"coc.preferences.syntaxHighlight": true,
+        "coc.preferences.statusBar.displayByAle": true,
+        "coc.preferences.statusBar.enabled": true,
+	"coc.preferences.rootPatterns": [ ".git", ".vscode" ],
+	"coc.preferences.git.enable": true,
 	"coc.preferences.formatOnSaveFiletypes": [
 		"css",
 		"java",
@@ -45,14 +40,22 @@
 		"vim", 
 		"rust"
 	],
+	// codelens
+	"codeLens.enable": true,
+	"javascript.referencesCodeLens.enable": true,
+	"java.completion.enabled": true, "coc.preferences.colorSupport": { 
+	  "type": "boolean", 
+	  "description": "Enable color highlight if language server support it.", 
+	  "default": true 
+	}, 
 	// React Config
 	"tsserver.formarOnType": true, 
 	"coc.preferences.formarOnType": true,
 	// Python Configs
-	"jedi.executable.command": "jedi-language-server",
 	"jedi.enable": true,
+	"jedi.executable.command": "jedi-language-server",
 	"jedi.markupKindPreferred": "plaintext",
-	"jedi.trace.server": "messages",
+	"jedi.trace.server": true, // previously "message"
 	"jedi.jediSettings.autoImportModules": [],
 	"jedi.executable.args": [],
 	"jedi.completion.disableSnippets": false,
@@ -60,8 +63,10 @@
 	"jedi.diagnostics.enable": true,
 	"jedi.diagnostics.didChange": true,
 	"jedi.diagnostics.didSave": true,
+	"jedi.diagnostics.didOpen": true,
 	"python.linting.enabled": true,
 	"python.linting.pylintEnabled": true,
+	"python.linting.flake8Enabled": false,
 	"python.jediEnabled": false,
 	"python.pythonPath": "python",
 	// Java Configs
@@ -89,5 +94,8 @@
 	"rust-analyzer.trace.extension": true,
 	"rust-client.enable": true,
   "rust-client.disableRustup": true,
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
+  "coc.source.vimtex.filetypes": [
+    "tex"
+  ]
 }

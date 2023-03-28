@@ -6,134 +6,79 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 " utils
-Plug 'tpope/vim-repeat' " can use . with other plugins
-Plug 'tpope/vim-eunuch' " use UNIX shell command in vim
-Plug 'dkarter/bullets.vim' " check box easily
+Plug 'tpope/vim-repeat'            " can use . with other plugins
+Plug 'tpope/vim-eunuch'            " use UNIX shell command in vim
+Plug 'dkarter/bullets.vim'         " check box easily
 Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
-Plug 'voldikss/vim-floaterm' " popup terminal for vim with :terminal and :FloatermToggle
-" Plug 'jiangmiao/auto-pairs' " insert and delete brackets in pairs
-" Plug 'szw/vim-maximizer' " Fix vim windows
-" Plug 'wincent/command-t' " file buffers
-" Plug 'terryma/vim-expand-region' " Press + to expand the visual selection and _ to shrink it.
-" Plug 'junegunn/vim-peekaboo' " see the contents of registers with `'` and `@`
-" Plug 'tpope/vim-rsi' " Prevent key override
-" Plug 'tpope/vim-sleuth' " automatically adjust shiftwidth and expandtab
-
+Plug 'voldikss/vim-floaterm'       " popup terminal for vim with :terminal and :FloatermToggle
+Plug 'jiangmiao/auto-pairs'        " insert and delete brackets in pairs
+Plug 'godlygeek/tabular'           " align text based on regex => :Tabularize /<regex>
+Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switch bc no <S-tab> behavior)
 
 " tmux
-" Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
+Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 
 " treesitter
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Sidebar
 Plug 'scrooloose/nerdtree'
-Plug 'mbbill/undotree' " view all undo history
+Plug 'mbbill/undotree'          " view all undo history
 Plug 'liuchengxu/vim-which-key' " show all key bindings
 
 " ctags
 Plug 'preservim/tagbar' " show functions and import from ctags on tagbar
-" Plug 'universal-ctags/ctags' " ctags implementation
 
-" file finder
+" File Finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter' " fzf look at project directory
-Plug 'mhinz/vim-startify' " fancy start screen and session manager
-" Plug 'vifm/vifm.vim' " Launch vifm from vim
-" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger
-" Plug 'vifm/vifm'
-" Plug 'ranger/ranger'
-" Plug 'francoiscabrol/ranger.vim'
+Plug 'mhinz/vim-startify'  " fancy start screen and session manager
 
 " Code Finder
 Plug 'mileszs/ack.vim' " use :Ack in vim -> :Ack <pattern> <file>
-Plug 'rking/ag.vim'	" use :Ag in vim
-" Plug 'sjbach/lusty' " Buffer-grep: find code in opened buffer (missing
-" functionalities)
+Plug 'rking/ag.vim'    " use :Ag in vim
 
-" colorscheme' & syntax highlight
-Plug 'itchyny/lightline.vim' " colorscheme for vim modes
-Plug 'scrooloose/nerdcommenter' " Change indentation behavior
-Plug 'morhetz/gruvbox' " gruvbox color scheme
-Plug 'ap/vim-css-color' " Highlight colors in css files
-Plug 'ryanoasis/vim-devicons' " Use icons from ryanoasis/nerd-fonts
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Plug 'edkolev/promptline.vim'
+" Colorscheme' & Syntax Highlight
+Plug 'itchyny/lightline.vim'          " Colorscheme for vim modes
+Plug 'scrooloose/nerdcommenter'       " Change indentation behavior
+Plug 'morhetz/gruvbox'                " Gruvbox color scheme
+Plug 'ap/vim-css-color'               " Highlight colors in css files
+Plug 'ryanoasis/vim-devicons'         " Use icons from ryanoasis/nerd-fonts
+Plug 'vim-airline/vim-airline'        " Status Bar
+Plug 'vim-airline/vim-airline-themes' " More status bar themes
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-" Plug 'vim-scripts/c.vim' " c/c++ ide
-" Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
-" Plug 'rust-lang/rust.vim'
-" Plug 'racer-rust/vim-racer'
-" Plug 'fatih/vim-go'
-" Plug 'neoclide/coc-tabnine'
 
-" autocomplete for react development
-" Plug 'pangloss/vim-javascript'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'peitalin/vim-jsx-typescript'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" Plug 'jparise/vim-graphql'
-" Plug 'neovimhaskell/haskell-vim'
-" Plug 'tpope/vim-endwise' 
-
-" Plug 'dense-analysis/ale'
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'mattn/vim-lsp-settings'
-" Plug 'neovim/nvim-lspconfig'
-
-" autoformat
-Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switch bc no <S-tab> behavior)
-" Plug 'godlygeek/tabulark " Allows vim-markdown to work
-" Plug 'plasticboy/vim-markdown' " markdown formatting
-" Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
-" Plug 'prettier/vim-prettier'
 
 " snippets
-Plug 'neoclide/coc-snippets'
-Plug 'honza/vim-snippets' " snippets for various languages
-Plug 'SirVer/ultisnips' " Ultimate snippet solution for vim
-" Plug 'gillescastel/latex-snippets'
+Plug 'neoclide/coc-snippets'       " snippet with coc
+Plug 'honza/vim-snippets'          " snippets for various languages
+Plug 'SirVer/ultisnips'            " Ultimate snippet solution for vim
+Plug 'gillescastel/latex-snippets' " latex snippets
 
 " latex compiler
-" Plug 'lervag/vimtex'
-" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
-" Plug 'vim-latex/vim-latex'
+Plug 'lervag/vimtex'
 
-" pandoc compiler
-" Plug 'vim-pandoc/vim-pandoc'
-" Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " debugger
 Plug 'puremourning/vimspector'
 
 
 " git
-Plug 'tpope/vim-fugitive' "generate page to view commit message
+Plug 'tpope/vim-fugitive'     " generate page to view commit message
 Plug 'airblade/vim-gitgutter' " Show diff
 
 " vimwiki
-Plug 'vimwiki/vimwiki' " create linked text files
-" Plug 'jceb/vim-orgmode' " task management with .org file 
+Plug 'vimwiki/vimwiki'               " create linked text files
 Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
-" Plug 'xolox/vim-notes' " Note Taking in Vim using :Note
-" Plug 'esensar/vimwiki-reviews-lua' " reviews vimwiki by week, month, year
-" Plug 'GothenburgBitFactory/taskwarrior' " task management
-" Plug 'tools-life/taskwiki'
 
-" app
-" Plug 'itchyny/calendar.vim' " calendar
-" Plug 'lfos/calcurse' "Calendar scheduling app
-" Plug 'blindFS/vim-taskwarrior' " interface for taskwarrior task manager
 
 call plug#end()
 
 " Syntax
-" syntax on
 syntax enable
 
 " Autocompletion
@@ -241,20 +186,17 @@ colorscheme gruvbox
 
 " copy to clipboard in linux
 set clipboard=unnamedplus
-" set clipboard=unnamed " for windows
+" set clipboard=unnamed (for windows)
 
 " Choose Leader
 let mapleader=","
 
-" Work around to fix weird utf-8 ubiquitous char that makes vim enter in
-" replace mode
+" Work around to fix weird utf-8 ubiquitous char that makes vim enter in replace mode
 set t_u7=
 
 " Configs for vim-latex-live-preview
 let g:livepreview_previewer = 'evince'
 let g:livepreview_engine = 'pdflatex' . ' [options]'
-" let g:livepreview_previewer = 'zathura'
-" let g:livepreview_use_biber = 1
 
 " automatically change the current directory
 autocmd BufEnter * silent! lcd %:p:h
@@ -262,6 +204,10 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " Allow fold inside Markdown (vim-markdown)
 let g:markdown_folding = 1
+
+" Allow <Enter> key in markdown file (fixing autocomplete) CHECK!
+" autocmd FileType Markdown inoremap <buffer><silent><expr> <CR> coc#_select_confirm()
+autocmd FileType markdown inoremap <buffer><silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
 
 
 " open latex on side screen
@@ -274,15 +220,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " let g:airline_theme='gruvbox'
 
-" Fix JSON indentation
-" augroup Indentation
-" autocmd!
-" autocmd FileType javascript set shiftwidth=2
-" augroup END
+" TREESITTER CONFIGS TODO: move into its own file
 
-" Configs for pandoc
- " let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
- " let g:pandoc#filetypes#pandoc_markdown = 0
 
 
 " Deactivate Vim Rooter echoing ( only echoes for Vimwiki)
@@ -305,6 +244,73 @@ source ~/.vim/init/vimspector.vim
 source ~/.vim/init/vimwiki.vim
 source ~/.vim/init/which-key.vim
 
+" Load pluggins: IDK why it doesn't automatically
+" source ~/.vim/plugged/
+
+
 " run .profile
 " source ~/.profile
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                Old plugins                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+" Plug 'jceb/vim-orgmode' " task management with .org file 
+" Plug 'xolox/vim-notes' " Note Taking in Vim using :Note
+" Plug 'esensar/vimwiki-reviews-lua' " reviews vimwiki by week, month, year
+" Plug 'GothenburgBitFactory/taskwarrior' " task management
+" Plug 'tools-life/taskwiki'
+
+" app
+" Plug 'itchyny/calendar.vim' " calendar
+" Plug 'lfos/calcurse' "Calendar scheduling app
+" Plug 'blindFS/vim-taskwarrior' " interface for taskwarrior task manager
+
+
+" Plug 'edkolev/promptline.vim'
+" Plug 'sjbach/lusty' " Buffer-grep: find code in opened buffer (missing functionalities)
+" Plug 'universal-ctags/ctags' " ctags implementation
+" Plug 'vifm/vifm'
+" Plug 'ranger/ranger'
+" Plug 'szw/vim-maximizer'                                  " Fix vim windows
+" Plug 'wincent/command-t'                                  " file buffers
+" Plug 'terryma/vim-expand-region'                          " Press + to expand the visual selection and _ to shrink it.
+" Plug 'junegunn/vim-peekaboo'                              " see the contents of registers with `'` and `@`
+" Plug 'tpope/vim-rsi'                                      " Prevent key override
+" Plug 'tpope/vim-sleuth'                                   " automatically adjust shiftwidth and expandtab
+" Plug 'vim-scripts/c.vim' " c/c++ ide
+" Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
+" Plug 'rust-lang/rust.vim'
+" Plug 'racer-rust/vim-racer'
+" Plug 'fatih/vim-go'
+" Plug 'neoclide/coc-tabnine'
+
+" autocomplete for react development
+" Plug 'pangloss/vim-javascript'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'jparise/vim-graphql'
+" Plug 'neovimhaskell/haskell-vim'
+" Plug 'tpope/vim-endwise' 
+
+" Plug 'dense-analysis/ale'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+" Plug 'neovim/nvim-lspconfig'
+
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
+" Plug 'vim-latex/vim-latex'
+
+" pandoc compiler
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
+
+" Plug 'godlygeek/tabulark " Allows vim-markdown to work
+" Plug 'plasticboy/vim-markdown' " markdown formatting
+" Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
+" Plug 'prettier/vim-prettier'
+
 

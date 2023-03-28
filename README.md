@@ -20,9 +20,16 @@ Keeping track of my Dotfiles by using symlink
 
 - [X] Make vim a core editor: `` git config --global core.editor "vim"``
 - [X] Download pdflatex to compile latex files: `` sudo apt-get pdflatex``
+- [X] Installing `zsh`: [here](https://dev.to/yogeshdev/make-your-unix-terminal-beautiful-productive-c1d)
 
 
 ## ToDos
+
+**Trobleshoot**
+
+- [ ] When installing a new plugin with `:PlugInstall`, it doesn't show in `:scriptnames` so we can't use the functions from that plugins
+
+**Features**
 
 - [ ] use `beamerthemeNord` as pandoc template
 - [ ] configure i3 window manager
