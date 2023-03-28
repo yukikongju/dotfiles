@@ -94,6 +94,9 @@ function install_linux_system_tools {
 
 function install_vimium {
     # https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/
+    
+    # justify text
+    sudo apth install par
 }
 
 

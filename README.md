@@ -27,13 +27,15 @@ Keeping track of my Dotfiles by using symlink
 
 **Trobleshoot**
 
-- [ ] When installing a new plugin with `:PlugInstall`, it doesn't show in `:scriptnames` so we can't use the functions from that plugins
+- [.] When installing a new plugin with `:PlugInstall`, it doesn't show in `:scriptnames` so we can't use the functions from that plugins. doesn't work with lua
 
 **Features**
 
 - [ ] use `beamerthemeNord` as pandoc template
 - [ ] configure i3 window manager
 - [ ] Add `mathjax` and `latex` in vimwiki (see [this](https://www.rosipov.com/blog/custom-templates-in-vimwiki/))
+- [ ] reformat text justified with [vim-pencil](https://github.com/preservim/vim-pencil)
+- [ ] [vim-wordy](https://github.com/preservim/vim-wordy)
 
 
 ## Setting Up Dotfiles
@@ -97,6 +99,8 @@ Native:
 - [X] Move screen whilst keeping the cursor at the same spot with `<ctrl-e>` and `<ctrl-y>`
 - [X] Increment and decrement next number with ``<c-a>`` and ``<c-x>``
 - [X] Using [folds](https://bitcrowd.dev/folding-sections-of-markdown-in-vim)
+- [X] setup thesaurus: [here](https://www.thegeekstuff.com/2008/12/vi-and-vim-editor-3-steps-to-enable-thesaurus-option/)
+- [X] Add synonym thesaurus
 
 ## Tmux Keybindings
 

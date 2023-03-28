@@ -13,7 +13,8 @@ Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
 Plug 'voldikss/vim-floaterm'       " popup terminal for vim with :terminal and :FloatermToggle
 Plug 'jiangmiao/auto-pairs'        " insert and delete brackets in pairs
 Plug 'godlygeek/tabular'           " align text based on regex => :Tabularize /<regex>
-Plug 'dhruvasagar/vim-table-mode' " markdown table formatting (may want to switch bc no <S-tab> behavior)
+Plug 'dhruvasagar/vim-table-mode'  " markdown table formatting (may want to switch bc no <S-tab> behavior)
+Plug 'preservim/vim-lexical'        " use thesaurus to find synonym
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
@@ -22,7 +23,7 @@ Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Sidebar
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'      " view file directory
 Plug 'mbbill/undotree'          " view all undo history
 Plug 'liuchengxu/vim-which-key' " show all key bindings
 
@@ -37,7 +38,7 @@ Plug 'mhinz/vim-startify'  " fancy start screen and session manager
 
 " Code Finder
 Plug 'mileszs/ack.vim' " use :Ack in vim -> :Ack <pattern> <file>
-Plug 'rking/ag.vim'    " use :Ag in vim
+Plug 'rking/ag.vim'    " use :Ag in vim -> SilverSearcher
 
 
 " Colorscheme' & Syntax Highlight
@@ -49,29 +50,29 @@ Plug 'ryanoasis/vim-devicons'         " Use icons from ryanoasis/nerd-fonts
 Plug 'vim-airline/vim-airline'        " Status Bar
 Plug 'vim-airline/vim-airline-themes' " More status bar themes
 
-" autocomplete
+" Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 
 
-" snippets
+" Snippets
 Plug 'neoclide/coc-snippets'       " snippet with coc
 Plug 'honza/vim-snippets'          " snippets for various languages
 Plug 'SirVer/ultisnips'            " Ultimate snippet solution for vim
 Plug 'gillescastel/latex-snippets' " latex snippets
 
-" latex compiler
+" Latex compiler
 Plug 'lervag/vimtex'
 
 
-" debugger
+" Debugger
 Plug 'puremourning/vimspector'
 
 
-" git
+" Git
 Plug 'tpope/vim-fugitive'     " generate page to view commit message
 Plug 'airblade/vim-gitgutter' " Show diff
 
-" vimwiki
+" Vimwiki
 Plug 'vimwiki/vimwiki'               " create linked text files
 Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
 
@@ -218,7 +219,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-" let g:airline_theme='gruvbox'
+let g:airline_theme='gruvbox'
 
 " TREESITTER CONFIGS TODO: move into its own file
 
@@ -237,6 +238,7 @@ source ~/.vim/init/git.vim
 source ~/.vim/init/mappings.vim
 source ~/.vim/init/snippets.vim
 source ~/.vim/init/startify.vim
+source ~/.vim/init/thesaurus.vim
 source ~/.vim/init/tmux.vim
 source ~/.vim/init/tree.vim
 source ~/.vim/init/utils.vim
