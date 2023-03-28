@@ -29,6 +29,11 @@ function! ToggleSpellLang()
     endif
 endfunction
 
+" Substitute All Pattern By New Pattern ex: GlobalSubstitute('test', 'testing')
+function! GlobalSubstituteConfirm(old_pattern, new_pattern)
+  execute '%s/' . a:old_pattern . '/' . a:new_pattern . '/gc'
+endfunction
+
 " TODO: word count
 
 
@@ -39,7 +44,22 @@ endfunction
 " omap s :normal vs<CR>
 
 " TODO: Compare two files
-" diff -u -w cargo/src/bin/cargo/commands/build.rs cargo/src/bin/cargo/commands/rustc.rs
+
+
+" Thesaurus Search under cursor
+" function! Thesaurus()
+"     let word = expand("<cword>")
+"     if !word || word == ""
+"         echo "No word under cursor"
+"         return
+"     endif
+"     let thesaurus_result = thesaurus_query(word)
+"     if !thesaurus_result || thesaurus_result == ""
+"         echo "No thesaurus entry found"
+"         return
+"     endif
+"     echo thesaurus_result
+" endfunction
 
 
 

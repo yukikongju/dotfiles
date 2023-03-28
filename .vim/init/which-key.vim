@@ -26,7 +26,6 @@ let g:which_key_map.a = {
 nnoremap <leader>bh :!rustlings hint next;
 nnoremap <leader>bw :!rustlings watch;
 
-
 nnoremap <leader>ec :!gcc %;
 nnoremap <leader>ek :!g++ -O % -o %:h;
 nnoremap <leader>ej :!jekyll s;
@@ -165,22 +164,34 @@ let g:which_key_map.o = {
 	    \}
 
 " Keybindings for global/local Replace
-nnoremap <leader>ra :%s/\<<C-r><C-w>\>/
-nnoremap <leader>rc gD:%s/<C-R>///gc<left><left><left><C-R>
+nnoremap <leader>ra :call GlobalSubstituteConfirm()<left>
+nnoremap <leader>ru :%s/\<<C-r><C-w>\>/ 
+nnoremap <leader>rc :%s/<C-r><C-w>//gc<left><left><left>
+nnoremap <leader>rj :%!fmt -w 80<CR>:%!par -j -w80<CR>
 
-" Keybings to reverse lines
-" nnoremap <leader>rr :g/^/m 0 5 (startline, endline)
+
+" Replace Pattern TODO: write function that take old_name new_name
+" :g/pattern/d - Supprime toutes les lignes correspondant à un motif donné
+" :g/pattern/s//replacement/g - Remplace toutes les occurrences d'un motif donné par un remplacement donné dans toutes les lignes correspondantes
+" :s/foo/bar/gc - Remplace toutes les occurrences de "foo" par "bar", en
+" demandant une confirmation pour chaque occurrence (done)
+
 let g:which_key_map.r ={
 	    \'name': '+replace',
-	    \'a': 'replace-all-under-cursor',
+	    \'a': 'replace-all',
 	    \'c': 'replace-confirm-all-under-cursor',
+	    \'u': 'replace-all-under-cursor',
+	    \'j': 'justify current file',
 	    \}
+
 
 " nnoremap <leader>sa :call AckSearch("")<left><left>
 nnoremap <leader>sa :Ag <SPACE>
+nnoremap <leader>sd :Gvdiffsplit<CR>
 nnoremap <leader>sj :Ack <SPACE>
 nnoremap <leader>su :Ack! "\b<cword>\b" <CR>	
-nnoremap <leader>sd :Gvdiffsplit<CR>
+nnoremap <leader>ss z=<CR>
+" nnoremap <leader>st :call Thesaurus()<CR>   (synonym: check thesaurus.vim)
 
 nnoremap <silent> <leader>sq  :copen<CR>
 nnoremap <silent> <leader>sl  :lopen<CR>
@@ -191,8 +202,9 @@ let g:which_key_map.s ={
 	    \ 'j': 'search-word-and-jump',
 	    \ 'l': 'locationlist',
 	    \ 'q': 'quickfix'    ,
-	    \ 't': 'tagbar'    ,
 	    \ 'u': 'search-under-cursor-and-jump'    ,
+	    \ 's': 'spell-checking'    ,
+	    \ 't': 'vim-lexical-thesaurus (only in md)'    ,
 	    \}
 
 

@@ -6,6 +6,22 @@
 
 let g:vimwiki_folding='expr' "list, '', expr, syntax,
 
+" let g:vimwiki_global_ext = 0
+" let g:vimwiki_conceallevel = 0
+" let g:vimwiki_table_mappings = 1
+" let g:vimwiki_folding_disabled = ['table', 'pre']
+" let g:vimwiki_auto_header = 1
+" let g:vimwiki_autowriteall = 1
+" let g:vimwiki_html_header = '<header>'
+" let g:vimwiki_html_footer = '</footer>'
+" let g:vimwiki_html_template = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>$title</title></head><body>$toc$body</body></html>'
+" let g:vimwiki_pandoc_use_xelatex = 1
+" let g:vimwiki_pandoc_args = '--mathjax -s -f markdown+tex_math_dollars+raw_tex'
+" let g:vimwiki_pandoc_templates = {'html5': '$HOME/vimwiki/templates/pandoc-template.html'}
+" let g:vimwiki_all2html_args = '-f markdown+tex_math_dollars+raw_tex -t html5 --mathjax'
+" let g:vimwiki_all2html_postprocessor = 'tidy -q -i -w 1000 -c -utf8'
+
+
 
 " TODO: change vimwiki base path based on os
 if has('win32')
@@ -15,6 +31,9 @@ elseif has("linux")
 endif
 
 " Subfolders: Courses, Logs, Rant, FlashCards, ActiveRecall, Prog
+" 
+	    " \ 'template_path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/templates/',
+	    " \ 'template_default': 'default',
 let g:vimwiki_list = [
 	    \{
 	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/WhatIveLearned/',
@@ -31,8 +50,6 @@ let g:vimwiki_list = [
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
 	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Courses/site_html/',
-	    \ 'template_path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/templates/',
-	    \ 'template_default': 'default',
 	    \ 'template_ext': '.tpl',
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \},
