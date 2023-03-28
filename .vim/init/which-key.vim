@@ -67,7 +67,7 @@ nnoremap <silent> <Leader>fm :Maps<CR>
 nnoremap <silent> <Leader>fr :Rg<CR>
 nnoremap <silent> <Leader>fs :Snippets<CR>
 nnoremap <silent> <leader>ft :Tags<CR>
-" nnoremap <silent> <leader>fy :registers<CR>
+nnoremap <silent> <leader>fy :registers<CR>
 " nnoremap <silent> <leader>f/ :BLines<CR>
 nnoremap <silent> <leader>f/ :History/<CR> 
 nnoremap <silent> <leader>f' :Marks<CR>
@@ -77,38 +77,17 @@ let g:which_key_map.f = {
 	    \'a': 'Ag',
 	    \'b': 'buffers',
 	    \'c': 'command-history',
+	    \'e': 'file-explorer',
 	    \'f': 'files-history',
 	    \'g': 'git-commit',
 	    \'h': 'helptags',
 	    \'m': 'maps',
-	    \'e': 'file-explorer',
 	    \'r': 'ripgrep',
 	    \'s': 'file-snippets',
 	    \'t': 'tags',
+	    \'y': 'yank-history',
 	    \'/': 'search-history',
 	    \}
-
-" \'y': 'yank-history',
-
-" nmap <leader>hd <Plug>(GitGutterPreviewHunk)
-" nmap <leader>hf <Plug>(GitGutterFold)
-nmap <leader>hn <Plug>(GitGutterNextHunk)
-nmap <leader>hp <Plug>(GitGutterPrevHunk)
-
-" Keybindings for gitgutter hunks
-let g:which_key_map.h = {
-	    \'name':'+hunk',
-	    \'d': 'hunks-difference',
-	    \'f': 'fold-hunks',
-	    \'n': 'next-hunk',
-	    \'p': 'previous-hunk',
-	    \}
-
-"     \'p': ['<Plug>(GitGutterPreviewHunk)' , 'preview-hunk'],
-"     \'s': ['<Plug>(GitGutterStageHunk)' , 'stage-hunk'],
-"     \'u': ['<Plug>(GitGutterUndoHunk)' , 'undo-hunk'],
-
-
 
 " Keybindings for latex (Fix: behavior)
 nnoremap <leader>la :!git add */*.pdf */*.tex;

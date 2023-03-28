@@ -1,5 +1,5 @@
 """"""""""""""""""""""
-"  NERDTreeGit Configs  "
+"  NERDTree Configs  "
 """"""""""""""""""""""
 let g:NERDTreeGitStatusShowIgnored = 1
 " let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -28,9 +28,9 @@ let g:gitgutter_map_keys = 0
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 
-" nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
 " nmap ghu <Plug>(GitGutterUndoHunk)
-" nmap ghp <Plug>(GitGutterPreviewHunk)
 
 " Customize symbols
 " let g:gitgutter_sign_added = 'xx'
