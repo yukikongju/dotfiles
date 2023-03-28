@@ -203,6 +203,7 @@ nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
 nnoremap <leader>vr :source $MYVIMRC<cr>
 nnoremap <leader>vs :vsplit<cr>
 nnoremap <leader>vt :tabe<cr>
+nnoremap <leader>vw :!tmux source-file ~/.tmux.conf<cr>
 
 let g:which_key_map.v ={
 	    \'name':'+vim',
