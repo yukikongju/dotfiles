@@ -13,6 +13,12 @@ unlink $HOME/.vimrc
 rm -rf $HOME/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
+# Symbolic link for .tmux.conf
+unlink $HOME/.tmux.conf
+rm -rf $HOME/.tmux.conf
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+
 # Symbolic link for coc-settings
 unlink $HOME/.vim/coc-settings.json
 rm -rf $HOME/.vim/coc-settings.json
