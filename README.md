@@ -56,7 +56,6 @@ Keeping track of my Dotfiles by using symlink
 
 - [X] Matrix Style background: ``cmatrix``
 - [ ] Task Automation with autosys: autorep, .jil, sentevent
-- [ ] Windows Configuration with Tmux
 
 
 ## What does .vimrc do
@@ -79,8 +78,8 @@ Plugins:
 - [X] PDF file viewer with evince (zathura is another option)
 - [X] Converting markdown file to pdf with pandoc using ``pandoc file.md -o file.pdf``
 - [X] Ag, Rg, LustyBuffer
-- [ ] Window Manager with dwm or i3
-- [ ] Preview Picture and Videos with ranger
+- [X] Window Manager with dwm or i3 (tmux)
+- [X] Preview Picture and Videos with ranger
 - [X] swap CAPS with esc: ```crontab -e; @reboot setxkbmap -option caps:swapescape```
 - [X] Using `sioyek` to view PDF smartly: `flatpak run com.github.ahrm.sioyek`
 
@@ -100,7 +99,7 @@ Native:
 - [X] Increment and decrement next number with ``<c-a>`` and ``<c-x>``
 - [X] Using [folds](https://bitcrowd.dev/folding-sections-of-markdown-in-vim)
 - [X] setup thesaurus: [here](https://www.thegeekstuff.com/2008/12/vi-and-vim-editor-3-steps-to-enable-thesaurus-option/)
-- [X] Add synonym thesaurus
+- [X] see synonym thesaurus
 
 ## Tmux Keybindings
 

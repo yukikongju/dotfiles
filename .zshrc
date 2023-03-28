@@ -12,6 +12,11 @@ ZSH_THEME="spaceship"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
 
+# Defining rc files
+# export MYVIMRC="~/.vimrc"
+export MYTMUXCONF="/home/yukikongju/.tmux.conf"
+export MYZSHRC="/home/yukikongju/.zshrc"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/

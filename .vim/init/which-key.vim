@@ -198,21 +198,34 @@ let g:which_key_map.s ={
 
 
 " Keybindings for vim files
+nnoremap <leader>va :source $MYVIMRC<cr>:!source $MYZSHRC<cr>:!tmux source-file $MYTMUXCONF<cr>
 nnoremap <leader>ve :tabnew $MYVIMRC<cr>
 nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
 nnoremap <leader>vr :source $MYVIMRC<cr>
+nnoremap <leader>vn :tabe<cr>
 nnoremap <leader>vs :vsplit<cr>
-nnoremap <leader>vt :tabe<cr>
-nnoremap <leader>vw :!tmux source-file ~/.tmux.conf<cr>
+nnoremap <leader>vt :tabnew $MYTMUXCONF<cr>
+nnoremap <leader>vz :tabnew $MYZSHRC<cr>
+
+" nnoremap <leader>vw :!source $MYZSHRC<cr>
+" nnoremap <leader>vw :!tmux source-file $MYTMUXCONF<cr>
+
+" TODO: Keybindings for .zshrc, .tmux.conf
 
 let g:which_key_map.v ={
 	    \'name':'+vim',
-	    \'e': 'edit-vim',
-	    \'r': 'reload-vim',
+	    \'a': 'reload-all-rc-files',
+	    \'e': 'edit-vimrc',
+	    \'r': 'reload-vimrc',
 	    \'f': 'open-vim-files',
 	    \'s': 'open-vsplit',
-	    \'t': 'open-newtab'
+	    \'t': 'edit-termux',
+	    \'n': 'open-newtab',
+	    \'z': 'edit-zshrc',
 	    \}
+
+" \'w': 'reload-termux',
+" $ Install termux plugins: tmux run-shell ~/.tmux/plugins/tpm/bindings/install_plugins
 
 " TODO: Keybindings for vimspector
 
