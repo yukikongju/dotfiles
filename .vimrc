@@ -14,7 +14,7 @@ Plug 'voldikss/vim-floaterm'       " popup terminal for vim with :terminal and :
 Plug 'jiangmiao/auto-pairs'        " insert and delete brackets in pairs
 Plug 'godlygeek/tabular'           " align text based on regex => :Tabularize /<regex>
 Plug 'dhruvasagar/vim-table-mode'  " markdown table formatting (may want to switch bc no <S-tab> behavior)
-Plug 'preservim/vim-lexical'        " use thesaurus to find synonym
+Plug 'preservim/vim-lexical'       " use thesaurus to find synonym
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator' " tmux and vim integration
@@ -51,8 +51,10 @@ Plug 'vim-airline/vim-airline'        " Status Bar
 Plug 'vim-airline/vim-airline-themes' " More status bar themes
 
 " Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
+Plug 'pixelneo/vim-python-docstring'            " generate docstring for python
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " DOcumentation GEnerator
 
 " Snippets
 Plug 'neoclide/coc-snippets'       " snippet with coc

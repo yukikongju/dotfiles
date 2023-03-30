@@ -89,10 +89,21 @@ let g:which_key_map.f = {
 	    \'/': 'search-history',
 	    \}
 
+" python docstring generation from vim-python-docstring
+nnoremap <leader>gd :DogeGenerate<cr>
+nnoremap <leader>gp :Docstring<cr>
+
+" Generate Keybindings
+let g:which_key_map.g = {
+	    \'name': '+generate', 
+	    \'d': 'generate-docstring with doge', 
+	    \'p': 'generate-docstring-python for single function', 
+	    \}
+
 
 " GitGutter Keybindings
 let g:which_key_map.h = {
-	    \'name': '+gitgutter', 
+	    \'name': '+gitgutter-hunks', 
 	    \'p': 'preview-hunk', 
 	    \'s': 'stage-hunk', 
 	    \'u': 'undo-stage', 
@@ -237,7 +248,7 @@ let g:which_key_map.v ={
 let g:which_key_map.w = {
 	    \ 'name' : '+windows' ,
 	    \ 'w' : ['<C-W>w'     , 'other-window']          ,
-	    \ 'd' : ['<C-W>c'     , 'delete-window']         ,
+	    \ 'd' : ['<C-W>d'     , 'delete-window']         ,
 	    \ '-' : ['<C-W>s'     , 'split-window-below']    ,
 	    \ '|' : ['<C-W>v'     , 'split-window-right']    ,
 	    \ '2' : ['<C-W>v'     , 'layout-double-columns'] ,

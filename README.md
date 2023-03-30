@@ -14,6 +14,7 @@ Keeping track of my Dotfiles by using symlink
 
 - [X] Download Plugin manager from junegunn/vim-plug: `` curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ``
+- [ ] Download tmux plugins manager: [here](https://github.com/tmux-plugins/tpm)
 - [X] Enable Symbolic Links on Git Bash: ``export MSYS=winsymlinks:nativestrict``
 
 - [X] Download nodejs for coc.nvim: `` sudo apt-get install nodejs``
@@ -36,6 +37,8 @@ Keeping track of my Dotfiles by using symlink
 - [ ] Add `mathjax` and `latex` in vimwiki (see [this](https://www.rosipov.com/blog/custom-templates-in-vimwiki/))
 - [ ] reformat text justified with [vim-pencil](https://github.com/preservim/vim-pencil)
 - [ ] [vim-wordy](https://github.com/preservim/vim-wordy)
+- [ ] IntelliJ like: show function name on bracket/parenthesis 
+- [ ] Task Manager [girok](https://github.com/noisrucer/girok)
 
 
 ## Setting Up Dotfiles
@@ -68,6 +71,7 @@ Plugins:
 - [X] Autocomplete with coc.nvim: python, rust, c
 - [X] Fuzzy file finder with fzf ``<c-f>``
 - [X] Snippets with ultisnips
+- [X] Docstring generator with doge and vim-python-docstring using `<leader>gd` and `<leader>gp`
 - [X] Latex Compiler with vimtex using ``<leader>lc``
 - [X] Debugger with vimspector and ``<leader>dd``
 - [X] Check and Uncheck checkboxes with bullets.vim ``<leader>x``
@@ -103,7 +107,7 @@ Native:
 
 ## Tmux Keybindings
 
-- Current key binding: ``<c-b>``
+- Current key binding: ``<c-a>``
 
 #### Session and Window Preview
 

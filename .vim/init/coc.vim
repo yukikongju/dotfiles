@@ -137,3 +137,19 @@ function! s:show_documentation()
     endif
 endfunction
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                        Python Docstring Generators                         "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Configs for 'pixelneo/vim-python-docstring'
+let g:python_style = 'numpy'
+
+
+" Configs for 'kkoomen/vim-doge'
+let g:doge_doc_standard_python = 'numpy'
+let g:doge_doc_standard_cpp    = 'doxygen_javadoc'
+let g:doge_doc_standard_c      = 'doxygen_javadoc'
+
+" remap <leader>d for Doge completion mapping
+let g:doge_mapping = '<leader>gd'
+
