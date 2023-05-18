@@ -1,9 +1,8 @@
 "  .vimrc base file
 
-
 " Remap escape keys to kj in insert mode
-nnoremap kj <esc>
-inoremap kj <esc>
+" nnoremap kj <esc>
+" inoremap kj <esc>
 
 
 " Remap ; to : in normal and vertical mode
@@ -23,11 +22,11 @@ let &t_EI = "\<esc>[2 q" " block cursor for normal mode
 let &t_SR = "\<esc>[3 q" " underline cursor for replace mode
 
 
-# change background color
+" change background color
 set background=dark
 colorscheme gruvbox
 
-# leader
+" leader
 let mapleader=','
 
 
