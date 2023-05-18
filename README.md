@@ -107,7 +107,7 @@ Native:
 
 ## Tmux Keybindings
 
-- Current key binding: ``<c-a>``
+- Current key binding: ``<c-s>``
 
 #### Session and Window Preview
 
@@ -122,11 +122,16 @@ Native:
 
 #### Panes
 
-- Split pane horizontally and vertically: ``<c-b>%`` and ``<c-b>"``
+- Split pane horizontally and vertically: ``<c-b>% or -`` and ``<c-b>" or |``
 - Move pane: ``<c-b>{}``
 - Switch to pane: ``<c-b><arrow-key>`` or ``<c-b>o``
 - Convert pane to window: ``<c-b>!``
 - Resize Panes: ``<c-b><c- 'arrow-key'>``
+
+#### Utilities
+
+- Copy Pasting on tmux:  `<c-s>[` and `<c-s>]`
+
 
 ## One Drive Integration
 

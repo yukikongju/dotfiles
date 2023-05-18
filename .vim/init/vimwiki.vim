@@ -133,22 +133,25 @@ let g:vimwiki_key_mappings = {
             \ 'html': 1,
             \ 'mouse': 1,
             \ }
-augroup VimwikiRemaps
-    autocmd!
-    " unmap tab in insert mode
-    autocmd Filetype vimwiki silent! iunmap <buffer> <Tab>
-    " remap table tab mappings to M-n M-p
-    autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-n> vimwiki#tbl#kbd_tab()
-    autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-p> vimwiki#tbl#kbd_shift_tab()
-    " on enter if completion is open, complete first element otherwise use
-    " default vimwiki mapping
-    autocmd Filetype vimwiki inoremap <silent><expr><buffer> <cr> pumvisible() ? coc#_select_confirm()
-augroup end
 
-" autocmd FileType markdown,rmarkdown,vimwiki " activates only on markdown, rmarkdown, and vimiwki filetypes
-"       \ inoremap <CR> <ESC>:VimwikiReturn 3 5<CR>| " enables insert mode vimwiki return mapping
-"       \ autocmd CompleteChanged * silent! iunmap <CR>| " disables insert mode mapping on complete changed
-"       \ autocmd CompleteDone * inoremap <CR> <ESC>:VimwikiReturn 3 5<CR> " re-enables the insert mode mapping
+
+" THIS CODE FORBID US TO PRESS ENTER in mardkown files
+" augroup VimwikiRemaps
+"     autocmd!
+"     " unmap tab in insert mode
+"     autocmd Filetype vimwiki silent! iunmap <buffer> <Tab>
+"     " remap table tab mappings to M-n M-p
+"     autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-n> vimwiki#tbl#kbd_tab()
+"     autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-p> vimwiki#tbl#kbd_shift_tab()
+"     " on enter if completion is open, complete first element otherwise use
+"     " default vimwiki mapping
+"     autocmd Filetype vimwiki inoremap <silent><expr><buffer> <cr> pumvisible() ? coc#_select_confirm()
+" augroup end
+
+" " autocmd FileType markdown,rmarkdown,vimwiki " activates only on markdown, rmarkdown, and vimiwki filetypes
+" "       \ inoremap <CR> <ESC>:VimwikiReturn 3 5<CR>| " enables insert mode vimwiki return mapping
+" "       \ autocmd CompleteChanged * silent! iunmap <CR>| " disables insert mode mapping on complete changed
+" "       \ autocmd CompleteDone * inoremap <CR> <ESC>:VimwikiReturn 3 5<CR> " re-enables the insert mode mapping
 
 
 " remapping follow links
