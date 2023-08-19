@@ -7,6 +7,25 @@
 # function download_plugin_manager {
     # curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # }
+#
+
+function install_lobster {
+    # https://github.com/justchokingaround/lobster#linux-from-source
+    sudo curl -sL github.com/justchokingaround/lobster/raw/main/lobster.sh -o /usr/local/bin/lobster &&
+    sudo chmod +x /usr/local/bin/lobster
+
+    sudo apt install mpv
+}
+
+function install_wpscan {
+    sudo gem install nokogiri wpscan
+}
+
+
+function install_go {
+    # https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-20-04
+     go install github.com/ffuf/ffuf/v2@latest
+}
 
 function install_weylus { 
     # https://ubunlog.com/en/weylus-convierte-telefono-tableta-en-pantalla-tactil-para-escritorio/

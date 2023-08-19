@@ -86,6 +86,7 @@ Plugins:
 - [X] Preview Picture and Videos with ranger
 - [X] swap CAPS with esc: ```crontab -e; @reboot setxkbmap -option caps:swapescape```
 - [X] Using `sioyek` to view PDF smartly: `flatpak run com.github.ahrm.sioyek`
+- [X] Using `lobster` to watch TV shows and movies
 
 Native:
 - [X] Mappings Refractor
