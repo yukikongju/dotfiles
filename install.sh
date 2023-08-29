@@ -17,6 +17,10 @@ function install_lobster {
     sudo apt install mpv
 }
 
+function install_libgen {
+    sudo npm install -g libgen-downloader
+}
+
 function install_wpscan {
     sudo gem install nokogiri wpscan
 }

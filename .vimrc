@@ -61,6 +61,7 @@ Plug 'neoclide/coc-snippets'       " snippet with coc
 Plug 'honza/vim-snippets'          " snippets for various languages
 Plug 'SirVer/ultisnips'            " Ultimate snippet solution for vim
 Plug 'gillescastel/latex-snippets' " latex snippets
+Plug 'vim-latex/vim-latex'
 
 " Latex compiler
 Plug 'lervag/vimtex'
@@ -306,7 +307,6 @@ source ~/.vim/init/which-key.vim
 " Plug 'neovim/nvim-lspconfig'
 
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'  }
-" Plug 'vim-latex/vim-latex'
 
 " pandoc compiler
 " Plug 'vim-pandoc/vim-pandoc'
