@@ -17,6 +17,14 @@ function install_lobster {
     sudo apt install mpv
 }
 
+function install_opencv {
+    # https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/
+    # sudo ln -s /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2
+
+
+}
+
+
 function install_libgen {
     sudo npm install -g libgen-downloader
     sudo apt install fbreader
