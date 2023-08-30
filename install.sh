@@ -19,6 +19,7 @@ function install_lobster {
 
 function install_libgen {
     sudo npm install -g libgen-downloader
+    sudo apt install fbreader
 }
 
 function install_wpscan {
