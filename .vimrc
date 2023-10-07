@@ -202,6 +202,17 @@ set t_u7=
 let g:livepreview_previewer = 'evince'
 let g:livepreview_engine = 'pdflatex' . ' [options]'
 
+"
+let g:vimtex_compiler_latexmk = { 
+        \ 'executable' : 'latexmk',
+        \ 'options' : [ 
+        \   '-xelatex',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
+
 " automatically change the current directory
 autocmd BufEnter * silent! lcd %:p:h
 " set autochdir
