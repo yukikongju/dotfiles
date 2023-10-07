@@ -89,6 +89,7 @@ Plugins:
 - [X] Using `lobster` to watch TV shows and movies
 - [X] Downloading books with `libgen-downloader`
 - [X] Reading ebooks using `fbreader`
+- [ ] Configure powerline: `powerline-config tmux setup`
 
 Native:
 - [X] Mappings Refractor

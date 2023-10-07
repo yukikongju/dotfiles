@@ -20,7 +20,7 @@ function install_lobster {
 function install_opencv {
     # https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/
     # sudo ln -s /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2
-
+    sudo apt-get -y install libopencv-dev
 
 }
 
