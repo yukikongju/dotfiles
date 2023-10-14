@@ -156,16 +156,16 @@ set ttyfast
 " Encoding
 set encoding=UTF-8
 
-" Folding
+" Folding: zR
 " set foldmethod=syntax
-set foldcolumn=1
-set foldlevelstart=5 " open all fold nested below n level deep
-set foldnestmax=2
+" set foldcolumn=1
+" set foldlevelstart=5 " open all fold nested below n level deep
+" set foldnestmax=2
 
 " Enable fold for js
-autocmd FileType javascript,java setlocal foldmethod=syntax
-autocmd FileType python setlocal foldmethod=indent
-let javaScript_fold=1
+" autocmd FileType javascript,java setlocal foldmethod=syntax
+" autocmd FileType python setlocal foldmethod=indent
+" let javaScript_fold=1
 " autocmd FileType markdown setlocal foldmethod=expr
 
 " Buffers
@@ -237,6 +237,30 @@ let g:airline_theme='gruvbox'
 
 " TREESITTER CONFIGS TODO: move into its own file
 
+
+
+" Python PEP 7 & 8: https://svn.python.org/projects/python/trunk/Misc/Vim/vimrc
+" au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+" au BufRead,BufNewFile *.py,*.pyw set expandtab
+" fu Select_c_style()
+"     if search('^\t', 'n', 150)
+"         set shiftwidth=8
+"         set noexpandtab
+"     el 
+"         set shiftwidth=4
+"         set expandtab
+"     en
+" endf
+" au BufRead,BufNewFile *.c,*.h call Select_c_style()
+" au BufRead,BufNewFile Makefile* set noexpandtab
+
+" highlight BadWhitespace ctermbg=red guibg=red
+" au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h set textwidth=79
+" au BufRead,BufNewFile *.c,*.h set formatoptions-=c formatoptions-=o formatoptions-=r
+" au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
 
 
 " Deactivate Vim Rooter echoing ( only echoes for Vimwiki)

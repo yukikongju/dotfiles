@@ -13,6 +13,7 @@ let g:coc_global_extensions = [
 	    \ 'coc-clangd',
 	    \ 'coc-cmake',
 	    \ 'coc-jedi',
+	    \ 'coc-prettier',
 	    \ ]
 
 " \ 'coc-markmap',
