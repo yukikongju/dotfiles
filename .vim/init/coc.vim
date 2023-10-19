@@ -16,10 +16,12 @@ let g:coc_global_extensions = [
 	    \ 'coc-prettier',
 	    \ ]
 
+"
 " \ 'coc-markmap',
 " \ 'coc-elixir',
 " \ 'coc-snippets',
 " \ 'coc-tsserver',
+" \ 'coc-ccls',
 " \ 'coc-vimtex',
 " \ 'coc-rls',
 " \ 'coc-rust-analyzer',

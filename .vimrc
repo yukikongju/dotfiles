@@ -66,10 +66,13 @@ Plug 'vim-latex/vim-latex'
 " Latex compiler
 Plug 'lervag/vimtex'
 
-
 " Debugger
 Plug 'puremourning/vimspector'
 
+" Python Console
+Plug 'jpalardy/vim-slime', { 'for': 'python' }
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+" Plug 'ivanov/vim-ipython'
 
 " Git
 Plug 'tpope/vim-fugitive'     " generate page to view commit message
@@ -125,7 +128,7 @@ set smartindent
 set autoindent
 set noshiftround
 " set tabstop=4
-set softtabstop=4 " number of spaces in tab
+set softtabstop=4
 
 " Swapfiles
 set nobackup
@@ -159,7 +162,7 @@ set encoding=UTF-8
 " Folding: zR
 " set foldmethod=syntax
 " set foldcolumn=1
-" set foldlevelstart=5 " open all fold nested below n level deep
+" set foldlevelstart=5
 " set foldnestmax=2
 
 " Enable fold for js
@@ -237,6 +240,11 @@ let g:airline_theme='gruvbox'
 
 " TREESITTER CONFIGS TODO: move into its own file
 
+" vim-ipython CONFIGS:
+let g:slime_python_ipython = 1
+
+" CPP CONFIGS:
+" set path+=./include " make vim recognize include files
 
 
 " Python PEP 7 & 8: https://svn.python.org/projects/python/trunk/Misc/Vim/vimrc

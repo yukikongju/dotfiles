@@ -62,7 +62,6 @@
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": false,
-  "python.jediEnabled": false,
   "python.pythonPath": "python",
   // Java Configs
   "java.referencesCodeLens.enabled": true,
@@ -89,6 +88,24 @@
   "rust-analyzer.trace.extension": true,
   "rust-client.enable": true,
   "rust-client.disableRustup": true,
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
-  "coc.source.vimtex.filetypes": ["tex"]
+  "coc.source.vimtex.filetypes": ["tex"],
+  // C++ Configs
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
+  }
 }

@@ -9,6 +9,10 @@
 # }
 #
 
+function install_bear {
+    sudo apt install bear
+}
+
 function install_lobster {
     # https://github.com/justchokingaround/lobster#linux-from-source
     sudo curl -sL github.com/justchokingaround/lobster/raw/main/lobster.sh -o /usr/local/bin/lobster &&
