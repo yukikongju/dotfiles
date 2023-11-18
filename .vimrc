@@ -245,6 +245,7 @@ let g:slime_python_ipython = 1
 
 " CPP CONFIGS:
 " set path+=./include " make vim recognize include files
+let c_comment_strings = 0
 
 
 " Python PEP 7 & 8: https://svn.python.org/projects/python/trunk/Misc/Vim/vimrc
@@ -330,7 +331,7 @@ source ~/.vim/init/which-key.vim
 " Plug 'tpope/vim-sleuth'                                   " automatically adjust shiftwidth and expandtab
 " Plug 'vim-scripts/c.vim' " c/c++ ide
 " Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
-" Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 " Plug 'racer-rust/vim-racer'
 " Plug 'fatih/vim-go'
 " Plug 'neoclide/coc-tabnine'

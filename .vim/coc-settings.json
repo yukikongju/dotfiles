@@ -18,6 +18,7 @@
   "coc.preferences.statusBar.displayByAle": true,
   "coc.preferences.statusBar.enabled": true,
   "coc.preferences.rootPatterns": [".git", ".vscode"],
+  "coc.preferences.signatureTarget": "O",
   "coc.preferences.git.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
@@ -25,15 +26,21 @@
     "javascript",
     "javascriptreact",
     "json",
+    "cpp",
+    "c",
     "html",
     "markdown",
     "python",
     "tex",
     "typescript",
     "typescriptreact",
-    "vim",
-    "rust"
+    "vim"
+    // "rust"
   ],
+  "coc.preferences.formatOnSaveOptions": {
+    "useTabs": false,
+    "tabWidth": 4
+  },
   // codelens
   "codeLens.enable": true,
   "javascript.referencesCodeLens.enable": true,
@@ -101,11 +108,17 @@
         ".git/",
         ".hg/"
       ],
+      "rootUri": "",
+      "trace.server": "verbose",
       "initializationOptions": {
         "cache": {
           "directory": "/tmp/ccls"
         }
+      },
+      "client": {
+        "showInactive": false
       }
     }
-  }
+  },
+  "c-cpp.disableReferences": true
 }
