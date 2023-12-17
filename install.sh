@@ -9,6 +9,12 @@
 # }
 #
 
+function install_newsboat {
+    # https://github.com/newsboat/newsboat
+    sudo apt install newsboat
+}
+
+
 function install_bear {
     sudo apt install bear
 }

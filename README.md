@@ -89,6 +89,7 @@ Plugins:
 - [X] Using `lobster` to watch TV shows and movies
 - [X] Downloading books with `libgen-downloader`
 - [X] Reading ebooks using `fbreader`
+- [X] Reading RSS feed using `newsboat`
 - [ ] Configure powerline: `powerline-config tmux setup`
 
 Native:
@@ -193,4 +194,8 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 - [beamerthemenord](https://github.com/junwei-wang/beamerthemeNord)
 - [bracken theme](https://www.overleaf.com/latex/templates/beamer-template-by-cameron-bracken/gmgmqwprthxb)
 - [montpellier rose professionalfonts theme](https://deic.uab.cat/~iblanes/beamer_gallery/individual/Montpellier-rose-professionalfonts.html)
+
+**newsboat and RSS**
+
+- [newsboat doc](https://newsboat.org/releases/2.33/docs/newsboat.html)
 
