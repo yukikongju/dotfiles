@@ -7,5 +7,8 @@
 
 # Generate sym link for newsboat
 unlink $HOME/.newsboat/urls
-rm -rf $HOME/.newsboat/urls
+unlink $HOME/.newsboat/config
+rm -rf $HOME/.newsboat/
+mkdir $HOME/.newsboat/
 ln -s ~/dotfiles/.newsboat/urls ~/.newsboat/urls
+ln -s ~/dotfiles/.newsboat/config ~/.newsboat/config
