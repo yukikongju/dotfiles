@@ -1,6 +1,7 @@
 # Newsboat configuration file
 # https://newsboat.org/releases/2.10.2/docs/newsboat.html#bookmark-cmd
 # https://newsboat.org/releases/2.25/docs/newsboat.html
+# https://github.com/LukeSmithxyz/voidrice/blob/master/.config/newsboat/config
 
 #show-read-feeds no
 auto-reload yes
@@ -47,6 +48,10 @@ highlight feedlist ".*(0/0))" black
 # ignore-article "Author: John Doe"
 # highlight-article "keyword" red default
 
+# Tags t
+
+# Browser
+# browser linkhandler
 
 ##
 # Article filters
