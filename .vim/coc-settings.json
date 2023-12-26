@@ -120,5 +120,5 @@
       }
     }
   },
-  "c-cpp.disableReferences": true
+  "c-cpp.disableReferences": false
 }

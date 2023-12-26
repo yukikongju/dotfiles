@@ -40,6 +40,7 @@ color article white default
 # Hack: Neatly displayed subheadings
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
+feedlist-format "%?T?║%4i %n %8u (%T) %t &╠═════════════════════════════════════════════════════ %t?" 
 
 # set date format
 # date-format "%Y-%m-%d %H:%M:%S"
