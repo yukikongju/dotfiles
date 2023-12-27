@@ -1,4 +1,5 @@
 # https://yukikongju-miscellaneous-projects-rssfindermain-glcl5p.streamlit.app/
+# https://castos.com/tools/find-podcast-rss-feed/
 
 # =============================================================================
 
@@ -6,10 +7,10 @@ Blogs
 https://www.lesswrong.com/feed.xml?view=curated-rss "rant"
 https://kevindorst.substack.com/feed "rant" 
 https://lionelpage.substack.com/feed "rant"
-https://www.astralcodexten.com/feed "rant"
+# https://www.astralcodexten.com/feed "rant"
 # https://dominiccummings.substack.com/feed
 # https://thezvi.substack.com/feed
-# https://graymirror.substack.com/feed
+https://graymirror.substack.com/feed "rant"
 # https://freddiedeboer.substack.com/feed
 https://eighteenthelephant.com/feed "rant"
 # https://tomstafford.substack.com/feed
@@ -27,13 +28,8 @@ https://www.hamiltonnolan.com/feed "politics"
 
 # --- Software Engineering
 https://experiencestack.co/feed "software-engineering" "~Experience Stack" 
-
-# --- Data Engineering
-https://netflixtechblog.com/feed "data-engineering"
-https://devops.com/feed "data-engineering"
-
-# --- Sports Analytics
-https://www.technologyreview.com/feed "sports-analytics"
+https://netflixtechblog.com/feed "software-engineering"
+# https://devops.com/feed "data-engineering"
 
 # --- Machine Learning: LLMs
 https://www.ruder.io/rss/ "ml" "~ruder.io" 
@@ -47,7 +43,6 @@ http://feeds.feedburner.com/miriblog "ml" "~Machine Learning Intelligence Resear
 https://towardsdatascience.com/feed "ml" "~Towards Data Science" 
 https://www.technologyreview.com/feed "ml" "~MIT Technology Review" 
 
-
 # --- Maths
 https://statmodeling.stat.columbia.edu/feed "maths" "~Statistical Modeling" 
 
@@ -58,94 +53,123 @@ https://statmodeling.stat.columbia.edu/feed "maths" "~Statistical Modeling"
 
 Youtube
 
-# --- Youtube - CS Rant
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "rant" "~Luke Smith" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "rant" "~Mental Outlaw" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC-rlcjDdSyk3MRHUPdA0TLg "rant" "~honestduane" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w "rant" "~Louis Rossmann" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UChI0q9a-ZcbZh7dAu_-J-hg "rant" "~Uper Echelon" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCqcbQf6yw5KzRoDDcZ_wBSw "rant" "~Wes Roth" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCbGGg1xyVana3IY4WInzgyg "rant" "~Jonathan Blow" 
-
-# --- Youtube - Computer Science // Software Engineering
-https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA "tech" "~Theo - t3.gg" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "tech" "~Fireship" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ "tech" "~Beyond Fireship" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC3Sg-IRTXCBuFyyAj9wT9yQ "tech" "~Liu Zuo Lin" 
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCmEzz-dPBVrsy4ZluSsYHDg "tech" "~Hyperplexed" 
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCSpJZD7Mt2jrLEBPvelrc4A "tech" "~BOT Lab" 
-
 # --- Youtube - Software Engineering
 https://www.youtube.com/feeds/videos.xml?channel_id=UCGmR6lhKMlCkvrvb39vPtdA "software-engineering" "~Steve (builder.io)" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4Snw5yrSDMXys31I18U3gg "software-engineering" "~DevOps Journey" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsrVDPJBYeXItETFHG0qzyw "software-engineering" "~Web Dev Cody" 
 
+# --- Youtube - CS Rant
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "rant" "~Luke Smith" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "rant" "~Mental Outlaw" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w "rant" "~Louis Rossmann" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCqcbQf6yw5KzRoDDcZ_wBSw "rant" "~Wes Roth" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC-rlcjDdSyk3MRHUPdA0TLg "rant" "~honestduane" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UChI0q9a-ZcbZh7dAu_-J-hg "rant" "~Uper Echelon" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCbGGg1xyVana3IY4WInzgyg "rant" "~Jonathan Blow" 
+
+# --- Youtube - Computer Science // Software Engineering
+https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA "tech" "~Theo - t3.gg" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "tech" "~Fireship" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ "tech" "~Beyond Fireship" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC3Sg-IRTXCBuFyyAj9wT9yQ "tech" "~Liu Zuo Lin" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCmEzz-dPBVrsy4ZluSsYHDg "tech" "~Hyperplexed" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCSpJZD7Mt2jrLEBPvelrc4A "tech" "~BOT Lab" 
+
 # --- Youtube - Data Engineering
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZgt6AzoyjslHTC9dz0UoTw "data-engineering" "~ByteByteGo" 
 
 # --- Youtube - Machine Learning
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvKRFNawVcuz4b9ihUTApCg "ml" "~David Shapiro" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw "ml" "~AI Explained" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRM1urw2ECVHH7ojJw8MXiQ "ml" "~WhyML" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UC66Ggxy8MHX9DCDohdRYDTA "ml" "~Edan Meyer" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCvKRFNawVcuz4b9ihUTApCg "ml" "~David Shapiro" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew "ml" "~Yannic Kilcher" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgBncpylJ1kiVaPyP-PZauQ "ml" "~Serrano Academy" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCawZsQWqfGSbCI5yjkdVkTA "ml" "~Matthew Berman" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMtxPy2z1qzwvP7wiarkoaw "ml" "~Samuel Albanie"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtAcpQcYerN8xxZJYTfWBMw "ml" "~Umar Jamil" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCCkJI-ZJ0i3hUhare_oqZFQ "ml" "~Arxiv Papers" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5_1Nis0kMJns-B9wJGbkXw "ml" "~Tony Shin"
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew "ml" "~Yannic Kilcher" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCCkJI-ZJ0i3hUhare_oqZFQ "ml" "~Arxiv Papers" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCgBncpylJ1kiVaPyP-PZauQ "ml" "~Serrano Academy" 
 
 # --- Youtube - Cybersecurity
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw "cybersecurity" "~John Hammond" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCa6eh7gCkpPo5XXUDfygQQA "cybersecurity" "~IppSec" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCW6xlqxSY3gGur4PkGPEUeA "cybersecurity" "~Seytonic" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC9iIZaEy1r_q6CRAiXBqXOA "cybersecurity" "~cazz" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw "cybersecurity" "~John Hammond" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCa6eh7gCkpPo5XXUDfygQQA "cybersecurity" "~IppSec" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC9iIZaEy1r_q6CRAiXBqXOA "cybersecurity" "~cazz" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCW6xlqxSY3gGur4PkGPEUeA "cybersecurity" "~Seytonic" 
 
 # --- Youtube - Conference
-https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw "conference" "~Strange Loop" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw "conference" "~Strange Loop" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCMlGfpWw-RUdWX_JbLCukXg "conference" "~CppCon"
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC98CzaYuFNAA_gOINFB0e4Q "conference" "EuroPython"
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCMjMBMGt0WJQLeluw6qNJuA "conference" "~PyCon US"
 
-# --- Youtube - Science
-https://www.youtube.com/feeds/videos.xml?channel_id=UCXAS_Ekkq0iFJ9dSUIkcAkw "science" "~The Efficient Engineer" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCdp4_l1vPmpN-gDbUwhaRUQ "science" "~Branch Education" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCbHJVeS0ZIco7FTTqhvDg6g "science" "~NanoRooms" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC415bOPUcGSamy543abLmRA "science" "~Cleo Abraham" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA "science" "~Veritasium" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCTpmmkp1E4nmZqWPS-dl5bg "science" "~Quanta Magazine" 
 
 # --- Youtube - Economics
-https://www.youtube.com/feeds/videos.xml?channel_id=UCngq92xrmmsfEgGdfAJ6giQ "economics" "~Money GPS" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCngq92xrmmsfEgGdfAJ6giQ "economics" "~Money GPS" 
 
 # --- Youtube - Maths
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrn9HkH3trWYpxzlW9l8eSg "maths" "~EpsilonDelta" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCcrR0XBH0aWbdffktUBEdw "maths" "~Mutual Information" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC9Tl0-lzeDPH4y7LcRwRSQA "maths" "~Egor Howell" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrlZs71h3mTR45FgQNINfrg "maths" "~Mathemaniac" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC9Tl0-lzeDPH4y7LcRwRSQA "maths" "~Egor Howell" 
 
 # --- Youtube - Stories
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_kH5ltlZdtFAY2qV_lp2xA "stories" "~Vince Vintage" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCAfr3VoUx-l6PfOcYFfDhyQ "stories" "~Pezle" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCo73DWkWyTWwzb5ziM774eQ "stories" "~CalebIsSalty" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCxaaULLk6UCnRl5VKRc7G0A "stories" "~NoTextToSpeech" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXjvsikVclbNRGRlzr8jTEg "stories" "~Baseball Doesn't Exist" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCAfr3VoUx-l6PfOcYFfDhyQ "stories" "~Pezle" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCo73DWkWyTWwzb5ziM774eQ "stories" "~CalebIsSalty" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCxaaULLk6UCnRl5VKRc7G0A "stories" "~NoTextToSpeech" 
+
+# --- Youtube - Self-Help
+https://www.youtube.com/feeds/videos.xml?channel_id=UCIhOaKbWTk8ScGi6C0tiyPQ "self-help" "~Outperform"
 
 # --- Youtube - Philosophy
-https://www.youtube.com/feeds/videos.xml?channel_id=UCW71hQg1kDxmFIfijA8dL0Q "philosophy" "~Unsolitcited Advice" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC1VzCyqpmCaRh8_BnijbOvg "philosophy" "~Cardenades Of Cyrene" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCW71hQg1kDxmFIfijA8dL0Q "philosophy" "~Unsolitcited Advice" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC1VzCyqpmCaRh8_BnijbOvg "philosophy" "~Cardenades Of Cyrene" 
 
 # --- Youtube - Sport Science
-https://www.youtube.com/feeds/videos.xml?channel_id=UCYUNAfli7Uu0hOjj1D0Q6Cw "training" "~Dr. Jacob Goodin" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCYUNAfli7Uu0hOjj1D0Q6Cw "training" "~Dr. Jacob Goodin" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrJhTwfygi-D-slK4gbZ8fA "training" "~Rehab Science" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCuR-ZdVJtF3muYhYUQ-he-Q "sports" "~The Coaches Voice" 
 
+# --- Youtube - Science
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCXAS_Ekkq0iFJ9dSUIkcAkw "science" "~The Efficient Engineer" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC415bOPUcGSamy543abLmRA "science" "~Cleo Abraham" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA "science" "~Veritasium" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTpmmkp1E4nmZqWPS-dl5bg "science" "~Quanta Magazine" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCdp4_l1vPmpN-gDbUwhaRUQ "science" "~Branch Education" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCbHJVeS0ZIco7FTTqhvDg6g "science" "~NanoRooms" 
+
 # --- Youtube - News
-https://www.youtube.com/feeds/videos.xml?channel_id=UCY0YIply-je0EhSWLgpftVw "news" "~BEME News" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCmGSJVG3mCRXVOP4yZrU1Dw "news" "~Johnny Harris" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCY0YIply-je0EhSWLgpftVw "news" "~BEME News" 
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCmGSJVG3mCRXVOP4yZrU1Dw "news" "~Johnny Harris" 
 
 # --- Youtube - Politics
-https://www.youtube.com/feeds/videos.xml?channel_id=UCP5tjEmvPItGyLhmjdwP7Ww "politics" "~Real Life Lore"  
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCP5tjEmvPItGyLhmjdwP7Ww "politics" "~Real Life Lore"  
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCRP7zAaW64tGw26Ee2h-l-Q "politics" "~Common Sense Soapbox"
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCRXnOs1rjfLMYrtZ-0n29NA "politics" "~FreedomToons"
+
+# =============================================================================
+
+Podcast
+
+https://rss.art19.com/the-re--cap-show "sports" "~The RE-CAP Show" # https://podcasts.apple.com/ca/podcast/the-re-cap-show/id1698132164
+# https://www.youtube.com/playlist?list=PLxn-kpJHbPx08CzJeEJsVtv_Igzga4wv6 "maths" "~Wolfram Student Podcast"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLwKB0xApY8p80CFTBbXb9g "entertainment" "~MadeItOut Podcast"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6VaYmR8OS37ZpVFWk1WxjQ "entertainment" "~5a7 Podcast"
+
+# =============================================================================
+
+Livestream
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg "livestream" "~Tsoding Daily"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwgKmJM4ZJQRJ-U5NjvR2dg "livestream" "~geohotz Archive"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "livestream" "~Jon Gjengset"
 
 # =============================================================================
 
 News
+# https://rss.politico.com/politics-news.xml "politics" "~Politico"
+# https://rss.politico.com/economy.xml "economy" "~Politico"
 
 # =============================================================================
 
@@ -154,6 +178,14 @@ Academia
 # =============================================================================
 
 Music
+
+# =============================================================================
+
+Music
+
+# =============================================================================
+
+Reddit
 
 # =============================================================================
 

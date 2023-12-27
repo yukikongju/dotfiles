@@ -198,4 +198,8 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 **newsboat and RSS**
 
 - [newsboat doc](https://newsboat.org/releases/2.33/docs/newsboat.html)
+- [newsboat configs](https://newsboat.org/releases/2.33/docs/newsboat.html#_newsboat_configuration_commands)
+- [How I watch Youtube with newsboat](https://archive.org/details/hpr3695)
+- [RSS Filtering with newsboat - Brodie Robertson](https://www.youtube.com/watch?v=UctJ1IHTW04)
+
 

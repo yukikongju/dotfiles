@@ -3,31 +3,33 @@
 # https://newsboat.org/releases/2.25/docs/newsboat.html
 # https://github.com/LukeSmithxyz/voidrice/blob/master/.config/newsboat/config
 
-#show-read-feeds no
+# show-read-feeds no
 auto-reload yes
 reload-threads 100
 display-article-progress yes
+# prepopulate-query-feeds yes
+# refresh-on-startup yes
 
 bind-key j down
 bind-key k up
+bind-key l open
+bind-key h quit
 bind-key j next articlelist
 bind-key k prev articlelist
 bind-key J next-feed articlelist
 bind-key K prev-feed articlelist
 bind-key G end
 bind-key g home
-#bind-key d pagedown
-#bind-key u pageup
-#bind-key l open
-#bind-key h quit
+bind-key d pagedown
+bind-key u pageup
 bind-key a toggle-article-read
-# bind-key f flags-toggle-read
 bind-key A mark-feed-read
 bind-key n next-unread
 bind-key N prev-unread
-#bind-key D pb-download
-#bind-key U show-urls
-#bind-key x pb-delete
+bind-key D pb-download
+bind-key U show-urls
+# bind-key x pb-delete
+# bind-key f flags-toggle-read
 
 # colors
 color listnormal cyan default
@@ -37,33 +39,46 @@ color listnormal_unread white default
 color info cyan black bold
 color article white default
 
-# Hack: Neatly displayed subheadings
+# Subheading Display
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
 feedlist-format "%?T?║%4i %n %8u (%T) %t &╠═════════════════════════════════════════════════════ %t?" 
 
+# Feedlist Formatting
+
+# Article Formatting
+articlelist-format "%4i %D %?T?|%-17T| ?%t"
+
+# TODO: Bookmarks
+bookmark-interactive yes
+
+# macro setup
+# browser linkhandler
+macro , open-in-browser
+
+# Videos
+# macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
+
+
 # set date format
 # date-format "%Y-%m-%d %H:%M:%S"
 
-# Define Filter
-# ignore-article "Author: John Doe"
-# highlight-article "keyword" red default
+
+# Downloads
+# macro d set browser "yt-dlp"; open-in-browser ; set browser linkhandler
 
 # Tags t
 
 # Browser
 # browser linkhandler
 
-##
-# Article filters
-##
-# ignore-mode "display"
-# Redacted: a bunch of ignore-article rules not relevant to the issue
+# ------------------------ Filtering Contents -------------------------------
 
-# browser "firefox %u"
+# Define Filter
+ignore-mode "display"
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCLwKB0xApY8p80CFTBbXb9g" "title =~ \"wlw\"" # MadeItOut Podcast
+ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UC6VaYmR8OS37ZpVFWk1WxjQ" "title =~ \"Clip\"" # 5a7 Podcast
+ignore-article "https://graymirror.substack.com/feed" "(title =~ \"Office hours\") or(title =~ \"\/\") or (title =~ \"Podcast\")" # GrayMirror
 
+# highlight-article "keyword" red default
 
-# browser "run-with-vpn firefox --private-window %u 2>/dev/null"
-# Macros: Preceed with comma (ex. ,m)
-# macro m set browser "run-with-vpn mpv --no-terminal --volume=80 %u" ; open-in-browser ; set browser "run-with-vpn firefox --private-window %u 2>/dev/null"
-# macro n set browser "run-with-vpn mpv --no-terminal --volume=80 --ytdl-format='bestvideo[height<=?720]+bestaudio/best' %u" ; open-in-browser ; set browser "run-with-vpn firefox --private-window %u 2>/dev/null"
