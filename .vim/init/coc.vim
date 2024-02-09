@@ -14,6 +14,8 @@ let g:coc_global_extensions = [
 	    \ 'coc-cmake',
 	    \ 'coc-jedi',
 	    \ 'coc-prettier',
+	    \ 'coc-tsserver',
+	    \ 'coc-eslint',
 	    \ ]
 
 "

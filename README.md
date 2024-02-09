@@ -90,6 +90,7 @@ Plugins:
 - [X] Downloading books with `libgen-downloader`
 - [X] Reading ebooks using `fbreader`
 - [X] Reading RSS feed using `newsboat`
+- [X] Reading mangas with [`mangal`](https://github.com/metafates/mangal)
 - [ ] Configure powerline: `powerline-config tmux setup`
 
 Native:
@@ -202,4 +203,7 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 - [How I watch Youtube with newsboat](https://archive.org/details/hpr3695)
 - [RSS Filtering with newsboat - Brodie Robertson](https://www.youtube.com/watch?v=UctJ1IHTW04)
 
+**mangal**
+
+- [mangal query json](https://github.com/metafates/mangal/wiki/Inline-mode)
 

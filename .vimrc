@@ -10,7 +10,7 @@ Plug 'tpope/vim-repeat'            " can use . with other plugins
 Plug 'tpope/vim-eunuch'            " use UNIX shell command in vim
 Plug 'dkarter/bullets.vim'         " check box easily
 Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
-Plug 'voldikss/vim-floaterm'       " popup terminal for vim with :terminal and :FloatermToggle
+" Plug 'voldikss/vim-floaterm'       " popup terminal for vim with :terminal and :FloatermToggle
 Plug 'jiangmiao/auto-pairs'        " insert and delete brackets in pairs
 Plug 'godlygeek/tabular'           " align text based on regex => :Tabularize /<regex>
 Plug 'dhruvasagar/vim-table-mode'  " markdown table formatting (may want to switch bc no <S-tab> behavior)
@@ -51,10 +51,16 @@ Plug 'vim-airline/vim-airline'        " Status Bar
 Plug 'vim-airline/vim-airline-themes' " More status bar themes
 
 " Autocomplete
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-Plug 'pixelneo/vim-python-docstring'            " generate docstring for python
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " DOcumentation GEnerator
+" Plug 'pixelneo/vim-python-docstring'            " generate docstring for python
+" Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " DOcumentation GEnerator
+
+" autocomplete for react development
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 
 " Snippets
 Plug 'neoclide/coc-snippets'       " snippet with coc
@@ -336,12 +342,6 @@ Plug 'rust-lang/rust.vim'
 " Plug 'fatih/vim-go'
 " Plug 'neoclide/coc-tabnine'
 
-" autocomplete for react development
-" Plug 'pangloss/vim-javascript'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'peitalin/vim-jsx-typescript'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" Plug 'jparise/vim-graphql'
 " Plug 'neovimhaskell/haskell-vim'
 " Plug 'tpope/vim-endwise' 
 

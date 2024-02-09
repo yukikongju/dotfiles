@@ -9,6 +9,11 @@
 # }
 #
 
+function install_magal {
+    sudo apt install mangal
+}
+
+
 function install_newsboat {
     # https://github.com/newsboat/newsboat
     sudo apt install newsboat
@@ -113,6 +118,7 @@ function install_pandoc {
     sudo apt install texlive-latex-extra
     sudo apt install texlive-fonts-extra
     sudo apt install texlive-xetex
+    sudo apt-get install texlive-extra-utils  
 }
 
 function install_docker {
