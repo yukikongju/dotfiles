@@ -21,6 +21,7 @@
 	"coc.preferences.colorSupport": true,
         "coc.preferences.fold.enable": false,
 	"coc.preferences.syntaxHighlight": true,
+	"inlayHint.enable": false,
         "coc.preferences.statusBar.displayByAle": true,
         "coc.preferences.statusBar.enabled": true,
 	"coc.preferences.rootPatterns": [ ".git", ".vscode" ],
@@ -52,20 +53,20 @@
 	"tsserver.formarOnType": true, 
 	"coc.preferences.formarOnType": true,
 	// Python Configs
-	"jedi.enable": true,
+	"jedi.enable": false,
 	"jedi.executable.command": "jedi-language-server",
 	"jedi.markupKindPreferred": "plaintext",
 	"jedi.trace.server": true, // previously "message"
 	"jedi.jediSettings.autoImportModules": [],
 	"jedi.executable.args": [],
 	"jedi.completion.disableSnippets": false,
-	"python.formatting.provider": "autopep8",
+	//	"python.formatting.provider": "autopep8",
 	"jedi.diagnostics.enable": true,
 	"jedi.diagnostics.didChange": true,
 	"jedi.diagnostics.didSave": true,
 	"jedi.diagnostics.didOpen": true,
 	"python.linting.enabled": true,
-	"python.linting.pylintEnabled": true,
+	"python.linting.pylintEnabled": false,
 	"python.linting.flake8Enabled": false,
 	"python.jediEnabled": false,
 	"python.pythonPath": "python",
@@ -97,5 +98,6 @@
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
   "coc.source.vimtex.filetypes": [
     "tex"
-  ]
+  ],
+  "snippets.ultisnips.pythonPrompt": false
 }

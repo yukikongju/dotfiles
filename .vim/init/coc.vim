@@ -12,13 +12,14 @@ let g:coc_disable_startup_warning = 1
 let g:coc_global_extensions = [
 	    \ 'coc-clangd',
 	    \ 'coc-cmake',
-	    \ 'coc-jedi',
+	    \ 'coc-snippets',
 	    \ ]
 
+" \ 'coc-jedi',
 " \ 'coc-markmap',
 " \ 'coc-elixir',
-" \ 'coc-snippets',
 " \ 'coc-tsserver',
+" \ 'coc-pyright',
 " \ 'coc-vimtex',
 " \ 'coc-rls',
 " \ 'coc-rust-analyzer',
@@ -29,7 +30,6 @@ let g:coc_global_extensions = [
 " \ 'coc-eslint',
 " \ 'coc-prettier',
 " \ 'coc-python',
-" \ 'coc-pyright',
 " \ 'coc-todolist',
 " \ 'coc-json',
 

@@ -188,7 +188,8 @@ set background=dark
 colorscheme gruvbox
 
 " copy to clipboard in linux
-set clipboard=unnamedplus
+" set clipboard=unnamedplus " (linux)
+set clipboard^=unnamed,unnamedplus
 " set clipboard=unnamed (for windows)
 
 " Choose Leader

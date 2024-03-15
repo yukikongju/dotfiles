@@ -1,3 +1,7 @@
+"
+" VIM ROOTER
+let g:rooter_patterns = ['.git']
+
 " let g:fzf_preview_window=''
 nnoremap <silent> <C-f> :Files<CR>
 
