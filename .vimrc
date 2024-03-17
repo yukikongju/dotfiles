@@ -54,6 +54,7 @@ Plug 'vim-airline/vim-airline-themes' " More status bar themes
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 " Plug 'pixelneo/vim-python-docstring'            " generate docstring for python
 " Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " DOcumentation GEnerator
+Plug 'lunacookies/vim-sh' " syntax highlight for sh
 
 " autocomplete for react development
 Plug 'pangloss/vim-javascript'
@@ -198,8 +199,9 @@ set background=dark
 colorscheme gruvbox
 
 " copy to clipboard in linux
-" set clipboard=unnamedplus
+" set clipboard=unnamedplus (linux)
 " set clipboard=unnamed (for windows)
+set clipboard^=unnamed,unnamedplus " (mac)
 
 " Choose Leader
 let mapleader=","
