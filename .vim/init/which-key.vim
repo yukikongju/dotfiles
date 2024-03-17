@@ -153,13 +153,15 @@ let g:which_key_map.l ={
 " \'c': 'generate-pdf-from-current-file',
 
 " Keybindings to open quickfix and location
-nnoremap <silent> <leader>ob :!btm --color gruvbox<CR>
+nnoremap <silent> <leader>oc :!btm --color gruvbox<CR>
+nnoremap <leader>ob :!newsboat;<cr>
 nnoremap <silent> <leader>om :!cmatrix<CR>
 nnoremap <silent> <leader>or :!ranger<CR>
 let g:which_key_map.o = {
 	    \ 'name' : '+open-app',
-	    \ 'b' : 'open-bottom-cpu',
+	    \ 'c' : 'open-bottom-cpu',
 	    \ 'm' : 'open-cmatrix',
+	    \ 'o' : 'open-newsboat',
 	    \ 'r' : 'open-ranger',
 	    \}
 
@@ -212,6 +214,7 @@ let g:which_key_map.s ={
 nnoremap <leader>va :source $MYVIMRC<cr>:!source $MYZSHRC<cr>:!tmux source-file $MYTMUXCONF<cr>
 nnoremap <leader>ve :tabnew $MYVIMRC<cr>
 nnoremap <leader>vf :tabnew ~/dotfiles/.vim/init/<cr>
+nnoremap <leader>vb :tabnew ~/dotfiles/.newsboat/urls<cr>
 nnoremap <leader>vr :source $MYVIMRC<cr>
 nnoremap <leader>vn :tabe<cr>
 nnoremap <leader>vs :vsplit<cr>
@@ -226,6 +229,7 @@ nnoremap <leader>vz :tabnew $MYZSHRC<cr>
 let g:which_key_map.v ={
 	    \'name':'+vim',
 	    \'a': 'reload-all-rc-files',
+	    \'b': 'edit-newsboat-urls',
 	    \'e': 'edit-vimrc',
 	    \'r': 'reload-vimrc',
 	    \'f': 'open-vim-files',
@@ -280,4 +284,3 @@ let g:which_key_map.b = {
 	    \ 'p' : ['bprevious' , 'previous-buffer'] ,
 	    \ '?' : ['Buffers'   , 'fzf-buffer']      ,
 	    \}
-
