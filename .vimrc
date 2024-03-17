@@ -198,7 +198,7 @@ set background=dark
 colorscheme gruvbox
 
 " copy to clipboard in linux
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 " set clipboard=unnamed (for windows)
 
 " Choose Leader
@@ -223,11 +223,11 @@ let g:vimtex_compiler_latexmk = {
         \}
 
 " automatically change the current directory
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
 " set autochdir
 
 " Allow fold inside Markdown (vim-markdown)
-let g:markdown_folding = 1
+" let g:markdown_folding = 1
 
 " Allow <Enter> key in markdown file (fixing autocomplete) CHECK!
 " autocmd FileType Markdown inoremap <buffer><silent><expr> <CR> coc#_select_confirm()
