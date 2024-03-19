@@ -22,14 +22,50 @@ get_os_install_function() {
     esac
 }
 
+setup_sym_links() {
+    dotfile_abs_path=$1
+    directory_abs_path=$2
+
+    # remove directory if exists
+    if [ -d $directory_abs_path ]; then
+	rm -r $directory_abs_path
+    fi
+
+    # creating directory
+    mkdir $directory_abs_path
+
+    # creating sym links for all files in path
+    for f in $(find $dotfile_abs_path -type f); do
+	# get dir_abs_file_path
+	file_name="${f#$dotfile_abs_path/}"
+	dir_abs_file_path=$directory_abs_path/$file_name
+
+	# remove sym link if exists
+	if [ -L $dir_abs_file_path ] && [ -e $dir_abs_file_path ]; then
+	    echo "sym link exists. unlinking and removing it.."
+	    unlink $dir_abs_file_path
+	    rm $dir_abs_file_path
+	fi
+
+	# create sym link
+	# echo $f $dir_abs_file_path
+	ln -s $f $dir_abs_file_path
+    done
+}
+
 setup_node() {
     # TODO
+    echo "\n --- Setting up node --- \n"
 
+    # Download node, npm
+    
+    # 
 }
 
 setup_vim() {
     echo "\n --- Setting up Vim --- \n"
     # Download vim
+    # $install_function vim
 
     # Download VimPlug
     if [ -f ~/.vim/autoload/plug.vim ]; then
@@ -71,18 +107,43 @@ setup_tmux() {
 }
 
 setup_newsboat() {
-    # TODO  
     echo "\n --- Setting up newsboat --- \n"
+    NEWSBOAT_DIR=~/.newsboat
+    DOTFILE_NEWSBOAT_DIR=~/dotfiles/.newsboat
+
+    # Download newsboat
+    # $install_function newsboat
+
+    # create sym links for config and url files
+    if [ -d $NEWSBOAT_DIR ]; then
+	echo "~/.newsboat configuration already exists. Do you wish to override them? [Y/N]"
+	read response
+	if [ $response = "Y" ]; then
+	    setup_sym_links $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
+	else
+	    echo "Keeping old newsboat configs."
+	fi
+    else
+	echo "Setting up Sym Links for Newsboat"
+	setup_sym_links $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
+    fi
 }
 
 setup_lobster() {
     # TODO  
-    echo "\n --- Setting up loabster --- \n"
+    echo "\n --- Setting up lobster --- \n"
+
+    # Download lobster prerequisites
+
+    # Download lobster
+
 }
 
 setup_bash_profile() {
     # TODO  
     echo "\n --- Setting up bash profile --- \n"
+
+
 }
 
 
@@ -91,8 +152,8 @@ os_name=$(get_os_name)
 echo "OS Name is: $os_name"
 install_function=$(get_os_install_function $os_name)
 
-setup_vim
-setup_tmux
-# setup_newsboat
+# setup_vim
+# setup_tmux
+setup_newsboat
 # setup_lobster
 
