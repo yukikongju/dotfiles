@@ -159,12 +159,23 @@ setup_newsboat() {
 }
 
 setup_lobster() {
-    # TODO  
+    # https://github.com/justchokingaround/lobster#linux-from-source
     echo "\n --- Setting up lobster --- \n"
 
-    # Download lobster prerequisites
+    # --- Install Prerequisites
+    $install_function mpv
 
-    # Download lobster
+    # --- Installing Lobster
+    echo "Installing Lobster.."
+    if [ $os_name = "macOS" ]; then 
+	curl -sL github.com/justchokingaround/lobster/raw/main/lobster.sh -o "$(brew --prefix)"/bin/lobster && chmod +x "$(brew --prefix)"/bin/lobster
+	echo "Successfully installed Lobster"
+    elif [ $os_name = "Linux" ]; then
+	sudo curl -sL github.com/justchokingaround/lobster/raw/main/lobster.sh -o /usr/local/bin/lobster && sudo chmod +x /usr/local/bin/lobster
+	echo "Successfully installed Lobster"
+    else
+	echo "Lobster installation not supported for your current OS."
+    fi
 
 }
 
@@ -180,7 +191,7 @@ echo "OS Name is: $os_name"
 install_function=$(get_os_install_function $os_name)
 
 # setup_vim
-setup_tmux
+# setup_tmux
 # setup_newsboat
 # setup_lobster
 
