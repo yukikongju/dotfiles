@@ -116,8 +116,16 @@ setup_vim() {
     # creating sym links for .vimrc
     confirm_file_config_override ~/.vimrc
 
-    # TODO: creating sym links for ultisnips; vim files; coc-settings.json
+    # creating sym links for ultisnips; vim files; coc-settings.json
+    ULTISNIPS_DIR=~/.vim/UltiSnips
+    DOTFILE_ULTISNIPS_DIR=~/dotfiles/.vim/UltiSnips
+    confirm_directory_config_override $DOTFILE_ULTISNIPS_DIR $ULTISNIPS_DIR
 
+    VIM_SCRIPTS_DIR=~/.vim/init
+    DOTFILE_VIM_SCRIPTS_DIR=~/dotfiles/.vim/init
+    confirm_directory_config_override $DOTFILE_VIM_SCRIPTS_DIR $VIM_SCRIPTS_DIR
+
+    confirm_file_config_override ~/.vim/coc-settings.json
 }
 
 
