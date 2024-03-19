@@ -24,9 +24,11 @@ let g:vimwiki_folding='expr' "list, '', expr, syntax,
 
 
 " TODO: change vimwiki base path based on os
-if has('win32')
+if has('win32') || has('win64')
     let _vimwiki_base_path = "C:\Users\emuli\OneDrive - Universite de Montreal\VimWikiNotes"
-elseif has("linux")
+elseif has("mac")
+    let _vimwiki_base_path = "~/Projects/VimwikiNotes"
+elseif has('unix')
     let _vimwiki_base_path = "~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes"
 endif
 
@@ -36,82 +38,54 @@ endif
 	    " \ 'template_default': 'default',
 let g:vimwiki_list = [
 	    \{
-	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/WhatIveLearned/',
+	    \ 'path': _vimwiki_base_path . "/WhatIveLearned/",
 	    \ 'name':'What I have learned',
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
-	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/WhatIveLearned/site_html/',
+	    \ 'path_html': _vimwiki_base_path . "/WhatIveLearned/site_html/",
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \},
 	    \{
-	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Logs/',
+	    \ 'path': _vimwiki_base_path . "/Logs/",
 	    \ 'name': 'Logs',
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
-	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Logs/site_html/',
+	    \ 'path_html': _vimwiki_base_path . "/Logs/site_html/",
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \ 'auto_diary-index': 1,
 	    \},
 	    \{
-	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Rant/',
+	    \ 'path': _vimwiki_base_path . "/Rant/",
 	    \ 'name': 'Rant',
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
-	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Rant/site_html/',
+	    \ 'path_html': _vimwiki_base_path . "/Rant/site_html/",
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \ 'auto_generate_tags': 1,
 	    \},
 	    \{
-	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Journal/',
+	    \ 'path': _vimwiki_base_path . "/Journal/",
 	    \ 'name': 'Journal',
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
-	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Journal/site_html/',
+	    \ 'path_html': _vimwiki_base_path . "/Journal/site_html/",
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \ 'auto_generate_tags': 1,
 	    \},
 	    \{
-	    \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Blog/',
+	    \ 'path': _vimwiki_base_path . "/Blog/",
 	    \ 'name':'Blog',
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
-	    \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Blog/site_html/',
+	    \ 'path_html': _vimwiki_base_path . "/Blog/site_html/",
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \},
 	    \]
-
-	    " \{
-	    " \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Courses/',
-	    " \ 'name':'Courses',
-	    " \ 'syntax': 'markdown',
-	    " \ 'ext': '.md',
-	    " \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Courses/site_html/',
-	    " \ 'template_ext': '.tpl',
-	    " \ 'custom_wiki2html': 'vimwiki_markdown',
-	    " \},
-	    " \{
-	    " \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Writting/',
-	    " \ 'name':'Writting Prompts',
-	    " \ 'syntax': 'markdown',
-	    " \ 'ext': '.md',
-	    " \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/Writting/site_html/',
-	    " \ 'custom_wiki2html': 'vimwiki_markdown',
-	    " \ 'template_ext': '.tpl',
-	    " \},
-	    " \{
-	    " \ 'path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/ChatGPT/',
-	    " \ 'name':'ChatGPT',
-	    " \ 'syntax': 'markdown',
-	    " \ 'ext': '.md',
-	    " \ 'path_html': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/ChatGPT/site_html/',
-	    " \ 'custom_wiki2html': 'vimwiki_markdown',
-	    " \ 'template_ext': '.tpl',
-	    " \},
 
 
 " Allow latex in vimwiki
