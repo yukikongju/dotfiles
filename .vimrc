@@ -199,9 +199,13 @@ set background=dark
 colorscheme gruvbox
 
 " copy to clipboard in linux
-" set clipboard=unnamedplus (linux)
-" set clipboard=unnamed (for windows)
-set clipboard^=unnamed,unnamedplus " (mac)
+if has('win32') || has('win64')
+    set clipboard=unnamed (for windows)
+elseif has('mac')
+    set clipboard^=unnamed,unnamedplus " (mac)
+else
+    set clipboard=unnamedplus (linux)
+endif
 
 " Choose Leader
 let mapleader=","
