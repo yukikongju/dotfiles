@@ -22,7 +22,7 @@ get_os_install_function() {
     esac
 }
 
-setup_sym_links_dir() {
+override_sym_links_dir() {
     dotfile_abs_path=$1
     directory_abs_path=$2
 
@@ -60,13 +60,13 @@ confirm_directory_config_override() {
 	echo "$directory_abs_path configuration already exists. Do you wish to override them? [Y/N]"
 	read response
 	if [ $response = "Y" ]; then
-	    setup_sym_links_dir $dotfile_abs_path $directory_abs_path
+	    override_sym_links_dir $dotfile_abs_path $directory_abs_path
 	else
 	    echo "Keeping old $directory_abs_path configs."
 	fi
     else
 	echo "Setting up Sym Links for Newsboat"
-	setup_sym_links_dir $dotfile_abs_path $directory_abs_path
+	override_sym_links_dir $dotfile_abs_path $directory_abs_path
     fi
 }
 
@@ -182,7 +182,11 @@ setup_lobster() {
 setup_bash_profile() {
     # TODO  
     echo "\n --- Setting up bash profile --- \n"
+}
 
+setup_pandoc() {
+    # TODO
+    echo "\n --- Setting up Pandoc --- \n"
 
 }
 
@@ -190,8 +194,11 @@ os_name=$(get_os_name)
 echo "OS Name is: $os_name"
 install_function=$(get_os_install_function $os_name)
 
+# setup_node
 # setup_vim
 # setup_tmux
 # setup_newsboat
 # setup_lobster
+# setup_bash_profile
+# setup_pandoc
 
