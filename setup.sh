@@ -52,7 +52,7 @@ setup_sym_links_dir() {
     done
 }
 
-confirm_directory_override() {
+confirm_directory_config_override() {
     dotfile_abs_path=$1
     directory_abs_path=$2
 
@@ -62,11 +62,31 @@ confirm_directory_override() {
 	if [ $response = "Y" ]; then
 	    setup_sym_links_dir $dotfile_abs_path $directory_abs_path
 	else
-	    echo "Keeping old newsboat configs."
+	    echo "Keeping old $directory_abs_path configs."
 	fi
     else
 	echo "Setting up Sym Links for Newsboat"
 	setup_sym_links_dir $dotfile_abs_path $directory_abs_path
+    fi
+}
+
+confirm_file_config_override() {
+    config_file_name=$1
+
+    if [ -f $config_file_name ]; then
+	echo "A $config_file_namefile file already exists. Do you wish to replace it? [Y/N]"
+	read response
+	if [ response = "Y" ]; then
+	    echo "overriding config file at $config_file_name.."
+	    if [ -L $config_file_name ]; then
+		unlink $config_file_name
+		rm $config_file_name
+	    fi
+	    ln -s ~/dotfiles/$config_file_name $config_file_name
+	fi
+    else
+	echo "Creating a sym link for $config_file_name"
+	ln -s ~/dotfiles/$config_file_name $config_file_name
     fi
 }
 
@@ -94,15 +114,9 @@ setup_vim() {
     fi
 
     # creating sym links for .vimrc
-    if [ -f ~/.vimrc ]; then
-	echo "A vimrc file already exists. Do you wish to replace it? [Y/N]"
-	read replace
-    else
-	echo "Creating a sym link for .vimrc"
-	ln -s ~/dotfiles/.vimrc ~/.vimrc
-    fi
+    confirm_file_config_override ~/.vimrc
 
-    # creating sym links for ultisnips; vim files; coc-settings.json
+    # TODO: creating sym links for ultisnips; vim files; coc-settings.json
 
 }
 
@@ -121,12 +135,7 @@ setup_tmux() {
     fi
 
     # create sym link for tmux config
-    if [ -f ~/.tmux.conf ]; then
-	echo "tmux config file already exists. Do you wish to override it? [Y/N]"
-	read response
-	# if [ $response = "Y" ]; then
-	# fi
-    fi
+    confirm_file_config_override ~/.tmux.conf
 }
 
 setup_newsboat() {
@@ -138,7 +147,7 @@ setup_newsboat() {
     $install_function newsboat
 
     # create sym links for config and url files
-    confirm_directory_override $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
+    confirm_directory_config_override $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
 }
 
 setup_lobster() {
@@ -158,14 +167,12 @@ setup_bash_profile() {
 
 }
 
-
-
 os_name=$(get_os_name)
 echo "OS Name is: $os_name"
 install_function=$(get_os_install_function $os_name)
 
 # setup_vim
-# setup_tmux
-setup_newsboat
+setup_tmux
+# setup_newsboat
 # setup_lobster
 
