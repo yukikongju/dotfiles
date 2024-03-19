@@ -22,7 +22,7 @@ get_os_install_function() {
     esac
 }
 
-setup_sym_links() {
+setup_sym_links_dir() {
     dotfile_abs_path=$1
     directory_abs_path=$2
 
@@ -48,9 +48,26 @@ setup_sym_links() {
 	fi
 
 	# create sym link
-	# echo $f $dir_abs_file_path
 	ln -s $f $dir_abs_file_path
     done
+}
+
+confirm_directory_override() {
+    dotfile_abs_path=$1
+    directory_abs_path=$2
+
+    if [ -d $directory_abs_path ]; then
+	echo "$directory_abs_path configuration already exists. Do you wish to override them? [Y/N]"
+	read response
+	if [ $response = "Y" ]; then
+	    setup_sym_links_dir $dotfile_abs_path $directory_abs_path
+	else
+	    echo "Keeping old newsboat configs."
+	fi
+    else
+	echo "Setting up Sym Links for Newsboat"
+	setup_sym_links_dir $dotfile_abs_path $directory_abs_path
+    fi
 }
 
 setup_node() {
@@ -93,7 +110,7 @@ setup_vim() {
 setup_tmux() {
     echo "\n --- Setting up tmux ---\n"
     # Download tmux
-    # $install_function tmux
+    $install_function tmux
 
     # Download tmux plugin manager
     if [ -d ~/.tmux/plugins/tpm ]; then
@@ -104,6 +121,12 @@ setup_tmux() {
     fi
 
     # create sym link for tmux config
+    if [ -f ~/.tmux.conf ]; then
+	echo "tmux config file already exists. Do you wish to override it? [Y/N]"
+	read response
+	# if [ $response = "Y" ]; then
+	# fi
+    fi
 }
 
 setup_newsboat() {
@@ -112,21 +135,10 @@ setup_newsboat() {
     DOTFILE_NEWSBOAT_DIR=~/dotfiles/.newsboat
 
     # Download newsboat
-    # $install_function newsboat
+    $install_function newsboat
 
     # create sym links for config and url files
-    if [ -d $NEWSBOAT_DIR ]; then
-	echo "~/.newsboat configuration already exists. Do you wish to override them? [Y/N]"
-	read response
-	if [ $response = "Y" ]; then
-	    setup_sym_links $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
-	else
-	    echo "Keeping old newsboat configs."
-	fi
-    else
-	echo "Setting up Sym Links for Newsboat"
-	setup_sym_links $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
-    fi
+    confirm_directory_override $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
 }
 
 setup_lobster() {
