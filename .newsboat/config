@@ -75,6 +75,7 @@ max-items 20
 
 # Browser
 # browser linkhandler
+browser "open -g -a 'Google Chrome' %u"
 
 # ------------------------ Filtering Contents -------------------------------
 
