@@ -48,13 +48,15 @@ feedlist-format "%?T?║%4i %n %8u (%T) %t &╠═══════════
 
 # Article Formatting
 articlelist-format "%4i %D %?T?|%-17T| ?%t"
+articlelist-title-format "Articles in feed '%T' (%u unread)"
+# articlelist-title-format "%N %V - Articles in feed '%T' (%u unread, %t total) - %U"
+
 
 # TODO: Bookmarks
 # bookmark-interactive yes
 
-
 # max items for faster
-max-items 20
+max-items 30
 
 # macro setup
 # browser linkhandler
@@ -76,6 +78,7 @@ max-items 20
 # Browser
 # browser linkhandler
 browser "open -g -a 'Google Chrome' %u"
+browser "urlview -p -i -"
 
 # ------------------------ Filtering Contents -------------------------------
 
