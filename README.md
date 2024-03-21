@@ -14,7 +14,7 @@ Keeping track of my Dotfiles by using symlink
 
 - [X] Download Plugin manager from junegunn/vim-plug: `` curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ``
-- [ ] Download tmux plugins manager: [here](https://github.com/tmux-plugins/tpm)
+- [X] Download tmux plugins manager: [here](https://github.com/tmux-plugins/tpm)
 - [X] Enable Symbolic Links on Git Bash: ``export MSYS=winsymlinks:nativestrict``
 
 - [X] Download nodejs for coc.nvim: `` sudo apt-get install nodejs``

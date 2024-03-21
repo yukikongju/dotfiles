@@ -90,13 +90,42 @@ confirm_file_config_override() {
     fi
 }
 
+setup_python() {
+    # TODO
+    echo "\n --- Setting up Python --- \n"
+
+    # install basic packages
+    pip3 install pep8 jedi-language-server
+    pip3 install jupyter
+    pip3 install numpy pandas matplotlib seaborn sklearn
+
+}
+
+setup_r_lang() {
+    # TODO
+    echo "\n --- Setting up R --- \n"
+
+    $install_function r-base r-base-core
+    $install_function libcurl4-openssl-dev libssl-dev
+
+
+}
+
+
 setup_node() {
     # TODO
     echo "\n --- Setting up node --- \n"
 
+    # download javascript, typescript
+
     # Download node, npm
+    $install_function nodejs npm
     
-    # 
+    # Download React, next.js
+
+    # JS Packages
+    npm install -g standard
+
 }
 
 setup_vim() {
@@ -112,6 +141,15 @@ setup_vim() {
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	echo "Successfully installed VimPlug"
     fi
+
+    # TODO: Download fzf
+
+    # Download fuzzy finder utils 
+    $install_function tree ctags ack-grep ripgrep silversearcher-ag
+
+    # Download vimwiki utils to generate HTML file
+    pip install vimwiki-markdown
+    $install_function dvipng
 
     # creating sym links for .vimrc
     confirm_file_config_override ~/.vimrc
@@ -194,6 +232,8 @@ os_name=$(get_os_name)
 echo "OS Name is: $os_name"
 install_function=$(get_os_install_function $os_name)
 
+# setup_python
+# setup_r_lang
 # setup_node
 # setup_vim
 # setup_tmux
