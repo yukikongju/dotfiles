@@ -119,7 +119,7 @@ setup_node() {
     # download javascript, typescript
 
     # Download node, npm
-    $install_function nodejs npm
+    $install_function nodejs npm next vite
     
     # Download React, next.js
 
@@ -225,7 +225,9 @@ setup_bash_profile() {
 setup_pandoc() {
     # TODO
     echo "\n --- Setting up Pandoc --- \n"
+    $install_function pandoc 
 
+    # install xelatex: https://tug.org/mactex/mactex-download.html [5.7G]
 }
 
 os_name=$(get_os_name)
