@@ -293,3 +293,9 @@ let g:which_key_map.b = {
 	    \ '?' : ['Buffers'   , 'fzf-buffer']      ,
 	    \}
 
+" Keybindings for yank: https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+" nnoremap <leader>yp cp :let @" = expand("%")<cr>
+" nnoremap <leader>yp cp :let @+ = expand("%")<cr>
+nnoremap <leader>yp :!echo %<cr>
+
+
