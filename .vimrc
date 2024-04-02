@@ -200,11 +200,11 @@ colorscheme gruvbox
 
 " copy to clipboard in linux
 if has('win32') || has('win64')
-    set clipboard=unnamed (for windows)
+    set clipboard=unnamed " (for windows)
 elseif has('mac')
     set clipboard^=unnamed,unnamedplus " (mac)
 else
-    set clipboard=unnamedplus (linux)
+    set clipboard=unnamedplus " (linux)
 endif
 
 " Choose Leader

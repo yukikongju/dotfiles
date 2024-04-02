@@ -60,7 +60,15 @@ nnoremap <silent> <Leader>fa :Ag<CR>
 nnoremap <silent> <leader>fb :Buffers<CR>
 nnoremap <silent> <leader>fc :History:<CR>
 nnoremap <silent> <leader>ff :History<CR>
-nnoremap <silent> <leader>fe :!nautilus .<CR>
+
+if has('win32') || has('win64')
+    nnoremap <silent> <leader>fe :!explorer .<CR>
+elseif has('mac')
+    nnoremap <silent> <leader>fe :!open .<CR>
+else
+    nnoremap <silent> <leader>fe :!nautilus .<CR>
+endif
+
 nnoremap <silent> <leader>fg :Commits<CR>
 nnoremap <silent> <leader>fh :Helptags<CR>
 nnoremap <silent> <Leader>fm :Maps<CR>
