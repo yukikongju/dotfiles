@@ -53,6 +53,7 @@ https://huggingface.co/blog/feed.xml "ml" "~Hugging Face Blog"
 # --- Data Science
 https://towardsdatascience.com/feed "ml" "~Towards Data Science" 
 https://www.technologyreview.com/feed "ml" "~MIT Technology Review" 
+https://thegradient.pub/rss/ "ml" "~The Gradient"
 
 # --- Data Engineering
 https://neptune.ai/blog/rss "de" "~Neptune.ai Blog"
@@ -71,7 +72,8 @@ https://hnrss.org/best "cybersecurity" "~Hacker News - Best"
 # https://feeds.feedburner.com/TheHackersNews "cybersecurity" "~The Hacker News"
 
 # --- Product Management
-https://substack.com/@retentionblog "Product Management" "~retention blog"
+https://substack.com/@retentionblog "Product Management" "~Retention Blog"
+https://www.appsflyer.com/blog/feed/ "Product Management" "~Appsflyer Blog"
 
 # =============================================================================
 
@@ -193,6 +195,7 @@ Livestream
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg "livestream" "~Tsoding Daily"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwgKmJM4ZJQRJ-U5NjvR2dg "livestream" "~geohotz Archive"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "livestream" "~Jon Gjengset"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ "livestream" "~Andreas Kling"
 
 # =============================================================================
 
