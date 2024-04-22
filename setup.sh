@@ -230,6 +230,14 @@ setup_pandoc() {
     # install xelatex: https://tug.org/mactex/mactex-download.html [5.7G]
 }
 
+setup_zsh() {
+    # Oh My zsh installation: https://ohmyz.sh/?ref=tcude.net#install
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    # zsh-autosuggestions installation: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+}
+
 os_name=$(get_os_name)
 echo "OS Name is: $os_name"
 install_function=$(get_os_install_function $os_name)
@@ -243,4 +251,5 @@ install_function=$(get_os_install_function $os_name)
 # setup_lobster
 # setup_bash_profile
 # setup_pandoc
+# setup_zsh
 
