@@ -231,11 +231,15 @@ setup_pandoc() {
 }
 
 setup_zsh() {
+    # TODO
     # Oh My zsh installation: https://ohmyz.sh/?ref=tcude.net#install
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
     # zsh-autosuggestions installation: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+    # symlink to zshrc
+    confirm_file_config_override ~/.zshrc
 }
 
 os_name=$(get_os_name)
@@ -251,5 +255,5 @@ install_function=$(get_os_install_function $os_name)
 # setup_lobster
 # setup_bash_profile
 # setup_pandoc
-# setup_zsh
+setup_zsh
 
