@@ -72,7 +72,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 git
-zsh-autosuggestions
+zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
+zsh-autocomplete # https://github.com/marlonrichert/zsh-autocomplete
+zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

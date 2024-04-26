@@ -235,8 +235,17 @@ setup_zsh() {
     # Oh My zsh installation: https://ohmyz.sh/?ref=tcude.net#install
     # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+    # --- ZSH PLUGINS Installation
+
     # zsh-autosuggestions installation: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
     # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+    # zsh-autocomplete: https://github.com/marlonrichert/zsh-autocomplete
+    # git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
+
+    # zsh-syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
+    echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
 
     # symlink to zshrc
     confirm_file_config_override ~/.zshrc
