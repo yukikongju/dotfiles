@@ -8,6 +8,7 @@ https://www.lesswrong.com/feed.xml?view=curated-rss "rant"
 https://kevindorst.substack.com/feed "rant" 
 https://lionelpage.substack.com/feed "rant"
 https://graymirror.substack.com/feed "rant"
+https://scottaaronson.blog/ "rant"
 # https://eighteenthelephant.com/feed "rant"
 # https://www.astralcodexten.com/feed "rant"
 # https://dominiccummings.substack.com/feed
@@ -49,6 +50,7 @@ http://ai.stanford.edu/blog/feed.xml "ml" "~Stanford AI Blog"
 http://feeds.feedburner.com/miriblog "ml" "~Machine Learning Intelligence Research Institute" 
 # https://transformer-circuits.pub/feed "ml"
 https://huggingface.co/blog/feed.xml "ml" "~Hugging Face Blog"
+https://blog.iclr.cc/feed/ "ml" "~International Conference On Learning Representations"
 
 # --- Data Science
 https://towardsdatascience.com/feed "ml" "~Towards Data Science" 
