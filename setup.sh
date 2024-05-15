@@ -76,7 +76,7 @@ confirm_file_config_override() {
     if [ -f $config_file_name ]; then
 	echo "A $config_file_namefile file already exists. Do you wish to replace it? [Y/N]"
 	read response
-	if [ response = "Y" ]; then
+	if [ $response = "Y" ]; then
 	    echo "overriding config file at $config_file_name.."
 	    if [ -L $config_file_name ]; then
 		unlink $config_file_name
@@ -256,7 +256,7 @@ setup_zsh() {
     # git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
 
     # zsh-syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
-    echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+    # echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 
     # symlink to zshrc
