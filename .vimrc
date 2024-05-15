@@ -133,8 +133,6 @@ elseif has("mac")
     let &t_SI = "\<Esc>[5 q"
 endif
 
-
-
 " Indentation and tabulation
 " set wrap
 set formatoptions=tcqrn1
@@ -221,21 +219,6 @@ let mapleader=","
 
 " Work around to fix weird utf-8 ubiquitous char that makes vim enter in replace mode
 set t_u7=
-
-" Configs for vim-latex-live-preview
-let g:livepreview_previewer = 'evince'
-let g:livepreview_engine = 'pdflatex' . ' [options]'
-
-"
-let g:vimtex_compiler_latexmk = { 
-        \ 'executable' : 'latexmk',
-        \ 'options' : [ 
-        \   '-xelatex',
-        \   '-file-line-error',
-        \   '-synctex=1',
-        \   '-interaction=nonstopmode',
-        \ ],
-        \}
 
 " automatically change the current directory
 " autocmd BufEnter * silent! lcd %:p:h

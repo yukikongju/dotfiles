@@ -19,3 +19,19 @@
 " Authoring with R Markdown
 " https://bookdown.org/yihui/bookdown/collaboration.html
 
+
+" Configs for vim-latex-live-preview
+let g:livepreview_previewer = 'evince'
+let g:livepreview_engine = 'pdflatex' . ' [options]'
+
+"
+let g:vimtex_compiler_latexmk = { 
+        \ 'executable' : 'latexmk',
+        \ 'options' : [ 
+        \   '-xelatex',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
+

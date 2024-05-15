@@ -23,7 +23,7 @@ let g:vimwiki_folding='expr' "list, '', expr, syntax,
 
 
 
-" TODO: change vimwiki base path based on os
+" change vimwiki base path based on os
 if has('win32') || has('win64')
     let _vimwiki_base_path = "C:\Users\emuli\OneDrive - Universite de Montreal\VimWikiNotes"
 elseif has("mac")
