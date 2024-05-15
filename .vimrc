@@ -122,9 +122,18 @@ set visualbell
 
 " Change Cursor Style based on mode
 set cursorline " Highlight line under cursor
-let &t_SI = "\<esc>[5 q" " I beam cursor for insert mode
-let &t_EI = "\<esc>[2 q" " block cursor for normal mode
-let &t_SR = "\<esc>[3 q" " underline cursor for replace mode
+
+if has('win32') || has('win64') || has('unix')
+    let &t_SI = "\<esc>[5 q" " I beam cursor for insert mode
+    let &t_EI = "\<esc>[2 q" " block cursor for normal mode
+    let &t_SR = "\<esc>[3 q" " underline cursor for replace mode
+elseif has("mac")
+    let &t_EI = "\<Esc>[1 q"
+    let &t_SR = "\<Esc>[3 q"
+    let &t_SI = "\<Esc>[5 q"
+endif
+
+
 
 " Indentation and tabulation
 " set wrap
