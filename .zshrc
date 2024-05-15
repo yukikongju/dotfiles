@@ -105,3 +105,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# ENVIRONMENT VARIABLES
+
+export MYVIMRC="$HOME/.vimrc"
+export MYZSHRC="$HOME/.zshrc"
+export MYTMUXCONF="$HOME/.tmux.conf"
+
