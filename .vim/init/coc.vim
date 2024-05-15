@@ -11,8 +11,10 @@
 let g:coc_disable_startup_warning = 1
 let g:coc_global_extensions = [
 	    \ 'coc-clangd',
+	    \ 'coc-ccls',
 	    \ 'coc-cmake',
 	    \ 'coc-jedi',
+	    \ 'coc-json',
 	    \ 'coc-prettier',
 	    \ 'coc-tsserver',
 	    \ 'coc-eslint',

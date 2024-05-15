@@ -111,6 +111,15 @@ setup_r_lang() {
 
 }
 
+setup_cpp() {
+    # TODO: setup: https://blog.octoco.ltd/vim-coc-and-c-dbe99405f7bd
+    echo "\n --- Setting Up C++ \n"
+
+    # vim cpp setup: https://codevion.github.io/#!vim/coc.md
+    # clangd: https://clangd.llvm.org/installation
+    $install_function llvm ccls bear
+}
+
 
 setup_node() {
     # TODO
@@ -182,6 +191,9 @@ setup_tmux() {
 
     # create sym link for tmux config
     confirm_file_config_override ~/.tmux.conf
+
+    # updating tmux.cong file
+    tmux source-file ~/.tmux.conf
 }
 
 setup_newsboat() {

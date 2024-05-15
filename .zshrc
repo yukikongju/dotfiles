@@ -74,7 +74,8 @@ plugins=(
 git
 zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
 zsh-autocomplete # https://github.com/marlonrichert/zsh-autocomplete
-zsh-syntax-highlighting
+# zsh-syntax-highlighting
+virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh

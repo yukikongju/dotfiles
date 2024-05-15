@@ -258,7 +258,7 @@ let g:slime_python_ipython = 1
 " CPP CONFIGS:
 " set path+=./include " make vim recognize include files
 let c_comment_strings = 0
-
+let c_no_curly_error=1
 
 " Python PEP 7 & 8: https://svn.python.org/projects/python/trunk/Misc/Vim/vimrc
 " au BufRead,BufNewFile *.py,*pyw set shiftwidth=4

@@ -99,8 +99,11 @@
   // C++ Configs
   "languageserver": {
     "ccls": {
+      "highlight": {
+        "references": 0
+      },
       "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "filetypes": ["c", "cc", "c++", "cpp", "objc", "objcpp"],
       "rootPatterns": [
         ".ccls",
         "compile_commands.json",
