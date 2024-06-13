@@ -110,7 +110,7 @@ autocmd FileType markdown,gitcommit,tex, setlocal spell
 autocmd FileType markdown,gitcommit,tex setlocal complete+=kspell
 
 " Activate Mouse Action
-set mouse=a
+" set mouse=a
 
 " Cursor
 set scrolloff=8

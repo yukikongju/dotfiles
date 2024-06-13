@@ -112,3 +112,10 @@ export MYVIMRC="$HOME/.vimrc"
 export MYZSHRC="$HOME/.zshrc"
 export MYTMUXCONF="$HOME/.tmux.conf"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/emulie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/emulie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+source ~/Downloads/google-cloud-sdk/completion.zsh.inc
