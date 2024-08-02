@@ -26,6 +26,12 @@ https://www.goodthoughts.blog/ "philosophy" "~Good Thoughts"
 https://williamfvallicella.substack.com/ "philosophy" "~Philosphy in Progress"
 https://www.philosophybro.com/ "philosophy" "~Philosophy Bro"
 https://aeon.co/ "philosophy" "~Aeon"
+https://casparoesterheld.com/ "philosophy" "~Casparo Esterheld"
+
+Relationship
+https://stripper.substack.com/rss "relationship" "~Stripper's Substack"
+https://seekingtobejolly.substack.com/archive "relationship" "~Seeking to be Jolly"
+https://debliu.substack.com/archive "relationship" "~Deb Liu"
 
 Psychology
 https://smallpotatoes.paulbloom.net/ "psychology" "~Small Potatoes"
@@ -43,8 +49,17 @@ https://historyimpossible.substack.com/ "~History Impossible"
 # --- Comics
 # https://waitbutwhy.com/feed
 
-# --- Society 
+Economy
+https://thebearcave.substack.com/archive "economy" "~The Bear Cave"
+https://www.thebignewsletter.com/archive "economy" "~BIG by Matt Stoller"
+https://www.sageecon.com/ "economy" "~Safe Economics"
+
+Stock Market
+https://www.mostlymetrics.com/archive "stock market" "~Mostly Metrics"
+
+Society 
 # https://nickbostrom.com/
+https://www.noahpinion.blog/archive "society" "~Noahpinion"
 
 Software Engineering
 https://www.weeklycspaper.com/archive/rss "tech" "~Weekly CS Paper Archive"
@@ -69,6 +84,7 @@ http://feeds.feedburner.com/miriblog "ml" "~Machine Learning Intelligence Resear
 https://huggingface.co/blog/feed.xml "ml" "~Hugging Face Blog"
 https://blog.iclr.cc/feed/ "ml" "~International Conference On Learning Representations"
 https://proceedings.neurips.cc/ "~Neurips Proceedings"
+https://www.alignmentforum.org/feed.xml "ml" "~Alignement Forum"
 
 Data Science
 https://towardsdatascience.com/feed "ml" "~Towards Data Science" 
@@ -95,6 +111,7 @@ https://hnrss.org/best "cybersecurity" "~Hacker News - Best"
 Product Management
 https://substack.com/@retentionblog "Product Management" "~Retention Blog"
 https://www.appsflyer.com/blog/feed/ "Product Management" "~Appsflyer Blog"
+https://www.lennysnewsletter.com/ "Product Management" "~Lenny's Newsletter"
 
 # =============================================================================
 
@@ -256,4 +273,11 @@ Github
 Reddit
 
 # =============================================================================
+
+
+# --- TO EXPLORE
+# https://substack.com/top/business
+# https://jjpryor.substack.com/p/the-top-50-substack-newsletters-by
+# https://reletter.com/charts/substack/top-50
+
 

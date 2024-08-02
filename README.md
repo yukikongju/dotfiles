@@ -110,6 +110,7 @@ Native:
 - [X] Using [folds](https://bitcrowd.dev/folding-sections-of-markdown-in-vim)
 - [X] setup thesaurus: [here](https://www.thegeekstuff.com/2008/12/vi-and-vim-editor-3-steps-to-enable-thesaurus-option/)
 - [X] see synonym thesaurus
+- [X] Ebook converter with `calibre`
 
 ## Tmux Keybindings
 
