@@ -85,6 +85,7 @@ https://huggingface.co/blog/feed.xml "ml" "~Hugging Face Blog"
 https://blog.iclr.cc/feed/ "ml" "~International Conference On Learning Representations"
 https://proceedings.neurips.cc/ "~Neurips Proceedings"
 https://www.alignmentforum.org/feed.xml "ml" "~Alignement Forum"
+# https://colah.github.io/ "~colah"
 
 Data Science
 https://towardsdatascience.com/feed "ml" "~Towards Data Science" 
@@ -127,7 +128,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "ra
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "rant" "~Mental Outlaw" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w "rant" "~Louis Rossmann" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCPQTTtBcxB73yVs3QcMolKg "rant" "~Stable Discussion"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCvKRFNawVcuz4b9ihUTApCg "rant" "~David Shapiro" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5Dw9TFdbPJoTDMSiJdIQTA "rant" "~Whatifalthist"
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCvKRFNawVcuz4b9ihUTApCg "rant" "~David Shapiro" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC0BAd8tPlDqFvDYBemHcQPQ "rant" "~Fredrik Christenson"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCqcbQf6yw5KzRoDDcZ_wBSw "rant" "~Wes Roth" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC-rlcjDdSyk3MRHUPdA0TLg "rant" "~honestduane" 
@@ -138,6 +140,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCvKRFNawVcuz4b9ihUTApCg "ra
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA "tech" "~Theo - t3.gg" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "tech" "~Fireship" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ "tech" "~Beyond Fireship" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ "tech" "~The Primagen"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCuudpdbKmQWq2PPzYgVCWlA "tech" "~Indently"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC3Sg-IRTXCBuFyyAj9wT9yQ "tech" "~Liu Zuo Lin" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCmEzz-dPBVrsy4ZluSsYHDg "tech" "~Hyperplexed" 
@@ -151,6 +154,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw "ml
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRM1urw2ECVHH7ojJw8MXiQ "ml" "~WhyML" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCMtxPy2z1qzwvP7wiarkoaw "ml" "~Samuel Albanie"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCR9j1jqqB5Rse69wjUnbYwA "ml" "~All About AI"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCeQhm8DwHBg_YEYY0KGM1GQ "ml" "~Tunadorable"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgfe2ooZD3VJPB6aJAnuQng "ml" "~bycloudAI"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCawZsQWqfGSbCI5yjkdVkTA "ml" "~Matthew Berman" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC66Ggxy8MHX9DCDohdRYDTA "ml" "~Edan Meyer" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCgBncpylJ1kiVaPyP-PZauQ "ml" "~Serrano Academy" 
@@ -160,6 +165,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCR9j1jqqB5Rse69wjUnbYwA "ml
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCCkJI-ZJ0i3hUhare_oqZFQ "ml" "~Arxiv Papers" 
 
 # --- Youtube - Cybersecurity
+ https://www.youtube.com/feeds/videos.xml?channel_id=UC6biysICWOJ-C3P4Tyeggzg "cybersecurity" "~Low Level Learning"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw "cybersecurity" "~John Hammond" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCa6eh7gCkpPo5XXUDfygQQA "cybersecurity" "~IppSec" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC9iIZaEy1r_q6CRAiXBqXOA "cybersecurity" "~cazz" 
@@ -168,12 +174,13 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCR9j1jqqB5Rse69wjUnbYwA "ml
 # --- Youtube - Conference
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw "conference" "~Strange Loop" 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCMlGfpWw-RUdWX_JbLCukXg "conference" "~CppCon"
-# https://www.youtube.com/feeds/videos.xml?channel_id=UC98CzaYuFNAA_gOINFB0e4Q "conference" "EuroPython"
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC98CzaYuFNAA_gOINFB0e4Q "conference" "~EuroPython"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCMjMBMGt0WJQLeluw6qNJuA "conference" "~PyCon US"
 
 
 # --- Youtube - Economics
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCngq92xrmmsfEgGdfAJ6giQ "economics" "~Money GPS" 
+
 
 # --- Youtube - Maths
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrn9HkH3trWYpxzlW9l8eSg "maths" "~EpsilonDelta" 

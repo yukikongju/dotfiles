@@ -87,6 +87,8 @@ Plugins:
 - [X] swap CAPS with esc: ```crontab -e; @reboot setxkbmap -option caps:swapescape```
 - [X] Using `sioyek` to view PDF smartly: `flatpak run com.github.ahrm.sioyek`
 - [X] Using `lobster` to watch TV shows and movies
+- [X] Using [`jerry`](https://github.com/justchokingaround/jerry/) to watch anime and read mangas
+    - modify token at file `$HOME/.local/share/jerry/anilist_token.txt`
 - [X] Downloading books with `libgen-downloader`
 - [X] Reading ebooks using `fbreader`
 - [X] Reading RSS feed using `newsboat`
