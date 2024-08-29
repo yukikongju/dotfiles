@@ -162,6 +162,7 @@ setup_vim() {
 
     # creating sym links for .vimrc
     confirm_file_config_override ~/.vimrc
+    confirm_file_config_override ~/.ideavimrc
 
     # creating sym links for ultisnips; vim files; coc-settings.json
     ULTISNIPS_DIR=~/.vim/UltiSnips
