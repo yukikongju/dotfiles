@@ -1,0 +1,3 @@
+" vimrc file for pycharm
+set clipboard+=unnamed
+
