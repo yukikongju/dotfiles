@@ -241,6 +241,9 @@ setup_pandoc() {
     $install_function pandoc 
 
     # install xelatex: https://tug.org/mactex/mactex-download.html [5.7G]
+
+    # install latex: -- https://tug.org/mactex/mactex-download.html
+    latexmk bibtex
 }
 
 setup_zsh() {

@@ -168,6 +168,20 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
   </script>
 ```
 
+## Go to apps for different OS
+
+**General**
+
+- vimium: use vim shortcut in chrome
+
+
+**MacOS**
+
+- system manager: RayCast
+    * extensions: chrome, slack, visual studio code, arc, perplexity, github, obsidian
+- window tiling system: [Rectangle](https://rectangleapp.com/)
+- 
+
 ## Ressources
 
 - [How to Open a PDF in Word and use Immersive Reader](https://www.youtube.com/watch?v=dCAPOExjfb8)
