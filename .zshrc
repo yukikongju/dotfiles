@@ -106,6 +106,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# OH-My-POSH SETUP
+OHMYPOSH_THEME="amro"
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
+
+
 # ENVIRONMENT VARIABLES
 
 export MYVIMRC="$HOME/.vimrc"
