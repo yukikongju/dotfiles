@@ -77,6 +77,16 @@ let g:vimwiki_list = [
 	    \ 'auto_generate_tags': 1,
 	    \},
 	    \{
+	    \ 'path': _vimwiki_base_path . "/Career/",
+	    \ 'name': 'Career',
+	    \ 'syntax': 'markdown',
+	    \ 'ext': '.md',
+	    \ 'path_html': _vimwiki_base_path . "/Career/site_html/",
+	    \ 'custom_wiki2html': 'vimwiki_markdown',
+	    \ 'template_ext': '.tpl',
+	    \ 'auto_generate_tags': 1,
+	    \},
+	    \{
 	    \ 'path': _vimwiki_base_path . "/Blog/",
 	    \ 'name':'Blog',
 	    \ 'syntax': 'markdown',

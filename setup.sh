@@ -246,7 +246,7 @@ setup_ohmyposh() {
 	echo "Oh-My-Posh installation for your current OS not supported"
     fi
 
-    # install font from Nerd Font
+    # install font from Nerd Font: Cascadia Cove
     oh-my-posh font install
 
     # Configure terminal/editor/shell to use font
