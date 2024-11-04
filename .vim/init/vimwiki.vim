@@ -32,70 +32,31 @@ elseif has('unix')
     let _vimwiki_base_path = "~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes"
 endif
 
-" Subfolders: Courses, Logs, Rant, FlashCards, ActiveRecall, Prog
-" 
-	    " \ 'template_path': '~/Insync/emulie.chhor@umontreal.ca/OneDrive Biz/VimWikiNotes/templates/',
-	    " \ 'template_default': 'default',
-let g:vimwiki_list = [
-	    \{
-	    \ 'path': _vimwiki_base_path . "/WhatIveLearned/",
-	    \ 'name':'What I have learned',
+" Subfolders: WhatIveLearned, Logs, Rant, Journal, Career, Blog
+
+let g:vimwiki_folder_dct = {
+	    \ 'WhatIveLearned': {'name': 'What I have learned'},
+	    \ 'Logs': {'name': 'Logs'},
+	    \ 'Rant': {'name': 'Rant'},
+	    \ 'Journal': {'name': 'Journal'},
+	    \ 'Career': {'name': 'Career'},
+	    \ 'Blog': {'name': 'Blog'},
+	    \ }
+
+let g:vimwiki_list = []
+for [key, val] in items(g:vimwiki_folder_dct)
+    call add(g:vimwiki_list, {
+	    \ 'path': _vimwiki_base_path . "/" . key . "/",
+	    \ 'name': val['name'],
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
-	    \ 'path_html': _vimwiki_base_path . "/WhatIveLearned/site_html/",
-	    \ 'custom_wiki2html': 'vimwiki_markdown',
-	    \ 'template_ext': '.tpl',
-	    \},
-	    \{
-	    \ 'path': _vimwiki_base_path . "/Logs/",
-	    \ 'name': 'Logs',
-	    \ 'syntax': 'markdown',
-	    \ 'ext': '.md',
-	    \ 'path_html': _vimwiki_base_path . "/Logs/site_html/",
+	    \ 'path_html': _vimwiki_base_path . "/" . key . "/site_html/",
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \ 'auto_diary-index': 1,
-	    \},
-	    \{
-	    \ 'path': _vimwiki_base_path . "/Rant/",
-	    \ 'name': 'Rant',
-	    \ 'syntax': 'markdown',
-	    \ 'ext': '.md',
-	    \ 'path_html': _vimwiki_base_path . "/Rant/site_html/",
-	    \ 'custom_wiki2html': 'vimwiki_markdown',
-	    \ 'template_ext': '.tpl',
 	    \ 'auto_generate_tags': 1,
-	    \},
-	    \{
-	    \ 'path': _vimwiki_base_path . "/Journal/",
-	    \ 'name': 'Journal',
-	    \ 'syntax': 'markdown',
-	    \ 'ext': '.md',
-	    \ 'path_html': _vimwiki_base_path . "/Journal/site_html/",
-	    \ 'custom_wiki2html': 'vimwiki_markdown',
-	    \ 'template_ext': '.tpl',
-	    \ 'auto_generate_tags': 1,
-	    \},
-	    \{
-	    \ 'path': _vimwiki_base_path . "/Career/",
-	    \ 'name': 'Career',
-	    \ 'syntax': 'markdown',
-	    \ 'ext': '.md',
-	    \ 'path_html': _vimwiki_base_path . "/Career/site_html/",
-	    \ 'custom_wiki2html': 'vimwiki_markdown',
-	    \ 'template_ext': '.tpl',
-	    \ 'auto_generate_tags': 1,
-	    \},
-	    \{
-	    \ 'path': _vimwiki_base_path . "/Blog/",
-	    \ 'name':'Blog',
-	    \ 'syntax': 'markdown',
-	    \ 'ext': '.md',
-	    \ 'path_html': _vimwiki_base_path . "/Blog/site_html/",
-	    \ 'custom_wiki2html': 'vimwiki_markdown',
-	    \ 'template_ext': '.tpl',
-	    \},
-	    \]
+	    \ })
+endfor
 
 
 " Allow latex in vimwiki
