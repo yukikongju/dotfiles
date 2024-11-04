@@ -73,7 +73,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
 git
 zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
-zsh-autocomplete # https://github.com/marlonrichert/zsh-autocomplete
+# zsh-autocomplete # https://github.com/marlonrichert/zsh-autocomplete
 # zsh-syntax-highlighting
 virtualenv
 )
@@ -107,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # OH-My-POSH SETUP
+# themes: https://ohmyposh.dev/docs/themes
 OHMYPOSH_THEME="amro"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
 
