@@ -1,6 +1,4 @@
-
-
-# TODO: using latex template with pandoc: https://tex.stackexchange.com/questions/573431/how-do-i-adapt-a-standard-latex-template-for-pandoc-in-a-docker-container-not
+" TODO: using latex template with pandoc: https://tex.stackexchange.com/questions/573431/how-do-i-adapt-a-standard-latex-template-for-pandoc-in-a-docker-container-not
 
 " https://blog.cubieserver.de/2021/document-writing-with-markdown-and-latex/
 
