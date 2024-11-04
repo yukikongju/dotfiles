@@ -77,8 +77,8 @@ Plug 'lervag/vimtex'
 Plug 'puremourning/vimspector'
 
 " Python Console
-Plug 'jpalardy/vim-slime', { 'for': 'python' }
-Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+" Plug 'jpalardy/vim-slime', { 'for': 'python' }
+" Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 " Plug 'ivanov/vim-ipython'
 
 " Git

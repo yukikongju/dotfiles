@@ -107,7 +107,7 @@ Native:
 - [X] Spelling Checker for Markdown files with errors fix suggestions with ``z=`` in normal mode
 - [X] Open ``.vimrc`` file anywhere with ``<leader>ev``
 - [X] Go to top, mid, bottom file with ``zt``, ``zz`` and ``zb``
-- [X] Move screen whilst keeping the cursor at the same spot with `<ctrl-e>` and `<ctrl-y>`
+- [ ] Move screen whilst keeping the cursor at the same spot with `<ctrl-e>` and `<ctrl-y>`
 - [X] Increment and decrement next number with ``<c-a>`` and ``<c-x>``
 - [X] Using [folds](https://bitcrowd.dev/folding-sections-of-markdown-in-vim)
 - [X] setup thesaurus: [here](https://www.thegeekstuff.com/2008/12/vi-and-vim-editor-3-steps-to-enable-thesaurus-option/)
@@ -223,4 +223,8 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 **mangal**
 
 - [mangal query json](https://github.com/metafates/mangal/wiki/Inline-mode)
+
+**oh-my-posh**
+
+- [ohmyposh](https://ohmyposh.dev/)
 

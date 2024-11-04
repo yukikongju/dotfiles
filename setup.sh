@@ -230,6 +230,41 @@ setup_lobster() {
 
 }
 
+setup_ohmyposh() {
+    # TODO: setup oh-my-posh
+    # https://ohmyposh.dev/docs/installation/macos
+
+    echo "\n --- Setting up Oh-My-Posh --- \n"
+
+    # installing oh-my-posh
+    if [ $os_name = "macOS" ]; then
+	brew install jandedobbeleer/oh-my-posh/oh-my-posh
+	brew update && brew upgrade oh-my-posh
+    elif [ $os_name = "Linux" ]; then
+	curl -s https://ohmyposh.dev/install.sh | bash -s
+    else
+	echo "Oh-My-Posh installation for your current OS not supported"
+    fi
+
+    # install font from Nerd Font
+    oh-my-posh font install
+
+    # Configure terminal/editor/shell to use font
+    # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/1_shell.omp.json)"
+    # OHMYPOSH_THEME="1_shell"
+    OHMYPOSH_THEME="amro"
+    eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/$(OHMYPOSH_THEME).omp.json)"
+    source ~/.zshrc
+
+    # configure a theme / custom prompt configuration
+    # For the macOS Terminal app:
+    # Open Preferences, go to the Profiles tab, and in the Text section, click "Change" next to Font. Select the installed Nerd Font (e.g., "CaskaydiaCove Nerd Font" or "MesloLGM Nerd Font")1.
+    # For VS Code:
+    # Open Settings, search for "Terminal > Integrated: Font Family" and set it to "CaskaydiaCove NFM" or "MesloLGM Nerd Font"1.
+
+
+}
+
 setup_bash_profile() {
     # TODO  
     echo "\n --- Setting up bash profile --- \n"
@@ -280,5 +315,6 @@ install_function=$(get_os_install_function $os_name)
 # setup_lobster
 # setup_bash_profile
 # setup_pandoc
-setup_zsh
+# setup_zsh
+# setup_ohmyposh
 
