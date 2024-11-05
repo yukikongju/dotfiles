@@ -184,6 +184,9 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 
 ## Ressources
 
+
+- [learn vim the hard way](https://learnvimscriptthehardway.stevelosh.com/)
+
 - [How to Open a PDF in Word and use Immersive Reader](https://www.youtube.com/watch?v=dCAPOExjfb8)
 
 - [Dotfiles Management by Fireship](https://www.youtube.com/watch?v=r_MpUP6aKiQ&t=510s)

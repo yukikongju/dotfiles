@@ -10,7 +10,6 @@ Plug 'tpope/vim-repeat'            " can use . with other plugins
 Plug 'tpope/vim-eunuch'            " use UNIX shell command in vim
 Plug 'dkarter/bullets.vim'         " check box easily
 Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
-" Plug 'voldikss/vim-floaterm'       " popup terminal for vim with :terminal and :FloatermToggle
 Plug 'jiangmiao/auto-pairs'        " insert and delete brackets in pairs
 Plug 'godlygeek/tabular'           " align text based on regex => :Tabularize /<regex>
 Plug 'dhruvasagar/vim-table-mode'  " markdown table formatting (may want to switch bc no <S-tab> behavior)
@@ -52,8 +51,6 @@ Plug 'vim-airline/vim-airline-themes' " More status bar themes
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
-" Plug 'pixelneo/vim-python-docstring'            " generate docstring for python
-" Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " DOcumentation GEnerator
 Plug 'lunacookies/vim-sh' " syntax highlight for sh
 
 " autocomplete for react development
@@ -76,11 +73,6 @@ Plug 'lervag/vimtex'
 " Debugger
 Plug 'puremourning/vimspector'
 
-" Python Console
-" Plug 'jpalardy/vim-slime', { 'for': 'python' }
-" Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
-" Plug 'ivanov/vim-ipython'
-
 " Git
 Plug 'tpope/vim-fugitive'     " generate page to view commit message
 Plug 'airblade/vim-gitgutter' " Show diff
@@ -88,6 +80,7 @@ Plug 'airblade/vim-gitgutter' " Show diff
 " Vimwiki
 Plug 'vimwiki/vimwiki'               " create linked text files
 Plug 'patrickdavey/vimwiki_markdown' " a better way to convert vimwiki to html
+" Plug 'xolox/vim-notes'               " alternative to vimwiki
 
 
 call plug#end()
@@ -358,5 +351,13 @@ Plug 'rust-lang/rust.vim'
 " Plug 'plasticboy/vim-markdown' " markdown formatting
 " Plug 'vim-autoformat/vim-autoformat' " Autoformat file on save
 " Plug 'prettier/vim-prettier'
+" Plug 'voldikss/vim-floaterm'       " popup terminal for vim with :terminal and :FloatermToggle
 
+" Python Console
+" Plug 'pixelneo/vim-python-docstring'            " generate docstring for python
+" Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " DOcumentation GEnerator
+" Plug 'jpalardy/vim-slime', { 'for': 'python' }
+" Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+" Plug 'ivanov/vim-ipython'
 
+" Python Conceal: https://github.com/ehamberg/vim-cute-python

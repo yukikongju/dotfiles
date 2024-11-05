@@ -6,7 +6,7 @@
 
 let g:vimwiki_folding='expr' "list, '', expr, syntax,
 
-" let g:vimwiki_global_ext = 0
+" let g:vimwiki_global_ext = 0 " turn off creation of local wikis
 " let g:vimwiki_conceallevel = 0
 " let g:vimwiki_table_mappings = 1
 " let g:vimwiki_folding_disabled = ['table', 'pre']
@@ -34,13 +34,15 @@ endif
 
 " Subfolders: WhatIveLearned, Logs, Rant, Journal, Career, Blog
 
+" not implemented yet: frequency: daily, weekly, monthly, yearly
 let g:vimwiki_folder_dct = {
-	    \ 'WhatIveLearned': {'name': 'What I have learned'},
-	    \ 'Logs': {'name': 'Logs'},
-	    \ 'Rant': {'name': 'Rant'},
-	    \ 'Journal': {'name': 'Journal'},
-	    \ 'Career': {'name': 'Career'},
-	    \ 'Blog': {'name': 'Blog'},
+	    \ 'WhatIveLearned': {'name': 'What I have learned', 'frequency': 'daily'},
+	    \ 'Logs': {'name': 'Logs', 'frequency': 'daily'},
+	    \ 'Rant': {'name': 'Rant', 'frequency': 'daily'},
+	    \ 'Journal': {'name': 'Journal', 'frequency': 'daily'},
+	    \ 'Career': {'name': 'Career', 'frequency': 'daily'},
+	    \ 'Blog': {'name': 'Blog', 'frequency': 'daily'},
+	    \ 'TODOs': {'name': 'TODOs', 'frequency': 'daily'},
 	    \ }
 
 let g:vimwiki_list = []
@@ -55,6 +57,7 @@ for [key, val] in items(g:vimwiki_folder_dct)
 	    \ 'template_ext': '.tpl',
 	    \ 'auto_diary-index': 1,
 	    \ 'auto_generate_tags': 1,
+	    \ 'diary_frequency': "daily"
 	    \ })
 endfor
 
