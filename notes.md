@@ -96,6 +96,15 @@ let g:vim_templates_list = [
 Todos:
 - define `config` list to use for templates
     * 
+- :VimwikiDiaryGenerateLinks
+    Delete old, insert new diary section into diary index file.
+- :VimwikiDiaryNextDay
+    Open next day diary link if available.
+    Mapped to <C-Down>.
+- :VimwikiDiaryPrevDay
+    Open previous day diary link if available.
+    Mapped to <C-Up>.
+
 
 
 not implemented:
