@@ -29,6 +29,10 @@ alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
 
+# python aliases (if system is using python 2.x as default)
+alias python=python3
+alias pip=pip3
+
 #######################################################################
 #                            BASH HISTORY                             #
 #######################################################################
