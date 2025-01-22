@@ -173,6 +173,8 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 **General**
 
 - vimium: use vim shortcut in chrome
+- [excalidraw](https://excalidraw.com/)
+- [witeboard](https://witeboard.com/)
 
 
 **MacOS**
@@ -180,7 +182,7 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 - system manager: RayCast
     * extensions: chrome, slack, visual studio code, arc, perplexity, github, obsidian
 - window tiling system: [Rectangle](https://rectangleapp.com/)
-- 
+
 
 ## Ressources
 
