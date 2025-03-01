@@ -85,6 +85,7 @@ https://huggingface.co/blog/feed.xml "ml" "~Hugging Face Blog"
 https://blog.iclr.cc/feed/ "ml" "~International Conference On Learning Representations"
 https://proceedings.neurips.cc/ "~Neurips Proceedings"
 https://www.alignmentforum.org/feed.xml "ml" "~Alignement Forum"
+https://research.atspotify.com/feed/ "ml" "~Research Spotify R&D" 
 # https://colah.github.io/ "~colah"
 https://nlp.seas.harvard.edu/papers/
 
@@ -92,10 +93,20 @@ Data Science
 https://towardsdatascience.com/feed "ml" "~Towards Data Science" 
 https://www.technologyreview.com/feed "ml" "~MIT Technology Review" 
 https://thegradient.pub/rss/ "ml" "~The Gradient"
+https://technology.riotgames.com/ "ml" "~Riot Games Tech Blog"
+https://towardsdatascience.com/category/data-science/feed/ "ds" "~Towards Data Science - DS"
+https://towardsdatascience.com/category/artificial-intelligence/machine-learning/ "ml" "~Towards Data Science - ML"
 
 Data Engineering
 https://neptune.ai/blog/rss "de" "~Neptune.ai Blog"
 https://research.netflix.com/ "de" "~Netflix Research"
+https://netflixtechblog.com/rss "de" "~The Netflix Tech Blog"
+https://blog.bytebytego.com/rss "de" "~ByteByteGo Newsletter"
+https://engineering.atspotify.com/feed/ "de" "~Spotify Engineering R&D "
+https://towardsdatascience.com/category/data-science/data-engineering/feed "de" "~Towards Data Science - DE"
+https://www.linkedin.com/blog/engineering "de" "~LinkedIn Engieering Blog"
+https://www.dataengineeringweekly.com/rss "de" "~Data Engineering Weekly"
+https://www.confessionsofadataguy.com/feed/ "de" "~Confessions of a Data Guy"
 # https://datatalks.club/articles.html
 # https://se-ml.github.io/practices/
 
