@@ -4,13 +4,60 @@
 
 # =============================================================================
 
-Blogs
+"Data Engineering"
+https://netflixtechblog.com/rss "de" "~The Netflix Tech Blog"
+https://blog.bytebytego.com/rss "de" "~ByteByteGo Newsletter"
+https://engineering.atspotify.com/feed/ "de" "~Spotify Engineering R&D "
+https://www.dataengineeringweekly.com/rss "de" "~Data Engineering Weekly"
+https://www.confessionsofadataguy.com/feed/ "de" "~Confessions of a Data Guy"
+https://towardsdatascience.com/category/data-science/data-engineering/feed "de" "~Towards Data Science - DE"
+https://www.linkedin.com/blog/engineering "de" "~LinkedIn Engieering Blog"
+# https://neptune.ai/blog/rss "de" "~Neptune.ai Blog"
+# https://datatalks.club/articles.html
+# https://se-ml.github.io/practices/
+
+"DL Research"
+https://research.netflix.com/ "dl research" "~Netflix Research"
+https://research.atspotify.com/feed/ "dl research" "~Research Spotify R&D" 
+
+"Machine Learning"
+https://proceedings.neurips.cc/ "ml" "~Neurips Proceedings"
+http://feeds.feedburner.com/blogspot/gJZg "ml" "~Google AI Blog"
+http://ai.stanford.edu/blog/feed.xml "ml" "~Stanford AI Blog" 
+http://feeds.feedburner.com/miriblog "ml" "~Machine Learning Intelligence Research Institute" 
+https://www.ruder.io/rss/ "ml" "~ruder.io" 
+https://huggingface.co/blog/feed.xml "ml" "~Hugging Face Blog"
+https://blog.iclr.cc/feed/ "ml" "~International Conference On Learning Representations"
+https://www.alignmentforum.org/feed.xml "ml" "~Alignement Forum"
+# https://colah.github.io/ "~colah"
+# https://distill.pub/feed
+# https://transformer-circuits.pub/feed "ml"
+# https://nlp.seas.harvard.edu/papers/
+
+"Data Science"
+https://www.technologyreview.com/feed "ml" "~MIT Technology Review" 
+https://thegradient.pub/rss/ "ml" "~The Gradient"
+https://towardsdatascience.com/category/data-science/feed/ "ds" "~Towards Data Science - DS"
+https://towardsdatascience.com/category/artificial-intelligence/machine-learning/feed/ "ml" "~Towards Data Science - ML"
+https://towardsdatascience.com/feed/ "ml" "~Towards Data Science" 
+# https://technology.riotgames.com/ "ml" "~Riot Games Tech Blog"
+
+"Software Engineering"
+https://www.weeklycspaper.com/archive/rss "tech" "~Weekly CS Paper Archive"
+# https://experiencestack.co/feed "software-engineering" "~Experience Stack" 
+# https://netflixtechblog.com/feed "software-engineering"
+# https://devops.com/feed "data-engineering"
+
+
+# =============================================================================
+
+"Blogs"
 https://www.lesswrong.com/feed.xml?view=curated-rss "rant"
 https://kevindorst.substack.com/feed "rant" 
 https://lionelpage.substack.com/feed "rant"
 https://graymirror.substack.com/feed "rant"
-https://scottaaronson.blog/ "rant"
-https://joecarlsmith.com/archive "rant"
+# https://scottaaronson.blog/ "rant"
+# https://joecarlsmith.com/archive "rant"
 # https://eighteenthelephant.com/feed "rant"
 # https://www.astralcodexten.com/feed "rant"
 # https://dominiccummings.substack.com/feed
@@ -19,101 +66,61 @@ https://joecarlsmith.com/archive "rant"
 # https://tomstafford.substack.com/feed
 # https://www.mariushobbhahn.com/feed
 
-Philosophy
+"Philosophy"
 https://m-phi.blogspot.com/feeds/posts/default  "philosophy" "~Mathematical Philosophy"
 https://sprachlogik.blogspot.com/feeds/posts/default "philosophy" "~Sprach Logik"
-https://www.goodthoughts.blog/ "philosophy" "~Good Thoughts"
-https://williamfvallicella.substack.com/ "philosophy" "~Philosphy in Progress"
-https://www.philosophybro.com/ "philosophy" "~Philosophy Bro"
-https://aeon.co/ "philosophy" "~Aeon"
-https://casparoesterheld.com/ "philosophy" "~Casparo Esterheld"
+# https://www.goodthoughts.blog/ "philosophy" "~Good Thoughts"
+# https://williamfvallicella.substack.com/ "philosophy" "~Philosphy in Progress"
+# https://www.philosophybro.com/ "philosophy" "~Philosophy Bro"
+# https://aeon.co/ "philosophy" "~Aeon"
+# https://casparoesterheld.com/ "philosophy" "~Casparo Esterheld"
 
-Relationship
-https://stripper.substack.com/rss "relationship" "~Stripper's Substack"
-https://seekingtobejolly.substack.com/archive "relationship" "~Seeking to be Jolly"
-https://debliu.substack.com/archive "relationship" "~Deb Liu"
+# Relationship
+# https://stripper.substack.com/rss "relationship" "~Stripper's Substack"
+# https://seekingtobejolly.substack.com/archive "relationship" "~Seeking to be Jolly"
+# https://debliu.substack.com/archive "relationship" "~Deb Liu"
 
 Psychology
-https://smallpotatoes.paulbloom.net/ "psychology" "~Small Potatoes"
-https://eschwitz.substack.com/ "psychology" "~The Splintered Mind"
-https://greglukianoff.substack.com/ "psychology" "~The Eternally Radical Idea"
-https://www.natesilver.net/ "psychology" "~Silver Bulletin"
+# https://smallpotatoes.paulbloom.net/ "psychology" "~Small Potatoes"
+# https://eschwitz.substack.com/ "psychology" "~The Splintered Mind"
+# https://greglukianoff.substack.com/ "psychology" "~The Eternally Radical Idea"
+# https://www.natesilver.net/ "psychology" "~Silver Bulletin"
 
-News
+"News"
 # https://www.leefang.com/feed
 # https://www.hamiltonnolan.com/feed "politics"
 https://www.bellingcat.com/rss "politics" "~Bellingcat"
 https://pudding.cool/rss.xml "stories" "~pudding cool"
-https://historyimpossible.substack.com/ "~History Impossible"
+# https://historyimpossible.substack.com/ "news" "~History Impossible"
 
 # --- Comics
 # https://waitbutwhy.com/feed
 
 Economy
-https://thebearcave.substack.com/archive "economy" "~The Bear Cave"
-https://www.thebignewsletter.com/archive "economy" "~BIG by Matt Stoller"
-https://www.sageecon.com/ "economy" "~Safe Economics"
+# https://thebearcave.substack.com/archive "economy" "~The Bear Cave"
+# https://www.thebignewsletter.com/archive "economy" "~BIG by Matt Stoller"
+# https://www.sageecon.com/ "economy" "~Safe Economics"
 
-Stock Market
-https://www.mostlymetrics.com/archive "stock market" "~Mostly Metrics"
+"Stock Market"
+# https://www.mostlymetrics.com/archive "stock market" "~Mostly Metrics"
 
-Society 
+"Society" 
 # https://nickbostrom.com/
-https://www.noahpinion.blog/archive "society" "~Noahpinion"
+# https://www.noahpinion.blog/archive "society" "~Noahpinion"
 
-Software Engineering
-https://www.weeklycspaper.com/archive/rss "tech" "~Weekly CS Paper Archive"
-# https://experiencestack.co/feed "software-engineering" "~Experience Stack" 
-# https://netflixtechblog.com/feed "software-engineering"
-# https://devops.com/feed "data-engineering"
 
-Programming Languages 
+"Programming Languages "
 http://lambda-the-ultimate.org/tracker "programming-languages" "~Lambda the Ultimate"
 # http://troubles.md/ "programming-languages"
 # https://docs.python.org/3/whatsnew/index.html "programming-languages" "Python What's New"
 # https://en.cppreference.com/w/cpp/language/history "programming-languages" "C++ Wha'ts New"
 # https://releases.rs/docs/1.1.0/
 
-Machine Learning: LLMs
-https://www.ruder.io/rss/ "ml" "~ruder.io" 
-# https://distill.pub/feed
-http://feeds.feedburner.com/blogspot/gJZg "ml" "~Google AI Blog"
-http://ai.stanford.edu/blog/feed.xml "ml" "~Stanford AI Blog" 
-http://feeds.feedburner.com/miriblog "ml" "~Machine Learning Intelligence Research Institute" 
-# https://transformer-circuits.pub/feed "ml"
-https://huggingface.co/blog/feed.xml "ml" "~Hugging Face Blog"
-https://blog.iclr.cc/feed/ "ml" "~International Conference On Learning Representations"
-https://proceedings.neurips.cc/ "~Neurips Proceedings"
-https://www.alignmentforum.org/feed.xml "ml" "~Alignement Forum"
-https://research.atspotify.com/feed/ "ml" "~Research Spotify R&D" 
-# https://colah.github.io/ "~colah"
-https://nlp.seas.harvard.edu/papers/
 
-Data Science
-https://towardsdatascience.com/feed "ml" "~Towards Data Science" 
-https://www.technologyreview.com/feed "ml" "~MIT Technology Review" 
-https://thegradient.pub/rss/ "ml" "~The Gradient"
-https://technology.riotgames.com/ "ml" "~Riot Games Tech Blog"
-https://towardsdatascience.com/category/data-science/feed/ "ds" "~Towards Data Science - DS"
-https://towardsdatascience.com/category/artificial-intelligence/machine-learning/ "ml" "~Towards Data Science - ML"
-
-Data Engineering
-https://neptune.ai/blog/rss "de" "~Neptune.ai Blog"
-https://research.netflix.com/ "de" "~Netflix Research"
-https://netflixtechblog.com/rss "de" "~The Netflix Tech Blog"
-https://blog.bytebytego.com/rss "de" "~ByteByteGo Newsletter"
-https://engineering.atspotify.com/feed/ "de" "~Spotify Engineering R&D "
-https://towardsdatascience.com/category/data-science/data-engineering/feed "de" "~Towards Data Science - DE"
-https://www.linkedin.com/blog/engineering "de" "~LinkedIn Engieering Blog"
-https://www.dataengineeringweekly.com/rss "de" "~Data Engineering Weekly"
-https://www.confessionsofadataguy.com/feed/ "de" "~Confessions of a Data Guy"
-# https://datatalks.club/articles.html
-# https://se-ml.github.io/practices/
-
-Maths
+"Maths"
 https://statmodeling.stat.columbia.edu/feed "maths" "~Statistical Modeling" 
 
-Cybersecurity
+"Cybersecurity"
 # https://techcrunch.com/feed
 # https://news.ycombinator.com/rss "cybersecurity" "~Hacker News"
 # https://hckrnews.com/
@@ -121,14 +128,14 @@ Cybersecurity
 https://hnrss.org/best "cybersecurity" "~Hacker News - Best"
 # https://feeds.feedburner.com/TheHackersNews "cybersecurity" "~The Hacker News"
 
-Product Management
-https://substack.com/@retentionblog "Product Management" "~Retention Blog"
+"Product Management"
+# https://substack.com/@retentionblog "Product Management" "~Retention Blog"
 https://www.appsflyer.com/blog/feed/ "Product Management" "~Appsflyer Blog"
-https://www.lennysnewsletter.com/ "Product Management" "~Lenny's Newsletter"
+# https://www.lennysnewsletter.com/ "Product Management" "~Lenny's Newsletter"
 
 # =============================================================================
 
-Youtube
+"Youtube"
 
 # --- Youtube - Software Engineering
 https://www.youtube.com/feeds/videos.xml?channel_id=UCGmR6lhKMlCkvrvb39vPtdA "software-engineering" "~Steve (builder.io)" 
