@@ -112,11 +112,13 @@ OHMYPOSH_THEME="amro"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
 
 
-# ENVIRONMENT VARIABLES
+# ---- ENVIRONMENT VARIABLES ----
 
 export MYVIMRC="$HOME/.vimrc"
 export MYZSHRC="$HOME/.zshrc"
 export MYTMUXCONF="$HOME/.tmux.conf"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="(python3 -m site --user-base)/bin:$PATH"
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -125,3 +127,5 @@ if [ -f '/Users/emulie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 source ~/Downloads/google-cloud-sdk/completion.zsh.inc
+
+

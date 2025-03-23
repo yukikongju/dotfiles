@@ -175,6 +175,7 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 - vimium: use vim shortcut in chrome
 - [excalidraw](https://excalidraw.com/)
 - [witeboard](https://witeboard.com/)
+- [draw.io]
 
 
 **MacOS**
@@ -232,4 +233,9 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 **oh-my-posh**
 
 - [ohmyposh](https://ohmyposh.dev/)
+
+**VSCode Extensions**
+
+- Github Pull Requests
+- Git Blame
 
