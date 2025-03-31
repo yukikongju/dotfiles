@@ -34,7 +34,7 @@ endif
 
 " Subfolders: WhatIveLearned, Logs, Rant, Journal, Career, Blog
 
-" not implemented yet: frequency: daily, weekly, monthly, yearly
+" not implemented yet: frequency: daily, weekly, monthly, quarterly, yearly
 let g:vimwiki_folder_dct = {
 	    \ 'WhatIveLearned': {'name': 'What I have learned', 'frequency': 'daily'},
 	    \ 'Logs': {'name': 'Logs', 'frequency': 'daily'},
@@ -43,6 +43,7 @@ let g:vimwiki_folder_dct = {
 	    \ 'Career': {'name': 'Career', 'frequency': 'daily'},
 	    \ 'Blog': {'name': 'Blog', 'frequency': 'daily'},
 	    \ 'TODOs': {'name': 'TODOs', 'frequency': 'daily'},
+	    \ 'Tests': {'name': 'Tests', 'frequency': 'weekly'},
 	    \ }
 
 let g:vimwiki_list = []
@@ -57,9 +58,72 @@ for [key, val] in items(g:vimwiki_folder_dct)
 	    \ 'template_ext': '.tpl',
 	    \ 'auto_diary-index': 1,
 	    \ 'auto_generate_tags': 1,
-	    \ 'diary_frequency': "daily"
+	    \ 'diary_frequency': val['frequency'],
 	    \ })
 endfor
+
+" Map the function to <Leader>w<Leader>w for :VimwikiMakeDiaryNote
+function! VimwikiSmartDiaryNote()
+    let current_wiki = vimwiki#vars#get_wikilocal('path')
+    let frequency = vimwiki#vars#get_wikilocal('diary_frequency')
+
+    " Default diary path
+    let diary_path = current_wiki . "diary/"
+
+    " Determine file name based on frequency
+    if frequency ==# 'weekly'
+        let diary_note = diary_path . strftime("%Y-W%V") . ".md"
+    elseif frequency ==# 'monthly'
+        let diary_note = diary_path . strftime("%Y-%m") . ".md"
+    elseif frequency ==# 'yearly'
+        let diary_note = diary_path . strftime("%Y") . ".md"
+    else
+        let diary_note = diary_path . strftime("%Y-%m-%d") . ".md"
+    endif
+
+    " Ensure the directory exists
+    if !isdirectory(diary_path)
+        call mkdir(diary_path, "p")
+    endif
+
+    " Open the diary note
+    execute "edit " . diary_note
+endfunction
+nnoremap <Leader>w<Leader>w :call VimwikiSmartDiaryNote()
+
+" TODO: Map the function <Leader>wi :VimwikiDiaryIndex
+" function! VimwikiCustomDiaryIndex()
+"     let current_wiki = vimwiki#vars#get_wikilocal('path')
+"     let frequency = vimwiki#vars#get_wikilocal('diary_frequency')
+
+"     " Set the index file path
+"     let index_file = current_wiki . "diary/index.md"
+
+"     " Define the appropriate index format
+"     if frequency ==# 'weekly'
+"         let index_content = "= Weekly Diary Index =\n{{index target=\"diary/*-W*.md\"}}"
+"     elseif frequency ==# 'monthly'
+"         let index_content = "= Monthly Diary Index =\n{{index target=\"diary/*-*.md\"}}"
+"     elseif frequency ==# 'yearly'
+"         let index_content = "= Yearly Diary Index =\n{{index target=\"diary/*.md\"}}"
+"     else
+"         let index_content = "= Daily Diary Index =\n{{index target=\"diary/*.md\"}}"
+"     endif
+
+"     " Ensure the diary directory exists
+"     if !isdirectory(current_wiki . "diary/")
+"         call mkdir(current_wiki . "diary/", "p")
+"     endif
+
+"     " Write the index file
+"     call writefile(split(index_content, "\n"), index_file)
+
+"     " Open the diary index
+"     execute "edit " . index_file
+" endfunction
+
+" Map the function to override :VimwikiDiaryIndex
+" command! VimwikiDiaryIndex call VimwikiCustomDiaryIndex()
 
 
 " Allow latex in vimwiki
@@ -137,13 +201,13 @@ let g:vimwiki_key_mappings = {
 """""""""""""""""""""""""
 
 " New lines in list item are converted in <br> in html file
-let g:vimwiki_list_ignore_newline = 0
-let g:vimwiki_text_ignore_newline = 0
+" let g:vimwiki_list_ignore_newline = 0
+" let g:vimwiki_text_ignore_newline = 0
 " let g:vimwiki_html_header_numbering = 0
 
 """"""""""""""""""""""""""
 "  vim.calendar Configs  "
 """"""""""""""""""""""""""
 
-let g:calendar_task_delete = 1
+" let g:calendar_task_delete = 1
 
