@@ -9,7 +9,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-repeat'            " can use . with other plugins
 Plug 'tpope/vim-eunuch'            " use UNIX shell command in vim
 Plug 'dkarter/bullets.vim'         " check box easily
-Plug 'iamcco/markdown-preview.vim' " Preview markdown file with :MarkdownPreview
+" Plug 'iamcco/markdown-preview.nvim' 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " Preview markdown file with :MarkdownPreview
 Plug 'jiangmiao/auto-pairs'        " insert and delete brackets in pairs
 Plug 'godlygeek/tabular'           " align text based on regex => :Tabularize /<regex>
 Plug 'dhruvasagar/vim-table-mode'  " markdown table formatting (may want to switch bc no <S-tab> behavior)
