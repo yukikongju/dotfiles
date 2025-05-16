@@ -111,6 +111,19 @@ source $ZSH/oh-my-zsh.sh
 OHMYPOSH_THEME="amro"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
 
+# ---- GIT ALIASES ----
+#* CLI Aliases
+alias gs='git status'
+alias gc='git commit -m'
+alias gco='git checkout'
+
+#* Directory Aliases
+alias home='cd ~ && ls'
+alias dashboards='cd ~/Documents/dashboards && ls -a'
+# alias workspace='cd ~/workspace && ls -a'
+# alias ad-hoc='cd ~/workspace/hds-ad-hoc && ls -a'
+# alias pub-sub-load='cd ~/workspace/pub-sub-load && ls -a'
+
 
 # ---- ENVIRONMENT VARIABLES ----
 

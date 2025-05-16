@@ -236,6 +236,8 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 
 **VSCode Extensions**
 
-- Github Pull Requests
-- Git Blame
+- Github
+    * Github Pull Requests
+    * Git Blame
+- Better Comments
 
