@@ -1,4 +1,4 @@
-let g:tmux_navigator_no_mappings = 1
+" let g:tmux_navigator_no_mappings = 1
 
 " Use alt to switch panes
 " execute "set <M-j>=\ej"
