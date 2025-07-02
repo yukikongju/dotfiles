@@ -115,6 +115,7 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPO
 #* CLI Aliases
 alias gs='git status'
 alias gc='git commit -m'
+alias gcnv='git commit --no-verify -m'
 alias gco='git checkout'
 
 #* Directory Aliases

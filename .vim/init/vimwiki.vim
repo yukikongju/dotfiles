@@ -36,15 +36,17 @@ endif
 
 " not implemented yet: frequency: daily, weekly, monthly, quarterly, yearly
 let g:vimwiki_folder_dct = {
-	    \ 'WhatIveLearned': {'name': 'What I have learned', 'frequency': 'daily'},
-	    \ 'Logs': {'name': 'Logs', 'frequency': 'daily'},
-	    \ 'Rant': {'name': 'Rant', 'frequency': 'daily'},
-	    \ 'Journal': {'name': 'Journal', 'frequency': 'daily'},
 	    \ 'Career': {'name': 'Career', 'frequency': 'daily'},
+	    \ 'Logs': {'name': 'Logs', 'frequency': 'daily'},
+	    \ 'Journal': {'name': 'Journal', 'frequency': 'daily'},
 	    \ 'Blog': {'name': 'Blog', 'frequency': 'daily'},
-	    \ 'TODOs': {'name': 'TODOs', 'frequency': 'daily'},
-	    \ 'Tests': {'name': 'Tests', 'frequency': 'weekly'},
+	    \ 'Writeups': {'name': 'Writeups', 'frequency': 'daily'},
+	    \ 'WhatIveLearned': {'name': 'What I have learned', 'frequency': 'daily'},
+	    \ 'Rant': {'name': 'Rant', 'frequency': 'daily'},
 	    \ }
+
+	    " \ 'Tests': {'name': 'Tests', 'frequency': 'weekly'},
+
 
 let g:vimwiki_list = []
 for [key, val] in items(g:vimwiki_folder_dct)
