@@ -12,8 +12,24 @@ alias ga='git add' # Add a file to Git.
 alias gaa='git add --all' # Add all files to Git.
 alias gc='git commit' # Commit changes to the code.
 alias gl='git log --oneline' # View the Git log.
+alias glo='git log --oneline --graph --all --decorate'
+alias glm='git log --merges --oneline' # View all git merges
 alias gd='git diff' # View the difference.
 alias gb='git checkout -b' # Create a new Git branch and move to the new branch at the same time.
+
+# 'git shortlog --merges' # reflog
+# 'git log --pretty=format:"%h %s" | grep "^fix"' # git log with :fix tag
+# 'git shortlog -s -n' # top contributors
+# 'git log --follow <FILE_PATH>'
+# 'git blame'
+# git show <COMMIT_HASH> " 
+# git show <COMMIT_HASH> -- path/to/file.txt
+# git show --name-only <COMMIT_HASH>
+# git log -p <MERGED_COMMIT_PR> " show commits and files modified
+# git diff --name-only HEAD^ HEAD
+# git diff <OTHER_COMMIT_HASH> -- <PATH/TO/FILE> " difference between file of current branch and other file path
+# git log --since="2025-07-01" --until="2025-08-01"
+
 
 # months aliases
 alias jan='cal -m 01'

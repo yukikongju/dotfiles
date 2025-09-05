@@ -132,6 +132,7 @@ export MYVIMRC="$HOME/.vimrc"
 export MYZSHRC="$HOME/.zshrc"
 export MYTMUXCONF="$HOME/.tmux.conf"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 export PATH="(python3 -m site --user-base)/bin:$PATH"
 
 
