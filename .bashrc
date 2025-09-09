@@ -269,3 +269,10 @@ function generate_readme() {
 }
 
 
+# Directory size: 
+# su -sh .
+# Files Size Recusrively
+# du -hsc *
+
+
+
