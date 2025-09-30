@@ -275,6 +275,12 @@ setup_pandoc() {
     echo "\n --- Setting up Pandoc --- \n"
     $install_function pandoc 
 
+    # install latexmk or MacTex
+    # brew install --cask mactex
+    # sudo apt install latexmk
+    # which pdflatex
+    # which latexmk
+
     # install xelatex: https://tug.org/mactex/mactex-download.html [5.7G]
 
     # install latex: -- https://tug.org/mactex/mactex-download.html
