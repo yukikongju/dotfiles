@@ -106,6 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+# ensure shell hook is installed to use "direnv allow" effectively
+eval "$(direnv hook zsh)"
+
 # OH-My-POSH SETUP
 # themes: https://ohmyposh.dev/docs/themes
 OHMYPOSH_THEME="amro"
