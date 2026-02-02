@@ -115,19 +115,46 @@ eval "$(direnv hook zsh)"
 OHMYPOSH_THEME="amro"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
 
+# FIXME: show venv 
+# oh-my-posh config export --config amro --output test.json
+# oh-my-posh init your-shell --config path/to/your-theme.omp.json | Invoke-Expression
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # ---- GIT ALIASES ----
+
 #* CLI Aliases
 alias gs='git status'
 alias gc='git commit -m'
 alias gcnv='git commit --no-verify -m'
 alias gco='git checkout'
 
-#* Directory Aliases
+
+# ---- DIRECTORY NAVIGATION ----
+
+##* Directoy Navigation
 alias home='cd ~ && ls'
-alias dashboards='cd ~/Documents/dashboards && ls -a'
-# alias workspace='cd ~/workspace && ls -a'
-# alias ad-hoc='cd ~/workspace/hds-ad-hoc && ls -a'
-# alias pub-sub-load='cd ~/workspace/pub-sub-load && ls -a'
+alias wiki='cd $HOME/Projects/VimWikiNotes/'
+
+# Navigating to WorkAdhoc Directory
+wadoc() { 
+    local year month dir_path
+    year=$(date +%Y)
+    month=$(date +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+    dir_path="$HOME/Projects/VimWikiNotes/WorkAdHoc/$year/$month"
+    echo "Switching to $dir_path"
+    cd "$dir_path"
+}
+
+# ---- CURRENT PROJECT SHORTCUT ----
+
+##* PERSONNAL
+alias carseg='cd $HOME/Projects/Miscellaneous-Projects/CarSegmentation && code .'
+
+##* WORK
+alias scoping='cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py'
+alias inges='cd $HOME/Documents/ds-ingestion/'
+alias dash="cd $HOME/Documents/dashboards && code ."
 
 
 # ---- ENVIRONMENT VARIABLES ----
@@ -148,3 +175,4 @@ if [ -f '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . 
 source ~/Downloads/google-cloud-sdk/completion.zsh.inc
 
 
+export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@3

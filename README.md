@@ -168,6 +168,14 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
   </script>
 ```
 
+## Chrome Extensions
+
+- Remove Paywalls
+- Ad Blocks
+- 1Password
+- Tab Suspender
+
+
 ## Go to apps for different OS
 
 **General**
@@ -182,7 +190,9 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 
 - system manager: RayCast
     * extensions: chrome, slack, visual studio code, arc, perplexity, github, obsidian
-- window tiling system: [Rectangle](https://rectangleapp.com/)
+- Window tiling system: [Rectangle](https://rectangleapp.com/)
+- Sidebar Browser: Arc
+- Color Dimmer: f.lux
 
 
 ## Ressources
@@ -240,4 +250,5 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
     * Github Pull Requests
     * Git Blame
 - Better Comments
+- [Open VSCode from terminal](https://www.freecodecamp.org/news/how-to-open-visual-studio-code-from-your-terminal/)
 

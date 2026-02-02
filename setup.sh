@@ -1,5 +1,11 @@
 #!/bin/sh
 
+get_obsidian() {
+    # plugins: Excalidraw, Dataview, Templater, Calendar, Kanban, Journal
+
+}
+
+
 get_os_name() {
     os_uname=$(uname -s)
     case $os_uname in 

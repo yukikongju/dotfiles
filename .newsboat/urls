@@ -19,6 +19,7 @@ https://www.linkedin.com/blog/engineering "de" "~LinkedIn Engieering Blog"
 "DL Research"
 https://research.netflix.com/ "dl research" "~Netflix Research"
 https://research.atspotify.com/feed/ "dl research" "~Research Spotify R&D" 
+# https://blog.christianperone.com/
 
 "Machine Learning"
 https://proceedings.neurips.cc/ "ml" "~Neurips Proceedings"
@@ -111,6 +112,7 @@ Economy
 
 "Programming Languages "
 http://lambda-the-ultimate.org/tracker "programming-languages" "~Lambda the Ultimate"
+# http://ithare.com/
 # http://troubles.md/ "programming-languages"
 # https://docs.python.org/3/whatsnew/index.html "programming-languages" "Python What's New"
 # https://en.cppreference.com/w/cpp/language/history "programming-languages" "C++ Wha'ts New"
@@ -260,8 +262,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg "li
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwgKmJM4ZJQRJ-U5NjvR2dg "livestream" "~geohotz Archive"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "livestream" "~Jon Gjengset"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ "livestream" "~Andreas Kling"
-# anthonywritescode
-
+https://www.youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w "livestream" "anthonywritescode"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOt3Ssxx03pxLdH3qzyTAsQ "livestream" "Daniel Hirsch"
 
 # =============================================================================
 
