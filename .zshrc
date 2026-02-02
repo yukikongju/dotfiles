@@ -124,17 +124,17 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # ---- GIT ALIASES ----
 
 #* CLI Aliases
-alias gs='git status'
-alias gc='git commit -m'
-alias gcnv='git commit --no-verify -m'
-alias gco='git checkout'
+alias gs="git status"
+alias gc="git commit -m"
+alias gcnv="git commit --no-verify -m"
+alias gco="git checkout"
 
 
 # ---- DIRECTORY NAVIGATION ----
 
 ##* Directoy Navigation
-alias home='cd ~ && ls'
-alias wiki='cd $HOME/Projects/VimWikiNotes/'
+alias home="cd ~ && ls"
+alias wiki="cd $HOME/Projects/VimWikiNotes/"
 
 # Navigating to WorkAdhoc Directory
 wadoc() { 
@@ -149,12 +149,13 @@ wadoc() {
 # ---- CURRENT PROJECT SHORTCUT ----
 
 ##* PERSONNAL
-alias carseg='cd $HOME/Projects/Miscellaneous-Projects/CarSegmentation && code .'
+alias carseg="cd $HOME/Projects/Miscellaneous-Projects/CarSegmentation && code ."
 
 ##* WORK
-alias scoping='cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py'
-alias inges='cd $HOME/Documents/ds-ingestion/'
+alias scoping="cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py"
+alias inges="cd $HOME/Documents/ds-ingestion/"
 alias dash="cd $HOME/Documents/dashboards && code ."
+alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && uv run python3 -m notebook"
 
 
 # ---- ENVIRONMENT VARIABLES ----
