@@ -150,12 +150,35 @@ wadoc() {
 
 ##* PERSONNAL
 alias carseg="cd $HOME/Projects/Miscellaneous-Projects/CarSegmentation && code ."
+alias sigproc="cd $HOME/Projects/Miscellaneous-Projects/sigproc"
+alias rwalk="cd $HOME/Projects/Miscellaneous-Projects/RandomWalk"
+alias tidytuesday='
+cd $HOME/Projects/tidytuesday/ && \
+tmux split-window -v "uv run python -m notebook" && \
+tmux select-pane -U && \
+tmux split-window -v "vi $HOME/Projects/tidytuesday/README.md"
+'
+
+# TODO: open arc link with learning
+
+##* LEARNING
+alias spatial='
+cd "$HOME/Projects/Miscellaneous-Projects/SpatialThoughts" && \
+tmux split-window -v "uv run python -m notebook" && \
+tmux select-pane -U && \
+tmux split-window -v "vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-29.md"
+'
+alias radioref='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-24.md'
+alias econ='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-30.md'
+alias mila="cd $HOME/Projects/MilaCourse/IFT6765/notes" # TODO: open course link
+alias deepml="cd $HOME/Projects/LeetCodeTraining/DeepML/" # TODO: open deeml link
+alias lean="cd $HOME/Projects/LeetCodeTraining/Lean/" # TODO: open lean link
 
 ##* WORK
 alias scoping="cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py"
 alias inges="cd $HOME/Documents/ds-ingestion/"
 alias dash="cd $HOME/Documents/dashboards && code ."
-alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && uv run python3 -m notebook"
+alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
 
 
 # ---- ENVIRONMENT VARIABLES ----
