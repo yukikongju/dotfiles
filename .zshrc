@@ -137,7 +137,7 @@ alias home="cd ~ && ls"
 alias wiki="cd $HOME/Projects/VimWikiNotes/"
 
 # Navigating to WorkAdhoc Directory
-wadoc() { 
+wadhoc() { 
     local year month dir_path
     year=$(date +%Y)
     month=$(date +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
@@ -170,15 +170,24 @@ tmux split-window -v "vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-0
 '
 alias radioref='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-24.md'
 alias econ='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-30.md'
+alias silge='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-20.md'
+
 alias mila="cd $HOME/Projects/MilaCourse/IFT6765/notes" # TODO: open course link
 alias deepml="cd $HOME/Projects/LeetCodeTraining/DeepML/" # TODO: open deeml link
 alias lean="cd $HOME/Projects/LeetCodeTraining/Lean/" # TODO: open lean link
+alias wil='
+cd $HOME/Projects/VimWikiNotes/WhatIveLearned/
+vi diary/diary.md
+'
 
 ##* WORK
 alias scoping="cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py"
 alias inges="cd $HOME/Documents/ds-ingestion/"
 alias dash="cd $HOME/Documents/dashboards && code ."
 alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
+
+##* UTILS
+alias snips="cd $HOME/dotfiles/.vim/UltiSnips/"
 
 
 # ---- ENVIRONMENT VARIABLES ----

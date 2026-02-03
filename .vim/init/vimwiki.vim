@@ -56,6 +56,8 @@ for [key, val] in items(g:vimwiki_folder_dct)
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md',
 	    \ 'path_html': _vimwiki_base_path . "/" . key . "/site_html/",
+	    \ 'diary_rel_path': 'diary/',
+	    \ 'diary_index': 'diary',
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
 	    \ 'auto_diary-index': 1,
@@ -149,7 +151,6 @@ nnoremap <leader>wa :VimwikiAll2HTML<CR>
 " Thanks to anton-fomin!: https://github.com/vimwiki/vimwiki/issues/1093
 let g:vimwiki_key_mappings = {
             \ 'all_maps': 1,
-            \ 'global': 1,
             \ 'headers': 1,
             \ 'text_objs': 1,
             \ 'table_format': 1,
@@ -160,6 +161,7 @@ let g:vimwiki_key_mappings = {
             \ 'mouse': 1,
             \ }
 
+" \ 'global': 1,
 
 " THIS CODE FORBID US TO PRESS ENTER in mardkown files
 " augroup VimwikiRemaps
