@@ -138,12 +138,46 @@ alias wiki="cd $HOME/Projects/VimWikiNotes/"
 
 # Navigating to WorkAdhoc Directory
 wadhoc() { 
-    local year month dir_path
-    year=$(date +%Y)
-    month=$(date +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+    # Usage
+    # wadhoc → current month
+    # wadhoc -1 → last month
+    # wadhoc +1 → next month
+    # wadhoc -3 → 3 months ago
+
+    local offset year month dir_path
+    if [[ $# -eq 0 ]]; then
+        # Base month (no offset logic at all)
+        year=$(date +%Y)
+        month=$(date +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+    else
+        offset=$1
+
+        # Validate offset
+        if [[ ! "$offset" =~ ^[+-]?[0-9]+$ ]]; then
+            echo "Invalid offset: '$offset'"
+            echo "Usage: wadhoc [±N]"
+            return 1
+        fi
+
+        # macOS (BSD date)
+        year=$(date -v"${offset}"m +%Y)
+        month=$(date -v"${offset}"m +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+
+	# linux
+	# year=$(date -d "$offset month" +%Y)
+	# month=$(date -d "$offset month" +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+    fi
+
     dir_path="$HOME/Projects/VimWikiNotes/WorkAdHoc/$year/$month"
+
+    if [[ ! -d "$dir_path" ]]; then
+	echo "Directory does not exist, creating it"
+	mkdir -p "$dir_path"
+    fi
+
     echo "Switching to $dir_path"
-    cd "$dir_path"
+    cd "$dir_path" || return 1
+
 }
 
 # ---- CURRENT PROJECT SHORTCUT ----
@@ -172,13 +206,16 @@ alias radioref='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-24.m
 alias econ='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-30.md'
 alias silge='vi $HOME/Projects/VimWikiNotes/WhatIveLearned/diary/2026-01-20.md'
 
-alias mila="cd $HOME/Projects/MilaCourse/IFT6765/notes" # TODO: open course link
 alias deepml="cd $HOME/Projects/LeetCodeTraining/DeepML/" # TODO: open deeml link
 alias lean="cd $HOME/Projects/LeetCodeTraining/Lean/" # TODO: open lean link
 alias wil='
 cd $HOME/Projects/VimWikiNotes/WhatIveLearned/
 vi diary/diary.md
 '
+
+alias mila="cd $HOME/Projects/MilaCourse/IFT6765/notes" # TODO: open course link
+alias vqa="cd $HOME/Projects/MilaCourse/IFT6765/paper-presentations/vqa/"
+
 
 ##* WORK
 alias scoping="cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py"
