@@ -180,6 +180,50 @@ wadhoc() {
 
 }
 
+padhoc() { 
+    # Usage
+    # padhoc → current month
+    # padhoc -1 → last month
+    # padhoc +1 → next month
+    # padhoc -3 → 3 months ago
+
+    local offset year month dir_path
+    if [[ $# -eq 0 ]]; then
+        # Base month (no offset logic at all)
+        year=$(date +%Y)
+        month=$(date +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+    else
+        offset=$1
+
+        # Validate offset
+        if [[ ! "$offset" =~ ^[+-]?[0-9]+$ ]]; then
+            echo "Invalid offset: '$offset'"
+            echo "Usage: wadhoc [±N]"
+            return 1
+        fi
+
+        # macOS (BSD date)
+        year=$(date -v"${offset}"m +%Y)
+        month=$(date -v"${offset}"m +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+
+	# linux
+	# year=$(date -d "$offset month" +%Y)
+	# month=$(date -d "$offset month" +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+    fi
+
+    dir_path="$HOME/Projects/VimWikiNotes/PersonalAdHoc/$year/$month"
+
+    if [[ ! -d "$dir_path" ]]; then
+	echo "Directory does not exist, creating it"
+	mkdir -p "$dir_path"
+    fi
+
+    echo "Switching to $dir_path"
+    cd "$dir_path" || return 1
+
+}
+
+
 # ---- CURRENT PROJECT SHORTCUT ----
 
 ##* PERSONNAL
@@ -213,18 +257,22 @@ cd $HOME/Projects/VimWikiNotes/WhatIveLearned/
 vi diary/diary.md
 '
 
-alias mila="cd $HOME/Projects/MilaCourse/IFT6765/notes" # TODO: open course link
+##* SCHOOL
+alias mila="cd $HOME/Projects/MilaCourse/IFT6765/" # TODO: open course link
 alias vqa="cd $HOME/Projects/MilaCourse/IFT6765/paper-presentations/vqa/"
-
+alias papers="cd $HOME/Projects/MilaCourse/IFT6765/papers/"
+alias cert="cd $HOME/Projects/satellite/certifications/CanadianBasicQualification/"
 
 ##* WORK
 alias scoping="cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py"
 alias inges="cd $HOME/Documents/ds-ingestion/"
+# Note: if "code" doesn't work, then `Ctrl+Shift+P` and Select the command Shell Command: Install 'code' command in PATH
 alias dash="cd $HOME/Documents/dashboards && code ."
 alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
 
 ##* UTILS
 alias snips="cd $HOME/dotfiles/.vim/UltiSnips/"
+alias wiggler="cd $HOME/Projects/Miscellaneous-Projects/MouseWiggler && python3 wiggler.py 100 3"
 
 
 # ---- ENVIRONMENT VARIABLES ----
