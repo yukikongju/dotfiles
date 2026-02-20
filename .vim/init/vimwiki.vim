@@ -21,6 +21,15 @@ let g:vimwiki_folding='expr' "list, '', expr, syntax,
 " let g:vimwiki_all2html_args = '-f markdown+tex_math_dollars+raw_tex -t html5 --mathjax'
 " let g:vimwiki_all2html_postprocessor = 'tidy -q -i -w 1000 -c -utf8'
 
+" FIXME Colors: deactivating vimwiki colors to use default theme colors - see *vimwiki-syntax-headers* (works but deactivate dashes)
+" augroup VimwikiNoColors
+"     autocmd!
+"     autocmd FileType vimwiki setlocal syntax=markdown
+" augroup END
+
+
+" let g:vimwiki_hl_headers = 0
+" let g:vimwiki_hl_cb_checked = 0
 
 
 " change vimwiki base path based on os

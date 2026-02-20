@@ -40,9 +40,8 @@ Plug 'mhinz/vim-startify'  " fancy start screen and session manager
 Plug 'mileszs/ack.vim' " use :Ack in vim -> :Ack <pattern> <file>
 Plug 'rking/ag.vim'    " use :Ag in vim -> SilverSearcher
 
-
 " Colorscheme' & Syntax Highlight
-Plug 'itchyny/lightline.vim'          " Colorscheme for vim modes
+" Plug 'itchyny/lightline.vim'          " Colorscheme for vim modes
 Plug 'scrooloose/nerdcommenter'       " Change indentation behavior
 Plug 'morhetz/gruvbox'                " Gruvbox color scheme
 Plug 'ap/vim-css-color'               " Highlight colors in css files
@@ -54,25 +53,18 @@ Plug 'vim-airline/vim-airline-themes' " More status bar themes
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete for all
 Plug 'lunacookies/vim-sh' " syntax highlight for sh
 
-" autocomplete for react development
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
-
 " Snippets
 Plug 'neoclide/coc-snippets'       " snippet with coc
 Plug 'honza/vim-snippets'          " snippets for various languages
 Plug 'SirVer/ultisnips'            " Ultimate snippet solution for vim
-Plug 'gillescastel/latex-snippets' " latex snippets
-Plug 'vim-latex/vim-latex'
+" Plug 'gillescastel/latex-snippets' " latex snippets
+" Plug 'vim-latex/vim-latex'
 
 " Latex compiler
 Plug 'lervag/vimtex'
 
 " Debugger
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 
 " Git
 Plug 'tpope/vim-fugitive'     " generate page to view commit message
@@ -273,27 +265,13 @@ let c_no_curly_error=1
 " Deactivate Vim Rooter echoing ( only echoes for Vimwiki)
 let g:rooter_silent_chdir = 1
 
-" Vim Configs
-source ~/.vim/init/ack.vim
-source ~/.vim/init/colors.vim
-source ~/.vim/init/coc.vim
-source ~/.vim/init/fzf.vim
-source ~/.vim/init/functions.vim
-source ~/.vim/init/git.vim
-source ~/.vim/init/mappings.vim
-source ~/.vim/init/snippets.vim
-source ~/.vim/init/startify.vim
-source ~/.vim/init/thesaurus.vim
-source ~/.vim/init/tmux.vim
-source ~/.vim/init/tree.vim
-source ~/.vim/init/utils.vim
-source ~/.vim/init/vimspector.vim
-source ~/.vim/init/vimwiki.vim
-source ~/.vim/init/which-key.vim
+" Vim Configs: loading vim files `source ~/.vim/init/*.vim`
+for s:file in split(globpath('~/.vim/init', '*.vim'), '\n')
+    execute 'source' fnameescape(s:file)
+endfor
 
 " Load pluggins: IDK why it doesn't automatically
 " source ~/.vim/plugged/
-
 
 " run .profile
 " source ~/.profile
@@ -329,7 +307,7 @@ source ~/.vim/init/which-key.vim
 " Plug 'tpope/vim-sleuth'                                   " automatically adjust shiftwidth and expandtab
 " Plug 'vim-scripts/c.vim' " c/c++ ide
 " Plug 'artur-shaik/vim-javacomplete2' " autocomplete for java
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 " Plug 'racer-rust/vim-racer'
 " Plug 'fatih/vim-go'
 " Plug 'neoclide/coc-tabnine'
@@ -360,5 +338,12 @@ Plug 'rust-lang/rust.vim'
 " Plug 'jpalardy/vim-slime', { 'for': 'python' }
 " Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 " Plug 'ivanov/vim-ipython'
+
+" autocomplete for react development
+" Plug 'pangloss/vim-javascript'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'jparise/vim-graphql'
 
 " Python Conceal: https://github.com/ehamberg/vim-cute-python

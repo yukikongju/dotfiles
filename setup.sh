@@ -143,6 +143,12 @@ setup_node() {
 
 }
 
+setup_nvim() {
+    $install_function neovim
+
+}
+
+
 setup_vim() {
     echo "\n --- Setting up Vim --- \n"
     # Download vim
