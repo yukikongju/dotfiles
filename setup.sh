@@ -143,8 +143,11 @@ setup_node() {
 
 }
 
-setup_nvim() {
+setup_neovim() {
     $install_function neovim
+
+    # TODO create symlinks - .config/nvim/
+    ln -s ~/dotfiles/nvim/init.lua .config/nvim/init.lua
 
 }
 
