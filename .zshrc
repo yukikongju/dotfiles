@@ -121,6 +121,9 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPO
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# credentials
+export GOOGLE_APPLICATION_CREDENTIALS=~/keys/relax-server-06b2a61c0080.json
+
 # ---- GIT ALIASES ----
 
 #* CLI Aliases

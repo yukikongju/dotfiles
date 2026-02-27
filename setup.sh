@@ -1,9 +1,9 @@
 #!/bin/sh
 
-get_obsidian() {
-    # plugins: Excalidraw, Dataview, Templater, Calendar, Kanban, Journal
+# get_obsidian() {
+#     # plugins: Excalidraw, Dataview, Templater, Calendar, Kanban, Journal
 
-}
+# }
 
 
 get_os_name() {
@@ -38,6 +38,7 @@ override_sym_links_dir() {
     fi
 
     # creating directory
+    # FIXME: create nested directory instead
     mkdir $directory_abs_path
 
     # creating sym links for all files in path
@@ -71,7 +72,7 @@ confirm_directory_config_override() {
 	    echo "Keeping old $directory_abs_path configs."
 	fi
     else
-	echo "Setting up Sym Links for Newsboat"
+	echo "Setting up Sym Links for <PLACEHOLDER>"
 	override_sym_links_dir $dotfile_abs_path $directory_abs_path
     fi
 }
@@ -144,10 +145,18 @@ setup_node() {
 }
 
 setup_neovim() {
-    $install_function neovim
+    # $install_function neovim
 
     # TODO create symlinks - .config/nvim/
-    ln -s ~/dotfiles/nvim/init.lua .config/nvim/init.lua
+    # ln -s ~/dotfiles/nvim/init.lua .config/nvim/init.lua
+
+    NVIM_PLUGINS_DIR=~/.config/nvim/lua/plugins
+    DOTFILE_NVIM_PLUGINS_DIR=~/dotfiles/nvim/lua/plugins
+    confirm_directory_config_override $DOTFILE_NVIM_PLUGINS_DIR $NVIM_PLUGINS_DIR
+
+    NVIM_NATIVE_CONFIGS_DIR=~/.config/nvim/lua/configs
+    DOTFILE_NVIM_NATIVE_CONFIGS_DIR=~/dotfiles/nvim/lua/configs
+    confirm_directory_config_override $DOTFILE_NVIM_NATIVE_CONFIGS_DIR $NVIM_NATIVE_CONFIGS_DIR
 
 }
 
@@ -338,4 +347,4 @@ install_function=$(get_os_install_function $os_name)
 # setup_pandoc
 # setup_zsh
 # setup_ohmyposh
-
+setup_neovim
