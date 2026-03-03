@@ -15,7 +15,8 @@ return {
                 --"debugpy",
                 "mypy",
                 "ruff",
-                "pyright"
+                "pyright",
+                "clangd"
             }
         },
         --   config = function()
@@ -64,6 +65,7 @@ return {
             vim.lsp.config("lua_ls", { capabilities = capabilities })
             vim.lsp.config("basedpyright", { capabilities = capabilities })
             vim.lsp.config("rust_analyzer", { capabilities = capabilities })
+            vim.lsp.config("clangd", { capabilities = capabilities })
             --vim.lsp.config("debugpy", { capabilities = capabilities })
 
             --vim.lsp.config("ruff", {
@@ -103,7 +105,7 @@ return {
 
 
 
-            vim.lsp.enable({ "ts_ls", "lua_ls", "basedpyright", "rust_analyzer" }) -- "ruff"
+            vim.lsp.enable({ "ts_ls", "lua_ls", "basedpyright", "rust_analyzer", "clangd" }) -- "ruff"
             vim.keymap.set("n", "<leader>gk", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {})
             --vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

@@ -147,6 +147,18 @@ setup_node() {
 setup_neovim() {
     # $install_function neovim
 
+    # for ultisnips
+    # pip install pynvim
+    # python3 -m venv ~/.venvs/neovim
+    # npm install -g neovim 
+    # ~/.venvs/neovim/bin/pip install --upgrade pip pynvim
+    # ~/.venvs/neovim/bin/python -c "import pynvim; print(pynvim.__version__)"
+
+    # for markdown preview
+    # cd ~/.local/share/nvim/lazy/markdown-preview.nvim/app
+    # npm install
+    # npm ls tslib 
+
     # TODO create symlinks - .config/nvim/
     # ln -s ~/dotfiles/nvim/init.lua .config/nvim/init.lua
 
