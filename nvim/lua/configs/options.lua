@@ -1,6 +1,6 @@
 local opt = vim.opt
 
--- 
+--
 vim.cmd("set nocompatible")
 vim.cmd("filetype plugin on")
 vim.cmd("filetype plugin indent on")
@@ -49,7 +49,10 @@ opt.hidden = true
 
 -- Line numbers
 opt.number = true
-vim.opt.relativenumber = true
+opt.relativenumber = true
+
+-- Screen Positioning Behavior: zt, zz, zb
+opt.scrolloff = 8
 
 -- Searching
 opt.hlsearch = true
@@ -67,11 +70,11 @@ opt.background = "dark"
 
 -- Clipboard
 if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
-  vim.opt.clipboard = "unnamed"
+    vim.opt.clipboard = "unnamed"
 elseif vim.fn.has("mac") == 1 then
-  vim.opt.clipboard = "unnamed,unnamedplus"
+    vim.opt.clipboard = "unnamed,unnamedplus"
 else
-  vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 end
 --
 --

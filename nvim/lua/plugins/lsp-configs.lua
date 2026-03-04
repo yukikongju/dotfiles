@@ -15,7 +15,7 @@ return {
                 --"debugpy",
                 "mypy",
                 "ruff",
-                "pyright",
+                --"pyright",
                 "clangd"
             }
         },
@@ -113,6 +113,8 @@ return {
             vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {})
             vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, {})
+            vim.lsp.inlay_hint.enable(true)
 
             -- autoformat on save
             vim.api.nvim_create_autocmd("BufWritePre", {
