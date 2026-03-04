@@ -147,6 +147,10 @@ setup_node() {
 setup_neovim() {
     # $install_function neovim
 
+    # neovide installation: https://neovide.dev/installation.html
+    # brew install --cask neovide
+    # sudo launchctl config user path "$(brew --prefix)/bin:${PATH}"
+
     # for ultisnips
     # pip install pynvim
     # python3 -m venv ~/.venvs/neovim
