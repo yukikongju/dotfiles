@@ -31,5 +31,7 @@ require("lazy").setup("plugins")
 
 -- require'nvim-treesitter'.install { 'rust', 'javascript', 'zig' , 'python'}
 
+-- FIXME: recursively load files in "configs"
 require("configs/mappings")
 require("configs/options")
+require("configs/floatingbuf")
