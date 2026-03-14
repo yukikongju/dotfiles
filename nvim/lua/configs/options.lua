@@ -1,7 +1,5 @@
 local opt = vim.opt
 
-
-
 -- Indentation and tabulation
 opt.formatoptions = "tcqrn1"
 opt.shiftwidth = 4
@@ -17,6 +15,18 @@ opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
 opt.autowrite = true
+
+-- cursor
+--opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+--vim.opt.guicursor = "n-v-c-sm:block-Cursor,i-ci-ve:ver25-Cursor,r-cr-o:hor20-Cursor"
+--opt.guicursor = "n-v-c-sm:block-Cursor,i-ci-ve:ver25-Cursor,r-cr-o:hor20-Cursor"
+--vim.api.nvim_set_hl(0, "Cursor", { bg = "#ffffff" })
+--vim.api.nvim_create_autocmd("ColorScheme", {
+--pattern = "*",
+--callback = function()
+--vim.api.nvim_set_hl(0, "Cursor", { bg = "#ffffff" })
+--end,
+--})
 
 -- File Stats
 opt.ruler = true

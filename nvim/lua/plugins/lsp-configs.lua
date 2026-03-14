@@ -19,7 +19,7 @@ return {
                 "tsserver",
                 --"pyright",
                 "clangd",
-                "stylua"
+                -- "stylua"
             }
         },
         --   config = function()

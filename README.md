@@ -185,6 +185,7 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 - [excalidraw](https://excalidraw.com/)
 - [witeboard](https://witeboard.com/)
 - [draw.io]
+- [neovide](https://neovide.dev/installation.html): smoother neovim gui
 
 
 **MacOS**
