@@ -15,8 +15,11 @@ return {
                 --"debugpy",
                 "mypy",
                 "ruff",
+                "flake8",
+                "tsserver",
                 --"pyright",
-                "clangd"
+                "clangd",
+                "stylua"
             }
         },
         --   config = function()
@@ -28,7 +31,7 @@ return {
         lazy = false,
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "basedpyright", "ts_ls", "rust_analyzer" }, --  "pyrefly", "ruff"
+                ensure_installed = { "lua_ls", "basedpyright", "ts_ls", "rust_analyzer", }, --  "pyrefly", "ruff"
                 auto_install = true,
             })
         end,
@@ -104,17 +107,32 @@ return {
             }
 
 
-
             vim.lsp.enable({ "ts_ls", "lua_ls", "basedpyright", "rust_analyzer", "clangd" }) -- "ruff"
             vim.keymap.set("n", "<leader>gk", vim.lsp.buf.hover, {})
-            vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {})
             --vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
             vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, {})
             vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {})
-            vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+            --vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {})
+            --vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
             vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, {})
             vim.lsp.inlay_hint.enable(true)
+
+            -- telescope
+            vim.keymap.set("n", "<leader>gr", require("telescope.builtin").lsp_references, {})      -- replaces vim.lsp.buf.references
+            vim.keymap.set("n", "<leader>gi", require("telescope.builtin").lsp_implementations, {}) -- replaces vim.lsp.buf.implementation
+            vim.keymap.set("n", "<leader>fs", require("telescope.builtin").lsp_document_symbols, {})
+            vim.keymap.set("n", "<leader>fS", require("telescope.builtin").lsp_workspace_symbols, {})
+
+
+            -- Disable inlay hints in insert mode (workaround for nvim 0.11.x col out-of-range bug)
+            vim.api.nvim_create_autocmd("InsertEnter", {
+                callback = function() vim.lsp.inlay_hint.enable(false) end,
+            })
+            vim.api.nvim_create_autocmd("InsertLeave", {
+                callback = function() vim.lsp.inlay_hint.enable(true) end,
+            })
 
             -- autoformat on save
             vim.api.nvim_create_autocmd("BufWritePre", {

@@ -20,7 +20,12 @@ return {
         "hrsh7th/nvim-cmp",
         config = function()
             local cmp = require("cmp")
+            local types = require("cmp.types")
             require("luasnip.loaders.from_vscode").lazy_load()
+            require("luasnip.loaders.from_lua").load({
+                paths = "~/.config/nvim/snippets/"
+            })
+
             --require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
 
             cmp.setup({
@@ -39,6 +44,7 @@ return {
                     ["<C-e>"] = cmp.mapping.abort(),
                     ["<C-Space>"] = cmp.mapping.complete(),
                     ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+                    --["<C-y>"] = cmp.mapping.confirm({ select = true }),
                     ["<C-n>"] = cmp.mapping.select_next_item(),
                     ["<C-p>"] = cmp.mapping.select_prev_item(),
                     --["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -48,21 +54,37 @@ return {
                 sorting = {
                     priority_weight = 2,
                     comparators = {
-                        cmp.config.compare.score,
                         cmp.config.compare.exact,
-                        cmp.config.compare.offset,
-                        cmp.config.compare.kind,
+                        cmp.config.compare.score,
+
+                        -- De-prioritize snippet items unless prefix strongly matches
+                        function(entry1, entry2)
+                            local k1 = entry1:get_kind()
+                            local k2 = entry2:get_kind()
+                            local s1 = k1 == types.lsp.CompletionItemKind.Snippet
+                            local s2 = k2 == types.lsp.CompletionItemKind.Snippet
+                            if s1 ~= s2 then
+                                return not s1 -- non-snippets first
+                            end
+                        end,
+
+                        -- prefer recently used and locality
+                        cmp.config.compare.recently_used,
+                        cmp.config.compare.locality,
+
+                        -- stable fall back
+                        --cmp.config.compare.offset,
+                        --cmp.config.compare.kind,
                         cmp.config.compare.length,
                         cmp.config.compare.order,
                     },
                 },
                 sources = cmp.config.sources({
-                    { name = "nvim_lsp", max_item_count = 10 },
-                    --{ name = "nvim_lsp" },
-                    { name = "luasnip" },
-                    --{ name = "path" },
-                    --{ name = "buffer" },
-                    --{name = "ultisnips"},
+                    { name = "nvim_lsp", group_index = 1, priority = 700, max_item_count = 10 },
+                    { name = "luasnip",  group_index = 1, priority = 1000 },
+                    --{ name = "ultisnips", group_index = 1, priority = 1000 },
+                    --{ name = "path",     group_index = 2, priority = 400 },
+                    --{ name = "buffer",   group_index = 2, priority = 300 },
                 }),
             })
         end,

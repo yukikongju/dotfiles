@@ -1,19 +1,16 @@
 local opt = vim.opt
 
---
-vim.cmd("set nocompatible")
-vim.cmd("filetype plugin on")
-vim.cmd("filetype plugin indent on")
 
 
 -- Indentation and tabulation
 opt.formatoptions = "tcqrn1"
 opt.shiftwidth = 4
+opt.softtabstop = 4
+opt.tabstop = 2
 opt.smarttab = true
 opt.smartindent = true
 opt.autoindent = true
 opt.shiftround = false
-opt.softtabstop = 4
 
 -- Swapfiles
 opt.backup = false
@@ -83,6 +80,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Highlight when yanking (copying) text',
     group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
     callback = function()
-        vim.highlight.on_yank()
+        vim.hl.on_yank()
     end,
 })

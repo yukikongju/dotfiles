@@ -25,9 +25,11 @@ map('n', 'K', 'm`o<Esc>``')
 map('n', '<leader>p', '"0p')
 map('n', '<leader>P', '"0P')
 
--- Move lines
+-- Add lines below/above
 map('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
 map('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
+
+-- Move lines
 map('n', '<C-j>', ':m .+1<CR>==', { silent = true })
 map('n', '<C-k>', ':m .-2<CR>==', { silent = true })
 

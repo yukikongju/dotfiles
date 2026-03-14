@@ -1,10 +1,9 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("filetype plugin on")
 vim.g.mapleader = ","
-
+vim.cmd("set expandtab")
+vim.cmd("set nocompatible")
+vim.cmd("filetype plugin on")
+vim.cmd("filetype plugin indent on")
+--
 -- Pin Python provider so plugins like UltiSnips use a known interpreter.
 --if vim.fn.executable(vim.fn.expand("~/.venvs/neovim/bin/python")) == 1 then
 --vim.g.python3_host_prog = vim.fn.expand("~/.venvs/neovim/bin/python")

@@ -174,6 +174,7 @@ For more information, see `:h vimwiki` -> `vimwiki-syntax-math`
 - Ad Blocks
 - 1Password
 - Tab Suspender
+- Read Aloud
 
 
 ## Go to apps for different OS
