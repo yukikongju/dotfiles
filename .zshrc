@@ -191,19 +191,23 @@ padhoc() {
     # padhoc -1 → last month
     # padhoc +1 → next month
     # padhoc -3 → 3 months ago
+    # Behavior: Create New directory / Change directory
+    # - README: Mindset, What I've Learned
+    # - From Previous Month: chores.md, roadmap.md (projects + readings)
 
     local offset year month dir_path
     if [[ $# -eq 0 ]]; then
         # Base month (no offset logic at all)
         year=$(date +%Y)
         month=$(date +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
+        offset=0
     else
         offset=$1
 
         # Validate offset
         if [[ ! "$offset" =~ ^[+-]?[0-9]+$ ]]; then
             echo "Invalid offset: '$offset'"
-            echo "Usage: wadhoc [±N]"
+            echo "Usage: padhoc [±N]"
             return 1
         fi
 
@@ -211,16 +215,48 @@ padhoc() {
         year=$(date -v"${offset}"m +%Y)
         month=$(date -v"${offset}"m +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
 
+    # echo $((offset))
+
 	# linux
 	# year=$(date -d "$offset month" +%Y)
 	# month=$(date -d "$offset month" +%m-%b-%Y | tr '[:lower:]' '[:upper:]')
     fi
 
-    dir_path="$HOME/Projects/VimWikiNotes/PersonalAdHoc/$year/$month"
+    local dir_path="$HOME/Projects/VimWikiNotes/PersonalAdHoc/$year/$month"
 
     if [[ ! -d "$dir_path" ]]; then
-	echo "Directory does not exist, creating it"
-	mkdir -p "$dir_path"
+      echo "Directory does not exist, creating it"
+      mkdir -p "$dir_path"
+
+        # get previous month
+        local prev_year prev_month
+        if [[ $# -eq 0 ]]; then 
+           prev_year=$(date -v-1m +%Y)
+           prev_month=$(date -v-1m +%m-%b-%Y | tr '[:lower:]' '[:upper:]') 
+        elif [[ $((offset-1)) -eq 0 ]]; then
+           prev_year=$(date +%Y)
+           prev_month=$(date +%m-%b-%Y | tr '[:lower:]' '[:upper:]') 
+        else
+           prev_year=$(date -v"$((offset - 1))"m +%Y)
+           prev_month=$(date -v"$((offset - 1))"m +%m-%b-%Y | tr '[:lower:]' '[:upper:]') 
+        fi
+        local prev_dir_path="$HOME/Projects/VimWikiNotes/PersonalAdHoc/$prev_year/$prev_month"
+        
+        # copy notes from previous months
+        local prev_files_list=("chores.md" "roadmap.md")
+        for file in "${prev_files_list[@]}"; do
+            if [[ -f "${prev_dir_path}/${file}" ]]; then
+                echo "Copying ${file} from $prev_dir_path"
+                cp "${prev_dir_path}/${file}"  "${dir_path}/${file}"
+            else
+                echo "No ${file} found in previous month (${prev_dir_path}). Skipping..."
+            fi
+        done
+
+        # Add readme.md
+        echo "# Personal Adhoc - \n\n## Mindset\n\n## Readings\n\n## What I've Learned\n\n## Reference Docs\n\n" > "${dir_path}/README.md"
+
+
     fi
 
     echo "Switching to $dir_path"
@@ -272,8 +308,8 @@ alias cert="cd $HOME/Projects/satellite/certifications/CanadianBasicQualificatio
 alias scoping="cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py"
 alias inges="cd $HOME/Documents/ds-ingestion/"
 # Note: if "code" doesn't work, then `Ctrl+Shift+P` and Select the command Shell Command: Install 'code' command in PATH
-alias dash="cd $HOME/Documents/dashboards && code ."
-alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
+alias dash="cd $HOME/Documents/dashboards" #  && code .
+# alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
 
 ##* UTILS
 alias snips="cd $HOME/dotfiles/.vim/UltiSnips/"

@@ -43,7 +43,24 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ["<C-e>"] = cmp.mapping.abort(),
                     ["<C-Space>"] = cmp.mapping.complete(),
-                    ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+                    ["<Tab>"] = cmp.mapping(function(fallback)
+                        local luasnip = require("luasnip")
+                        if cmp.visible() then
+                            cmp.confirm({ select = true })
+                        elseif luasnip.locally_jumpable(1) then
+                            luasnip.jump(1)
+                        else
+                            fallback()
+                        end
+                    end, { "i", "s" }),
+                    ["<S-Tab>"] = cmp.mapping(function(fallback)
+                        local luasnip = require("luasnip")
+                        if luasnip.locally_jumpable(-1) then
+                            luasnip.jump(-1)
+                        else
+                            fallback()
+                        end
+                    end, { "i", "s" }),
                     --["<C-y>"] = cmp.mapping.confirm({ select = true }),
                     ["<C-n>"] = cmp.mapping.select_next_item(),
                     ["<C-p>"] = cmp.mapping.select_prev_item(),
