@@ -1,5 +1,5 @@
 return {
-    --{ "SirVer/ultisnips" },
+    -- { "SirVer/ultisnips", event = { 'InsertEnter' } }, -- Note: don't activate because we want luasnip to handle snippets, we only want to load ultisnips snippets
     {
         "hrsh7th/cmp-nvim-lsp"
     },
@@ -25,6 +25,10 @@ return {
             require("luasnip.loaders.from_lua").load({
                 paths = "~/.config/nvim/snippets/"
             })
+            require("luasnip.loaders.from_snipmate").load({
+                paths = "~/.config/nvim/snippets/"
+                -- paths = "~/.vim/UltiSnips/" -- note:
+            })
 
             --require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
 
@@ -43,6 +47,7 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ["<C-e>"] = cmp.mapping.abort(),
                     ["<C-Space>"] = cmp.mapping.complete(),
+                    -- using <tab> to accept snippet or jump to next/prev snippets parameters
                     ["<Tab>"] = cmp.mapping(function(fallback)
                         local luasnip = require("luasnip")
                         if cmp.visible() then
@@ -97,11 +102,12 @@ return {
                     },
                 },
                 sources = cmp.config.sources({
-                    { name = "nvim_lsp", group_index = 1, priority = 700, max_item_count = 10 },
-                    { name = "luasnip",  group_index = 1, priority = 1000 },
-                    --{ name = "ultisnips", group_index = 1, priority = 1000 },
-                    --{ name = "path",     group_index = 2, priority = 400 },
-                    --{ name = "buffer",   group_index = 2, priority = 300 },
+                    { name = "nvim_lsp",  group_index = 1, priority = 700, max_item_count = 10 },
+                    { name = "luasnip",   group_index = 1, priority = 1000 },
+                    { name = "ultisnips", group_index = 1, priority = 1000 },
+                    { name = "snippy",    group_index = 1, priority = 1000 },
+                    -- { name = "path",      group_index = 2, priority = 400 },
+                    -- { name = "buffer",    group_index = 2, priority = 300 },
                 }),
             })
         end,

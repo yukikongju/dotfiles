@@ -37,6 +37,8 @@ map('n', '<C-k>', ':m .-2<CR>==', { silent = true })
 map('n', 'gt', ':tabnext<CR>')
 map('n', 'gT', ':tabprevious<CR>')
 map('n', '<leader>nt', ':tabe<CR>', { silent = true })
+map('n', '<leader>nv', ':vsplit<CR>', { silent = true })
+map('n', '<leader>nh', ':split<CR>', { silent = true })
 
 -- Formatting and stay on the same line
 map('n', '<leader>i', 'gg=G``zz<CR>', { silent = true })
@@ -50,6 +52,17 @@ map('n', 'gV', '`[v`]')
 -- Apply macros
 map('n', 'Q', '@q')
 map('v', 'Q', ':norm @q<CR>')
+
+-- Dotfiles mappings
+-- map('n', '<leader>ve', ':tabnew $MYVIMRC<cr>')
+map('n', '<leader>vf', ':tabnew ~/dotfiles/nvim/init.lua<cr>')
+map('n', '<leader>vf', ':tabnew ~/dotfiles/nvim/lua/<cr>')
+map('n', '<leader>vb', ':tabnew ~/dotfiles/.newsboat/urls<cr>')
+map('n', '<leader>vr', ':source ~/.config/init.lua<cr>')
+map('n', '<leader>vn', ':tabe<cr>')
+map('n', '<leader>vs', ':vsplit<cr>')
+map('n', '<leader>vt', ':tabnew $MYTMUXCONF<cr>')
+map('n', '<leader>vz', ':tabnew $MYZSHRC<cr>')
 
 -- Date keybindings
 -- map('', '<F1>', ':r! date "+\\%A \\%d \\%B \\%Y"<CR>')
