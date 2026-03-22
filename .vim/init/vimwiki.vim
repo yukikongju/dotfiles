@@ -69,11 +69,13 @@ for [key, val] in items(g:vimwiki_folder_dct)
 	    \ 'diary_index': 'diary',
 	    \ 'custom_wiki2html': 'vimwiki_markdown',
 	    \ 'template_ext': '.tpl',
-	    \ 'auto_diary-index': 1,
+	    \ 'auto_diary_index': 1,
 	    \ 'auto_generate_tags': 1,
 	    \ 'diary_frequency': val['frequency'],
 	    \ })
 endfor
+
+	    " \ 'diary_index': 'diary',
 
 " Map the function to <Leader>w<Leader>w for :VimwikiMakeDiaryNote
 function! VimwikiSmartDiaryNote()
