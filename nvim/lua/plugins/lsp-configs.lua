@@ -111,6 +111,7 @@ return {
             vim.keymap.set("n", "<leader>gk", vim.lsp.buf.hover, {})
             --vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
             vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, {})
+            -- Note: gf: go to file; C-W + gf: go to file in new tab
             vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {})
             --vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {})
             --vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})

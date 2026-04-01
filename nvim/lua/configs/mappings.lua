@@ -64,6 +64,11 @@ map('n', '<leader>vs', ':vsplit<cr>')
 map('n', '<leader>vt', ':tabnew $MYTMUXCONF<cr>')
 map('n', '<leader>vz', ':tabnew $MYZSHRC<cr>')
 
+-- Copying files path
+map('n', '<leader>pa', ":let @+ = expand('%:p')") -- absolute path
+map('n', '<leader>pa', ":let @+ = expand('%')")   -- relative path
+
+
 -- Date keybindings
 -- map('', '<F1>', ':r! date "+\\%A \\%d \\%B \\%Y"<CR>')
 -- map('', '<F2>', ':r! date "+\\%A \\%d \\%B \\%Y" -d "+1 day"<CR>')

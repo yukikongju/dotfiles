@@ -297,6 +297,7 @@ alias wil='
 cd $HOME/Projects/VimWikiNotes/WhatIveLearned/
 vi diary/diary.md
 '
+alias books="cd $HOME/Projects/VimWikiNotes/Readings/books/sumary"
 
 ##* SCHOOL
 alias mila="cd $HOME/Projects/MilaCourse/IFT6765/" # TODO: open course link
@@ -322,8 +323,8 @@ export MYVIMRC="$HOME/.vimrc"
 export MYZSHRC="$HOME/.zshrc"
 export MYTMUXCONF="$HOME/.tmux.conf"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/Library/Python/3.10/bin:$PATH"
-export PATH="(python3 -m site --user-base)/bin:$PATH"
+# export PATH="$HOME/Library/Python/3.10/bin:$PATH"
+# export PATH="(python3 -m site --user-base)/bin:$PATH"
 
 
 # The next line updates PATH for the Google Cloud SDK.
