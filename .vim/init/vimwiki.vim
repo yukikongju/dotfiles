@@ -31,6 +31,21 @@ let g:vimwiki_folding='expr' "list, '', expr, syntax,
 " let g:vimwiki_hl_headers = 0
 " let g:vimwiki_hl_cb_checked = 0
 
+function! VimwikiSyncCurrentWiki() abort
+  if &filetype !~# 'markdown\|vimwiki'
+      return
+  endif
+  let l:idx = vimwiki#base#find_wiki(expand('%:p'))
+  if l:idx >= 0
+      call vimwiki#vars#set_bufferlocal('wiki_nr', l:idx)
+  endif
+endfunction
+
+augroup VimwikiSync
+  autocmd!
+  autocmd BufReadPost,BufEnter *.md call VimwikiSyncCurrentWiki()
+augroup END
+
 
 " change vimwiki base path based on os
 if has('win32') || has('win64')

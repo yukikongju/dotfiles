@@ -9,6 +9,7 @@ return {
             { name = "WhatIveLearned", path = "~/Projects/VimwikiNotes/WhatIveLearned", syntax = "markdown", ext = ".md", diary_rel_path = "diary/", diary_index = "diary" },
             { name = "Rant",           path = "~/Projects/VimwikiNotes/Rant",           syntax = "markdown", ext = ".md", diary_rel_path = "diary/", diary_index = "diary" },
             { name = "Journal",        path = "~/Projects/VimwikiNotes/Journal",        syntax = "markdown", ext = ".md", diary_rel_path = "diary/", diary_index = "diary" },
+            { name = "Logs",           path = "~/Projects/VimwikiNotes/Logs",           syntax = "markdown", ext = ".md", diary_rel_path = "diary/", diary_index = "diary" },
         }
     end
 }

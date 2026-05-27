@@ -65,8 +65,8 @@ map('n', '<leader>vt', ':tabnew $MYTMUXCONF<cr>')
 map('n', '<leader>vz', ':tabnew $MYZSHRC<cr>')
 
 -- Copying files path
-map('n', '<leader>pa', ":let @+ = expand('%:p')") -- absolute path
-map('n', '<leader>pa', ":let @+ = expand('%')")   -- relative path
+map('n', '<leader>pa', function() vim.fn.setreg('+', vim.fn.expand('%:p')) end) -- absolute path
+map('n', '<leader>pr', function() vim.fn.setreg('+', vim.fn.expand('%')) end)   -- relative path
 
 
 -- Date keybindings
