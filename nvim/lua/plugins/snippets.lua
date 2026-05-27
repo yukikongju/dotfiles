@@ -15,22 +15,20 @@ return {
             "saadparwaiz1/cmp_luasnip",
             "rafamadriz/friendly-snippets",
         },
+        config = function()
+            local ls = require("luasnip")
+            require("luasnip.loaders.from_vscode").lazy_load()
+            require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
+            require("luasnip.loaders.from_snipmate").load({ paths = "~/.config/nvim/snippets/" })
+            -- vimwiki files get filetype=vimwiki, not markdown; snippets live in markdown.snippets
+            ls.filetype_extend("vimwiki", { "markdown" })
+        end,
     },
     {
         "hrsh7th/nvim-cmp",
         config = function()
             local cmp = require("cmp")
             local types = require("cmp.types")
-            require("luasnip.loaders.from_vscode").lazy_load()
-            require("luasnip.loaders.from_lua").load({
-                paths = "~/.config/nvim/snippets/"
-            })
-            require("luasnip.loaders.from_snipmate").load({
-                paths = "~/.config/nvim/snippets/"
-                -- paths = "~/.vim/UltiSnips/" -- note:
-            })
-
-            --require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
 
             cmp.setup({
                 --completion = { autocomplete = false },

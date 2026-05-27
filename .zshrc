@@ -140,6 +140,7 @@ alias gco="git checkout"
 ##* Directoy Navigation
 alias home="cd ~ && ls"
 alias wiki="cd $HOME/Projects/VimWikiNotes/"
+alias gpt="cd $HOME/Projects/VimWikiNotes/ChatGPT/"
 
 # Navigating to WorkAdhoc Directory
 wadhoc() { 
@@ -178,6 +179,8 @@ wadhoc() {
     if [[ ! -d "$dir_path" ]]; then
 	echo "Directory does not exist, creating it"
 	mkdir -p "$dir_path"
+  mkdir -p "$dir_path/BS"
+  mkdir -p "$dir_path/PG"
     fi
 
     echo "Switching to $dir_path"
@@ -314,7 +317,7 @@ alias dash="cd $HOME/Documents/dashboards" #  && code .
 
 ##* UTILS
 alias snips="cd $HOME/dotfiles/.vim/UltiSnips/"
-alias wiggler="cd $HOME/Projects/Miscellaneous-Projects/MouseWiggler && python3 wiggler.py 100 3"
+alias wiggler="cd $HOME/Projects/Miscellaneous-Projects/MouseWiggler && python3 wiggler.py 100 1"
 
 
 # ---- ENVIRONMENT VARIABLES ----

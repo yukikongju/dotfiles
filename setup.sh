@@ -174,6 +174,12 @@ setup_neovim() {
     DOTFILE_NVIM_NATIVE_CONFIGS_DIR=~/dotfiles/nvim/lua/configs
     confirm_directory_config_override $DOTFILE_NVIM_NATIVE_CONFIGS_DIR $NVIM_NATIVE_CONFIGS_DIR
 
+    # NVIM_NATIVE_SNIPPETS_DIR=~/.config/nvim/snippets
+    # DOTFILE_NVIM_NATIVE_SNIPETS_DIR=~/dotfiles/nvim/snippets
+    # confirm_directory_config_override $DOTFILE_NVIM_NATIVE_CONFIGS_DIR $NVIM_NATIVE_CONFIGS_DIR
+
+    ln -s ~/dotfiles/nvim/snippets ~/.config/nvim/snippets
+
 }
 
 
