@@ -165,10 +165,10 @@ setup_neovim() {
     # npm ls tslib 
 
     # installing tree-sitter
-    brew tree-sitter tree-sitter-cli 
+    $install_function tree-sitter tree-sitter-cli 
 
     # installing rip-grep for fzf
-    brew install ripgrep
+    $install_function install ripgrep
 
     # create directory if not exists
     mkdir -p ~/.config/nvim/
@@ -185,11 +185,9 @@ setup_neovim() {
     DOTFILE_NVIM_NATIVE_CONFIGS_DIR=~/dotfiles/nvim/lua/configs
     confirm_directory_config_override $DOTFILE_NVIM_NATIVE_CONFIGS_DIR $NVIM_NATIVE_CONFIGS_DIR
 
-    # NVIM_NATIVE_SNIPPETS_DIR=~/.config/nvim/snippets
-    # DOTFILE_NVIM_NATIVE_SNIPETS_DIR=~/dotfiles/nvim/snippets
-    # confirm_directory_config_override $DOTFILE_NVIM_NATIVE_CONFIGS_DIR $NVIM_NATIVE_CONFIGS_DIR
-
-    # ln -s ~/dotfiles/nvim/snippets ~/.config/nvim/snippets
+    NVIM_NATIVE_SNIPPETS_DIR=~/.config/nvim/snippets
+    DOTFILE_NVIM_NATIVE_SNIPPETS_DIR=~/dotfiles/nvim/snippets
+    confirm_directory_config_override $DOTFILE_NVIM_NATIVE_SNIPPETS_DIR $NVIM_NATIVE_SNIPPETS_DIR
 
 }
 
@@ -383,6 +381,6 @@ install_function=$(get_os_install_function $os_name)
 # setup_lobster
 # setup_bash_profile
 # setup_pandoc
-setup_zsh
+# setup_zsh
 # setup_ohmyposh
-# setup_neovim
+setup_neovim
