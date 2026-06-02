@@ -34,12 +34,12 @@ override_sym_links_dir() {
 
     # remove directory if exists
     if [ -d $directory_abs_path ]; then
-	rm -r $directory_abs_path
+        rm -r $directory_abs_path
     fi
 
     # creating directory
     # FIXME: create nested directory instead
-    mkdir $directory_abs_path
+    mkdir -p $directory_abs_path
 
     # creating sym links for all files in path
     for f in $(find $dotfile_abs_path -type f); do
@@ -64,8 +64,8 @@ confirm_directory_config_override() {
     directory_abs_path=$2
 
     if [ -d $directory_abs_path ]; then
-	echo "$directory_abs_path configuration already exists. Do you wish to override them? [Y/N]"
-	read response
+      echo "$directory_abs_path configuration already exists. Do you wish to override them? [Y/N]"
+      read response
 	if [ $response = "Y" ]; then
 	    override_sym_links_dir $dotfile_abs_path $directory_abs_path
 	else
@@ -81,30 +81,31 @@ confirm_file_config_override() {
     config_file_name=$1
 
     if [ -f $config_file_name ]; then
-	echo "A $config_file_namefile file already exists. Do you wish to replace it? [Y/N]"
-	read response
-	if [ $response = "Y" ]; then
-	    echo "overriding config file at $config_file_name.."
-	    if [ -L $config_file_name ]; then
-		unlink $config_file_name
-		rm $config_file_name
-	    fi
-	    ln -s ~/dotfiles/$config_file_name $config_file_name
-	fi
+        echo "A $config_file_namefile file already exists. Do you wish to replace it? [Y/N]"
+        read response
+    if [ $response = "Y" ]; then
+        echo "overriding config file at $config_file_name.."
+        if [ -L $config_file_name ]; then
+            unlink $config_file_name
+        rm $config_file_name
+        fi
+    ln -s ~/dotfiles/$config_file_name $config_file_name
+    fi
     else
-	echo "Creating a sym link for $config_file_name"
-	ln -s ~/dotfiles/$config_file_name $config_file_name
+        echo "Creating a sym link for $config_file_name"
+        ln -s ~/dotfiles/$config_file_name $config_file_name
     fi
 }
 
 setup_python() {
     # TODO
     echo "\n --- Setting up Python --- \n"
+    $install_function python
 
     # install basic packages
-    pip3 install pep8 jedi-language-server
-    pip3 install jupyter
-    pip3 install numpy pandas matplotlib seaborn sklearn
+    # pip3 install pep8 jedi-language-server
+    # pip3 install jupyter
+    # pip3 install numpy pandas matplotlib seaborn sklearn
 
 }
 
@@ -163,8 +164,18 @@ setup_neovim() {
     # npm install
     # npm ls tslib 
 
+    # installing tree-sitter
+    brew tree-sitter tree-sitter-cli 
+
+    # installing rip-grep for fzf
+    brew install ripgrep
+
+    # create directory if not exists
+    mkdir -p ~/.config/nvim/
+
+
     # TODO create symlinks - .config/nvim/
-    # ln -s ~/dotfiles/nvim/init.lua .config/nvim/init.lua
+    ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 
     NVIM_PLUGINS_DIR=~/.config/nvim/lua/plugins
     DOTFILE_NVIM_PLUGINS_DIR=~/dotfiles/nvim/lua/plugins
@@ -178,7 +189,7 @@ setup_neovim() {
     # DOTFILE_NVIM_NATIVE_SNIPETS_DIR=~/dotfiles/nvim/snippets
     # confirm_directory_config_override $DOTFILE_NVIM_NATIVE_CONFIGS_DIR $NVIM_NATIVE_CONFIGS_DIR
 
-    ln -s ~/dotfiles/nvim/snippets ~/.config/nvim/snippets
+    # ln -s ~/dotfiles/nvim/snippets ~/.config/nvim/snippets
 
 }
 
@@ -230,14 +241,18 @@ setup_tmux() {
 
     # Download tmux plugin manager
     if [ -d ~/.tmux/plugins/tpm ]; then
-	echo "tpm already installed. Skipping..."
+        echo "tpm already installed. Skipping..."
     else
-	echo "Installing tmux plugin manager (tpm)"
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+        echo "Installing tmux plugin manager (tpm)"
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     fi
 
+    # Downloading tmux plugins
+    $install_function install zsh-autosuggestions
+
     # create sym link for tmux config
-    confirm_file_config_override ~/.tmux.conf
+    # confirm_file_config_override ~/.tmux.conf
+    ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
     # updating tmux.cong file
     tmux source-file ~/.tmux.conf
@@ -284,12 +299,12 @@ setup_ohmyposh() {
 
     # installing oh-my-posh
     if [ $os_name = "macOS" ]; then
-	brew install jandedobbeleer/oh-my-posh/oh-my-posh
-	brew update && brew upgrade oh-my-posh
+        brew install jandedobbeleer/oh-my-posh/oh-my-posh
+        brew update && brew upgrade oh-my-posh
     elif [ $os_name = "Linux" ]; then
-	curl -s https://ohmyposh.dev/install.sh | bash -s
+        curl -s https://ohmyposh.dev/install.sh | bash -s
     else
-	echo "Oh-My-Posh installation for your current OS not supported"
+        echo "Oh-My-Posh installation for your current OS not supported"
     fi
 
     # install font from Nerd Font: Cascadia Cove
@@ -336,12 +351,12 @@ setup_pandoc() {
 setup_zsh() {
     # TODO
     # Oh My zsh installation: https://ohmyz.sh/?ref=tcude.net#install
-    # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
     # --- ZSH PLUGINS Installation
 
     # zsh-autosuggestions installation: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
-    # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
     # zsh-autocomplete: https://github.com/marlonrichert/zsh-autocomplete
     # git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
@@ -351,7 +366,8 @@ setup_zsh() {
 
 
     # symlink to zshrc
-    confirm_file_config_override ~/.zshrc
+    # confirm_file_config_override ~/.zshrc
+    ln -sf ~/dotfiles/.zshrc ~/.zshrc
 }
 
 os_name=$(get_os_name)
@@ -367,6 +383,6 @@ install_function=$(get_os_install_function $os_name)
 # setup_lobster
 # setup_bash_profile
 # setup_pandoc
-# setup_zsh
+setup_zsh
 # setup_ohmyposh
-setup_neovim
+# setup_neovim

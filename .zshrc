@@ -65,6 +65,9 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# activate zsh autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -106,6 +109,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# --- TMUX ---
+# stty -ixon # deactivating -ixon to be able to map ctrl+b to ctrl+s
+tmux source-file ~/.tmux.conf
+
+# --- PROGRAM IN PATH ---
 
 # ensure shell hook is installed to use "direnv allow" effectively
 eval "$(direnv hook zsh)"
@@ -115,6 +123,10 @@ eval "$(direnv hook zsh)"
 OHMYPOSH_THEME="amro"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
 
+# TREE-SITTER SETUP
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
 # FIXME: show venv 
 # oh-my-posh config export --config amro --output test.json
 # oh-my-posh init your-shell --config path/to/your-theme.omp.json | Invoke-Expression
@@ -123,7 +135,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # credentials
 # export GOOGLE_APPLICATION_CREDENTIALS=~/keys/relax-server-06b2a61c0080.json
-export GOOGLE_APPLICATION_CREDENTIALS=~/keys/relax-melodies-android-c4f9a4d0ecad-dbt.json
+# export GOOGLE_APPLICATION_CREDENTIALS=~/keys/relax-melodies-android-c4f9a4d0ecad-dbt.json
 
 
 # ---- GIT ALIASES ----
@@ -331,11 +343,11 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/emulie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/emulie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/emulie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/emulie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-source ~/Downloads/google-cloud-sdk/completion.zsh.inc
+# if [ -f '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/emulie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# source ~/Downloads/google-cloud-sdk/completion.zsh.inc
 
 
 export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@3
