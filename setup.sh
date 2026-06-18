@@ -170,6 +170,9 @@ setup_neovim() {
     # installing rip-grep for fzf
     $install_function install ripgrep
 
+    # for tagbar/ctags
+    $install_function ctags
+
     # create directory if not exists
     mkdir -p ~/.config/nvim/
 
@@ -306,7 +309,9 @@ setup_ohmyposh() {
     fi
 
     # install font from Nerd Font: Cascadia Cove
+    # Change Font: Terminal > Preferences > Profiles > Font -> Typeface: CascadiaCove Nerd; Style: Regular
     oh-my-posh font install
+    ls ~/Library/Fonts/ | grep -i nerd
 
     # Configure terminal/editor/shell to use font
     # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/1_shell.omp.json)"

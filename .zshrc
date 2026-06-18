@@ -320,12 +320,17 @@ alias vqa="cd $HOME/Projects/MilaCourse/IFT6765/paper-presentations/vqa/"
 alias papers="cd $HOME/Projects/MilaCourse/IFT6765/papers/"
 alias cert="cd $HOME/Projects/satellite/certifications/CanadianBasicQualification/"
 
-##* WORK
+##* WORK - BetterSleep
 alias scoping="cd $HOME/Projects/Miscellaneous-Projects/ExperimentsScopingCalculator && streamlit run gui.py"
 alias inges="cd $HOME/Documents/ds-ingestion/"
 # Note: if "code" doesn't work, then `Ctrl+Shift+P` and Select the command Shell Command: Install 'code' command in PATH
 alias dash="cd $HOME/Documents/dashboards" #  && code .
-# alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
+alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
+
+##* WORK - Plusgrade
+alias cp="cd $HOME/Work/continuous-pricing"
+alias sbu="cd $HOME/Work/cp-rl-sbu"
+alias monitoring="cd $HOME/Work/cpil-monitoring"
 
 ##* UTILS
 alias snips="cd $HOME/dotfiles/.vim/UltiSnips/"
@@ -338,6 +343,7 @@ export MYVIMRC="$HOME/.vimrc"
 export MYZSHRC="$HOME/.zshrc"
 export MYTMUXCONF="$HOME/.tmux.conf"
 export PATH="$HOME/.local/bin:$PATH"
+export EDITOR=nvim
 # export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 # export PATH="(python3 -m site --user-base)/bin:$PATH"
 
@@ -351,3 +357,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@3
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/emulie.chhor/.lmstudio/bin"
+# End of LM Studio CLI section
+
