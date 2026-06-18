@@ -1,3 +1,16 @@
+# to monitor slow part when opening new pane
+# zmodload zsh/zprof
+# time zsh -i -c exit
+
+
+# disable update check for faster pane creation
+export DISABLE_UPDATE_PROMPT=true # oh-my-zsh update
+export skip_global_compinit=1
+
+# cache brew prefix to avoid repeated subprocess calls
+export BREW_PREFIX=$(brew --prefix)
+export BREW_PREFIX_POSH=$(brew --prefix oh-my-posh)
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -66,7 +79,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # activate zsh autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -111,7 +124,7 @@ source $ZSH/oh-my-zsh.sh
 
 # --- TMUX ---
 # stty -ixon # deactivating -ixon to be able to map ctrl+b to ctrl+s
-tmux source-file ~/.tmux.conf
+# tmux source-file ~/.tmux.conf
 
 # --- PROGRAM IN PATH ---
 
@@ -120,12 +133,17 @@ eval "$(direnv hook zsh)"
 
 # OH-My-POSH SETUP
 # themes: https://ohmyposh.dev/docs/themes
-OHMYPOSH_THEME="amro"
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
+# OHMYPOSH_THEME="amro"
+# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
+
+# Starship
+# Note: using starship instead of oh-my-posh for faster terminal startup
+eval "$(starship init zsh)"
+
 
 # TREE-SITTER SETUP
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(brew shellenv)"
 
 # FIXME: show venv 
 # oh-my-posh config export --config amro --output test.json
@@ -359,6 +377,16 @@ export EDITOR=nvim
 export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@3
 
 # Added by LM Studio CLI (lms)
+<<<<<<< Updated upstream
 export PATH="$PATH:/Users/emulie.chhor/.lmstudio/bin"
 # End of LM Studio CLI section
 
+=======
+export PATH="$PATH:/Users/emulie/.lmstudio/bin"
+# End of LM Studio CLI section
+
+export PATH="$HOME/.lmstudio/bin:$PATH"
+
+# to monitor slow part when opening new pane
+# zprof
+>>>>>>> Stashed changes

@@ -321,6 +321,22 @@ return {
         cursor          = i(0),
     })),
 
+    s({ trig = "tref", dscr = "Reference Docs Template" }, fmt([[
+## Reference Docs
+
+**Files**
+
+{files}
+
+**Videos**
+
+{videos}
+{cursor}]], {
+        files = i(1, ""),
+        videos = i(2, ""),
+        cursor = i(0),
+    })),
+
     s({ trig = "htbsnip", dscr = "Hack The Box snippet" }, fmt([[
 # {name}
 
