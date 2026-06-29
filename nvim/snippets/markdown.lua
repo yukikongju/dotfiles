@@ -198,6 +198,10 @@ return {
 
 **Guide**
 
+**Articles**
+
+**Papers**
+
 **Docs**
 {cursor}]], {
         title = i(1, ""),
@@ -206,7 +210,7 @@ return {
         cursor = i(0),
     })),
 
-    s({ trig = "tdiary", dscr = "VimWiki Diary Template" }, { i(0) }),
+    -- s({ trig = "tdiary", dscr = "VimWiki Diary Template" }, { i(0) }),
 
     s({ trig = "tconcept", dscr = "Concept Template" }, fmt([[
 ## Overview
@@ -319,6 +323,31 @@ return {
         looking_forward = i(15, ""),
         focus           = i(16, ""),
         cursor          = i(0),
+    })),
+
+    s({ trig = "trefs", dscr = "Reference Docs Template" }, fmt([[
+## Reference Docs
+
+**Files**
+{files}
+
+**Docs**
+{docs}
+
+**Videos**
+
+
+**Articles**
+{articles}
+
+**Papers**
+{papers}
+{cursor}]], {
+        files = i(1, ""),
+        docs = i(2, ""),
+        articles = i(3, ""),
+        papers = i(4, ""),
+        cursor = i(0),
     })),
 
     s({ trig = "htbsnip", dscr = "Hack The Box snippet" }, fmt([[

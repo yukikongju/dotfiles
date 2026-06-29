@@ -251,6 +251,9 @@ setup_tmux() {
     # Downloading tmux plugins
     $install_function install zsh-autosuggestions
 
+    # Download starship (faster oh-my-posh alternative)
+    $install_function install starship
+
     # create sym link for tmux config
     # confirm_file_config_override ~/.tmux.conf
     ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf

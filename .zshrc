@@ -1,8 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# disable update check for faster pane creation
+export DISABLE_UPDATE_PROMPT=true # oh-my-posh update
+export ZSH_DISABLE_COMPFIX=true
+export skip_global_compinit=1
+
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -65,9 +70,6 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# activate zsh autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -111,27 +113,40 @@ source $ZSH/oh-my-zsh.sh
 
 # --- TMUX ---
 # stty -ixon # deactivating -ixon to be able to map ctrl+b to ctrl+s
-tmux source-file ~/.tmux.conf
+# tmux source-file ~/.tmux.conf
 
 # --- PROGRAM IN PATH ---
 
 # ensure shell hook is installed to use "direnv allow" effectively
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 
 # OH-My-POSH SETUP
 # themes: https://ohmyposh.dev/docs/themes
-OHMYPOSH_THEME="amro"
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
+# OHMYPOSH_THEME="amro"
+# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/${OHMYPOSH_THEME}.omp.json)"
+
+# Starship Setup
+# Note: Using starship instead of oh-my-posh for faster terminal startup
+eval "$(starship init zsh)"
+# source ~/.cache.starship.zsh
 
 # TREE-SITTER SETUP
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval $(brew shellenv)
 
 # FIXME: show venv 
 # oh-my-posh config export --config amro --output test.json
 # oh-my-posh init your-shell --config path/to/your-theme.omp.json | Invoke-Expression
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# only run compaudit/compdump once per day
+# autoload -Uz compinit
+# if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+    # compinit
+# else
+    # compinit -C
+# fi
 
 # credentials
 # export GOOGLE_APPLICATION_CREDENTIALS=~/keys/relax-server-06b2a61c0080.json
@@ -145,7 +160,7 @@ alias gs="git status"
 alias gc="git commit -m"
 alias gcnv="git commit --no-verify -m"
 alias gco="git checkout"
-
+alias c="clear"
 
 # ---- DIRECTORY NAVIGATION ----
 
@@ -191,8 +206,8 @@ wadhoc() {
     if [[ ! -d "$dir_path" ]]; then
 	echo "Directory does not exist, creating it"
 	mkdir -p "$dir_path"
-  mkdir -p "$dir_path/BS"
-  mkdir -p "$dir_path/PG"
+  # mkdir -p "$dir_path/BS"
+  # mkdir -p "$dir_path/PG"
     fi
 
     echo "Switching to $dir_path"
@@ -328,7 +343,7 @@ alias dash="cd $HOME/Documents/dashboards" #  && code .
 alias organics="cd $HOME/Projects/Miscellaneous-Projects/OrganicSubstractionModel/ && tmux split-window -v && uv run python3 -m notebook"
 
 ##* WORK - Plusgrade
-alias cp="cd $HOME/Work/continuous-pricing"
+alias cprl="cd $HOME/Work/continuous-pricing"
 alias sbu="cd $HOME/Work/cp-rl-sbu"
 alias monitoring="cd $HOME/Work/cpil-monitoring"
 
