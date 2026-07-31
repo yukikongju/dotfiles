@@ -67,6 +67,10 @@ return {
             vim.keymap.set("n", "<leader>fq", builtin.quickfix, {})
             --vim.keymap.set("n", "<leader>fh", builtin.quickfixhistory, {})
             vim.keymap.set("n", "<leader>fl", builtin.loclist, {})
+            vim.keymap.set('n', '<leader>fr', require('telescope.builtin').resume,
+                { desc = "Resume last Telescope picker" })
+            vim.keymap.set('n', '<leader>ch', '<cmd>Telescope command_history<cr>',
+                { desc = 'Telescope command history' })
 
             -- grep word under cursor in all files recursively -- useful for quickfix
             vim.keymap.set('n', '<leader>vg', ':vim <cword> **<CR>', { silent = true })

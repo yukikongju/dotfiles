@@ -3,8 +3,12 @@
 
 # disable update check for faster pane creation
 export DISABLE_UPDATE_PROMPT=true # oh-my-posh update
-export ZSH_DISABLE_COMPFIX=true
-export skip_global_compinit=1
+# export ZSH_DISABLE_COMPFIX=true
+# export skip_global_compinit=1
+
+## Initialize Completion Engine
+# autoload -Uz compinit
+# compinit
 
 # Path to your oh-my-zsh installation.
 # export ZSH="$HOME/.oh-my-zsh"
@@ -78,12 +82,12 @@ ZSH_THEME="robbyrussell"
 plugins=(
 git
 zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
-# zsh-autocomplete # https://github.com/marlonrichert/zsh-autocomplete
-# zsh-syntax-highlighting
+zsh-autocomplete # https://github.com/marlonrichert/zsh-autocomplete
+zsh-syntax-highlighting
 virtualenv
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -118,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # --- PROGRAM IN PATH ---
 
 # ensure shell hook is installed to use "direnv allow" effectively
-# eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
 # OH-My-POSH SETUP
 # themes: https://ohmyposh.dev/docs/themes
@@ -139,6 +143,11 @@ eval "$(starship init zsh)"
 # oh-my-posh init your-shell --config path/to/your-theme.omp.json | Invoke-Expression
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+## Enable colorized ls output for MacOS
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+# alias ls="ls -G"
 
 # only run compaudit/compdump once per day
 # autoload -Uz compinit
@@ -204,10 +213,11 @@ wadhoc() {
     dir_path="$HOME/Projects/VimWikiNotes/WorkAdHoc/$year/$month"
 
     if [[ ! -d "$dir_path" ]]; then
-	echo "Directory does not exist, creating it"
-	mkdir -p "$dir_path"
-  # mkdir -p "$dir_path/BS"
-  # mkdir -p "$dir_path/PG"
+        echo "Directory does not exist, creating it"
+        mkdir -p "$dir_path"
+        # mkdir -p "$dir_path/BS"
+        # mkdir -p "$dir_path/PG"
+        echo "# Work Adhoc - \n\n## Mindset\n\n## Projects\n\n## What I've Learned\n\n## Reference Docs\n\n" > "${dir_path}/README.md"
     fi
 
     echo "Switching to $dir_path"
@@ -349,7 +359,8 @@ alias monitoring="cd $HOME/Work/cpil-monitoring"
 
 ##* UTILS
 alias snips="cd $HOME/dotfiles/.vim/UltiSnips/"
-alias wiggler="cd $HOME/Projects/Miscellaneous-Projects/MouseWiggler && python3 wiggler.py 100 1"
+# alias wiggler="cd $HOME/Projects/Miscellaneous-Projects/MouseWiggler && python3 simple_wiggler.py 100 1"
+alias wiggler="cd $HOME/Projects/Miscellaneous-Projects/MouseWiggler && $HOME/Work/yutils/.venv/bin/python simple_wiggler.py 100 1"
 
 
 # ---- ENVIRONMENT VARIABLES ----

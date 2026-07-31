@@ -248,7 +248,7 @@ setup_tmux() {
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     fi
 
-    # Downloading tmux plugins
+    # Downloading tmux plugins: https://github.com/zsh-users/zsh-autosuggestions
     $install_function install zsh-autosuggestions
 
     # Download starship (faster oh-my-posh alternative)
