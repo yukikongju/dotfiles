@@ -177,7 +177,6 @@ alias c="clear"
 ## Git Explore: Explore previous git diff files made in git commit
 gx() {
     # Step 1: Select a commit from the git log
-    # Previews the full commit diff on the right as you scroll
     local commit
     commit=$(git log --oneline --color=always | \
         fzf --ansi \
@@ -185,19 +184,37 @@ gx() {
             --preview-window=right:60% | \
         awk '{print $1}')
 
-    # Exit if no commit was selected (user pressed Esc/Ctrl+C)
+    # Exit if no commit was selected (Esc/Ctrl+C is pressed)
     if [[ -z "$commit" ]]; then
         return 0
     fi
 
     # Step 2: Browse the files modified in that specific commit
-    # Uses your preferred --stat view on the left, and file diff on the right
     git show --stat=120 --format="" "$commit" | \
         grep '|' | \
         fzf --ansi \
             --bind 'j:down,k:up,q:abort' \
             --preview="echo {} | awk '{print \$1}' | xargs -I% git show --color=always $commit -- %" \
             --preview-window=right:60%
+}
+
+## Switch git branches
+gb() {
+    local branch
+    branch=$(git branch --all --color=always | grep -v '/HEAD\s' | sort | \
+        fzf --ansi \
+            --preview-window right:60% \
+            --preview 'git log --color=always --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit $(sed "s/^..//" <<< "{}" | cut -d" " -f1) | head -n 50' | \
+        sed 's/^..//' | cut -d' ' -f1 | sed 's#^remotes/origin/##')
+
+    if [ -n "$branch" ]; then
+        git checkout "$branch"
+    fi
+}
+
+## Executing old history commands
+hist() {
+    eval $(history | fzf | sed 's/ *[0-9]* *//')
 }
 
 
