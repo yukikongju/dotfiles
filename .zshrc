@@ -171,6 +171,36 @@ alias gcnv="git commit --no-verify -m"
 alias gco="git checkout"
 alias c="clear"
 
+# ---- FUNCTIONS ----
+
+
+## Git Explore: Explore previous git diff files made in git commit
+gx() {
+    # Step 1: Select a commit from the git log
+    # Previews the full commit diff on the right as you scroll
+    local commit
+    commit=$(git log --oneline --color=always | \
+        fzf --ansi \
+            --preview 'git show --color=always {1}' \
+            --preview-window=right:60% | \
+        awk '{print $1}')
+
+    # Exit if no commit was selected (user pressed Esc/Ctrl+C)
+    if [[ -z "$commit" ]]; then
+        return 0
+    fi
+
+    # Step 2: Browse the files modified in that specific commit
+    # Uses your preferred --stat view on the left, and file diff on the right
+    git show --stat=120 --format="" "$commit" | \
+        grep '|' | \
+        fzf --ansi \
+            --bind 'j:down,k:up,q:abort' \
+            --preview="echo {} | awk '{print \$1}' | xargs -I% git show --color=always $commit -- %" \
+            --preview-window=right:60%
+}
+
+
 # ---- DIRECTORY NAVIGATION ----
 
 ##* Directoy Navigation
