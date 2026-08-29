@@ -217,6 +217,19 @@ hist() {
     eval $(history | fzf | sed 's/ *[0-9]* *//')
 }
 
+## Connecting to Bluetooth devices
+# note: bluetooth device can be found using `blueutil --paired`
+bt() {
+    MOUSE_MAC="ac-bc-32-e5-de-23"
+    HEADPHONES_MAC="84-d3-52-a4-d8-23"
+    EARPHONES_MAC="27-87-b4-75-c7-58"
+
+    blueutil --connect "$MOUSE_MAC" > /dev/null 2>&1 &
+    blueutil --connect "$HEADPHONES_MAC" > /dev/null 2>&1 &
+    blueutil --connect "$EARPHONES_MAC" > /dev/null 2>&1 &
+    wait
+}
+
 
 # ---- DIRECTORY NAVIGATION ----
 

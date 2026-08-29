@@ -186,6 +186,7 @@ end)
 
 -- Note: bluetooth device mac address can be found with command `blueutil --paired`
 -- FIXME command `blueutil --connect` is accurate, but doesn't properly execute using hammerspoon for some reason
+-- use `hs.task.new()` instead?
 local bluetoothMash = { "cmd", "alt", "ctrl" }
 local mouseMacAddress = "ac-bc-32-e5-de-23"
 local headphonesMacAddress = "84-d3-52-a4-d8-23"
