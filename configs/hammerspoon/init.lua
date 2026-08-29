@@ -181,6 +181,36 @@ hs.hotkey.bind(keyCasterMash, "k", function()
 end)
 
 -- ==========================================================
+-- CAFEINATE
+-- ==========================================================
+
+caffeineMenubar = hs.menubar.new()
+
+local function updateCaffeineDisplay()
+    if hs.caffeinate.get("displayIdle") then
+        caffeineMenubar:setTitle("☕")
+    else
+        caffeineMenubar:setTitle("💤")
+    end
+end
+
+local function toggleCaffeine()
+    hs.caffeinate.toggle("displayIdle")
+    updateCaffeineDisplay()
+end
+
+if caffeineMenubar then
+    caffeineMenubar:setClickCallback(toggleCaffeine)
+    updateCaffeineDisplay()
+end
+
+-- ==========================================================
+-- VPNs
+-- ==========================================================
+
+
+
+-- ==========================================================
 -- BLUETOOTH DEVICE CONNECTIONS
 -- ==========================================================
 
