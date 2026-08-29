@@ -274,6 +274,14 @@ setup_newsboat() {
     confirm_directory_config_override $DOTFILE_NEWSBOAT_DIR $NEWSBOAT_DIR
 }
 
+setup_hammerspoon() {
+    HAMMERSPOON_DIR=~/.config/hammerspoon
+    DOTFILE_HAMMERSPOON_DIR=~/dotfiles/configs/hammerspoon
+
+    confirm_directory_config_override $DOTFILE_HAMMERSPOON_DIR $HAMMERSPOON_DIR
+}
+
+
 setup_lobster() {
     # https://github.com/justchokingaround/lobster#linux-from-source
     echo "\n --- Setting up lobster --- \n"

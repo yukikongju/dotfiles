@@ -11,10 +11,11 @@ opt.autoindent = true
 opt.shiftround = false
 
 -- Swapfiles
-opt.backup = false
+opt.backup = true
 opt.writebackup = false
 opt.swapfile = false
 opt.autowrite = true
+opt.undofile = true
 
 -- cursor
 --opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
