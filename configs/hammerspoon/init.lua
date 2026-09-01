@@ -1,4 +1,5 @@
 -- docs: https://www.hammerspoon.org/go/
+-- spoons: https://www.hammerspoon.org/Spoons/index.html
 
 -- ==========================================================
 -- HAMMERSPOON CONFIGURATION
@@ -10,6 +11,17 @@ hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", hs.reload):start()
 
 -- Disable window animations for instant Rectangle-like snapping
 hs.window.animationDuration = 0
+
+-- SpoonInstall
+-- note: need to install from here -> https://www.hammerspoon.org/Spoons/SpoonInstall.html
+-- https://github.com/zzamboni/dot-hammerspoon/blob/master/init.org
+hs.loadSpoon("SpoonInstall")
+Install = spoon.SpoonInstall
+spoon.SpoonInstall.repos.zzspoons = {
+    url = "https://github.com/zzamboni/zzSpoons",
+    desc = "zzamboni's spoon repository",
+}
+spoon.SpoonInstall.use_syncinstall = true
 
 -- ==========================================================
 -- WINDOW MANAGEMENT (similar to `Rectangle` app)
@@ -181,16 +193,53 @@ hs.hotkey.bind(keyCasterMash, "k", function()
 end)
 
 -- ==========================================================
--- CAFEINATE
+-- CAFEINATE: https://gist.github.com/heptal/50998f66de5aba955c00
 -- ==========================================================
+
+local ampOnIcon = [[ASCII:
+.....1a..........AC..........E
+..............................
+......4.......................
+1..........aA..........CE.....
+e.2......4.3...........h......
+..............................
+..............................
+.......................h......
+e.2......6.3..........t..q....
+5..........c..........s.......
+......6..................q....
+......................s..t....
+.....5c.......................
+]]
+
+local ampOffIcon = [[ASCII:
+.....1a.....x....AC.y.......zE
+..............................
+......4.......................
+1..........aA..........CE.....
+e.2......4.3...........h......
+..............................
+..............................
+.......................h......
+e.2......6.3..........t..q....
+5..........c..........s.......
+......6..................q....
+......................s..t....
+...x.5c....y.......z..........
+]]
+
+local ampImageOn = hs.image.imageFromASCII(ampOnIcon)
+local ampImageOff = hs.image.imageFromASCII(ampOffIcon)
 
 caffeineMenubar = hs.menubar.new()
 
 local function updateCaffeineDisplay()
     if hs.caffeinate.get("displayIdle") then
-        caffeineMenubar:setTitle("☕")
+        -- caffeineMenubar:setTitle("☕")
+        caffeineMenubar:setIcon(ampImageOn)
     else
-        caffeineMenubar:setTitle("💤")
+        -- caffeineMenubar:setTitle("💤")
+        caffeineMenubar:setIcon(ampImageOff)
     end
 end
 
@@ -233,3 +282,18 @@ hs.hotkey.bind(bluetoothMash, "b", function()
     hs.execute(envPath .. "blueutil --connect " .. headphonesMacAddress)
     hs.execute(envPath .. "blueutil --connect " .. earphonesMacAddress)
 end)
+
+-- ==========================================================
+-- TextClipBoardHistory: https://www.hammerspoon.org/Spoons/TextClipboardHistory.html
+-- ==========================================================
+Install:andUse("TextClipboardHistory",
+    {
+        disable = false,
+        config = {
+            show_in_menubar = false,
+        },
+        hotkeys = {
+            toggle_clipboard = { { "cmd", "shift" }, "v" } },
+        start = true,
+    }
+)

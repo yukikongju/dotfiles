@@ -214,7 +214,7 @@ gb() {
 
 ## Executing old history commands
 hist() {
-    eval $(history | fzf | sed 's/ *[0-9]* *//')
+    eval $(history -n 500 | fzf | sed 's/ *[0-9]* *//')
 }
 
 ## Connecting to Bluetooth devices
@@ -277,7 +277,8 @@ wadhoc() {
         mkdir -p "$dir_path"
         # mkdir -p "$dir_path/BS"
         # mkdir -p "$dir_path/PG"
-        echo "# Work Adhoc - \n\n## Mindset\n\n## Projects\n\n## What I've Learned\n\n## Reference Docs\n\n" > "${dir_path}/README.md"
+        echo "# Work Adhoc - $(date -v"${offset}"m +"%b %Y") \n\n## Mindset\n\n## Projects\n\n## Tasks\n\n## What I've Learned\n\n## Reference Docs\n\n" > "${dir_path}/README.md"
+
     fi
 
     echo "Switching to $dir_path"
@@ -354,7 +355,7 @@ padhoc() {
         done
 
         # Add readme.md
-        echo "# Personal Adhoc - \n\n## Mindset\n\n## Readings\n\n## What I've Learned\n\n## Reference Docs\n\n" > "${dir_path}/README.md"
+        echo "# Personal Adhoc - $(date -v"${offset}"m +"%b %Y")\n\n## Mindset\n\n## Readings\n\n## What I've Learned\n\n## Reference Docs\n\n" > "${dir_path}/README.md"
 
 
     fi
