@@ -69,6 +69,31 @@ map('n', '<leader>pa', function() vim.fn.setreg('+', vim.fn.expand('%:p')) end) 
 map('n', '<leader>pr', function() vim.fn.setreg('+', vim.fn.expand('%:~:.')) end) -- relative path
 
 
+-- fzf
+map('n', '<leader>fb', ':Buffers<CR>', { silent = true, desc = "Find Open Buffers" })
+map('n', '<leader>fc', ':History:<CR>', { silent = true, desc = "Command History" })
+map('n', '<leader>ff', ':History<CR>', { silent = true, desc = "File History" })
+map('n', '<leader>fg', ':Commits<CR>', { silent = true, desc = "Git Commits" })
+map('n', '<leader>fh', ':Helptags<CR>', { silent = true, desc = "Help Tags" })
+map('n', '<leader>fm', ':Maps<CR>', { silent = true, desc = "Keymaps" })
+map('n', '<leader>fr', ':Rg<CR>', { silent = true, desc = "Ripgrep (Search text)" })
+map('n', '<leader>fs', ':Snippets<CR>', { silent = true, desc = "Snippets" })
+map('n', '<leader>ft', ':Tags<CR>', { silent = true, desc = "Tags" })
+map('n', '<leader>fy', ':registers<CR>', { silent = true, desc = "Registers" })
+map('n', '<leader>f/', ':History/<CR>', { silent = true, desc = "Search History" })
+map('n', "<leader>f'", ':Marks<CR>', { silent = true, desc = "Marks" })
+
+-- Global/Local Replace Keybindings
+-- :g/pattern/d - Supprime toutes les lignes correspondant à un motif donné
+-- :g/pattern/s//replacement/g - Remplace toutes les occurrences d'un motif donné par un remplacement donné dans toutes les lignes correspondantes
+-- :s/foo/bar/gc - Remplace toutes les occurrences de "foo" par "bar", en demandant une confirmation pour chaque occurrence (done)
+map('n', '<leader>ru', [[:%s/\<<C-r><C-w>\>/ ]], { desc = "replace-all-under-cursor" })
+map('n', '<leader>rc', ':%s/<C-r><C-w>//gc<left><left><left>', { desc = "replace-confirm-all-under-cursor" })
+map('n', '<leader>rj', ':%!fmt -w 80<CR>:%!par -j -w80<CR>', { silent = true, desc = "justify current file" })
+
+-- Placeholder for your 'a' mapping (which was in your which-key map but missing from nnoremap)
+-- map('n', '<leader>ra', ':g/pattern/s//replacement/g', { desc = "replace-all" })
+
 -- Date keybindings
 -- map('', '<F1>', ':r! date "+\\%A \\%d \\%B \\%Y"<CR>')
 -- map('', '<F2>', ':r! date "+\\%A \\%d \\%B \\%Y" -d "+1 day"<CR>')
