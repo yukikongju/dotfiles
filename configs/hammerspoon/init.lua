@@ -87,6 +87,57 @@ hs.hotkey.bind(rectMash, "right", function() snapOrMoveDisplay("right") end)
 
 
 -- ==========================================================
+-- MOUSE CASTER TOGGLE
+-- ==========================================================
+
+local mouseCircle = nil
+local mouseTracker = nil
+
+local function updateCirclePosition()
+    if mouseCircle then
+        local mousePoint = hs.mouse.absolutePosition()
+        -- Offset by half the width/height (25) to center the circle on the cursor
+        mouseCircle:topLeft({ x = mousePoint.x - 25, y = mousePoint.y - 25 })
+    end
+end
+
+local function toggleRedMouse()
+    if mouseCircle then
+        -- Clean up and hide the circle
+        mouseCircle:delete()
+        mouseCircle = nil
+        if mouseTracker then
+            mouseTracker:stop()
+            mouseTracker = nil
+        end
+    else
+        -- Create a 50x50 canvas for the circle
+        mouseCircle = hs.canvas.new({ x = 0, y = 0, w = 50, h = 50 })
+        mouseCircle:appendElements({
+            type = "circle", -- rectangle, oval, segments, image, arc, points, text
+            action = "fill",
+            fillColor = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
+        })
+
+        -- Ensure the canvas floats above everything and doesn't intercept clicks
+        mouseCircle:level(hs.canvas.windowLevels.cursor)
+
+        updateCirclePosition()
+        mouseCircle:show()
+
+        -- Track mouse movements to update the circle's position in real-time
+        mouseTracker = hs.eventtap.new({ hs.eventtap.event.types.mouseMoved }, function(e)
+            updateCirclePosition()
+            return false -- Return false so the system still processes the mouse event
+        end)
+        mouseTracker:start()
+    end
+end
+
+-- Bind the toggle to Cmd + Alt/Opt + Ctrl + M
+hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "m", toggleRedMouse)
+
+-- ==========================================================
 -- KEY CASTER TOGGLE
 -- ==========================================================
 
