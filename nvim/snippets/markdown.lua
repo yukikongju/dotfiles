@@ -370,5 +370,18 @@ Goal:
         cursor = i(0),
     })),
 
+    s({ trig = "tfix", dscr = "Template for Fix Option Table" }, fmt([[
+
+ Fix Options
+
+| Option        | Effort | Description | Pros | Cons |
+|---------------|--------|-------------|------|------|
+| **Quick Fix** | Low    |             |      |      |
+| **Better**    | Medium |             |      |      |
+| **Best**      | High   |             |      |      |
+
+]], {
+    })),
+
 
 }
