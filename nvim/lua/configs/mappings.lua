@@ -1,3 +1,4 @@
+---- MAPPINGS ----
 local map = vim.keymap.set
 
 -- Remap vertical move

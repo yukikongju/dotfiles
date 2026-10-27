@@ -105,8 +105,31 @@ Todos:
     Open previous day diary link if available.
     Mapped to <C-Up>.
 
-
-
 not implemented:
 - generate page from tags
 
+## nvim configs setup
+
+When creating `nvim/lua/configs/<new_file>.lua` in dotfiles, 2 steps are 
+required:
+
+**Step 1: Add the `<new_file>.lua` reference to `init.lua`**
+
+```lua
+<...>
+
+require("configs/mappings")
+require("configs/options")
+require("configs/floatingbuf")
+require("configs/neovide")
+require("configs/<new_file>") <-- NEW
+```
+
+**Step 2: Add a symlink reference to the `.config/nvim/lua/configs/`**
+
+```bash
+# ln -s <path_to_target> <path_to_shortcut>
+ln -s ~/dotfiles/nvim/lua/configs/<new_file>.lua ~/.config/nvim/lua/configs/<new_file>.lua
+
+ln -s ~/dotfiles/nvim/lua/configs/highlights.lua ~/.config/nvim/lua/configs/highlights.lua
+```
