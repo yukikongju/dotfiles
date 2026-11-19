@@ -68,8 +68,18 @@ return {
             vim.lsp.config("lua_ls", { capabilities = capabilities })
             vim.lsp.config("basedpyright", { capabilities = capabilities })
             vim.lsp.config("rust_analyzer", { capabilities = capabilities })
-            vim.lsp.config("clangd", { capabilities = capabilities })
+            -- vim.lsp.config("clangd", { capabilities = capabilities })
             --vim.lsp.config("debugpy", { capabilities = capabilities })
+
+            local clangd_opts = {
+                -- Add custom command-line flags:
+                cmd = { 'clangd', '--background-index', '--clang-tidy' },
+                -- Customize clangd's behaviour:
+                init_options = { fallbackFlags = { '-std=c++17' }, },
+            }
+            if not vim.lsp.is_enabled('clangd') then
+                vim.lsp.enable('clangd', clangd_opts)
+            end
 
             --vim.lsp.config("ruff", {
             --capabilities = capabilities,

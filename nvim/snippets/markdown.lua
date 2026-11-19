@@ -383,5 +383,28 @@ Goal:
 ]], {
     })),
 
+    s({ trig = "tproposal", dscr = "Template for Proposal" }, fmt([[
+
+#
+
+**Date:**
+**Authors:**
+**Topics:**
+
+## Goal
+
+## Context
+
+## Impact
+
+## Proposal
+
+## Acceptance Criterias
+
+## Out of Scope
+
+]], {
+    })),
+
 
 }
